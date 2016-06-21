@@ -1,0 +1,159 @@
+/* File: main.scss
+ * Descriptiom: SASS stylesheet using Atomic CSS Methodology
+ */
+
+$font-stack: 'Helvetica';
+$black: #222222;
+$blue: rgb(51, 122, 183);
+$red: rgb(217, 83, 79);
+$white: #FEFEFE;
+
+//////////////////////////////////
+// Begin default DOM tag styles //
+//////////////////////////////////
+
+body {
+ font: 14px $font-stack !important;
+}
+
+a {
+ color: $blue;
+ &:hover {
+   cursor: pointer;
+ }
+}
+
+////////////////////////////////
+// End default DOM tag styles //
+////////////////////////////////
+
+////////////////////////////////////
+// Begin explicit class/id styles //
+////////////////////////////////////
+
+//////////////////////////////////
+// End explicit class/id styles //
+//////////////////////////////////
+
+////////////////////////////////
+// Begin atomic class styles //
+////////////////////////////////
+
+// TEXT FORMATTING
+.ta-center {
+ text-align: center;
+}
+
+.c-white {
+ color: $white;
+}
+
+.c-black {
+ color: $black;
+}
+//
+
+// BACKGROUND
+.bgc-black {
+ background-color: $black;
+}
+//
+
+// HEIGHT/WIDTH
+.h-100 {
+ height: 100%;
+}
+
+.w-100 {
+ width: 100%;
+}
+//
+
+// BORDER-RADIUS
+.brt-0 {
+ border-top-left-radius: 0px !important;
+ border-top-right-radius: 0px !important;
+}
+//
+
+// DISPLAY
+.d-i {
+ display: inline;
+}
+
+.d-n {
+ display: none !important;
+}
+//
+
+// MARGIN
+.mt-0 {
+ margin-top: 0px;
+}
+
+.mt-5 {
+ margin-top: 5px;
+}
+
+.mt-10 {
+ margin-top: 10px;
+}
+//
+
+// PADDING
+.p-0 {
+ padding: 0px !important;
+}
+
+.p-30 {
+ padding: 30px !important;
+}
+
+.pt-10 {
+ padding-top: 10px;
+}
+
+.pt-15 {
+ padding-top: 15px;
+}
+
+.pt-30 {
+ padding-top: 30px;
+}
+
+.pt-45 {
+ padding-top: 45px;
+}
+
+.pt-60 {
+ padding-top: 60px;
+}
+
+.pt-90 {
+ padding-top: 90px;
+}
+
+.pt-120 {
+ padding-top: 120px;
+}
+
+.pb-10 {
+ padding-bottom: 10px;
+}
+
+.pl-15 {
+ padding-left: 15px;
+}
+
+.pl-30 {
+ padding-left: 30px;
+}
+
+.pl-45 {
+ padding-left: 45px;
+}
+
+.pl-60 {
+ padding-left: 60px;
+}
+//
