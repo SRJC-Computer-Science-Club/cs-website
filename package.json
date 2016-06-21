@@ -3,7 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "build-css": "node-sass --include-path scss assets/scss/main.scss public/css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\"",
+    "watch-server": "nodemon ./bin/www",
+    "dev-windows": "start npm run watch-css && start npm run watch-server",
+    "dev-linux": "npm run watch-css & npm run watch-server"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -14,5 +19,9 @@
     "jade": "~1.11.0",
     "morgan": "~1.7.0",
     "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "node-sass": "^3.8.0",
+    "nodemon": "^1.9.2"
   }
 }
