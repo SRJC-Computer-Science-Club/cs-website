@@ -9,7 +9,7 @@
 ### Getting Started
 Want to contribute? Great!
 
-**Be sure to have [Node][node] installed.**
+**Be sure to have [Node][node](6.3.x) installed.**
 
 Open terminal/cmd in root directory of project.
 
@@ -18,11 +18,6 @@ Install project dependencies with:
 $ npm install
 ```
 
-*(Optional)*
-Install Bower with:
-```sh
-$ npm install -g bower
-```
 
 To start the server:
 ```sh
@@ -46,8 +41,6 @@ The development server should now be live at [http://localhost:3000](http://loca
 >[Bootstrap][bootstrap] is a sleek, intuitive, and powerful mobile first front-end framework
 
 >[JQuery][jquery] is a fast, small, and feature-rich JavaScript library
-
->[Bower](https://bower.io/) is a front-end package manager for the web
 
 
 ### Interesting and Helpful Resources
