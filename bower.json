@@ -1,0 +1,21 @@
+{
+  "name": "cs-website",
+  "description": "",
+  "main": "",
+  "authors": [
+    "whothat <benhuff322@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.0",
+    "bootstrap": "v4.0.0-alpha.2"
+  }
+}

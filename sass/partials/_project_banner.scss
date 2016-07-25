@@ -1,0 +1,36 @@
+.project-banner
+{
+	.project-banner-img
+	{
+		overflow: hidden;
+		padding: 0;
+	}
+
+	.img-crop
+	{
+		width: 200%;
+		margin-left: -50%;
+	}
+
+	.project-banner-headline
+	{
+		position: absolute;
+		bottom: 0px;
+		left: 20px;
+		font-weight: bold;
+		font-size: 3em;
+		color: white;
+	}
+
+	.project-banner-description
+	{
+		font-size: 1.5em;
+		margin-top: 20px;
+	}
+}
+
+.card
+{
+	margin-left:0px;
+	background: $lightgray;
+}

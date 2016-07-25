@@ -24,10 +24,14 @@ build/Release
 
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
-node_modules
+node_modules/
 
 # Debug log from npm
 npm-debug.log
 
 
 bower_components/
+
+
+*.css
+*.css.map

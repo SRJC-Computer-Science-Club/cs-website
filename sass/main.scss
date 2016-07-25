@@ -1,0 +1,77 @@
+/* File: main.scss
+ * Description: SASS stylesheet using Atomic CSS Methodology
+ *   http://sass-lang.com/
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+// Define SASS variables
+$font-stack: 'Droid Sans Mono','Helvetica';
+$black: #222222;
+$blue: rgb(51, 122, 183);
+$red: rgb(217, 83, 79);
+$white: #FDFDFD;
+$lightgray: #EEE;
+
+//////////////////////////////////
+// Begin default DOM tag styles //
+//////////////////////////////////
+
+body {
+  font: 14px $font-stack !important;
+  padding-top: 5rem;
+  background: $white;
+}
+
+a {
+  color: $blue;
+  &:hover {
+   cursor: pointer;
+  }
+}
+
+p{
+  text-align: left;
+  margin-top: 10px;
+}
+
+////////////////////////////////
+// End default DOM tag styles //
+////////////////////////////////
+
+
+
+@import 'partials/project_banner';
+@import 'partials/navbar';
+@import 'partials/project_page';
+@import 'partials/index_page';
+
+
+////////////////////////////////////
+// Begin explicit class/id styles //
+////////////////////////////////////
+
+
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.container-fluid
+{
+  max-width: 1300px;
+}
+
+.content>.row{
+  padding-top: 32px;
+}
+//////////////////////////////////
+// End explicit class/id styles //
+//////////////////////////////////
+
+
+//colors
+.lightgray
+{
+  background: $lightgray;
+}
