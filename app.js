@@ -15,7 +15,7 @@ try //try to load LiveReload
 {
   var livereload = require('livereload');
   server = livereload.createServer({exts: ['jade','js','scss','css']});
-  server.watch([__dirname + '/public', __dirname + '/sass/', __dirname + '/views']);
+  server.watch([__dirname + '/public', __dirname + '/sass/', __dirname + '/views', __dirname + '/routes']);
   console.log("LiveReload Started");
 }
 catch (ex) {}
