@@ -7,14 +7,14 @@ html(ng-app="csApp")
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 
 		title= title
-		link(href='bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
-		link(href='stylesheets/main.css', rel='stylesheet')
-		script(src="angular/angular.js")
+		link(href='/bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+		link(href='/stylesheets/main.css', rel='stylesheet')
+		script(src="/angular/angular.js")
 		
 	body
 		include ./partials/_navbar
 		.container-fluid
 			.starter-template
 				block content
-		script(src="jquery/dist/jquery.min.js")
-		script(src="javascripts/main.js")
+		script(src="/jquery/dist/jquery.min.js")
+		script(src="/javascripts/main.js")
