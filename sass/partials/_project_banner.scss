@@ -1,36 +1,32 @@
-.project-banner
-{
-	.project-banner-img
-	{
-		overflow: hidden;
-		padding: 0;
+#project-spotlight {
+	.project-banner {
+		.project-banner-img {
+			overflow: hidden;
+			padding: 0;
+		}
+
+		.img-crop {
+			width: 200%;
+			margin-left: -50%;
+		}
+
+		.project-banner-headline {
+			position: absolute;
+			bottom: 0;
+			left: 20px;
+			font-weight: bold;
+			font-size: 3em;
+			color: white;
+		}
+
+		.project-banner-description {
+			font-size: 1.5em;
+			margin-top: 20px;
+		}
 	}
 
-	.img-crop
-	{
-		width: 200%;
-		margin-left: -50%;
+	.card {
+		margin-left: 0;
+		background: $lightgray;
 	}
-
-	.project-banner-headline
-	{
-		position: absolute;
-		bottom: 0px;
-		left: 20px;
-		font-weight: bold;
-		font-size: 3em;
-		color: white;
-	}
-
-	.project-banner-description
-	{
-		font-size: 1.5em;
-		margin-top: 20px;
-	}
-}
-
-.card
-{
-	margin-left:0px;
-	background: $lightgray;
 }

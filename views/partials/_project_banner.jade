@@ -1,7 +1,7 @@
-.col-md-12(ng-repeat="project in projects")
+.col-md-12.project-banner(ng-repeat="project in projects")
 	.row.card
 		.col-lg-9.project-banner-img
 			img.img-fluid(src='http://placehold.it/1000x250/e5be90')
-			h1.project-banner-headline {{project.name}}
+			h1.project-banner-headline {{project.title}}
 		.col-lg-3.project-banner-description.card-block
-			p {{project.name + project.description}}
+			p {{project.title + project.description}}

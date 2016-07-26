@@ -1,24 +1,32 @@
-#project-page
-{
-	.project-member
-	{
+#project-page {
+	.project-member {
 		text-align: left;
 		margin: 10px auto;
 		max-width: 300px;
 
-		img
-		{
+		img {
 			margin: 10px;
 		}
 
-		.project-member-text
-		{
+		.project-member-text {
 			padding: 10px 0;
 		}
 	}
 
-	.project-title
-	{
+	.project-title {
 		text-align: left;
+	}
+
+	.project-quick-links-container {
+		list-style-type: none;
+
+		li {
+			float: right;
+
+			img {
+				width: 42px;
+				padding: 5px;
+			}
+		}
 	}
 }
