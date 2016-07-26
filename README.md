@@ -19,6 +19,7 @@ $ npm install
 ```
 
 
+
 To start the server:
 ```sh
 $ npm run dev
@@ -26,6 +27,17 @@ $ npm run dev
 If you receive any errors, confirm that npm install was run and try again
 
 The development server should now be live at [http://localhost:3000](http://localhost:3000)
+
+
+
+
+*(Optional)*
+Install LiveReload extension to automatically reload the webpage on changes
+
+[LiveReload (chrome)](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
+
+
+
 
 ### Tech
 >[Node][node] is  a JavaScript runtime built on Chrome's V8 JavaScript engine
