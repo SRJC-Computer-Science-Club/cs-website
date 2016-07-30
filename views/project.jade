@@ -1,16 +1,17 @@
 extends layout
 
 block content
-	#project-page.content(ng-controller='ProjectPageController')
+	#project-page.content
 		.row
 			.col-sm-9
 				.project-title
-					h1 {{project.title}}
+					h1= project.title
 			.col-sm-3
 				ul.project-quick-links-container
-					li(ng-repeat='(name,link) in project.links')
-						a(href='{{link}}')
-							include partials/atoms/quick_link_icon
+					each link, name in project.links
+						li
+							a(href=link)
+								include partials/atoms/quick_link_icon
 		include ./partials/project_page/_photo_gallery
 		include ./partials/project_page/_member_list
 		.row

@@ -1,8 +1,9 @@
-.col-md-6(ng-repeat='member in project.members')
-	.project-member.card
-		img.img-circle.pull-xs-left(src='http://placehold.it/64x64/77cb6f')
-		.project-member-text
-			//name
-			h6 {{member.firstName + ' ' + member.lastName}}
-			//role
-			p Project Lead
+each member in project.members
+	.col-md-6
+		.project-member.card
+			img.img-circle.pull-xs-left(src='http://placehold.it/64x64/77cb6f')
+			.project-member-text
+				//name
+				h6= member.firstName + " " + member.lastName
+				//role
+				p Project Lead
