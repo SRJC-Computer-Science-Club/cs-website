@@ -4,6 +4,5 @@ each member in project.members
 			img.img-circle.pull-xs-left(src='http://placehold.it/64x64/77cb6f')
 			.project-member-text
 				//name
-				h6= member.firstName + " " + member.lastName
-				//role
-				p Project Lead
+				h6= member.first_name + " " + member.last_name
+				p= member.role
