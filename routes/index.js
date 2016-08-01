@@ -1,7 +1,7 @@
 var express = require('express');
 var tempDB = require('./TEMP_schema');
 var router = express.Router();
-
+var helper = require('./helper_methods');
 
 router.get('*', function(req, res, next) {
   console.log(req.params);
@@ -30,7 +30,7 @@ router.get('/projects/', function(req, res, next) {
 
   }
 
-  res.render('projects', { title: 'CS Club | Projects' , projects: projects });
+  res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper});
 });
 
 
@@ -60,6 +60,13 @@ function findProjectMembers( project )
   }
 
   return members;
+}
+
+function pluralize( word ) {
+  if (word != 1)
+    return 's';
+  return '';
+
 }
 
 

@@ -6,23 +6,23 @@ each project in projects
 					img.img-fluid(src='http://placehold.it/1000x250/e5be90')
 				.project-cell
 					h3.project-cell-status= project.status
-					p= project.members.length + ' member' + (project.members.length != 1 ? 's' : '')
+					p= helper.pluralize('member', project.members.length, true)
 					.member
 						each member in project.members
 							p= member.first_name[0] + member.last_name[0]
 							p= member.first_name[0] + member.last_name[0]	
 					a(href='https://github.com/')
-						- var days = 0 //todo: 
+						- var days = -1 //todo: 
 						if (days > 14)
 							p No recent commits
 						else if days == 0
 							p= 'Last commit was today'
 						else
-							p= 'Last commit was ' + days + ' day' + (days != 1 ? 's' : '') + ' ago'
+							p= 'Last commit was ' + helper.pluralize('day', days, true) + ' ago'
 					a(href='/broken/')
-						- var positions = 0 //todo:
+						- var positions = -1 //todo:
 						if (positions > 0)
-							p= positions + ' position' + (positions != 1 ? 's' : '') + ' avaliable'
+							p= helper.pluralize('position', positions, true) + ' avaliable'
 						else
 							p No positions avaliable
 				.project-cell-description
