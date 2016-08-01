@@ -1,0 +1,33 @@
+each project in projects
+	.col-md-12.project-banner
+		.row.card
+			.col-lg-12.project-banner-img
+				a(href='/projects/' + project.id )
+					img.img-fluid(src='http://placehold.it/1000x250/e5be90')
+				.project-cell
+					h3.project-cell-status= project.status
+					p= project.members.length + ' member' + (project.members.length != 1 ? 's' : '')
+					.member
+						each member in project.members
+							p= member.first_name[0] + member.last_name[0]
+							p= member.first_name[0] + member.last_name[0]	
+					a(href='https://github.com/')
+						- var days = 0 //todo: 
+						if (days > 14)
+							p No recent commits
+						else if days == 0
+							p= 'Last commit was today'
+						else
+							p= 'Last commit was ' + days + ' day' + (days != 1 ? 's' : '') + ' ago'
+					a(href='/broken/')
+						- var positions = 0 //todo:
+						if (positions > 0)
+							p= positions + ' position' + (positions != 1 ? 's' : '') + ' avaliable'
+						else
+							p No positions avaliable
+				.project-cell-description
+					p= project.description_short
+			.col-lg-12.center-cell
+				p most recent post
+			.col-lg-12.project-banner-description.card-block
+				h1.project-headline= project.title

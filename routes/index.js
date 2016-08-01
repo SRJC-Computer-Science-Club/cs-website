@@ -24,7 +24,13 @@ router.get('/projects/:projectID', function(req, res, next) {
 
 /* GET Projects page. */
 router.get('/projects/', function(req, res, next) {
-  res.render('projects', { title: 'CS Club | Projects' , projects: tempDB.projects });
+  var projects = tempDB.projects;
+  for ( var project of projects) {
+    project.members= findProjectMembers(project);
+
+  }
+
+  res.render('projects', { title: 'CS Club | Projects' , projects: projects });
 });
 
 
