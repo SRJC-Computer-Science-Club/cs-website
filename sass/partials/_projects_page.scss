@@ -57,6 +57,10 @@
 				display: table;
 				clear: both;
 			}
+			.link {
+				
+
+			}
         }
         .project-cell-description {
 			position: absolute;
@@ -131,6 +135,27 @@
 		}
 	}
 	.archived-project {
-
+		padding: $margin-lg;
+		.project-cell {
+			position: absolute;
+			right: 0;
+			h6, p, a {
+				margin: $margin-sm 0;
+				text-align: right;
+			}
+		}
+		.project-headline {
+			text-align: left;
+			font-weight: bold;
+			font-size: 2em;
+			color: $black;
+		}
+		.link {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 	}
 }

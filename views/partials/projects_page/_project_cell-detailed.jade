@@ -35,7 +35,7 @@ each project in projects
 					p most recent post
 				.col-lg-12.project-banner-description.card-block
 					h1.project-headline= project.title
-	else if (project.id < 5)
+	else if (project.id < 6)
 		.col-md-6.project-banner
 			.row.card.secondary-project
 				.col-lg-12.project-banner-img
@@ -47,4 +47,15 @@ each project in projects
 					.project-headline
 						h1= project.title
 					a.link(href='/projects/' + project.id )
+	else
+		.col-md-12.project-banner
+			.row.card.archived-project
+				.col-lg-12
+					//img(src='http://placehold.it/600x300/D8D8D8')
+					.project-cell
+						h6.project-cell-status= project.status
+						p.project-cell-members= helper.pluralize('member', project.members.length, true)
+					.project-headline
+						h1= project.title
+				a.link(href='/projects/' + project.id )
 
