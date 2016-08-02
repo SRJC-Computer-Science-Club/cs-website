@@ -62,12 +62,4 @@ function findProjectMembers( project )
   return members;
 }
 
-function pluralize( word ) {
-  if (word != 1)
-    return 's';
-  return '';
-
-}
-
-
 module.exports = router;

@@ -5,78 +5,132 @@
 			width:  100%;
 		}
 	}
-	.project-cell {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 25%;
-		padding: 0 $margin-sm;
-		padding-right: 50px;
-		min-width: 196px;
-		h3 {
-
-		}
-
-		.project-cell-status::after {
+	.primary-project {
+		.project-cell {
 			position: absolute;
-			content: '';
-			width: 32px;
-			height: 32px;
-			right: 10px;
-			background: green;
-			border-radius: 16px;
-		}
+			top: 0;
+			right: 0;
+			width: 25%;
+			padding: 0 $margin-sm;
+			padding-right: 50px;
+			min-width: 196px;
 
-		p {
+			h3 {
 
-		}
-		
-		h3, p {
-			text-align: right;
-			margin: $margin-lg 0;
-		}
+			}
 
-		.member {
+			.project-cell-status::after {
+				position: absolute;
+				content: '';
+				width: 32px;
+				height: 32px;
+				right: 10px;
+				background: green;
+				border-radius: 16px;
+			}
+
 			p {
-				width: 30px;
-				height: 30px;
-				float: right;
-				background: $gray;
-				border-radius: 30px;
 
+			}
+			
+			h3, p {
+				text-align: right;
+				margin: $margin-lg 0;
+			}
+
+			.member {
+				p {
+					width: 30px;
+					height: 30px;
+					float: right;
+					background: $gray;
+					border-radius: 30px;
+
+					text-align: center;
+					padding: $margin-xs;
+					margin: $margin-xs 0 0 $margin-xs;
+				}
+			}
+
+			.member::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
+        }
+        .project-cell-description {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			padding: 0 $margin-sm;
+			width: 45%;
+			min-width: 196px;
+        }
+        .center-cell {
+			width: 100%;
+			p, h1 {
 				text-align: center;
-				padding: $margin-xs;
-				margin: $margin-xs 0 0 $margin-xs;
+			}
+        }
+        .project-headline {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			font-weight: bold;
+			font-size: 3em;
+			color: $black;
+        }
+	}
+	.secondary-project {
+		.project-cell {
+			position: absolute;
+			top: $margin-lg;
+			right: $margin-lg;
+			left: $margin-lg;
+			bottom: 0;
+			padding: 0 $margin-sm;
+			h4.project-cell-status {
+				padding-left: 24px;
+				text-align: left;
+
+			}
+			.project-cell-status::after {
+				position: absolute;
+				content: '';
+				width: 24px;
+				height: 24px;
+				left: 0;
+				background: green;
+				border-radius: 16px;
+			}
+			.project-cell-tasks {
+				position: absolute;
+				top: 0;
+				right: 0;
+
+			}
+			p, a {
+				text-align: left;
+				margin: $margin-lg 0;
 			}
 		}
-
-		.member::after {
-			content: '';
-			display: table;
-			clear: both;
+		.project-headline {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			font-weight: bold;
+			font-size: 2em;
+			color: $black;
+		}
+		.link {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
 		}
 	}
-	.project-cell-description {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 0 $margin-sm;
-		width: 45%;
-		min-width: 196px;
-	}
-	.center-cell {
-		width: 100%;
-		p, h1 {
-			text-align: center;
-		}
+	.archived-project {
 
-	}
-	.project-headline {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		font-weight: bold;
-		font-size: 3em;
-		color: $black;
 	}
 }
