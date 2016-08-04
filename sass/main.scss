@@ -12,6 +12,12 @@ $blue: rgb(51, 122, 183);
 $red: rgb(217, 83, 79);
 $white: #FDFDFD;
 $lightgray: #EEE;
+$gray: #BFBFBF;
+
+$margin-xs: 4px;
+$margin-sm: 8px;
+$margin-lg: 16px;
+$margin-xl: 32px;
 
 //////////////////////////////////
 // Begin default DOM tag styles //
@@ -30,9 +36,9 @@ a {
   }
 }
 
-p{
+p {
   text-align: left;
-  margin-top: 10px;
+  margin: $margin-sm 0;
 }
 
 ////////////////////////////////
@@ -43,6 +49,7 @@ p{
 
 @import 'partials/project_banner';
 @import 'partials/navbar';
+@import 'partials/projects_page';
 @import 'partials/project_page';
 @import 'partials/index_page';
 
