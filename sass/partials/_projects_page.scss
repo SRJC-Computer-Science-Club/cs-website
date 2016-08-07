@@ -10,14 +10,9 @@
 			position: absolute;
 			top: 0;
 			right: 0;
-			width: 25%;
-			padding: 0 $margin-sm;
+			width: 40%;
+			margin: $margin-lg;
 			padding-right: 50px;
-			min-width: 196px;
-
-			h3 {
-
-			}
 
 			.project-cell-status::after {
 				position: absolute;
@@ -28,16 +23,10 @@
 				background: green;
 				border-radius: 16px;
 			}
-
-			p {
-
-			}
-			
 			h3, p {
 				text-align: right;
 				margin: $margin-lg 0;
 			}
-
 			.member {
 				p {
 					width: 30px;
@@ -51,40 +40,47 @@
 					margin: $margin-xs 0 0 $margin-xs;
 				}
 			}
-
 			.member::after {
 				content: '';
 				display: table;
 				clear: both;
 			}
-			.link {
-				
-
+		}
+		.links {
+			position: absolute;
+			width: 40%;
+			right: 0;
+			bottom: 0;
+			margin: $margin-lg;
+			padding-right: 50px;
+			p {
+				text-align: right;
 			}
-        }
-        .project-cell-description {
+		}
+
+    .project-cell-description {
 			position: absolute;
 			bottom: 0;
 			left: 0;
-			padding: 0 $margin-sm;
-			width: 45%;
-			min-width: 196px;
-        }
-        .center-cell {
+			margin: $margin-lg;
+			width: 60%;
+    }
+    .center-cell {
 			width: 100%;
 			p, h1 {
 				text-align: center;
 			}
-        }
-        .project-headline {
+    }
+    .project-headline {
 			position: absolute;
 			bottom: 0;
 			width: 100%;
 			font-weight: bold;
 			font-size: 3em;
 			color: $black;
-        }
+    }
 	}
+
 	.secondary-project {
 		.project-cell {
 			position: absolute;

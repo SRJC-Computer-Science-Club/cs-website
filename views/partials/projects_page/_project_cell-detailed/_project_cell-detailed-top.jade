@@ -1,5 +1,5 @@
-.col-md-12.project-banner
-  .row.card.primary-project
+.col-md-12.project-banner.card.primary-project
+  .row
     .col-lg-12.project-banner-img
       a(href='/projects/' + project.id )
         img.img-fluid(src='http://placehold.it/1000x250/e5be90')
@@ -9,27 +9,13 @@
         .member
           each member in project.members
             p= member.first_name[0] + member.last_name[0]
-        - var tasks = 0	
-        - var tasksLeft = 'placeholder'
-        if (tasks > 0)
-          - tasksLeft= helper.pluralize('task', tasks, true) + ' left'
-        a.link(href='https://github.com/')
-          - var days = -1 //todo: 
-          if (days > 14)
-            p No recent commits
-          else if days == 0
-            p= 'Last commit was today' + ' - ' + tasksLeft
-          else
-            p= 'Last commit was ' + helper.pluralize('day', days, true) + ' ago' + ' - ' + tasksLeft
-        a.link(href='/broken/')
-          - var positions = -1 //todo:
-          if (positions > 0)
-            p= helper.pluralize('position', positions, true) + ' avaliable'
-          else
-            p No positions avaliable
+      .links
+        include ./_project_cell-detailed-links
       .project-cell-description
         p= project.description_short
-    .col-lg-12.center-cell
+  .row.center-cell
+    .col-md-12
       p most recent post
+  .row.center-cell
     .col-lg-12.project-banner-description.card-block
       h1.project-headline= project.title
