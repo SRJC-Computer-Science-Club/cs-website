@@ -3,21 +3,18 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
 		.navbar-wrapper
 			a.navbar-brand(href='/')= title
 			ul.nav.navbar-nav.pull-xs-right
-				li.nav-item.active
+				li.nav-item(class= navbar.active == 'home' ? 'active' : '')
 					a.nav-link(href='/') Home
-				li.nav-item
+				li.nav-item(class= navbar.active == 'projects' ? 'active' : '')
 					a.nav-link(href='/projects') Projects
-				li.nav-item
+				li.nav-item(class= navbar.active == 'contact' ? 'active' : '')
 					a.nav-link(href='#') Contact
+				li.nav-item(class= navbar.active == 'about' ? 'active' : '')
+					a.nav-link(href='#') About
 nav.navbar.navbar-fixed-top.navbar-dark.navbar-secondary
 	.nbw2
 		.navbar-wrapper
 			ul.nav.navbar-nav.pull-xs-right
-				li.nav-item.active
-					a.nav-link(href='#') Top News
-				li.nav-item
-					a.nav-link(href='#join-the-club') Join the Club
-				li.nav-item
-					a.nav-link(href='#project-spotlight') Project Spotlight
-				li.nav-item
-					a.nav-link(href='#') Recent Events
+				each link, index in navbar.links
+					li.nav-item(class= link.active === true ? 'active' : '')
+						a.nav-link(href=link.url)= link.name
