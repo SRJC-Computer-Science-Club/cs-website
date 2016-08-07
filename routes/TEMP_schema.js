@@ -154,7 +154,8 @@ var members_projects = [
   new MembersProjects( 2 , 3 , 1 , 'Creator' ),
   new MembersProjects( 3 , 0 , 1 , 'Co-Lead Developer' ),
   new MembersProjects( 4 , 0 , 2 , 'Programmer' ),
-  new MembersProjects( 5 , 0 , 3 , 'Programmer' )
+  new MembersProjects( 5 , 0 , 3 , 'Programmer' ),
+  new MembersProjects( 6 , 1 , 2 , 'Designer' )
 ]
 
 
