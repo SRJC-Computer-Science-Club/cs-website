@@ -79,6 +79,41 @@ router.get('/', function(req, res, next) {
 
 
 
+
+/* GET members page. */
+router.get('/members', function(req, res, next) {
+
+  var navbar = {
+    active: 'members',
+    links: [
+    { name: 'Members of the Board',  url: '#'  },
+    { name: 'Programmers and Developers',  url: '#'  }
+  ]};
+
+
+
+  res.render('members', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar });
+});
+
+
+
+
+/* GET NEW-PAGE TEMPLATE. */
+router.get('/PLACEHOLDER', function(req, res, next) {
+
+  var navbar = {
+    active: 'PAGE',
+    links: [
+    { name: 'ITEM',  url: '#'  },
+  ]};
+
+
+
+  res.render('JADE FILE', { title: 'CS Club', navbar: navbar });
+});
+
+
+
 function findProjectMembers( project )
 {
   var members = [];
