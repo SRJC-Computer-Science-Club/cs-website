@@ -1,61 +1,8 @@
 each project in projects
 	if (project.id < 3)
-		.col-md-12.project-banner
-			.row.card.primary-project
-				.col-lg-12.project-banner-img
-					a(href='/projects/' + project.id )
-						img.img-fluid(src='http://placehold.it/1000x250/e5be90')
-					.project-cell
-						h3.project-cell-status= project.status
-						p= helper.pluralize('member', project.members.length, true)
-						.member
-							each member in project.members
-								p= member.first_name[0] + member.last_name[0]
-						- var tasks = 0	
-						- var tasksLeft = 'placeholder'
-						if (tasks > 0)
-							- tasksLeft= helper.pluralize('task', tasks, true) + ' left'
-						a.link(href='https://github.com/')
-							- var days = -1 //todo: 
-							if (days > 14)
-								p No recent commits
-							else if days == 0
-								p= 'Last commit was today' + ' - ' + tasksLeft
-							else
-								p= 'Last commit was ' + helper.pluralize('day', days, true) + ' ago' + ' - ' + tasksLeft
-						a.link(href='/broken/')
-							- var positions = -1 //todo:
-							if (positions > 0)
-								p= helper.pluralize('position', positions, true) + ' avaliable'
-							else
-								p No positions avaliable
-					.project-cell-description
-						p= project.description_short
-				.col-lg-12.center-cell
-					p most recent post
-				.col-lg-12.project-banner-description.card-block
-					h1.project-headline= project.title
+		include ./_project_cell-detailed/_project_cell-detailed-top
 	else if (project.id < 6)
-		.col-md-6.project-banner
-			.row.card.secondary-project
-				.col-lg-12.project-banner-img
-					img(src='http://placehold.it/600x300/D8D8D8')
-					.project-cell
-						h4.project-cell-status= project.status
-						h4.project-cell-tasks 3/11
-						p= helper.pluralize('member', project.members.length, true)
-					.project-headline
-						h1= project.title
-					a.link(href='/projects/' + project.id )
+		include ./_project_cell-detailed/_project_cell-detailed-secondary
 	else
-		.col-md-12.project-banner
-			.row.card.archived-project
-				.col-lg-12
-					//img(src='http://placehold.it/600x300/D8D8D8')
-					.project-cell
-						h6.project-cell-status= project.status
-						p.project-cell-members= helper.pluralize('member', project.members.length, true)
-					.project-headline
-						h1= project.title
-				a.link(href='/projects/' + project.id )
-
+		include ./_project_cell-detailed/_project_cell-detailed-archived
+		

@@ -4,39 +4,77 @@ var router = express.Router();
 var helper = require('./helper_methods');
 
 router.get('*', function(req, res, next) {
-  console.log(req.params);
+  //console.log(req.params);
+
   next();
 });
 
 // GET project page
 router.get('/projects/:projectID', function(req, res, next) {
-    console.log(req.params);
+  console.log(req.params);
 
-    var project = tempDB.projects[req.params.projectID];
-    var members = findProjectMembers( project );
+  var projects = tempDB.projects;
 
-    project.members = members
-    console.log(project);
+  var navbar = {
+    active: 'projects',
+    links: []
+  };
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services});
+  var project = projects[req.params.projectID];
+
+  for ( var p of projects) {
+    navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
+  }
+
+
+  var members = findProjectMembers( project );
+
+  project.members = members
+  console.log(project);
+
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar});
 });
+
+
 
 
 /* GET Projects page. */
 router.get('/projects/', function(req, res, next) {
+
   var projects = tempDB.projects;
+
+  var navbar = {
+    active: 'projects',
+    links: []
+  };
+
   for ( var project of projects) {
     project.members= findProjectMembers(project);
-
+    navbar.links.push({name: project.title, url: '/projects/' +  project.id});
   }
 
-  res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper});
+console.log( navbar);
+  res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
 });
+
+
 
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'CS Club',  projects: tempDB.projects });
+
+  var navbar = {
+    active: 'home',
+    links: [
+    { name: 'News',  url: '#'  },
+    { name: 'Join the Club',  url: '#'  },
+    { name: 'Top Projects',  url: '#'  },
+    { name: 'Recent Events',  url: '#'  }
+  ]};
+
+
+
+  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar });
 });
 
 

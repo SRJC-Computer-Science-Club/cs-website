@@ -1,0 +1,10 @@
+.col-md-12.project-banner.archived-project
+  .row.card
+    .col-lg-12
+      //img(src='http://placehold.it/600x300/D8D8D8')
+      .project-cell
+        h6.project-cell-status= project.status
+        p.project-cell-members= helper.pluralize('member', project.members.length, true)
+      .project-headline
+        h1= project.title
+    a.link(href='/projects/' + project.id )
