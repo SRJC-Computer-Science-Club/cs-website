@@ -9,8 +9,8 @@
         .member
           each member in project.members
             p= member.first_name[0] + member.last_name[0]
-      .links
-        include ./_project_cell-detailed-links
+      //.links
+        //include ./_project_cell-detailed-links
       .project-cell-description
         p= project.description_short
   .row.center-cell
