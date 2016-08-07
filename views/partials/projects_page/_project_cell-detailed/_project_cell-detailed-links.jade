@@ -1,0 +1,18 @@
+- var tasks = 0	
+- var tasksLeft = 'placeholder'
+if (tasks > 0)
+  - tasksLeft= helper.pluralize('task', tasks, true) + ' left'
+a.link(href='https://github.com/')
+  - var days = -1 //todo: 
+  if (days > 14)
+    p No recent commits
+  else if days == 0
+    p= 'Last commit was today' + ' - ' + tasksLeft
+  else
+    p= 'Last commit was ' + helper.pluralize('day', days, true) + ' ago' + ' - ' + tasksLeft
+a.link(href='/broken/')
+  - var positions = -1 //todo:
+  if (positions > 0)
+    p= helper.pluralize('position', positions, true) + ' avaliable'
+  else
+    p No positions avaliable

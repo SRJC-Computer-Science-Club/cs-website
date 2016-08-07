@@ -5,78 +5,155 @@
 			width:  100%;
 		}
 	}
-	.project-cell {
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 25%;
-		padding: 0 $margin-sm;
-		padding-right: 50px;
-		min-width: 196px;
-		h3 {
-
-		}
-
-		.project-cell-status::after {
+	.primary-project {
+		.project-cell {
 			position: absolute;
-			content: '';
-			width: 32px;
-			height: 32px;
-			right: 10px;
-			background: green;
-			border-radius: 16px;
-		}
+			top: 0;
+			right: 0;
+			width: 40%;
+			margin: $margin-lg;
+			padding-right: 50px;
 
-		p {
+			.project-cell-status::after {
+				position: absolute;
+				content: '';
+				width: 32px;
+				height: 32px;
+				right: 10px;
+				background: green;
+				border-radius: 16px;
+			}
+			h3, p {
+				text-align: right;
+				margin: $margin-lg 0;
+			}
+			.member {
+				p {
+					width: 30px;
+					height: 30px;
+					float: right;
+					background: $gray;
+					border-radius: 30px;
 
+					text-align: center;
+					padding: $margin-xs;
+					margin: $margin-xs 0 0 $margin-xs;
+				}
+			}
+			.member::after {
+				content: '';
+				display: table;
+				clear: both;
+			}
 		}
-		
-		h3, p {
-			text-align: right;
-			margin: $margin-lg 0;
-		}
-
-		.member {
+		.links {
+			position: absolute;
+			width: 40%;
+			right: 0;
+			bottom: 0;
+			margin: $margin-lg;
+			padding-right: 50px;
 			p {
-				width: 30px;
-				height: 30px;
-				float: right;
-				background: $gray;
-				border-radius: 30px;
-
-				text-align: center;
-				padding: $margin-xs;
-				margin: $margin-xs 0 0 $margin-xs;
+				text-align: right;
 			}
 		}
 
-		.member::after {
-			content: '';
-			display: table;
-			clear: both;
-		}
+    .project-cell-description {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			margin: $margin-lg;
+			width: 60%;
+    }
+    .center-cell {
+			width: 100%;
+			p, h1 {
+				text-align: center;
+			}
+    }
+    .project-headline {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			font-weight: bold;
+			font-size: 3em;
+			color: $black;
+    }
 	}
-	.project-cell-description {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		padding: 0 $margin-sm;
-		width: 45%;
-		min-width: 196px;
-	}
-	.center-cell {
-		width: 100%;
-		p, h1 {
-			text-align: center;
-		}
 
+	.secondary-project {
+		.project-cell {
+			position: absolute;
+			top: $margin-lg;
+			right: $margin-lg;
+			left: $margin-lg;
+			bottom: 0;
+			padding: 0 $margin-sm;
+			h4.project-cell-status {
+				padding-left: 24px;
+				text-align: left;
+
+			}
+			.project-cell-status::after {
+				position: absolute;
+				content: '';
+				width: 24px;
+				height: 24px;
+				left: 0;
+				background: green;
+				border-radius: 16px;
+			}
+			.project-cell-tasks {
+				position: absolute;
+				top: 0;
+				right: 0;
+
+			}
+			p, a {
+				text-align: left;
+				margin: $margin-lg 0;
+			}
+		}
+		.project-headline {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			font-weight: bold;
+			font-size: 2em;
+			color: $black;
+		}
+		.link {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 	}
-	.project-headline {
-		position: absolute;
-		bottom: 0;
-		width: 100%;
-		font-weight: bold;
-		font-size: 3em;
-		color: $black;
+	.archived-project {
+		padding: $margin-lg;
+		.project-cell {
+			position: absolute;
+			right: $margin-lg;
+			width: 25%;
+			h6, p, a {
+				margin: $margin-sm 0;
+				text-align: right;
+			}
+		}
+		.project-headline {
+			width: 75%;
+			text-align: left;
+			font-weight: bold;
+			font-size: 2em;
+			color: $black;
+		}
+		.link {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
 	}
 }
