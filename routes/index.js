@@ -98,6 +98,23 @@ router.get('/members', function(req, res, next) {
 
 
 
+/* GET member page. */
+router.get('/members/:memberID', function(req, res, next) {
+  console.log(req.params);
+
+  var member = tempDB.members[req.params.memberID];;
+
+  var navbar = {
+    active: 'members',
+    links: []
+  };
+
+  res.render('member', { title: 'CS Club' , member: member, navbar: navbar});
+});
+
+
+
+
 /* GET NEW-PAGE TEMPLATE. */
 router.get('/PLACEHOLDER', function(req, res, next) {
 
