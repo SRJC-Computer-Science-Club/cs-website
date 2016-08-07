@@ -1,0 +1,23 @@
+#members-page {
+    #members-list {
+        .card {
+          margin: $margin-lg;
+          padding: $margin-sm;
+        }
+        .avatar {
+            background: black;
+            width: 96px;
+            height: 84px;
+        }
+        h1.member-name {
+            text-align: left;
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .quick-links {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+    }
+}

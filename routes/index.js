@@ -92,7 +92,7 @@ router.get('/members', function(req, res, next) {
 
 
 
-  res.render('members', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar });
+  res.render('members', { title: 'CS Club',  members: tempDB.members, navbar: navbar, helper: helper});
 });
 
 
