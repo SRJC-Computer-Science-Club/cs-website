@@ -1,5 +1,5 @@
-.col-md-12.project-banner.card.primary-project
-  .row
+.col-md-12.project-banner.primary-project
+  .row.card
     .col-lg-12.project-banner-img
       a(href='/projects/' + project.id )
         img.img-fluid(src='http://placehold.it/1000x250/e5be90')
@@ -13,10 +13,8 @@
         //include ./_project_cell-detailed-links
       .project-cell-description
         p= project.description_short
-  .row.center-cell
     .col-md-12
       p most recent post
-  .row.center-cell
     .col-lg-12.project-banner-description.card-block
       h1.project-headline= project.title
         

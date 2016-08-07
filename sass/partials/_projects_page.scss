@@ -131,7 +131,10 @@
 		}
 	}
 	.archived-project {
-		padding: $margin-lg;
+		.card{
+			padding: $margin-lg;
+		}
+
 		.project-cell {
 			position: absolute;
 			right: $margin-lg;
