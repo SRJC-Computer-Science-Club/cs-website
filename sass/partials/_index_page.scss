@@ -1,5 +1,36 @@
 #index-page {
-    .project-spotlight {
-      
+  #project-spotlight {
+    .project-cell {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: $margin-sm;
+      padding-right: 24px;
+      h3, p {
+        text-align: right;
+      }
+      p.status::after {
+				position: absolute;
+				content: '';
+				width: 16px;
+				height: 16px;
+				right: 0;
+				background: green;
+				border-radius: 8px;
+			}
     }
+    #project-cell-content-picker {
+      p {
+        font-size: .75em;
+      }
+
+    }
+    .link {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
 }
