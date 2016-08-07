@@ -134,13 +134,15 @@
 		padding: $margin-lg;
 		.project-cell {
 			position: absolute;
-			right: 0;
+			right: $margin-lg;
+			width: 25%;
 			h6, p, a {
 				margin: $margin-sm 0;
 				text-align: right;
 			}
 		}
 		.project-headline {
+			width: 75%;
 			text-align: left;
 			font-weight: bold;
 			font-size: 2em;
