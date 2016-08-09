@@ -123,6 +123,7 @@ var members = [
     {
       github: 'https://github.com/whothat'
     },
+		'name@domain.com',
     ['C++','JavaScript']
   ),
   new Member(
@@ -130,6 +131,7 @@ var members = [
     {
       github: 'https://github.com/joshuasrjc'
     },
+		'name@domain.com',
     ['C++','JavaScript']
   ),
   new Member(
@@ -137,6 +139,7 @@ var members = [
     {
       github: 'https://github.com/LinnierGames'
     },
+		'name@domain.com',
     ['C++','JavaScript']
   ),
   new Member(
@@ -144,6 +147,7 @@ var members = [
     {
       github: 'https://github.com/Pastyguy'
     },
+		'name@domain.com',
     ['C++','JavaScript']
   )
 ];
