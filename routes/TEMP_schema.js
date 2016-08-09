@@ -1,7 +1,7 @@
 //This will act as temporary database placeholder
 
 
-function Project( id, title, description, description_short, status, links )
+function Project( id, title, description, description_short, status, links, images )
 {
 	this.id = id;
 	this.title = title;
@@ -9,6 +9,7 @@ function Project( id, title, description, description_short, status, links )
 	this.description_short = description_short;
 	this.status = status;
 	this.links = links;
+	this.images = images;
 }
 
 
@@ -46,6 +47,10 @@ var projects = [
 			checkvist: 'https://checkvist.com/checklists/542765',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
 			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		{
+			banner: 'banner.jpg',
+			cover: 'cover.jpg'
 		}
 	),
 	new Project(

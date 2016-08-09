@@ -41,6 +41,11 @@ p {
   margin: $margin-sm 0;
 }
 
+.card{
+  overflow: hidden;
+  padding: 0;
+}
+
 ////////////////////////////////
 // End default DOM tag styles //
 ////////////////////////////////
