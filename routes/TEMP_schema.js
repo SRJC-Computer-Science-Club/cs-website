@@ -137,7 +137,8 @@ var members = [
   new Member(
     2, 'Erick', 'Sanchez', 'my bio', 'my short bio',
     {
-      github: 'https://github.com/LinnierGames'
+      github: 'https://github.com/LinnierGames',
+      url: 'https://github.com/LinnierGames'
     },
 		'name@domain.com',
     ['C++','JavaScript']

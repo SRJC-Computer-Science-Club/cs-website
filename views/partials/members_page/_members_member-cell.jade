@@ -1,12 +1,5 @@
-.col-lg-12.card
-  .row
+.col-lg-12
+  .row.card
     .col-lg-2.avatar
-      p p
     .col-lg-10
-      a(href='/members/' + member.id)
-        h1.member-name= member.first_name + ' ' + member.last_name
-      - var p = 12
-      p= 'Working on ' + helper.pluralize('project', p, true)
-      .quick-links
-        each link in member.links
-          a(href=link)= 'helper.url_domain(link)'
+      p hi

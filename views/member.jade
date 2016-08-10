@@ -1,5 +1,38 @@
 extends layout
 
 block content
-  #member-page.content
-    p= member.first_name
+  #member-page.content.row
+    .col-lg-8.card
+      .row.name-badge
+        .col-lg-12
+          .col-lg-4.avatar
+          .col-lg-8
+            h1= member.first_name + ' ' + member.last_name
+            hr
+            .member-links
+              each link in member.links
+                a(href=link target='_blank').links
+                  img.links
+                  span= 'placeholder'
+                a(href=link target='_blank').links
+                  img.links
+                  span= 'placeholder'
+                a(href=link target='_blank').links
+                  img.links
+                  span= 'placeholder'
+      .row.info
+        .col-lg-12
+          p= member.bio
+    .col-lg-4
+      .row.project-list
+        .col-lg-12.card
+          h2 Projects
+          each project in member.projects
+            a.link(href='/projects/' + project.id)
+              p= project.title
+            p.role= project.role
+      .row
+        .col-lg-12.card
+          h2 Languages
+          each lang in member.languages
+            p= lang
