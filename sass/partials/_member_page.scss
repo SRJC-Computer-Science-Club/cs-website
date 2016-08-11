@@ -1,9 +1,6 @@
 #member-page {
   .name-badge {
-    >.col-lg-12 {
-      padding: $margin-lg;
-
-    }
+    padding: $margin-lg;
     .avatar {
       display: inline-block;
       width: 150px;
@@ -60,6 +57,17 @@
       font-style: italic;
       margin-top: 0;
       margin-bottom: $margin-lg;
+    }
+  }
+  .languages-list {
+    .list {
+      p {
+        float: left;
+        margin: 0 $margin-sm $margin-sm 0;
+        padding: 0 $margin-sm;
+        border-radius: 12px;
+        background: $gray;
+      }
     }
   }
 }

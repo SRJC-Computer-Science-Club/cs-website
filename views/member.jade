@@ -2,37 +2,37 @@ extends layout
 
 block content
   #member-page.content.row
-    .col-lg-8.card
-      .row.name-badge
+    .col-lg-8
+      .row.card
         .col-lg-12
-          .col-lg-4.avatar
-          .col-lg-8
-            h1= member.first_name + ' ' + member.last_name
-            hr
-            .member-links
-              each link in member.links
-                a(href=link target='_blank').links
-                  img.links
-                  span= 'placeholder'
-                a(href=link target='_blank').links
-                  img.links
-                  span= 'placeholder'
-                a(href=link target='_blank').links
-                  img.links
-                  span= 'placeholder'
-      .row.info
-        .col-lg-12
-          p= member.bio
+          .row.name-badge
+            .col-lg-3.avatar
+            .col-lg-9
+              h1= member.first_name + ' ' + member.last_name
+              hr
+              .member-links
+                if (member.email !== undefined)
+                  a(href='mailto:' + member.email).links
+                    img.links
+                    span= 'email'
+                each link in member.links
+                  a(href=link target='_blank').links
+                    img.links
+                    span= 'placeholder'
+          .row.info
+            .col-lg-12
+              p= member.bio
     .col-lg-4
-      .row.project-list
-        .col-lg-12.card
+      .row.project-list.card
+        .col-lg-12
           h2 Projects
           each project in member.projects
             a.link(href='/projects/' + project.id)
               p= project.title
             p.role= project.role
-      .row
-        .col-lg-12.card
+      .row.languages-list.card
+        .col-lg-12
           h2 Languages
-          each lang in member.languages
-            p= lang
+          .list
+            each lang in member.languages
+              p= lang
