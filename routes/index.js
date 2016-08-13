@@ -79,6 +79,65 @@ router.get('/', function(req, res, next) {
 
 
 
+
+/* GET members page. */
+router.get('/members', function(req, res, next) {
+
+  var navbar = {
+    active: 'members',
+    links: [
+    { name: 'Members of the Board',  url: '#'  },
+    { name: 'Programmers and Developers',  url: '#'  }
+  ]};
+
+  var members = tempDB.members;
+
+  for ( var member of members)
+  {
+    member.numberOfProjects = findProjectsForMember( member).length;
+  }
+
+  res.render('members', { title: 'CS Club',  members: members, navbar: navbar, helper: helper});
+});
+
+
+
+
+/* GET member page. */
+router.get('/members/:memberID', function(req, res, next) {
+  console.log(req.params);
+
+  var member = tempDB.members[req.params.memberID];
+
+  member.projects = findProjectsForMember(member);
+
+  var navbar = {
+    active: 'members',
+    links: []
+  };
+
+  res.render('member', { title: 'CS Club' , member: member, navbar: navbar, helper: helper});
+});
+
+
+
+
+/* GET NEW-PAGE TEMPLATE. */
+router.get('/PLACEHOLDER', function(req, res, next) {
+
+  var navbar = {
+    active: 'PAGE',
+    links: [
+    { name: 'ITEM',  url: '#'  },
+  ]};
+
+
+
+  res.render('JADE FILE', { title: 'CS Club', navbar: navbar });
+});
+
+
+
 function findProjectMembers( project )
 {
   var members = [];
@@ -98,6 +157,29 @@ function findProjectMembers( project )
   }
 
   return members;
+}
+
+
+
+function findProjectsForMember( member )
+{
+  var projects = [];
+
+  for( var member_project of tempDB.members_projects )
+  {
+      if ( member_project.member_id == member.id )
+      {
+        var potentialProject = tempDB.projects[member_project.project_id];
+
+        if (potentialProject !== undefined ) {
+          tempDB.projects[member_project.project_id].role = member_project.role;
+          projects.push( tempDB.projects[member_project.project_id]);
+        }
+      }
+
+  }
+
+  return projects;
 }
 
 module.exports = router;

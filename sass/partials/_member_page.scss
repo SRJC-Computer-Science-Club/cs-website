@@ -1,0 +1,73 @@
+#member-page {
+  .name-badge {
+    padding: $margin-lg;
+    .avatar {
+      display: inline-block;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url('http://placehold.it/350x150');
+    }
+    .member-links {
+      width: 100%;
+      height: 100%;
+      .links {
+        float: left;
+        img.links {
+          width: 30px;
+          height: 30px;
+          background: $gray;
+          border-radius: 15px;
+
+          text-align: center;
+          padding-left: 32px;
+          margin: $margin-xs;
+        }
+        img.links::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+        span {
+          position: relative;
+          top: $margin-sm;
+          margin: 0 $margin-sm;
+        }
+      }
+    }
+    h1 {
+      text-align: left;
+    }
+
+  }
+  .info {
+
+  }
+  .project-list {
+    .link {
+      font-size: 1.5em;
+      p {
+        margin-bottom: 0;
+      }
+    }
+    .role {
+      font-style: italic;
+      margin-top: 0;
+      margin-bottom: $margin-lg;
+    }
+  }
+  .languages-list {
+    .list {
+      p {
+        float: left;
+        margin: 0 $margin-sm $margin-sm 0;
+        padding: 0 $margin-sm;
+        border-radius: 12px;
+        background: $gray;
+      }
+    }
+  }
+}
