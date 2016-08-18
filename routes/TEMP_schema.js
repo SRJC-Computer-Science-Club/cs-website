@@ -140,9 +140,10 @@ var members = [
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
 		'Making apps on the iPhone and other projects.',
     {
-      github: 'https://github.com/LinnierGames',
-      facebook: 'https://www.facebook.com/erick.sanchez.988926',
-			twiter: 'https://twitter.com/Linnier__Games'
+      github: 'https://www.GitHub.com/LinnierGames',
+      facebook: 'https://www.Facebook.com/erick.sanchez.988926',
+			twiter: 'https://www.Twitter.com/Linnier__Games',
+			homepage: ''
     },
 		'esericksanc@gmail.com',
     ['C++','JavaScript','Objective-C','HTML & CSS']
