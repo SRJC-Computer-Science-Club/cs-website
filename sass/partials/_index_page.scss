@@ -1,4 +1,29 @@
 #index-page {
+  #top-news {
+
+  }
+  #join {
+    .card {
+      padding: $margin-lg;
+    }
+    h3 {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: $margin-lg 0 0;
+    }
+    p {
+      text-align: center;
+      font-size: 2em;
+
+    }
+    p.small {
+      font-size: 1em;
+
+    }
+
+  }
   #project-spotlight {
     .project-cell {
       position: absolute;
