@@ -39,3 +39,7 @@ bower_components/
 .vscode/
 
 *.log.*
+
+# resources folder
+
+resources/
