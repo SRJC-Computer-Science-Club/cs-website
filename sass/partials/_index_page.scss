@@ -59,3 +59,33 @@
     }
   }
 }
+#footer {
+  .links {
+    padding: $margin-xl $margin-lg;
+    background-color: $lightgray;
+    p {
+      font-size: 18px;
+      font-weight: bolder;
+
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+  }
+  .news-bar {
+    padding: $margin-sm $margin-lg;
+    background-color: rgb( 226, 226, 226);
+    p {
+      margin: 0;
+    }
+
+  }
+  .about {
+    padding: $margin-sm $margin-lg $margin-lg;
+    background-color: rgb( 216, 216, 216);
+    h4 {
+      margin: 0;
+    }
+  }
+}
