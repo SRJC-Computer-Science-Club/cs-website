@@ -14,11 +14,11 @@ block content
                 if (member.email !== undefined)
                   a(href='mailto:' + member.email).links
                     img.links
-                    span= 'email'
+                    span= member.email
                 each link in member.links
                   a(href=link target='_blank').links
                     img.links
-                    span= 'placeholder'
+                    span= helper.trimURL(link)
           .row.info
             .col-lg-12
               p= member.bio
