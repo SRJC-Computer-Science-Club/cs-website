@@ -1,8 +1,0 @@
-each project in projects
-	.col-md-12.project-banner
-		a.row.card(href='/projects/' + project.id )
-			.col-lg-9.project-banner-img
-				img.img-fluid(src= 'images/projects/' + project.title.toLowerCase() + '/banner.jpg')
-				h1.project-banner-headline= project.title
-			.col-lg-3.project-banner-description.card-block
-				p= project.description_short

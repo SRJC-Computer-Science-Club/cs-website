@@ -1,4 +1,5 @@
 #project-spotlight.row(ng-controller="ProjectListController")
 	h2 Project Spotlight
-	include ./_project_cell
+	each project in projects
+		include ./_homepage_project_cell
 hr
