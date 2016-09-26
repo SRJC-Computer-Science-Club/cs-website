@@ -6,8 +6,8 @@
         }
         .avatar {
           display: inline-block;
-          width: 100px;
-          height: 100px;
+          width: 96px;
+          height: 96px;
           border-radius: 50%;
           background-repeat: no-repeat;
           background-position: center center;
@@ -23,29 +23,22 @@
           position: absolute;
           right: 0;
           top: 0;
-          width: 30px;
+          width: 25%;
           .links {
             float: right;
             img.links {
+              float: left;
               width: 30px;
               height: 30px;
               background: $gray;
               border-radius: 15px;
-
-              text-align: center;
-              padding-left: 32px;
               margin: $margin-xs;
             }
-            img.links::after {
-              content: '';
-              display: table;
-              clear: both;
+            span {
+              float: left;
+              text-align: right;
+              margin: $margin-sm;
             }
-            // span {
-            //   position: relative;
-            //   top: $margin-sm;
-            //   margin: 0 $margin-sm;
-            // }
           }
         }
     }
