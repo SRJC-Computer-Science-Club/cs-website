@@ -20,7 +20,7 @@ router.get('/projects/:projectID', function(req, res, next) {
     links: []
   };
 
-  var project = projects[req.params.projectID];
+  var project = findProjectForID( projects, req.params.projectID);
 
   for ( var p of projects) {
     navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
@@ -135,6 +135,22 @@ router.get('/PLACEHOLDER', function(req, res, next) {
 
   res.render('JADE FILE', { title: 'CS Club', navbar: navbar });
 });
+
+
+
+function findProjectForID( projects, id )
+{
+  var found;
+  for( var project of projects)
+  {
+    if (project.id == id)
+      found = project;
+  }
+  console.log ( "LOG" + found);
+
+  return found;
+
+}
 
 
 
