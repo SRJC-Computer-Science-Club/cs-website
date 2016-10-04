@@ -146,7 +146,6 @@ function findProjectForID( projects, id )
     if (project.id == id)
       found = project;
   }
-  console.log ( "LOG" + found);
 
   return found;
 
