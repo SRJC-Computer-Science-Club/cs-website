@@ -1,7 +1,7 @@
 .col-lg-12
   .row.card
-    .col-lg-2.avatar
-    .col-lg-10
+    .col-lg-1.avatar
+    .col-lg-11
       a(href='/members/' + member.id)
         h1.member-name= member.first_name + ' ' + member.last_name
       if (member.bio_short !== undefined)
@@ -10,5 +10,5 @@
       .quick-links
         each link in member.links
           a(href=link target='_blank').links
+            span= helper.trimURL(link)
             img.links
-            //span= 'placeholder'

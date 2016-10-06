@@ -2,7 +2,7 @@
   .row.card
     .col-lg-12.project-banner-img
       a(href='/projects/' + project.id )
-        img.img-fluid(src='http://placehold.it/1000x250/e5be90')
+        img.img-fluid(src='images/projects/' + project.title.toLowerCase() + '/banner.jpg')
       .project-cell
         h3.project-cell-status= project.status
         p= helper.pluralize('member', project.members.length, true)

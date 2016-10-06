@@ -1,7 +1,7 @@
 //This will act as temporary database placeholder
 
 
-function Project( id, title, description, description_short, status, links )
+function Project( id, title, description, description_short, status, links, images )
 {
 	this.id = id;
 	this.title = title;
@@ -9,6 +9,7 @@ function Project( id, title, description, description_short, status, links )
 	this.description_short = description_short;
 	this.status = status;
 	this.links = links;
+	this.images = images;
 }
 
 
@@ -46,6 +47,10 @@ var projects = [
 			checkvist: 'https://checkvist.com/checklists/542765',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
 			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		{
+			banner: 'banner.jpg',
+			cover: 'cover.jpg'
 		}
 	),
 	new Project(
@@ -81,38 +86,6 @@ var projects = [
     {
       github: 'https://github.com/joshuasrjc/function-fighters'
     }
-  ),
-  new Project(
-    4,
-    'Project',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'An AI battle arena simulator',
-    'Falling Behind',
-		{}
-  ),
-  new Project(
-    5,
-    'Project',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'An AI battle arena simulator',
-    'Completed',
-		{}
-  ),
-  new Project(
-    6,
-    'Project',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'An AI battle arena simulator',
-    'In Progress',
-		{}
-  ),
-  new Project(
-    7,
-    'Project',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'An AI battle arena simulator',
-    'Completed',
-		{}
   )
 ];
 
@@ -140,9 +113,10 @@ var members = [
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
 		'Making apps on the iPhone and other projects.',
     {
-      github: 'https://github.com/LinnierGames',
-      facebook: 'https://www.facebook.com/erick.sanchez.988926',
-			twiter: 'https://twitter.com/Linnier__Games'
+      github: 'https://www.GitHub.com/LinnierGames',
+      facebook: 'https://www.Facebook.com/erick.sanchez.988926',
+			twiter: 'https://www.Twitter.com/Linnier__Games',
+			homepage: ''
     },
 		'esericksanc@gmail.com',
     ['C++','JavaScript','Objective-C','HTML & CSS']
