@@ -1,13 +1,14 @@
 //This will act as temporary database placeholder
 
 
-function Project( id, title, description, description_short, status, links, images )
+function Project( id, title, description, description_short, status, milestones, links, images )
 {
 	this.id = id;
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
 	this.status = status;
+	this.milestones = milestones;
 	this.links = links;
 	this.images = images;
 }
@@ -43,6 +44,7 @@ var projects = [
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
 		'In Progress',
+		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/563656',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
@@ -55,6 +57,7 @@ var projects = [
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'An AI battle arena simulator',
     'Scrimmaging!',
+		{},
     {
       github: 'https://github.com/joshuasrjc/function-fighters'
     }
@@ -65,6 +68,7 @@ var projects = [
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'An autonomous maze solving robot mouse',
 		'Delayed',
+		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/542765',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
@@ -81,6 +85,7 @@ var projects = [
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'A simple 2d platformer game',
     'On-Hold',
+		{},
     {
       checkvist: 'https://checkvist.com/checklists/560653',
       waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
