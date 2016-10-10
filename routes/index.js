@@ -122,6 +122,22 @@ router.get('/members/:memberID', function(req, res, next) {
 
 
 
+/* GET ABOUT PAGE. */
+router.get('/about', function(req, res, next) {
+
+  var navbar = {
+    active: 'about',
+    links: [{}]
+  };
+
+
+
+  res.render('about', { title: 'CS Club', navbar: navbar });
+});
+
+
+
+
 /* GET NEW-PAGE TEMPLATE. */
 router.get('/PLACEHOLDER', function(req, res, next) {
 
