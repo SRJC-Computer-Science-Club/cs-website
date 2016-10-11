@@ -1,3 +1,17 @@
 #about-page {
-
+	.avatar {
+		display: inline-block;
+		width: 350px;
+		height: 200px;
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		background-image: url('http://placehold.it/350x200');
+	}
+	.context-left {
+		text-align: left;
+	}
+	.context-right {
+		text-align: right;
+	}
 }
