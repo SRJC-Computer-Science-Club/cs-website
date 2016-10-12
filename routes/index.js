@@ -72,9 +72,15 @@ router.get('/', function(req, res, next) {
     { name: 'Recent Events',  url: '#'  }
   ]};
 
+  var results = [
+    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
+    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
+  ];
 
 
-  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar });
+  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar, canidates: results });
 });
 
 
