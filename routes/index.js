@@ -66,9 +66,9 @@ router.get('/', function(req, res, next) {
   var navbar = {
     active: 'home',
     links: [
-    { name: 'News',  url: '#'  },
-    { name: 'Join the Club',  url: '#'  },
-    { name: 'Top Projects',  url: '#'  },
+    { name: 'News',  url: '#top-news'  },
+    { name: 'Join the Club',  url: '#join'  },
+    { name: 'Top Projects',  url: '#project-spotlight'  },
     { name: 'Recent Events',  url: '#'  }
   ]};
 
