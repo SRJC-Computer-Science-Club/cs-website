@@ -36,7 +36,7 @@ function ProjectsMembers( id, project_id, member_id, role )
 }
 
 
-
+//3
 var projects = [
 	new Project(
 		1,
@@ -94,15 +94,27 @@ var projects = [
   )
 ];
 
-
+//7
 var members = [
+	new Member(
+		2, 'Erick',
+		'Sanchez',
+		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
+		'Making apps on the iPhone and on other platforms.',
+		{
+			github: 'https://www.GitHub.com/LinnierGames',
+			facebook: 'https://www.Facebook.com/erick.sanchez.988926',
+			twiter: 'https://www.Twitter.com/Linnier__Games',
+			homepage: ''
+		},
+		'esericksanc@gmail.com',
+		['C++','JavaScript','Objective-C','HTML & CSS']
+	),
   new Member(
-    0, 'Benjamin', 'Hough', 'my bio', undefined,
-    {
-      github: 'https://github.com/whothat'
-    },
+    4, 'Steven', 'Guido', 'my bio', undefined,
+    {},
 		undefined,
-    ['C++','JavaScript']
+    []
   ),
   new Member(
     1, 'Joshua', 'Murphy', 'my bio', undefined,
@@ -113,29 +125,42 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
-    2, 'Erick',
-		'Sanchez',
-		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
-		'Making apps on the iPhone and other projects.',
-    {
-      github: 'https://www.GitHub.com/LinnierGames',
-      facebook: 'https://www.Facebook.com/erick.sanchez.988926',
-			twiter: 'https://www.Twitter.com/Linnier__Games',
-			homepage: ''
-    },
-		'esericksanc@gmail.com',
-    ['C++','JavaScript','Objective-C','HTML & CSS']
-  ),
-  new Member(
-    3, 'Oran', 'Collins', 'my bio', undefined,
+    3, 'Oran', 'C', 'my bio', undefined,
     {
       github: 'https://github.com/Pastyguy'
+    },
+		undefined,
+    ['C++','JavaScript']
+  ),
+  new Member(
+    5, 'Alex', 'Chen', 'my bio', undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    6, 'Noah', '', 'my bio', undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    7, 'Conan', 'Skaife', 'my bio', undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    0, 'Benjamin', 'Hough', 'my bio', undefined,
+    {
+      github: 'https://github.com/whothat'
     },
 		undefined,
     ['C++','JavaScript']
   )
 ];
 
+//11
 var members_projects = [
 	//Micromouse
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
@@ -144,11 +169,14 @@ var members_projects = [
   new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
 	//CS Website
   new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
-  new ProjectsMembers( 6 , 1 , 2 , 'Designer' ),
+  new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Lead Developer' ),
 	//Function Fighters
-  new ProjectsMembers( 2 , 3 , 1 , 'Creator & AI Player' ),
-  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' )
+  new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
+  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
+  new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+  new ProjectsMembers( 9 , 3 , 3 , 'AI Player' )
 ]
 
 //Global instances for icons
