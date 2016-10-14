@@ -1,7 +1,7 @@
-each project in projects
-	if (project.id < 3)
+each project, i in projects
+	if (i < 3)
 		include ./_project_cell-detailed/_project_cell-detailed-top
-	else if (project.id < 6)
+	else if (i < 6)
 		include ./_project_cell-detailed/_project_cell-detailed-secondary
 	else
 		include ./_project_cell-detailed/_project_cell-detailed-archived

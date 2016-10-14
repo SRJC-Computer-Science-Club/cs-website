@@ -20,7 +20,7 @@ router.get('/projects/:projectID', function(req, res, next) {
     links: []
   };
 
-  var project = projects[req.params.projectID];
+  var project = findProjectForID( projects, req.params.projectID);
 
   for ( var p of projects) {
     navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
@@ -66,17 +66,19 @@ router.get('/', function(req, res, next) {
   var navbar = {
     active: 'home',
     links: [
-    { name: 'News',  url: '#'  },
-    { name: 'Join the Club',  url: '#'  },
-    { name: 'Top Projects',  url: '#'  },
+    { name: 'News',  url: '#top-news'  },
+    { name: 'Join the Club',  url: '#join'  },
+    { name: 'Top Projects',  url: '#project-spotlight'  },
     { name: 'Recent Events',  url: '#'  }
   ]};
 
   var results = [
-    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
-    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
+    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
+    {id: 5, first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
+    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
+    {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Second ICC Member'}
   ];
 
 
@@ -113,7 +115,7 @@ router.get('/members', function(req, res, next) {
 router.get('/members/:memberID', function(req, res, next) {
   console.log(req.params);
 
-  var member = tempDB.members[req.params.memberID];
+  var member = findMemeberForID(tempDB.members,req.params.memberID);
 
   member.projects = findProjectsForMember(member);
 
@@ -144,6 +146,36 @@ router.get('/PLACEHOLDER', function(req, res, next) {
 
 
 
+function findProjectForID( projects, id )
+{
+  var found;
+  for( var project of projects)
+  {
+    if (project.id == id)
+      found = project;
+  }
+
+  return found;
+
+}
+
+
+
+function findMemeberForID( members, id )
+{
+  var found;
+  for( var member of members)
+  {
+    if (member.id == id)
+      found = member;
+  }
+
+  return found;
+
+}
+
+
+
 function findProjectMembers( project )
 {
   var members = [];
@@ -153,11 +185,11 @@ function findProjectMembers( project )
   {
     if ( member_project.project_id == project.id )
     {
-      var potentialMember = tempDB.members[member_project.member_id];
+      var potentialMember = findMemeberForID(tempDB.members,member_project.member_id);
 
       if (potentialMember !== undefined ) {
-        tempDB.members[member_project.member_id].role = member_project.role;
-        members.push( tempDB.members[member_project.member_id]);
+        potentialMember.role = member_project.role;
+        members.push( potentialMember);
       }
     }
   }
@@ -175,11 +207,11 @@ function findProjectsForMember( member )
   {
       if ( member_project.member_id == member.id )
       {
-        var potentialProject = tempDB.projects[member_project.project_id];
+        var potentialProject = findProjectForID(tempDB.projects,member_project.project_id);
 
         if (potentialProject !== undefined ) {
-          tempDB.projects[member_project.project_id].role = member_project.role;
-          projects.push( tempDB.projects[member_project.project_id]);
+          potentialProject.role = member_project.role;
+          projects.push( potentialProject);
         }
       }
 
