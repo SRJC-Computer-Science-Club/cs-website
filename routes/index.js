@@ -76,7 +76,8 @@ router.get('/', function(req, res, next) {
     {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
     {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
     {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
+    {first_name: 'Oran', last_name: 'C', election: 'ICC Member'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'Second ICC Member'}
   ];
 
 
