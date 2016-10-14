@@ -94,7 +94,7 @@ var projects = [
   )
 ];
 
-//7
+//8
 var members = [
 	new Member(
 		2, 'Erick',
@@ -140,6 +140,12 @@ var members = [
   ),
   new Member(
     6, 'Noah', '', 'my bio', undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    8, 'Wind', 'Carrianna', 'my bio', undefined,
     {},
 		undefined,
     []
