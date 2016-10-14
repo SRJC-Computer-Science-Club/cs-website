@@ -5,7 +5,7 @@ block content
 		.row
 			.col-sm-9
 				.project-title
-					h1= project.title
+					h1= project.title + " (" + project.status + ")"
 			.col-sm-3
 				ul.project-quick-links-container
 					each link, name in project.links
