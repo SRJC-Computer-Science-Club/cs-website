@@ -6,7 +6,7 @@
         h1.member-name= member.first_name + ' ' + member.last_name
       if (member.bio_short !== undefined)
         p= '"' + member.bio_short + '"'
-      p= 'Working on ' + helper.pluralize('project', member.numberOfProjects, true)
+      p= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
       .quick-links
         each link in member.links
           a(href=link target='_blank').links

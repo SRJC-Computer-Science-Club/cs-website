@@ -1,6 +1,6 @@
 each member in project.members
 	.col-md-6
-		.project-member.card
+		a(href='/members/'+ member.id).project-member.card
 			img.img-circle.pull-xs-left(src='http://placehold.it/64x64/77cb6f')
 			.project-member-text
 				//name
