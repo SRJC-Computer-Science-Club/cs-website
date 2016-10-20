@@ -1,0 +1,34 @@
+extends layout
+
+block content
+  #testing-page.content
+    .grid-system 
+      .row
+        .col-lg-6
+          p .col-lg-6
+        .col-lg-6
+          p .col-lg-6
+      .row
+        .col-md-6
+          p .col-md-6
+        .col-md-6
+          p .col-md-6
+      .row
+        .col-sm-6
+          p .col-sm-6
+        .col-sm-6
+          p .col-sm-6
+      .row
+        .col-xs-6
+          p .col-xs-6
+        .col-xs-6
+          p .col-xs-6
+    .grid-system
+      .row
+        .col-xs-3.col-sm-6.col-md-9.col-lg-11
+          .visible-xs-block
+            p mobile
+          .visible-sm-block
+            p tablet
+          .visible-md-block
+            p desktop
