@@ -130,6 +130,23 @@ router.get('/members/:memberID', function(req, res, next) {
 
 
 
+/* GET Testing. */
+router.get('/testing', function(req, res, next) {
+
+  var navbar = {
+    active: '',
+    links: [
+    { name: 'ITEM',  url: '#'  },
+  ]};
+
+
+
+  res.render('testing', { title: 'testing', navbar: navbar });
+});
+
+
+
+
 /* GET NEW-PAGE TEMPLATE. */
 router.get('/PLACEHOLDER', function(req, res, next) {
 
