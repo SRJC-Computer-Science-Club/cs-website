@@ -107,7 +107,6 @@ var members = [
 			github: 'https://www.GitHub.com/LinnierGames',
 			facebook: 'https://www.Facebook.com/erick.sanchez.988926',
 			twiter: 'https://www.Twitter.com/Linnier__Games',
-			homepage: ''
 		},
 		'esericksanc@gmail.com',
 		['C++','JavaScript','Objective-C','HTML & CSS']
@@ -121,18 +120,19 @@ var members = [
   new Member(
     1, 'Joshua', 'Murphy', 'my bio', undefined,
     {
-      github: 'https://github.com/joshuasrjc'
+      github: 'https://www.github.com/joshuasrjc'
     },
 		undefined,
     ['C++','JavaScript']
   ),
   new Member(
-    3, 'Oran', 'C', 'my bio', undefined,
+    3, 'Oran', 'C', 'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
     {
-      github: 'https://github.com/Pastyguy'
+      github: 'https://www.github.com/Pastyguy'
     },
 		undefined,
-    ['C++','JavaScript']
+    ['C++','HTML & CSS', 'python', 'JavaScript', 'BASH']
   ),
   new Member(
     8, 'Wind', 'Carrianna', 'my bio', undefined,
@@ -161,7 +161,7 @@ var members = [
   new Member(
     0, 'Benjamin', 'Hough', 'my bio', undefined,
     {
-      github: 'https://github.com/whothat'
+      github: 'https://www.github.com/whothat'
     },
 		undefined,
     ['C++','JavaScript']
