@@ -43,3 +43,7 @@ bower_components/
 # resources folder
 
 resources/
+
+# testing page
+sass/partials/_testing_page.scss
+views/testing.jade
