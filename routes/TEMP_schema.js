@@ -34,7 +34,7 @@ function ProjectsMembers( id, project_id, member_id, role )
 	this.role = role;
 }
 
-//3
+//4
 var projects = [
 	new Project(
 		1,
@@ -47,7 +47,8 @@ var projects = [
 		{
 			checkvist: 'https://checkvist.com/checklists/563656',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
-			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website'
+			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
+			figma: 'https://www.figma.com/files/project/64393/Club-Website'
 		}
   ),
   new Project(
@@ -93,10 +94,20 @@ var projects = [
       waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
       github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
     }
+  ),
+  new Project(
+    4,
+    'Quad-Copter',
+    '<a href=\'\\members\\3\'>I</a> worked on a landmine detection quadcopter with college <a href=\'\\members\\9\'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.',
+		'',
+    'Archived',
+		'',
+		{},
+    {}
   )
 ];
 
-//8
+//9
 var members = [
 	new Member(
 		2, 'Erick',
@@ -165,14 +176,23 @@ var members = [
     },
 		undefined,
     ['C++','JavaScript']
+  ),
+  new Member(
+    9, 'Yekalo', 'Aberha', 'my bio', undefined,
+    {
+      github: 'https://www.github.com/yyekalo'
+    },
+		undefined,
+    []
   )
 ];
 
-//12
+//15
 //0-Ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
-//0-micromouse 1-cs website 2-plattformer 3-function fighters
+//0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 var members_projects = [
 	//Micromouse
+  new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
   new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
   new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
@@ -185,9 +205,12 @@ var members_projects = [
   new ProjectsMembers( 10 , 2 , 2 , 'Lead Developer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
-  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
+  new ProjectsMembers( 7 , 3 , 2 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
-  new ProjectsMembers( 9 , 3 , 3 , 'AI Player' )
+  new ProjectsMembers( 9 , 3 , 3 , 'AI Player' ),
+	//Quad-Copter
+  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
+  new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
 ]
 
 //Global instances for icons
@@ -210,6 +233,13 @@ var services = {
 	{
 		name: 'Checkvist',
 		icon_sm: 'checkvist-icon-sm.png',
+		icon_md: '',
+		icon_lg: ''
+	},
+	figma:
+	{
+		name: 'Figma',
+		icon_sm: 'figma-icon-sm.png',
 		icon_md: '',
 		icon_lg: ''
 	}
