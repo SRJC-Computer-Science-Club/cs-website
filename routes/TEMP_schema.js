@@ -1,19 +1,18 @@
 //This will act as temporary database placeholder
 
 
-function Project( id, title, description, description_short, status, milestones, links, images )
+function Project( id, title, description, description_short, status, post, milestones, links, images )
 {
 	this.id = id;
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
 	this.status = status;
+	this.post = post;
 	this.milestones = milestones;
 	this.links = links;
 	this.images = images;
 }
-
-
 
 function Member( id, first_name, last_name, bio, bio_short, links, email, languages )
 {
@@ -35,7 +34,6 @@ function ProjectsMembers( id, project_id, member_id, role )
 	this.role = role;
 }
 
-
 //3
 var projects = [
 	new Project(
@@ -44,6 +42,7 @@ var projects = [
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
 		'In Progress',
+		'Developing for Mobile Version!',
 		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/563656',
@@ -57,6 +56,7 @@ var projects = [
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'An AI battle arena simulator',
     'Scrimmaging!',
+		'Would you like to join?!',
 		{},
     {
       github: 'https://github.com/joshuasrjc/function-fighters'
@@ -68,6 +68,7 @@ var projects = [
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'An autonomous maze solving robot mouse',
 		'Delayed',
+		'',
 		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/542765',
@@ -85,6 +86,7 @@ var projects = [
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'A simple 2d platformer game',
     'On-Hold',
+		'',
 		{},
     {
       checkvist: 'https://checkvist.com/checklists/560653',
@@ -133,6 +135,12 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
+    8, 'Wind', 'Carrianna', 'my bio', undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
     5, 'Alex', 'Chen', 'my bio', undefined,
     {},
 		undefined,
@@ -140,12 +148,6 @@ var members = [
   ),
   new Member(
     6, 'Noah', '', 'my bio', undefined,
-    {},
-		undefined,
-    []
-  ),
-  new Member(
-    8, 'Wind', 'Carrianna', 'my bio', undefined,
     {},
 		undefined,
     []
@@ -166,7 +168,9 @@ var members = [
   )
 ];
 
-//11
+//12
+//0-Ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
+//0-micromouse 1-cs website 2-plattformer 3-function fighters
 var members_projects = [
 	//Micromouse
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
@@ -174,8 +178,9 @@ var members_projects = [
   new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
   new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
 	//CS Website
-  new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
   new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
+  new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
+  new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	//2D Platformer
   new ProjectsMembers( 10 , 2 , 2 , 'Lead Developer' ),
 	//Function Fighters
