@@ -4,6 +4,11 @@ block content
   #testing-page.content
     .grid-system 
       .row
+        .col-xl-6
+          p .col-xl-6
+        .col-xl-6
+          p .col-xl-6
+      .row
         .col-lg-6
           p .col-lg-6
         .col-lg-6
@@ -25,10 +30,24 @@ block content
           p .col-xs-6
     .grid-system
       .row
-        .col-xs-3.col-sm-6.col-md-9.col-lg-11
-          .visible-xs-block
-            p mobile
-          .visible-sm-block
-            p tablet
-          .visible-md-block
-            p desktop
+        .col-xs-4.col-sm-6.col-md-8.col-lg-10.col-xl-12
+          .hidden-sm-up
+            p mobile xs
+          .hidden-xs-down.hidden-md-up
+            p mobile landscape sm
+          .hidden-sm-down.hidden-lg-up
+            p tablet md
+          .hidden-md-down.hidden-xl-up
+            p desktop lg
+          .hidden-lg-down
+            p HD desktop xl
+    hr
+    p examples
+    .example-1.grid-system
+      .row
+        .col-lg-10.col-md-8
+          h1 but over here is text
+          p Lurem
+          p.hidden-xs-down extra text
+        .col-lg-2.col-md-4
+          h1 here lies an image
