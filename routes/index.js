@@ -27,8 +27,13 @@ router.get('/', function(req, res, next) {
     {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
     {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'}
   ];
+  var projects = tempDB.projects;
 
-  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar, canidates: results });
+  for ( var project of projects) {
+    project.members= findProjectMembers(project);
+  }
+
+  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results });
 });
 
 

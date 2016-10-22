@@ -21,15 +21,18 @@
 				.col-sm-4
 					p Members
 					.member
-						each member in project.members
-							p= member.first_name[0] + member.last_name[0]
+						if (project.members.length > 0) 
+							each member in project.members
+								p= member.first_name[0] + member.last_name[0]
+						else
+							span no participating members
 			.row.project-status
 				.col-sm-12
 					span= project.status
 			.row.project-post
 				.col-sm-12
 					p.header Most recent post
-					p= project.post
+					p= project.post == "" ? "Nothing to report" : project.post
 			.row.project-description
 				.col-sm-12
 					p= project.description_short
@@ -51,12 +54,15 @@
 				.col-sm-12
 					p.header Members
 					.member
-						each member in project.members
-							p= member.first_name[0] + member.last_name[0]
+						if (project.members.length > 0) 
+							each member in project.members
+								p= member.first_name[0] + member.last_name[0]
+						else
+							span no participating members
 			.row.project-post
 				.col-sm-12
 					p.header Most recent post
-					p= project.post
+					p= project.post == "" ? "Nothing to report" : project.post
 			.row.project-description
 				.col-sm-12
 					p= project.description_short
