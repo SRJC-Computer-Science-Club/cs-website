@@ -69,31 +69,35 @@
       right: 0;
     }
   }
-  #device-sm {
+  #device-phone {
     .project-headline {
       background: $gray;
-
+    }
+    .project-members {
+      background: $gray;
+      padding: $margin-sm 0;
     }
     .project-status {
       //TODO apply this background color to the back-back ground
       background: $light-gray;
-      margin: 12px;
+      margin: $margin-sm;
       background: green;
       color: white;
     }
     .project-post {
       background: $lightgray;
+      padding: $margin-sm 0;
 
     }
     .project-description {
       background: $lightergray;
+      padding: $margin-sm 0;
 
     }
     .show-more {
       background: $lightergray;
 
     }
-
     .project-banner-headline {
       margin: 0;
       padding-top: $margin-sm;
@@ -107,7 +111,6 @@
       background: linear-gradient(0, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
     }
     .member {
-      padding: 0 $margin-sm;
       p {
         width: 24px;
         height: 24px;
