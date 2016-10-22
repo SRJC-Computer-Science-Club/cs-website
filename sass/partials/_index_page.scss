@@ -69,6 +69,58 @@
       right: 0;
     }
   }
+  #device-sm {
+    .project-headline {
+      background: $gray;
+
+    }
+    .project-status {
+      //TODO apply this background color to the back-back ground
+      background: $light-gray;
+      margin: 12px;
+      background: green;
+      color: white;
+    }
+    .project-post {
+      background: $lightgray;
+
+    }
+    .project-description {
+      background: $lightergray;
+
+    }
+    .show-more {
+      background: $lightergray;
+
+    }
+
+    .project-banner-headline {
+      margin: 0;
+      padding-top: $margin-sm;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			font-weight: bold;
+			font-size: 1.5em;
+			color: black;
+      background: linear-gradient(0, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    }
+    .member {
+      padding: 0 $margin-sm;
+      p {
+        width: 24px;
+        height: 24px;
+        float: right;
+        background: $gray-darkgray;
+        border-radius: 30px;
+
+        text-align: center;
+        padding: $margin-xs;
+        margin: $margin-xs 0 0 $margin-xs;
+      }
+    }
+  }
 }
 #footer {
   .links {

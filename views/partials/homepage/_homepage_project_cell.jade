@@ -1,5 +1,6 @@
 .col-md-12.project-banner
-	.row.card
+	//Tablet-Desktop-HD Desktop
+	.row.card.hidden-sm-down
 		.col-lg-9.project-banner-img
 			img.img-fluid(src= 'images/projects/' + project.title.toLowerCase() + '/banner.jpg')
 			h1.project-banner-headline= project.title
@@ -9,3 +10,33 @@
 			a.link(href='/projects/' + project.id )
 		.col-lg-3.project-banner-description
 			include ./_homepage_project_cell-content-picker
+	//Phone landscape sm
+	#device-sm.row.card.hidden-md-up.hidden-xs-down
+		.col-sm-12
+			.row.project-headline
+				.col-sm-8.project-banner-img
+					img.img-fluid(src= 'images/projects/' + project.title.toLowerCase() + '/banner.jpg')
+					h1.project-banner-headline= project.title
+					a.link(href='/projects/' + project.id )
+				.col-sm-4
+					p Members
+					.member
+						each member in project.members
+							p= member.first_name[0] + member.last_name[0]
+			.row.project-status
+				.col-sm-12
+					span= project.status
+			.row.project-post
+				.col-sm-12
+					p.header Most recent post
+					p= project.post
+			.row.project-description
+				.col-sm-12
+					p= project.description_short
+			.row.show-more
+				.col-sm-12
+					a show more
+	//Phone xs
+	#device-xs.row.card.hidden-sm-up
+		.col-xs-12
+			
