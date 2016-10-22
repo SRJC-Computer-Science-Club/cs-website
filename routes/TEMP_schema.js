@@ -218,28 +218,28 @@ var services = {
 	github:
 	{
 		name: 'GitHub',
-		icon_sm: 'github-icon-sm.png',
+		icon_sm: 'github-icon-42@2x.png',
 		icon_md: '',
 		icon_lg: ''
 	},
 	waffle:
 	{
 		name: 'WaffleIO',
-		icon_sm: 'waffleio-icon-sm.png',
+		icon_sm: 'waffleio-icon-42@2x.png',
 		icon_md: '',
 		icon_lg: ''
 	},
 	checkvist:
 	{
 		name: 'Checkvist',
-		icon_sm: 'checkvist-icon-sm.png',
+		icon_sm: 'checkvist-icon-42@2x.png',
 		icon_md: '',
 		icon_lg: ''
 	},
 	figma:
 	{
 		name: 'Figma',
-		icon_sm: 'figma-icon-sm.png',
+		icon_sm: 'figma-icon-42@2x.png',
 		icon_md: '',
 		icon_lg: ''
 	}
