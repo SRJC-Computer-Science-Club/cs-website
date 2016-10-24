@@ -328,7 +328,6 @@ var project_area_requests = [
 		[],
 		2
 	)
-
 ];
 
 //Global instances for icons
