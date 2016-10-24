@@ -123,6 +123,9 @@
 
       }
       .position-requests {
+        .table {
+          margin-bottom: 0;
+        }
         .table td.title {
           font-weight: bold;
           text-align: left;
@@ -161,6 +164,8 @@
   }
 }
 #footer {
+  .col-sm-12 {
+  }
   .links {
     padding: $margin-xl $margin-lg;
     background-color: $lightgray;
