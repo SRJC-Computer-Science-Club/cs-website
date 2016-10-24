@@ -5,7 +5,7 @@
 				img.img-fluid(src='/images/projects/' + project.title.toLowerCase() + '/cover.jpg' style="width: 100%")
 		.row
 			.col-xs-12
-				p| Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor corporis, eius excepturi. Labore enim, possimus nam facere ea ut officiis, sint iure doloremque assumenda delectus odio sit, voluptatibus placeat consequuntur.	 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae deserunt quas dignissimos, vitae, sint repellendus, perspiciatis reprehenderit similique, consequuntur dolores alias quae cupiditate molestias tenetur pariatur amet assumenda nostrum tempora.
+				p= project.description
 	.col-sm-2
 		each index in [1,2,3,4]
 			.col-xs-12.card(style='padding: 0')

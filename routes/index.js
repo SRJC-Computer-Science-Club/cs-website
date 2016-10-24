@@ -9,38 +9,32 @@ router.get('*', function(req, res, next) {
   next();
 });
 
-// GET project page
-router.get('/projects/:projectID', function(req, res, next) {
-  console.log(req.params);
-
-  var projects = tempDB.projects;
-
+/* GET home page. */
+router.get('/', function(req, res, next) {
   var navbar = {
-    active: 'projects',
-    links: []
-  };
+    active: 'home',
+    links: [
+    { name: 'News',  url: '#top-news'  },
+    { name: 'Join the Club',  url: '#join'  },
+    { name: 'Top Projects',  url: '#project-spotlight'  },
+    { name: 'Recent Events',  url: '#'  }
+  ]};
 
-  var project = projects[req.params.projectID];
+  var results = [
+    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Vice-President & Second ICC Member'},
+    {id: 5, first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
+    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
+    {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'}
+  ];
 
-  for ( var p of projects) {
-    navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
-  }
-
-
-  var members = findProjectMembers( project );
-
-  project.members = members
-  console.log(project);
-
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar});
+  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar, canidates: results });
 });
-
 
 
 
 /* GET Projects page. */
 router.get('/projects/', function(req, res, next) {
-
   var projects = tempDB.projects;
 
   var navbar = {
@@ -53,25 +47,25 @@ router.get('/projects/', function(req, res, next) {
     navbar.links.push({name: project.title, url: '/projects/' +  project.id});
   }
 
-console.log( navbar);
   res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
 });
 
-
-
-
-/* GET home page. */
-router.get('/', function(req, res, next) {
+// GET project page
+router.get('/projects/:projectID', function(req, res, next) {
+  var projects = tempDB.projects;
 
   var navbar = {
-    active: 'home',
-    links: [
-    { name: 'News',  url: '#'  },
-    { name: 'Join the Club',  url: '#'  },
-    { name: 'Top Projects',  url: '#'  },
-    { name: 'Recent Events',  url: '#'  }
-  ]};
+    active: 'projects',
+    links: []
+  };
 
+  var project = findProjectForID( projects, req.params.projectID);
+
+  for ( var p of projects) {
+    navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
+  }
+
+  var members = findProjectMembers( project );
   var results = [
     {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
     {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
@@ -79,16 +73,15 @@ router.get('/', function(req, res, next) {
     {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
   ];
 
+  project.members = members
 
-  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar, canidates: results });
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: resultsk, navbar: navbar});
 });
-
 
 
 
 /* GET members page. */
 router.get('/members', function(req, res, next) {
-
   var navbar = {
     active: 'members',
     links: [
@@ -106,14 +99,9 @@ router.get('/members', function(req, res, next) {
   res.render('members', { title: 'CS Club',  members: members, navbar: navbar, helper: helper});
 });
 
-
-
-
 /* GET member page. */
 router.get('/members/:memberID', function(req, res, next) {
-  console.log(req.params);
-
-  var member = tempDB.members[req.params.memberID];
+  var member = findMemeberForID(tempDB.members,req.params.memberID);
 
   member.projects = findProjectsForMember(member);
 
@@ -124,8 +112,6 @@ router.get('/members/:memberID', function(req, res, next) {
 
   res.render('member', { title: 'CS Club' , member: member, navbar: navbar, helper: helper});
 });
-
-
 
 
 /* GET ABOUT PAGE. */
@@ -142,21 +128,46 @@ router.get('/about', function(req, res, next) {
 });
 
 
-
-
 /* GET NEW-PAGE TEMPLATE. */
-router.get('/PLACEHOLDER', function(req, res, next) {
-
+router.get('/placholder', function(req, res, next) {
   var navbar = {
-    active: 'PAGE',
+    active: 'page',
     links: [
     { name: 'ITEM',  url: '#'  },
   ]};
 
-
-
-  res.render('JADE FILE', { title: 'CS Club', navbar: navbar });
+  res.render('jade_file', { title: 'CS Club', navbar: navbar });
 });
+
+
+
+function findProjectForID( projects, id )
+{
+  var found;
+  for( var project of projects)
+  {
+    if (project.id == id)
+      found = project;
+  }
+
+  return found;
+
+}
+
+
+
+function findMemeberForID( members, id )
+{
+  var found;
+  for( var member of members)
+  {
+    if (member.id == id)
+      found = member;
+  }
+
+  return found;
+
+}
 
 
 
@@ -169,11 +180,11 @@ function findProjectMembers( project )
   {
     if ( member_project.project_id == project.id )
     {
-      var potentialMember = tempDB.members[member_project.member_id];
+      var potentialMember = findMemeberForID(tempDB.members,member_project.member_id);
 
       if (potentialMember !== undefined ) {
-        tempDB.members[member_project.member_id].role = member_project.role;
-        members.push( tempDB.members[member_project.member_id]);
+        potentialMember.role = member_project.role;
+        members.push( potentialMember);
       }
     }
   }
@@ -191,11 +202,11 @@ function findProjectsForMember( member )
   {
       if ( member_project.member_id == member.id )
       {
-        var potentialProject = tempDB.projects[member_project.project_id];
+        var potentialProject = findProjectForID(tempDB.projects,member_project.project_id);
 
         if (potentialProject !== undefined ) {
-          tempDB.projects[member_project.project_id].role = member_project.role;
-          projects.push( tempDB.projects[member_project.project_id]);
+          potentialProject.role = member_project.role;
+          projects.push( potentialProject);
         }
       }
 
