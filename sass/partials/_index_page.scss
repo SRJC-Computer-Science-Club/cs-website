@@ -164,42 +164,55 @@
   }
 }
 #footer {
-  .col-sm-12 {
+  .links, .news-bar, .news-subbar, .about {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1300px;
+    padding: $margin-lg 6px;
+
   }
-  .links {
-    padding: $margin-xl $margin-lg;
+  .foot-wrapper-1 {
+    margin: 0 auto;
     background-color: $lightgray;
-    p {
-      font-size: 18px;
-      font-weight: bolder;
+    .links {
+      p {
+        font-size: 18px;
+        font-weight: bolder;
 
-    }
-    ul {
-      list-style: none;
-      padding: 0;
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
     }
   }
-  .news-bar {
-    padding: $margin-sm $margin-lg;
+  .foot-wrapper-2 {
+    margin: 0 auto;
     background-color: rgb( 226, 226, 226);
-    p {
-      margin: 0;
-    }
+    .news-bar {
+      p {
+        margin: 0;
+      }
 
+    }
   }
-  .news-subbar {
-    padding: $margin-sm $margin-lg;
+  .foot-wrapper-3 {
+    margin: 0 auto;
     background-color: rgb( 216, 216, 216);
-    p {
-      margin: 0;
-    }
+    .news-subbar {
+      p {
+        margin: 0;
+      }
 
+    }
   }
-  .about {
-    padding: $margin-sm $margin-lg $margin-lg;
+  .foot-wrapper-4 {
+    margin: 0 auto;
     background-color: rgb( 206, 206, 206);
-    h4 {
-      margin: 0;
+    .about {
+      h4 {
+        margin: 0;
+      }
     }
   }
 }
