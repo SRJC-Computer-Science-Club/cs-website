@@ -114,20 +114,6 @@ router.get('/members/:memberID', function(req, res, next) {
 
 
 
-/* GET Testing. */
-router.get('/testing', function(req, res, next) {
-  var navbar = {
-    active: '',
-    links: [
-    { name: 'ITEM',  url: '#'  },
-  ]};
-  var projects = tempDB.projects;
-
-  res.render('testing', { title: 'testing', projects: projects, navbar: navbar });
-});
-
-
-
 /* GET NEW-PAGE TEMPLATE. */
 router.get('/placholder', function(req, res, next) {
   var navbar = {
