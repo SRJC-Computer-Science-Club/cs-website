@@ -33,7 +33,7 @@ function ProjectsMembers( id, project_id, member_id, role, assignedArea )
 	this.member_id = member_id;
 	this.role = role;
 
-	this.assignedArea = 1;
+	this.assignedArea = assignedArea;
 }
 
 function ProjectAreaRequests( id, project_id, title, description, project_interest, nPositions, assets, author_id)
@@ -257,18 +257,8 @@ var members_projects = [
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
 ];
 
-var projectAreaRequests = [
-	new ProjectAreaRequests( 1, 1,
-	"Front-End Developers",
-	"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
-	5, 4,
-	[
-		{title: "HTML/CSS/Boostrap", experience: 3},
-		{title: "Java", experience: 1}
-	],
-	2
-	)
-
+var project_area_requests = [
+	new ProjectAreaRequests( 0, 1, "Front-End Developers", "Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.", 5, 4, [{title: "HTML/CSS/Boostrap", experience: 3}, {title: "Java", experience: 1}], 2)
 ];
 
 //Global instances for icons
@@ -307,5 +297,6 @@ module.exports = {
 	projects,
 	members,
   members_projects,
+	project_area_requests,
 	services
 };

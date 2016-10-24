@@ -30,6 +30,7 @@ router.get('/', function(req, res, next) {
 
   for ( var project of projects) {
     project.members= findProjectMembers(project);
+    project.areaRequests= findProjectAreaRequests(project);
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results });
@@ -192,11 +193,28 @@ function findProjectMembers( project )
 
 
 
+function findProjectAreaRequests( project )
+{
+  var requests = [];
+
+  for ( var area_request of tempDB.project_area_requests )
+  {
+    if (project.id == area_request.project_id)
+    {
+      requests.push(area_request);
+    }
+  }
+
+  return requests;
+}
+
+
+
 function findProjectsForMember( member )
 {
   var projects = [];
 
-  for( var member_project of tempDB.members_projects )
+  for ( var member_project of tempDB.members_projects )
   {
       if ( member_project.member_id == member.id )
       {
