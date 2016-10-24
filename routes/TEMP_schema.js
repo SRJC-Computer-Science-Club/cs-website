@@ -26,12 +26,26 @@ function Member( id, first_name, last_name, bio, bio_short, links, email, langua
 	this.languages = languages;
 }
 
-function ProjectsMembers( id, project_id, member_id, role )
+function ProjectsMembers( id, project_id, member_id, role, assignedArea )
 {
   this.id = id;
 	this.project_id = project_id;
 	this.member_id = member_id;
 	this.role = role;
+
+	this.assignedArea = assignedArea;
+}
+
+function ProjectAreaRequests( id, project_id, title, description, project_interest, nPositions, assets, author_id)
+{
+	this.id = id;
+	this.project_id = project_id;
+	this.title = title;
+	this.description = description;
+	this.project_interest = project_interest;
+	this.nPositions = nPositions;
+	this.assets = assets;
+	this.author_id = author_id;
 }
 
 //4
@@ -211,7 +225,21 @@ var members_projects = [
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
-]
+];
+
+var projectAreaRequests = [
+	new ProjectAreaRequests( 1, 1,
+	"Front-End Developers",
+	"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
+	5, 4,
+	[
+		{title: "HTML/CSS/Boostrap", experience: 3},
+		{title: "Java", experience: 1}
+	],
+	2
+	)
+
+];
 
 //Global instances for icons
 var services = {
