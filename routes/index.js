@@ -101,7 +101,7 @@ router.get('/members', function(req, res, next) {
 
 /* GET member page. */
 router.get('/members/:memberID', function(req, res, next) {
-  var member = findMemeberForID(tempDB.members,req.params.memberID);
+  var member = findMemberForID(tempDB.members,req.params.memberID);
 
   member.projects = findProjectsForMember(member);
 
@@ -156,7 +156,7 @@ function findProjectForID( projects, id )
 
 
 
-function findMemeberForID( members, id )
+function findMemberForID( members, id )
 {
   var found;
   for( var member of members)
@@ -180,7 +180,7 @@ function findProjectMembers( project )
   {
     if ( member_project.project_id == project.id )
     {
-      var potentialMember = findMemeberForID(tempDB.members,member_project.member_id);
+      var potentialMember = findMemberForID(tempDB.members,member_project.member_id);
 
       if (potentialMember !== undefined ) {
         potentialMember.role = member_project.role;
