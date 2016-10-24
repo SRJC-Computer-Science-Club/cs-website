@@ -63,19 +63,21 @@ var projects = [
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
 			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
 			figma: 'https://www.figma.com/files/project/64393/Club-Website'
-		}
+		},
+		{}
   ),
-  new Project(
-    3,
-    'Function Fighters',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'An AI battle arena simulator',
-    'Scrimmaging!',
+	new Project(
+		3,
+		'Function Fighters',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An AI battle arena simulator',
+		'Scrimmaging!',
 		'Would you like to join?!',
 		{},
-    {
-      github: 'https://github.com/joshuasrjc/function-fighters'
-    }
+		{
+		  github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		{}
   ),
 	new Project(
 		0,
@@ -90,9 +92,20 @@ var projects = [
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
 			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
 		},
+		[
+			"park1.jpeg",
+			"park2.jpeg",
+			"park3.jpeg",
+			"park4.jpeg",
+			"park5.jpeg",
+			"park6.jpeg",
+			"park7.jpeg"
+		],
 		{
-			banner: 'banner.jpg',
-			cover: 'cover.jpg'
+			image2: "park.jpeg",
+			image3: "park.jpeg",
+			image4: "park.jpeg",
+			image5: "park.jpeg"
 		}
 	),
   new Project(
@@ -107,7 +120,8 @@ var projects = [
       checkvist: 'https://checkvist.com/checklists/560653',
       waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
       github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-    }
+    },
+		{}
   ),
   new Project(
     4,
@@ -117,6 +131,7 @@ var projects = [
     'Archived',
 		'',
 		{},
+		{},
     {}
   )
 ];
@@ -124,8 +139,7 @@ var projects = [
 //9
 var members = [
 	new Member(
-		2, 'Erick',
-		'Sanchez',
+		2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
 		'Making apps on the iPhone and on other platforms.',
 		{
@@ -137,13 +151,16 @@ var members = [
 		['C++','JavaScript','Objective-C','HTML & CSS']
 	),
   new Member(
-    4, 'Steven', 'Guido', 'my bio', undefined,
+    4, 'Steven', 'Guido',
+		'my bio',
+		'short',
     {},
 		undefined,
     []
   ),
   new Member(
-    1, 'Joshua', 'Murphy', 'my bio', undefined,
+    1, 'Joshua', 'Murphy',
+		'my bio', 'short',
     {
       github: 'https://www.github.com/joshuasrjc'
     },
@@ -151,7 +168,8 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
-    3, 'Oran', 'C', 'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+    3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
 		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
     {
       github: 'https://www.github.com/Pastyguy'
@@ -160,31 +178,41 @@ var members = [
     ['C++','HTML & CSS', 'python', 'JavaScript', 'BASH']
   ),
   new Member(
-    8, 'Wind', 'Carrianna', 'my bio', undefined,
+    8, 'Wind', 'Carrianna',
+		'my bio',
+		'short',
     {},
 		undefined,
     []
   ),
   new Member(
-    5, 'Alex', 'Chen', 'my bio', undefined,
+    5, 'Alex', 'Chen',
+		'my bio',
+		'short',
     {},
 		undefined,
     []
   ),
   new Member(
-    6, 'Noah', '', 'my bio', undefined,
+    6, 'Noah', 'Torrez',
+		'my bio',
+		'short',
     {},
 		undefined,
     []
   ),
   new Member(
-    7, 'Conan', 'Skaife', 'my bio', undefined,
+    7, 'Conan', 'Skaife',
+		'my bio',
+		'short',
     {},
 		undefined,
     []
   ),
   new Member(
-    0, 'Benjamin', 'Hough', 'my bio', undefined,
+    0, 'Benjamin', 'Hough',
+		'my bio',
+		'short',
     {
       github: 'https://www.github.com/whothat'
     },
@@ -192,7 +220,9 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
-    9, 'Yekalo', 'Aberha', 'my bio', undefined,
+    9, 'Yekalo', 'Aberha',
+		'my bio',
+		'short',
     {
       github: 'https://www.github.com/yyekalo'
     },
@@ -228,15 +258,62 @@ var members_projects = [
 ];
 
 var projectAreaRequests = [
+	//CS Website
+	new ProjectAreaRequests( 0, 1,
+		"Front-End Developers",
+		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
+		5, 4,
+		[
+			{title: "HTML/CSS/Boostrap", experience: 3},
+			{title: "Java", experience: 1}
+		],
+		2
+	),
 	new ProjectAreaRequests( 1, 1,
-	"Front-End Developers",
-	"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
-	5, 4,
-	[
-		{title: "HTML/CSS/Boostrap", experience: 3},
-		{title: "Java", experience: 1}
-	],
-	2
+		"Back-End Developers",
+		"Check this out <a href=\"https://www.mongodb.com/",
+		8, 2,
+		[
+			{title: "MongoDB", experience: 5}
+		],
+		2
+	),
+	//function-fighters
+	new ProjectAreaRequests( 2, 3,
+		"AI Players",
+		"",
+		5, "&#8734",
+		[
+			{title: "Lua", experience: 1}
+		],
+		1
+	),
+	//2d-platformer
+	new ProjectAreaRequests( 3, 2,
+		"Game Developers",
+		"",
+		10, 3,
+		[
+			{title: "Unity", experience: 5}
+		],
+		2
+	),
+	new ProjectAreaRequests( 4, 2,
+		"Graphic/Asset Designers",
+		"",
+		4, 2,
+		[
+			{title: "Adobe Animate", experience: 5},
+			{title: "Vector Based Program", experience: 3}
+		],
+		2
+	),
+	new ProjectAreaRequests( 5, 2,
+		"Back-End Developer",
+		"",
+		2, 1,
+		[],
+		2
 	)
 
 ];
@@ -277,5 +354,6 @@ module.exports = {
 	projects,
 	members,
   members_projects,
+	project_area_requests,
 	services
 };
