@@ -121,8 +121,9 @@ router.get('/testing', function(req, res, next) {
     links: [
     { name: 'ITEM',  url: '#'  },
   ]};
+  var projects = tempDB.projects;
 
-  res.render('testing', { title: 'testing', navbar: navbar });
+  res.render('testing', { title: 'testing', projects: projects, navbar: navbar });
 });
 
 

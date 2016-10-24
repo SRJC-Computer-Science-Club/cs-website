@@ -48,7 +48,8 @@ var projects = [
 			checkvist: 'https://checkvist.com/checklists/563656',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
 			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website'
-		}
+		},
+		{}
   ),
   new Project(
     3,
@@ -60,7 +61,8 @@ var projects = [
 		{},
     {
       github: 'https://github.com/joshuasrjc/function-fighters'
-    }
+    },
+		{}
   ),
 	new Project(
 		0,
@@ -75,9 +77,20 @@ var projects = [
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
 			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
 		},
+		[
+			"park1.jpeg",
+			"park2.jpeg",
+			"park3.jpeg",
+			"park4.jpeg",
+			"park5.jpeg",
+			"park6.jpeg",
+			"park7.jpeg"
+		],
 		{
-			banner: 'banner.jpg',
-			cover: 'cover.jpg'
+			image2: "park.jpeg",
+			image3: "park.jpeg",
+			image4: "park.jpeg",
+			image5: "park.jpeg"
 		}
 	),
   new Project(
@@ -92,7 +105,8 @@ var projects = [
       checkvist: 'https://checkvist.com/checklists/560653',
       waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
       github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-    }
+    },
+		{}
   )
 ];
 
