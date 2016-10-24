@@ -1,44 +1,93 @@
 #members-page {
-    #members-list {
-        .card {
-          padding: $margin-sm;
+  #members-list {
+    .card {
+      padding: $margin-sm;
+      min-height: 108px;
+    }
+    .avatar {
+      position: absolute;
+      left: $margin-sm;
+      display: inline-block;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      background-image: url('http://placehold.it/230x100');
+    }
+    .member-info {
+      margin-left: 96px;
+
+    }
+    h1.member-name {
+        text-align: left;
+        font-size: 3em;
+        font-weight: bold;
+    }
+    .quick-links {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 25%;
+      .links {
+        float: right;
+        img.links {
+          float: left;
+          width: 30px;
+          height: 30px;
+          background: $gray;
+          border-radius: 15px;
+          margin: $margin-xs;
         }
-        .avatar {
-          display: inline-block;
-          width: 96px;
-          height: 96px;
-          border-radius: 50%;
-          background-repeat: no-repeat;
-          background-position: center center;
-          background-size: cover;
-          background-image: url('http://placehold.it/230x100');
+        span {
+          float: left;
+          text-align: right;
+          margin: $margin-sm;
         }
-        h1.member-name {
-            text-align: left;
-            font-size: 3em;
-            font-weight: bold;
-        }
-        .quick-links {
-          position: absolute;
-          right: 0;
-          top: 0;
-          width: 25%;
-          .links {
+      }
+    }
+    #device-phone {
+      .avatar {
+        position: relative;
+        padding-bottom: $margin-lg;
+      }
+      p, h1 {
+        padding: $margin-sm 0;
+      }
+      h1.member-name {
+        text-align: center;
+      }
+      .nProjects {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: right;
+        margin: 0;
+        padding: $margin-xs $margin-sm;
+        background-color: $lightgray;
+        border-radius: 6px;
+
+      }
+      .quick-links {
+        position: absolute;
+        top: 32px;
+        width: 25%;
+        .links {
+          float: right;
+          img.links {
             float: right;
-            img.links {
-              float: left;
-              width: 30px;
-              height: 30px;
-              background: $gray;
-              border-radius: 15px;
-              margin: $margin-xs;
-            }
-            span {
-              float: left;
-              text-align: right;
-              margin: $margin-sm;
-            }
+            width: 24px;
+            height: 24px;
+            border-radius: 12px;
+          }
+          span {
+            float: left;
+            text-align: right;
+            margin: 0;
           }
         }
+      }
     }
+  }
 }
