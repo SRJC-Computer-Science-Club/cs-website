@@ -94,7 +94,7 @@
 													- assets.push(asset.title + "— level " + asset.experience + "\n")
 												//TODO Area Request Project Interest
 												- var color = "gray";
-												td(title=assets style=" background-color: " +color)= request.project_interest
+												td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
 							else
 								span no requests at this moment
 						.events
@@ -182,7 +182,7 @@
 													- assets.push(asset.title + "— level " + asset.experience + "\n")
 												//TODO Area Request Project Interest
 												- var color = "gray";
-												td(title=assets style=" background-color: " +color)= request.project_interest
+												td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
 							else
 								span no requests at this moment
 						.events

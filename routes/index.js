@@ -33,7 +33,7 @@ router.get('/', function(req, res, next) {
     project.areaRequests= findProjectAreaRequests(project);
   }
 
-  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results });
+  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
 });
 
 

@@ -257,7 +257,7 @@ var members_projects = [
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
 ];
 
-var projectAreaRequests = [
+var project_area_requests = [
 	//CS Website
 	new ProjectAreaRequests( 0, 1,
 		"Front-End Developers",
