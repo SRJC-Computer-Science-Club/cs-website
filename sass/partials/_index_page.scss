@@ -36,6 +36,9 @@
 
   }
   #project-spotlight {
+    .row.card {
+      margin-bottom: $margin-xl;
+    }
     .project-cell {
       position: absolute;
       top: 0;
@@ -168,7 +171,7 @@
     margin: 0 auto;
     width: 100%;
     max-width: 1300px;
-    padding: $margin-lg 6px;
+    padding: $margin-sm 6px;
 
   }
   .foot-wrapper-1 {
