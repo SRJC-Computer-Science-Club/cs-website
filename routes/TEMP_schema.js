@@ -64,7 +64,7 @@ var projects = [
 			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
 			figma: 'https://www.figma.com/files/project/64393/Club-Website'
 		},
-		{}
+		[]
   ),
 	new Project(
 		3,
@@ -77,7 +77,7 @@ var projects = [
 		{
 		  github: 'https://github.com/joshuasrjc/function-fighters'
 		},
-		{}
+		[]
   ),
 	new Project(
 		0,
@@ -92,21 +92,7 @@ var projects = [
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
 			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
 		},
-		[
-			"park1.jpeg",
-			"park2.jpeg",
-			"park3.jpeg",
-			"park4.jpeg",
-			"park5.jpeg",
-			"park6.jpeg",
-			"park7.jpeg"
-		],
-		{
-			image2: "park.jpeg",
-			image3: "park.jpeg",
-			image4: "park.jpeg",
-			image5: "park.jpeg"
-		}
+		[]
 	),
   new Project(
     2,
@@ -114,14 +100,22 @@ var projects = [
     'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
     'A simple 2d platformer game',
     'On-Hold',
-		'',
+		'This project may change to a top view game',
 		{},
     {
       checkvist: 'https://checkvist.com/checklists/560653',
       waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
       github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
     },
-		{}
+		[
+			'3d model-1.png',
+			'main-character-1.png',
+			'main-character-2.png',
+			'main-character-3.png',
+			'main-character-sprite-1.png',
+			'preview of ui-1.png',
+			'preview-1.jpg'
+		]
   ),
   new Project(
     4,
@@ -132,7 +126,7 @@ var projects = [
 		'',
 		{},
 		{},
-    {}
+		[]
   )
 ];
 
