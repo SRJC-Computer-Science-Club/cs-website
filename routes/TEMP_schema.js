@@ -108,13 +108,13 @@ var projects = [
       github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
     },
 		[
+			'preview of ui-1.png',
+			'preview-1.jpg',
 			'3d model-1.png',
 			'main-character-1.png',
 			'main-character-2.png',
 			'main-character-3.png',
-			'main-character-sprite-1.png',
-			'preview of ui-1.png',
-			'preview-1.jpg'
+			'main-character-sprite-1.png'
 		]
   ),
   new Project(
@@ -242,28 +242,29 @@ var members = [
   )
 ];
 
-//15
+//16
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 var members_projects = [
+	//CS Website
+	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
+	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 16 , 1 , 4 , 'Programmer' ),
+	//Function Fighters
+  new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
+  new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
+  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
+  new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Micromouse
   new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
   new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
   new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
   new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
-	//CS Website
-  new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
-  new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
-  new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
-	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Lead Developer' ),
-	//Function Fighters
-  new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
-  new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
-  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
-  new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
