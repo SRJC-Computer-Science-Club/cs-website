@@ -130,7 +130,7 @@ var projects = [
   )
 ];
 
-//9
+//11
 var members = [
 	new Member(
 		2, 'Erick', 'Sanchez',
@@ -147,14 +147,15 @@ var members = [
   new Member(
     4, 'Steven', 'Guido',
 		'my bio',
-		'short',
+		'short bio',
     {},
 		undefined,
     []
   ),
   new Member(
     1, 'Joshua', 'Murphy',
-		'my bio', 'short',
+		'my bio',
+		'short bio',
     {
       github: 'https://www.github.com/joshuasrjc'
     },
@@ -174,7 +175,7 @@ var members = [
   new Member(
     8, 'Wind', 'Carrianna',
 		'my bio',
-		'short',
+		'short bio',
     {},
 		undefined,
     []
@@ -182,7 +183,7 @@ var members = [
   new Member(
     5, 'Alex', 'Chen',
 		'my bio',
-		'short',
+		'short bio',
     {},
 		undefined,
     []
@@ -190,7 +191,23 @@ var members = [
   new Member(
     6, 'Noah', 'Torrez',
 		'my bio',
-		'short',
+		'short bio',
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    11, 'Junior', 'Diarrassouba',
+		'my bio',
+		'short bio',
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    10, 'Alex', 'Dewey',
+		'my bio',
+		'short bio',
     {},
 		undefined,
     []
@@ -198,7 +215,7 @@ var members = [
   new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
-		'short',
+		'short bio',
     {},
 		undefined,
     []
@@ -206,7 +223,7 @@ var members = [
   new Member(
     0, 'Benjamin', 'Hough',
 		'my bio',
-		'short',
+		'short bio',
     {
       github: 'https://www.github.com/whothat'
     },
@@ -216,7 +233,7 @@ var members = [
   new Member(
     9, 'Yekalo', 'Aberha',
 		'my bio',
-		'short',
+		'short bio',
     {
       github: 'https://www.github.com/yyekalo'
     },
@@ -226,7 +243,8 @@ var members = [
 ];
 
 //15
-//0-Ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
+//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
+//9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 var members_projects = [
 	//Micromouse
@@ -243,9 +261,9 @@ var members_projects = [
   new ProjectsMembers( 10 , 2 , 2 , 'Lead Developer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
-  new ProjectsMembers( 7 , 3 , 2 , 'Beta Tester, AI Player' ),
+  new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
+  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
-  new ProjectsMembers( 9 , 3 , 3 , 'AI Player' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
