@@ -80,7 +80,7 @@ router.get('/projects/:projectID', function(req, res, next) {
 
   project.members = members
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: resultsk, navbar: navbar});
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
 });
 
 
