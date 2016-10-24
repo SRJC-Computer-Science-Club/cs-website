@@ -4,7 +4,6 @@ var router = express.Router();
 var helper = require('./helper_methods');
 
 router.get('*', function(req, res, next) {
-  //console.log(req.params);
 
   next();
 });
@@ -175,7 +174,6 @@ function findProjectMembers( project )
 {
   var members = [];
 
-  console.log( tempDB.members_projects);
   for( var member_project of tempDB.members_projects )
   {
     if ( member_project.project_id == project.id )
