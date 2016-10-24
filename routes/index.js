@@ -66,10 +66,16 @@ router.get('/projects/:projectID', function(req, res, next) {
   }
 
   var members = findProjectMembers( project );
+  var results = [
+    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
+    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
+  ];
 
   project.members = members
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar});
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: resultsk, navbar: navbar});
 });
 
 
@@ -107,6 +113,19 @@ router.get('/members/:memberID', function(req, res, next) {
   res.render('member', { title: 'CS Club' , member: member, navbar: navbar, helper: helper});
 });
 
+
+/* GET ABOUT PAGE. */
+router.get('/about', function(req, res, next) {
+
+  var navbar = {
+    active: 'about',
+    links: [{}]
+  };
+
+
+
+  res.render('about', { title: 'CS Club', navbar: navbar });
+});
 
 
 /* GET NEW-PAGE TEMPLATE. */
