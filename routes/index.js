@@ -3,8 +3,6 @@ var tempDB = require('./TEMP_schema');
 var router = express.Router();
 var helper = require('./helper_methods');
 var nodemailer = require('nodemailer');
-var bodyParser = require('body-parser');
-var app = require('../app');
 
 router.get('*', function(req, res, next) {
 
