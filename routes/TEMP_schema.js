@@ -48,7 +48,7 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
-//4
+//5
 var projects = [
 	new Project(
 		1,
@@ -76,6 +76,20 @@ var projects = [
 		{},
 		{
 		  github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		[]
+  ),
+  new Project(
+    5,
+    'Line Follower',
+    '',
+		'',
+    'Blueprinting',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/581272',
+			robogames: 'http://robogames.net/rules/line-following.php'
 		},
 		[]
   ),
@@ -246,6 +260,7 @@ var members = [
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
+//5-line follower
 var members_projects = [
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
@@ -257,14 +272,15 @@ var members_projects = [
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
-	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
+	//Line Follower
 	//Micromouse
   new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
   new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
   new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
   new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
+	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
@@ -332,6 +348,13 @@ var project_area_requests = [
 
 //Global instances for icons
 var services = {
+	noone:
+	{
+		name: 'Link',
+		icon_sm: 'link-icon-42@2x.png',
+		icon_md: '',
+		icon_lg: ''
+	},
 	github:
 	{
 		name: 'GitHub',
