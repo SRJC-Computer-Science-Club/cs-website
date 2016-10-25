@@ -37,6 +37,16 @@ router.get('/', function(req, res, next) {
 });
 
 
+/* GET /join. */
+router.get('/join', function(req, res, next) {
+  var navbar = {
+    active: 'home',
+    links: []};
+
+  res.render('join', { title: 'CS Club', navbar: navbar });
+});
+
+
 
 /* GET Projects page. */
 router.get('/projects/', function(req, res, next) {
