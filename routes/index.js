@@ -2,6 +2,9 @@ var express = require('express');
 var tempDB = require('./TEMP_schema');
 var router = express.Router();
 var helper = require('./helper_methods');
+var nodemailer = require('nodemailer');
+var bodyParser = require('body-parser');
+var app = require('../app');
 
 router.get('*', function(req, res, next) {
 
@@ -38,7 +41,7 @@ router.get('/', function(req, res, next) {
 
 
 /* GET /join. */
-router.get('/join', function(req, res, next) {
+router.get('/join/', function(req, res, next) {
   var navbar = {
     active: 'home',
     links: []};
@@ -46,6 +49,42 @@ router.get('/join', function(req, res, next) {
   res.render('join', { title: 'CS Club', navbar: navbar });
 });
 
+/* GET Submit. */
+router.get('/join/submit', function(req, res, next) {
+
+  var navbar = {
+    active: 'home',
+    links: []
+  };
+
+  // create reusable transporter object using the default SMTP transport
+  var transporter = nodemailer.createTransport(
+    {
+      service: 'Gmail',auth:
+      {
+        user: 'esericksanc@gmail.com',
+        pass: 'Jan1.2010'
+      }
+    });
+
+  // setup e-mail data with unicode symbols
+  var mailOptions = {
+      from: '"admin-email-slack-message" <esericksanc2@gmail.com>', // sender address
+      to: 'admin-email@srjccsc.mailclark.ai', // list of receivers
+      subject: 'Slack invite from ' +req.query.name, // Subject line
+      text: 'use : >' + req.query.contact + '< to contact me. ' + req.query.message // plaintext body
+  };
+
+  //send mail with defined transport object
+  transporter.sendMail(mailOptions, function(error, info){
+      if(error){
+          return console.log(error);
+      }
+      console.log('Message sent: ' + info.response);
+  });
+
+  res.render('submit', { title: 'CS Club', navbar: navbar });
+});
 
 
 /* GET Projects page. */
