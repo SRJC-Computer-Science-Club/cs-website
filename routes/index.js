@@ -67,12 +67,19 @@ router.get('/join/submit', function(req, res, next) {
       }
     });
 
+  var recipient =
+  {
+    name: req.query.name == '' ? 'No Name' : req.query.name,
+    contact: req.query.contact,
+    message: req.query.message
+  }
+
   // setup e-mail data with unicode symbols
   var mailOptions = {
       from: '"admin-email-slack-message" <esericksanc2@gmail.com>', // sender address
       to: 'admin-email@srjccsc.mailclark.ai', // list of receivers
-      subject: 'Slack invite from ' +req.query.name, // Subject line
-      text: 'use : >' + req.query.contact + '< to contact me. ' + req.query.message // plaintext body
+      subject: 'Slack invite from ' + recipient.name, // Subject line
+      text: 'use : >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
   };
 
   //send mail with defined transport object
