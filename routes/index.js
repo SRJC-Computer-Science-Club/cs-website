@@ -61,7 +61,7 @@ router.get('/join/submit', function(req, res, next) {
       service: 'Gmail',auth:
       {
         user: 'esericksanc@gmail.com',
-        pass: 'Jan1.2010'
+        pass: ''
       }
     });
 
