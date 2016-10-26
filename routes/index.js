@@ -75,8 +75,8 @@ router.get('/join/submit', function(req, res, next) {
 
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: '"BOT" <example@domain.com>', // sender address
-      to: 'admin-email@srjccsc.mailclark.ai', // list of receivers
+      from: '"BOT" <srjc.computer.science.club@gmail.com>', // sender address
+      to: 'srjc.computer.science.club@gmail.com', // list of receivers
       subject: 'Slack invite from ' + recipient.name, // Subject line
       text: 'use : >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
   };

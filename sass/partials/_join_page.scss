@@ -1,3 +1,9 @@
 #join-page {
+  h1, p, input.btn.btn-success.btn-lg {
+    text-align: left;
+  }
+  input.btn.btn-success.btn-lg {
+    margin-bottom: $margin-lg;
+  }
 
 }

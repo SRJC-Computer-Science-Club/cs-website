@@ -61,7 +61,7 @@ p {
 p.header {
   font-weight: bold;
   font-size: 1.25em;
-  margin: 0;
+  margin: $margin-xs;
 }
 
 @import 'partials/navbar';
