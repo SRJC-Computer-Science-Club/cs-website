@@ -5,5 +5,17 @@
   input.btn.btn-success.btn-lg {
     margin-bottom: $margin-lg;
   }
+}
 
+#submit-page {
+  img {
+    width: 50%;
+    height: 50%;
+    margin: $margin-lg;
+  }
+  a {
+    margin-bottom: $margin-lg;
+  }
+  .collapse {
+  }
 }
