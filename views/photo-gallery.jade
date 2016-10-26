@@ -2,3 +2,8 @@ extends layout
 
 block content
   #photo-gallery-page.content
+      h1= project.title
+      span Photo Gallery
+      hr
+      include ./partials/project_page/photo_gallery_page/_photo_gallery-carousel
+      include ./partials/project_page/photo_gallery_page/_photo_gallery-grid

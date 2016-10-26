@@ -87,7 +87,11 @@ router.get('/projects/:projectID', function(req, res, next) {
 router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
   var navbar = {
     active: 'projects',
-    links: []
+    links:
+    [
+      {name: 'Back to Project', url: '/projects/'+req.params.projectID, active: true}
+      //{name: 'Download Gallery', url: '#', active: false}
+    ]
   };
 
   var project = findProjectForID( tempDB.projects, req.params.projectID);

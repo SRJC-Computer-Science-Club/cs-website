@@ -1,0 +1,16 @@
+#grid
+  each image in project.images
+    - var source = '/images/projects/'+project.title+'/images/'+image;
+    //TODO DRY
+    .thumbnail.hidden-lg-down
+      a(href=source target='_blank')
+        img(src=source alt=image)
+      figcaption= image
+    .thumbnail(style='width: 33%;').hidden-xl-up.hidden-sm-down
+      a(href=source target='_blank')
+        img(src=source alt=image)
+      figcaption= image
+    .thumbnail(style='width: 100%;').hidden-md-up
+      a(href=source target='_blank')
+        img(src=source alt=image)
+      figcaption= image
