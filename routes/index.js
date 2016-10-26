@@ -82,15 +82,15 @@ router.get('/join/submit', function(req, res, next) {
   };
 
   //send mail with defined transport object
-  // if (recipient.name != 'No Name' | recipient.contact != '' | recipient.message != '')
-  //   transporter.sendMail(mailOptions, function(error, info){
-  //       if(error){
-  //           return console.log(error);
-  //       }
-  //       console.log('Message sent: ' + info.response);
-  //   });
-  // else
-  //   console.log('Message abort');
+  if (recipient.name != 'No Name' | recipient.contact != '' | recipient.message != '')
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });
+  else
+    console.log('Message abort');
 
   res.render('submit', { title: 'CS Club', results: recipient, navbar: navbar });
 });
