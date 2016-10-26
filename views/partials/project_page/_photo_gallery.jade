@@ -7,7 +7,11 @@
 			.col-xs-12
 				p!= project.description
 	.col-sm-2
-		each index in [1,2,3,4]
+		each index in [1,2,3]
 			.col-xs-12.card(style='padding: 0')
 				img.img-fluid(src='/images/projects/' + project.title.toLowerCase() + '/thumb' + index + '.jpg')
+		if (project.images.length > 0)
+			.col-xs-12.card(style='padding: 0')
+				a(href='/projects/'+project.id+'/photo-gallery')
+					img.img-fluid(src='/images/icons/photo-gallery-200@2x.png')
 hr
