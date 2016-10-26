@@ -58,10 +58,11 @@ router.get('/join/submit', function(req, res, next) {
   // create reusable transporter object using the default SMTP transport
   var transporter = nodemailer.createTransport(
     {
-      service: 'Gmail',auth:
+      service: 'Gmail',
+      auth:
       {
-        user: 'esericksanc@gmail.com',
-        pass: ''
+        user: 'srjc.computer.science.club@gmail.com',
+        pass: '855990033'
       }
     });
 
@@ -74,7 +75,7 @@ router.get('/join/submit', function(req, res, next) {
 
   // setup e-mail data with unicode symbols
   var mailOptions = {
-      from: '"admin-email-slack-message" <esericksanc2@gmail.com>', // sender address
+      from: '"BOT" <example@domain.com>', // sender address
       to: 'admin-email@srjccsc.mailclark.ai', // list of receivers
       subject: 'Slack invite from ' + recipient.name, // Subject line
       text: 'use : >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
