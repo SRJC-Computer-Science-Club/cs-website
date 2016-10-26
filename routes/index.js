@@ -83,6 +83,18 @@ router.get('/projects/:projectID', function(req, res, next) {
   res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
 });
 
+/* GET Project Photo Gallery. */
+router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
+  var navbar = {
+    active: 'projects',
+    links: []
+  };
+
+  var project = findProjectForID( tempDB.projects, req.params.projectID);
+
+  res.render('photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
+});
+
 
 
 /* GET members page. */
