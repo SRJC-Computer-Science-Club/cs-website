@@ -1,6 +1,14 @@
+- var isFound = false;
+- for (var officer of officers)
+  - if (officer.member_id == member.id)
+    - isFound = officer;
 //Tablet-Desktop-HD Desktop
 .row.card.hidden-sm-down
   .avatar
+  - if (isFound != false)
+    #corner-ribbons.wrapper
+      .ribbon-wrapper
+        .ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
   .member-info
     a(href='/members/' + member.id)
       h1.member-name= member.first_name + ' ' + member.last_name
@@ -14,6 +22,10 @@
           img.links
 //sm, xs Phone-and landscape
 #device-phone.row.card.hidden-md-up
+  - if (isFound != false)
+    #corner-ribbons.wrapper
+      .ribbon-wrapper
+        .ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
   .col-sm-12
     .avatar
     a(href='/members/' + member.id)

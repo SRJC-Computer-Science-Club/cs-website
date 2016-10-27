@@ -90,7 +90,7 @@ router.get('/members', function(req, res, next) {
     member.numberOfProjects = findProjectsForMember( member).length;
   }
 
-  res.render('members', { title: 'CS Club',  members: members, navbar: navbar, helper: helper});
+  res.render('members', { title: 'CS Club', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
 });
 
 /* GET member page. */

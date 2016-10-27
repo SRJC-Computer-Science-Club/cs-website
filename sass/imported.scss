@@ -1,0 +1,25 @@
+#corner-ribbons {
+  .ribbon-wrapper {
+    width: 350px;
+    height: 150px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    }
+
+    .ribbon {
+    font: bold 14px arial;
+    text-align: center;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform:    rotate(-45deg);
+    -ms-transform:     rotate(-45deg);
+    -o-transform:      rotate(-45deg);
+    position: relative;
+    padding: 3px 0;
+    left: -64px;
+    top: 24px;
+    width: 200px;
+    color: #FFFFFF;
+  }
+}
