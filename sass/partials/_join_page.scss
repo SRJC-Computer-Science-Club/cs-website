@@ -8,6 +8,9 @@
 }
 
 #submit-page {
+  .card {
+    padding: $margin-md;
+  }
   img {
     width: 50%;
     height: 50%;
@@ -16,6 +19,9 @@
   a {
     margin-bottom: $margin-lg;
   }
-  .collapse {
+  .club-bio {
+    h3 {
+      text-align: left;
+    }
   }
 }

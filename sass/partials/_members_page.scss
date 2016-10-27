@@ -6,7 +6,8 @@
     }
     .avatar {
       position: absolute;
-      left: $margin-sm;
+      top: 18px;
+      left: $margin-sm +24px;
       display: inline-block;
       width: 84px;
       height: 84px;
@@ -17,7 +18,7 @@
       background-image: url('http://placehold.it/230x100');
     }
     .member-info {
-      margin-left: 96px;
+      margin-left: 142px;
 
     }
     h1.member-name {
@@ -50,6 +51,8 @@
     #device-phone {
       .avatar {
         position: relative;
+        left: 0;
+        top: 0;
         padding-bottom: $margin-lg;
       }
       p, h1 {

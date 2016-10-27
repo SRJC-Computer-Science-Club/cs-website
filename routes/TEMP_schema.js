@@ -48,6 +48,14 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
+function ClubOfficers( id, member_id, position_title, swatch)
+{
+	this.id = id;
+	this.member_id = member_id;
+	this.position_title = position_title;
+	this.swatch = swatch;
+}
+
 //5
 var projects = [
 	new Project(
@@ -390,10 +398,19 @@ var services = {
 	}
 };
 
+var club_officers =
+[
+	new ClubOfficers( 0, 2, 'President', "#055B75"),
+	new ClubOfficers( 1, 4, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 2, 5, 'Treasurer', '#579C08'),
+	new ClubOfficers( 3, 3, 'ICC Rep', '#EEA00E')
+];
+
 module.exports = {
 	projects,
 	members,
   members_projects,
 	project_area_requests,
-	services
+	services,
+	club_officers
 };
