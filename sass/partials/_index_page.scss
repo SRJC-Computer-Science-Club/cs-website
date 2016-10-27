@@ -1,18 +1,8 @@
 #index-page {
   #top-news {
-  	.project-member {
-  		text-align: left;
-  		margin: 10px auto;
-      width: 296px;
-  		max-width: 300px;
-      float: left;
-  		img {
-  			margin: 10px;
-  		}
-  		.project-member-text {
-  			padding: 10px 0;
-  		}
-  	}
+  	.row.card {
+      padding: $margin-xl 0;
+    }
   }
   #join {
     .card {
