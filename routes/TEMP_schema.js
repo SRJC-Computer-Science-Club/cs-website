@@ -242,10 +242,11 @@ var members = [
   )
 ];
 
-//16
+//21
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
+//5-line follower
 var members_projects = [
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
@@ -257,6 +258,12 @@ var members_projects = [
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+	//Line Follower
+  new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
+  new ProjectsMembers( 18 , 5 , 1 , 'Developer' ),
+  new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
+  new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
+  new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//2D Platformer
   new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Micromouse
