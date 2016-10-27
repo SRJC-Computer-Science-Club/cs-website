@@ -48,7 +48,7 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
-//4
+//5
 var projects = [
 	new Project(
 		1,
@@ -76,6 +76,20 @@ var projects = [
 		{},
 		{
 		  github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		[]
+  ),
+  new Project(
+    5,
+    'Line Follower',
+    '',
+		'',
+    'Blueprinting',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/581272',
+			robogames: 'http://robogames.net/rules/line-following.php'
 		},
 		[]
   ),
@@ -264,14 +278,14 @@ var members_projects = [
   new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
   new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
-	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Micromouse
   new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
   new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
   new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
   new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
   new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
+	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
@@ -335,11 +349,17 @@ var project_area_requests = [
 		[],
 		2
 	)
-
 ];
 
 //Global instances for icons
 var services = {
+	noone:
+	{
+		name: 'Link',
+		icon_sm: 'link-icon-42@2x.png',
+		icon_md: '',
+		icon_lg: ''
+	},
 	github:
 	{
 		name: 'GitHub',

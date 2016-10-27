@@ -11,11 +11,17 @@ $black: #222222;
 $blue: rgb(51, 122, 183);
 $red: rgb(217, 83, 79);
 $white: #FDFDFD;
-$lightgray: #EEE;
+$lightergray: #FCFCFC;
+$lightgray: #EEEEEE;
+$light-gray: #D9D9D9;
 $gray: #BFBFBF;
+$gray-darkgray: #ADADAD;
+$darkgray: #7D7D7D;
+$darkergray: #484848;
 
 $margin-xs: 4px;
 $margin-sm: 8px;
+$margin-md: 12px;
 $margin-lg: 16px;
 $margin-xl: 32px;
 
@@ -52,7 +58,11 @@ p {
 // End default DOM tag styles //
 ////////////////////////////////
 
-
+p.header {
+  font-weight: bold;
+  font-size: 1.25em;
+  margin: 0;
+}
 
 @import 'partials/project_banner';
 @import 'partials/navbar';
@@ -61,7 +71,7 @@ p {
 @import 'partials/projects_page';
 @import 'partials/project_page';
 @import 'partials/index_page';
-@import 'partials/testing_page';
+@import 'partials/about';
 
 
 ////////////////////////////////////

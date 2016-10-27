@@ -1,1 +1,5 @@
-img(src='/images/icons/'+ services[name].icon_sm)
+- var image = services[name];
+if (image != undefined)
+  img(src='/images/icons/'+ services[name].icon_sm)
+else
+  img(src='/images/icons/'+ services.noone.icon_sm)

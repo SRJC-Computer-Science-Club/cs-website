@@ -4,7 +4,6 @@ var router = express.Router();
 var helper = require('./helper_methods');
 
 router.get('*', function(req, res, next) {
-  //console.log(req.params);
 
   next();
 });
@@ -27,8 +26,14 @@ router.get('/', function(req, res, next) {
     {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
     {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'}
   ];
+  var projects = tempDB.projects;
 
-  res.render('index', { title: 'CS Club',  projects: tempDB.projects, navbar: navbar, canidates: results });
+  for ( var project of projects) {
+    project.members= findProjectMembers(project);
+    project.areaRequests= findProjectAreaRequests(project);
+  }
+
+  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
 });
 
 
@@ -66,10 +71,16 @@ router.get('/projects/:projectID', function(req, res, next) {
   }
 
   var members = findProjectMembers( project );
+  var results = [
+    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
+    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
+    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
+  ];
 
   project.members = members
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar});
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
 });
 
 
@@ -108,18 +119,17 @@ router.get('/members/:memberID', function(req, res, next) {
 });
 
 
-
-/* GET Testing. */
-router.get('/testing', function(req, res, next) {
+/* GET ABOUT PAGE. */
+router.get('/about', function(req, res, next) {
   var navbar = {
-    active: '',
-    links: [
-    { name: 'ITEM',  url: '#'  },
-  ]};
+    active: 'about',
+    links: [{}]
+  };
 
-  res.render('testing', { title: 'testing', navbar: navbar });
+
+
+  res.render('about', { title: 'CS Club', navbar: navbar });
 });
-
 
 
 /* GET NEW-PAGE TEMPLATE. */
@@ -169,7 +179,6 @@ function findProjectMembers( project )
 {
   var members = [];
 
-  console.log( tempDB.members_projects);
   for( var member_project of tempDB.members_projects )
   {
     if ( member_project.project_id == project.id )
@@ -188,11 +197,28 @@ function findProjectMembers( project )
 
 
 
+function findProjectAreaRequests( project )
+{
+  var requests = [];
+
+  for ( var area_request of tempDB.project_area_requests )
+  {
+    if (project.id == area_request.project_id)
+    {
+      requests.push(area_request);
+    }
+  }
+
+  return requests;
+}
+
+
+
 function findProjectsForMember( member )
 {
   var projects = [];
 
-  for( var member_project of tempDB.members_projects )
+  for ( var member_project of tempDB.members_projects )
   {
       if ( member_project.member_id == member.id )
       {
