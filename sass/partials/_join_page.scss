@@ -8,12 +8,15 @@
 }
 
 #submit-page {
+  h1 {
+    text-align: left;
+  }
   .card {
     padding: $margin-md;
   }
   img.glyp {
-    width: 50%;
-    height: 50%;
+    width: 25%;
+    height: 25%;
     margin: $margin-lg;
   }
   a {
