@@ -92,7 +92,13 @@ router.get('/join/submit', function(req, res, next) {
   else
     console.log('Message abort');
 
-  res.render('submit', { title: 'CS Club', results: recipient, navbar: navbar });
+  var projects = tempDB.projects.slice(0,4);
+
+  for ( var project of projects) {
+    project.members= findProjectMembers(project);
+  }
+
+  res.render('submit', { title: 'CS Club', results: recipient, club_officers: findClubOfficers(), popular_projects: projects, upcoming_events: findUpcommingEvents(), navbar: navbar, helper: helper});
 });
 
 
@@ -291,6 +297,26 @@ function findProjectsForMember( member )
   }
 
   return projects;
+}
+
+function findUpcommingEvents()
+{
+  return tempDB.project_events;
+}
+
+function findClubOfficers()
+{
+  var members = [];
+  for (var officer of tempDB.club_officers) {
+    for (var member of tempDB.members) {
+      if (officer.member_id == member.id) {
+        member.role = officer.position_title;
+        members.push(member);
+      }
+    }
+  }
+
+  return members;
 }
 
 module.exports = router;

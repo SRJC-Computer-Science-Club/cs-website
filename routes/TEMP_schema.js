@@ -48,6 +48,16 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
+function ProjectEvent( id, project_id, title, description, description_short, date)
+{
+	this.id = id;
+	this.project_id = project_id;
+	this.title = title;
+	this.description = description;
+	this.description_short = description_short;
+	this.date = date;
+}
+
 function ClubOfficers( id, member_id, position_title, swatch)
 {
 	this.id = id;
@@ -360,6 +370,16 @@ var project_area_requests = [
 	)
 ];
 
+//0
+project_events = [
+	new ProjectEvent( 0, 5,
+	'RoboGames—Line Follower',
+	'description',
+	'Robotics competition for our line follower project.',
+	'April 21'
+	)
+]
+
 //Global instances for icons
 var services = {
 	noone:
@@ -412,6 +432,7 @@ module.exports = {
 	members,
   members_projects,
 	project_area_requests,
+	project_events,
 	services,
 	club_officers
 };
