@@ -2,7 +2,7 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
 	.nbw2
 		.navbar-wrapper
 			a.navbar-brand(href='/')= title
-			ul.nav.navbar-nav.pull-xs-right
+			ul.nav.navbar-nav.float-xs-right
 				li.nav-item(class= navbar.active == 'home' ? 'active' : '')
 					a.nav-link(href='/') Home
 				li.nav-item(class= navbar.active == 'projects' ? 'active' : '')
@@ -16,7 +16,7 @@ nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
 nav.navbar.navbar-fixed-top.navbar-dark.navbar-secondary
 	.nbw2
 		.navbar-wrapper
-			ul.nav.navbar-nav.pull-xs-right
+			ul.nav.navbar-nav.float-xs-right
 				each link, index in navbar.links
 					li.nav-item(class= link.active === true ? 'active' : '')
 						a.nav-link(href=link.url)= link.name

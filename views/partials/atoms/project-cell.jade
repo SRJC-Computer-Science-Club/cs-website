@@ -1,0 +1,5 @@
+a(href='/projects/'+ project.id).card
+	p.header= project.title
+	p.nMebers.hidden-xs-down= helper.pluralize('member', project.members.length, true)
+	p.hidden-sm-up= helper.pluralize('member', project.members.length, true)
+	p= project.description_short

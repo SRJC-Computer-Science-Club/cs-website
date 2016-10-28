@@ -8,14 +8,23 @@
 }
 
 #submit-page {
-  img {
-    width: 50%;
-    height: 50%;
+  h1 {
+    text-align: left;
+  }
+  .card {
+    padding: $margin-md;
+  }
+  img.glyp {
+    width: 25%;
+    height: 25%;
     margin: $margin-lg;
   }
   a {
     margin-bottom: $margin-lg;
   }
-  .collapse {
+  .club-bio {
+    h3 {
+      text-align: left;
+    }
   }
 }

@@ -1,12 +1,20 @@
 #members-page {
   #members-list {
-    .card {
+    .row {
+      padding-top: 0;
+    }
+    a.card {
       padding: $margin-sm;
       min-height: 108px;
     }
+    a.card:hover {
+      background-color: $highlighted;
+      text-decoration: none;
+    }
     .avatar {
       position: absolute;
-      left: $margin-sm;
+      top: 18px;
+      left: $margin-sm +24px;
       display: inline-block;
       width: 84px;
       height: 84px;
@@ -17,8 +25,7 @@
       background-image: url('http://placehold.it/230x100');
     }
     .member-info {
-      margin-left: 96px;
-
+      margin-left: 142px;
     }
     h1.member-name {
         text-align: left;
@@ -27,8 +34,9 @@
     }
     .quick-links {
       position: absolute;
-      right: 0;
-      top: 0;
+      top: $margin-md;
+      right: $margin-md;
+      margin-right: $margin-md;
       width: 25%;
       .links {
         float: right;
@@ -50,6 +58,8 @@
     #device-phone {
       .avatar {
         position: relative;
+        left: 0;
+        top: 0;
         padding-bottom: $margin-lg;
       }
       p, h1 {
@@ -60,8 +70,8 @@
       }
       .nProjects {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: $margin-md;
+        right: $margin-md;
         text-align: right;
         margin: 0;
         padding: $margin-xs $margin-sm;
@@ -71,7 +81,8 @@
       }
       .quick-links {
         position: absolute;
-        top: 32px;
+        top: 42px;
+        margin-right: $margin-md;
         width: 25%;
         .links {
           float: right;

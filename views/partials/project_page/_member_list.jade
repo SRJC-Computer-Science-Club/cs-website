@@ -1,5 +1,13 @@
 .row
-	.col-lg-8.col-lg-offset-2
+	.col-lg-12
 		h2 The Team
-		include ./_member 
+		.row
+			#atoms.col-lg-12
+				each member in project.members
+					.member-cell.grid.col-3.hidden-md-down
+						include ../atoms/member-cell
+					.member-cell.grid.col-2.hidden-lg-up.hidden-sm-down
+						include ../atoms/member-cell
+					.member-cell.hidden-md-up
+						include ../atoms/member-cell
 hr

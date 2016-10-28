@@ -48,6 +48,24 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
+function ProjectEvent( id, project_id, title, description, description_short, date)
+{
+	this.id = id;
+	this.project_id = project_id;
+	this.title = title;
+	this.description = description;
+	this.description_short = description_short;
+	this.date = date;
+}
+
+function ClubOfficers( id, member_id, position_title, swatch)
+{
+	this.id = id;
+	this.member_id = member_id;
+	this.position_title = position_title;
+	this.swatch = swatch;
+}
+
 //5
 var projects = [
 	new Project(
@@ -256,7 +274,7 @@ var members = [
   )
 ];
 
-//21
+//22
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
@@ -266,6 +284,7 @@ var members_projects = [
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 16 , 1 , 4 , 'Programmer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
@@ -351,6 +370,16 @@ var project_area_requests = [
 	)
 ];
 
+//0
+project_events = [
+	new ProjectEvent( 0, 5,
+	'RoboGames—Line Follower',
+	'description',
+	'Robotics competition for our line follower project.',
+	'April 21'
+	)
+]
+
 //Global instances for icons
 var services = {
 	noone:
@@ -390,10 +419,20 @@ var services = {
 	}
 };
 
+var club_officers =
+[
+	new ClubOfficers( 0, 2, 'President', "#055B75"),
+	new ClubOfficers( 1, 4, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 2, 5, 'Treasurer', '#579C08'),
+	new ClubOfficers( 3, 3, 'ICC Rep', '#EEA00E')
+];
+
 module.exports = {
 	projects,
 	members,
   members_projects,
 	project_area_requests,
-	services
+	project_events,
+	services,
+	club_officers
 };
