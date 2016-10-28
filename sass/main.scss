@@ -112,7 +112,6 @@ p.header {
 
 #atoms {
   .member-cell {
-    float: left;
     width: 100%;
     a.card {
       height: 96px;
@@ -132,6 +131,7 @@ p.header {
     }
   }
   .member-cell.grid {
+    float: left;
     width: 330px;
     a.card {
       margin: 0 .75rem .75rem 0;
@@ -142,5 +142,20 @@ p.header {
   }
   .member-cell.grid.col-2 {
     width: 50%;
+  }
+  //Generic-cell
+  .project-cell {
+    float: left;
+    width: 100%;
+    a.card:hover {
+      background-color: $highlighted;
+      text-decoration: none;
+    }
+    .nMebers {
+      position: absolute;
+      top: $margin-md;
+      right: $margin-md;
+      text-align: right;
+    }
   }
 }

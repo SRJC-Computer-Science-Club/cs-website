@@ -32,6 +32,8 @@ block content
               each member in club_officers
                 .member-cell
                   include ./partials/atoms/member-cell
-            .col-lg-6
-              h3 More stuff
-              p klasdfjsad;klf daslkf; jsafklajs fkl;asfjsafjakls;fj iowe lniod oivoieoivoefnsx,vmnreqnv nvop eanv o
+            #atoms.col-lg-6
+              h3 Popular Projects
+              each project in popular_projects
+                .project-cell
+                  include ./partials/atoms/project-cell
