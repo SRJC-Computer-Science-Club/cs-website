@@ -2,19 +2,19 @@ extends layout
 
 block content
   #submit-page.content
-    .row
-      .col-xs-12
-        .card
+    .card.card-block
+      .row
+        .col-xs-12
           h1 Good Show
           p!= 'Thank you, ' + results.name + ' for taking interest in our club! Expect either to hear back from a club officer/project manager or recieve an invite to join <a href="https://srjccsc.slack.com/" target="_blank">Slack</a> and jump into talking to your fellow peers and programmers!'
-        img(src='/images/icons/thumbs-up-1.png' alt='thumbs up')
-    //Return to Homepage, or Show message
-    .row
-      .col-xs-12
-        a.btn.btn-success.btn-lg(href='/') Return to Homepage
-        a(style='margin-left: 12px;' data-toggle="collapse" href="#showMessage" aria-expanded="false" aria-controls="collapseExample") show message
-        .collapse(id="showMessage")
-          .card
+          img.glyp(src='/images/icons/thumbs-up-1.png' alt='thumbs up')
+      //Return to Homepage, or Show message
+      .row
+        .col-xs-12
+          a.btn.btn-success.btn-lg(href='/') Return to Homepage
+          a(style='margin-left: 12px;' data-toggle="collapse" href="#showMessage" aria-expanded="false" aria-controls="collapseExample") show message
+          .collapse(id="showMessage")
+            hr
             p.header Name
             p= results.name
             p.header Contact
@@ -23,7 +23,15 @@ block content
             p= results.message
     //A small bio of what we do
     hr
-    .club-bio.row
-      .col-xs-12
-        h3 Our Club Officers
-        
+    .card.card-block.club-bio
+      .row
+        .col-xs-12
+          .row
+            #atoms.col-lg-6
+              h3 Our Club Officers
+              each member in club_officers
+                .member-cell
+                  include ./partials/atoms/member-cell
+            .col-lg-6
+              h3 More stuff
+              p klasdfjsad;klf daslkf; jsafklajs fkl;asfjsafjakls;fj iowe lniod oivoieoivoefnsx,vmnreqnv nvop eanv o
