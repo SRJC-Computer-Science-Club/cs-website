@@ -158,4 +158,20 @@ p.header {
       text-align: right;
     }
   }
+  //Generic-cell
+  .event-cell {
+    float: left;
+    width: 100%;
+    height: 25%;
+    a.card:hover {
+      background-color: $highlighted;
+      text-decoration: none;
+    }
+    .date {
+      position: absolute;
+      top: $margin-md;
+      right: $margin-md;
+      text-align: right;
+    }
+  }
 }
