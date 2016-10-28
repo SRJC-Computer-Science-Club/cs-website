@@ -264,7 +264,7 @@ var members = [
   )
 ];
 
-//21
+//22
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex 11-junior
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
@@ -274,6 +274,7 @@ var members_projects = [
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 16 , 1 , 4 , 'Programmer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
