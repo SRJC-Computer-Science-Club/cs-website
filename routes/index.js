@@ -149,6 +149,18 @@ router.get('/projects/:projectID', function(req, res, next) {
 
 
 
+/* GET Events Page. */
+router.get('/events', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  res.render('events', { title: 'CS Club - Events', navbar: navbar });
+});
+
+
+
 /* GET members page. */
 router.get('/members', function(req, res, next) {
   var navbar = {
