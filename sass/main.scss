@@ -68,6 +68,8 @@ p.header {
   margin: $margin-xs 0;
 }
 
+@import 'assets/tables';
+
 @import 'partials/navbar';
 @import 'partials/index_page';
 @import 'partials/join_page';
