@@ -156,7 +156,7 @@ router.get('/events', function(req, res, next) {
     links: []
   };
 
-  res.render('events', { title: 'CS Club - Events', navbar: navbar });
+  res.render('events', { title: 'CS Club - Events', upcoming_events: findUpcommingEvents(), navbar: navbar });
 });
 
 
