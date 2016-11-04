@@ -162,7 +162,7 @@ var projects = [
   )
 ];
 
-//11
+//12
 var members = [
 	new Member(
 		2, 'Erick', 'Sanchez',
@@ -179,20 +179,10 @@ var members = [
   new Member(
     4, 'Steven', 'Guido',
 		'my bio',
-		'short bio',
+		undefined,
     {},
 		undefined,
     []
-  ),
-  new Member(
-    1, 'Joshua', 'Murphy',
-		'my bio',
-		'short bio',
-    {
-      github: 'https://www.github.com/joshuasrjc'
-    },
-		undefined,
-    ['C++','JavaScript']
   ),
   new Member(
     3, 'Oran', 'C',
@@ -205,9 +195,19 @@ var members = [
     ['C++','HTML & CSS', 'python', 'JavaScript', 'BASH']
   ),
   new Member(
+    1, 'Joshua', 'Murphy',
+		'my bio',
+		undefined,
+    {
+      github: 'https://www.github.com/joshuasrjc'
+    },
+		undefined,
+    ['C++','JavaScript']
+  ),
+  new Member(
     8, 'Wind', 'Carrianna',
 		'my bio',
-		'short bio',
+		undefined,
     {},
 		undefined,
     []
@@ -215,7 +215,15 @@ var members = [
   new Member(
     5, 'Alex', 'Chen',
 		'my bio',
-		'short bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    12, 'Kyle', 'O\'Brien',
+		'my bio',
+		undefined,
     {},
 		undefined,
     []
@@ -223,15 +231,7 @@ var members = [
   new Member(
     6, 'Noah', 'Torrez',
 		'my bio',
-		'short bio',
-    {},
 		undefined,
-    []
-  ),
-  new Member(
-    11, 'Junior', 'Diarrassouba',
-		'my bio',
-		'short bio',
     {},
 		undefined,
     []
@@ -239,7 +239,15 @@ var members = [
   new Member(
     10, 'Alex', 'Dewey',
 		'my bio',
-		'short bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    11, 'Junior', 'Diarrassouba',
+		'my bio',
+		undefined,
     {},
 		undefined,
     []
@@ -247,7 +255,7 @@ var members = [
   new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
-		'short bio',
+		undefined,
     {},
 		undefined,
     []
@@ -255,7 +263,7 @@ var members = [
   new Member(
     0, 'Benjamin', 'Hough',
 		'my bio',
-		'short bio',
+		undefined,
     {
       github: 'https://www.github.com/whothat'
     },
@@ -265,7 +273,7 @@ var members = [
   new Member(
     9, 'Yekalo', 'Aberha',
 		'my bio',
-		'short bio',
+		undefined,
     {
       github: 'https://www.github.com/yyekalo'
     },
@@ -274,9 +282,9 @@ var members = [
   )
 ];
 
-//22
+//24
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex 11-junior
+//9-yekalo 10-alex dewey 11-junior 12-Kyle
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower
 var members_projects = [
@@ -284,8 +292,8 @@ var members_projects = [
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 16 , 1 , 12 , 'Programmer' ),
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
-	new ProjectsMembers( 16 , 1 , 4 , 'Programmer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
@@ -295,7 +303,10 @@ var members_projects = [
   new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
   new ProjectsMembers( 18 , 5 , 1 , 'Developer' ),
   new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
+	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
   new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
+	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
+	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//Micromouse
   new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
@@ -324,7 +335,7 @@ var project_area_requests = [
 	),
 	new ProjectAreaRequests( 1, 1,
 		"Back-End Developers",
-		"Check this out <a href=\"https://www.mongodb.com/",
+		"Check <a href=\"https://www.mongodb.com/\">this<\\a> out ",
 		8, 2,
 		[
 			{title: "MongoDB", experience: 5}
