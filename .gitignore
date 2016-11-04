@@ -42,6 +42,10 @@ bower_components/
 
 # resources folder
 
+assets/
+
 resources/
 
 resources/view.sketch
+
+*.prd
