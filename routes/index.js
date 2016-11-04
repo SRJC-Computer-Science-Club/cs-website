@@ -164,6 +164,17 @@ router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
 });
 
 
+/* GET Our Partners Page. */
+router.get('/our-partners', function(req, res, next) {
+  var navbar = {
+    active: 'our-partners',
+    links: []
+  };
+
+  res.render('our_partners', { title: 'CS Club - Our Partners', navbar: navbar });
+});
+
+
 
 /* GET members page. */
 router.get('/members', function(req, res, next) {
