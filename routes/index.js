@@ -2,6 +2,7 @@ var express = require('express');
 var tempDB = require('./TEMP_schema');
 var router = express.Router();
 var helper = require('./helper_methods');
+var nodemailer = require('nodemailer');
 
 router.get('*', function(req, res, next) {
 
@@ -36,6 +37,69 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
 });
 
+
+/* GET /join. */
+router.get('/join/', function(req, res, next) {
+  var navbar = {
+    active: 'home',
+    links: []};
+
+  res.render('join', { title: 'CS Club', navbar: navbar });
+});
+
+/* GET Submit. */
+router.get('/join/submit', function(req, res, next) {
+
+  var navbar = {
+    active: 'home',
+    links: []
+  };
+
+  // create reusable transporter object using the default SMTP transport
+  var transporter = nodemailer.createTransport(
+    {
+      service: 'Gmail',
+      auth:
+      {
+        user: 'srjc.computer.science.club@gmail.com',
+        pass: '855990033'
+      }
+    });
+
+  var recipient =
+  {
+    name: req.query.name == '' ? 'No Name' : req.query.name,
+    contact: req.query.contact,
+    message: req.query.message
+  }
+
+  // setup e-mail data with unicode symbols
+  var mailOptions = {
+      from: '"BOT" <srjc.computer.science.club@gmail.com>', // sender address
+      to: 'srjc.computer.science.club@gmail.com', // list of receivers
+      subject: 'Slack invite from ' + recipient.name, // Subject line
+      text: 'use : >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
+  };
+
+  //send mail with defined transport object
+  if (recipient.name != 'No Name' | recipient.contact != '' | recipient.message != '')
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            return console.log(error);
+        }
+        console.log('Message sent: ' + info.response);
+    });
+  else
+    console.log('Message abort');
+
+  var projects = tempDB.projects.slice(0,4);
+
+  for ( var project of projects) {
+    project.members= findProjectMembers(project);
+  }
+
+  res.render('submit', { title: 'CS Club', results: recipient, club_officers: findClubOfficers(), popular_projects: projects, upcoming_events: findUpcommingEvents(), navbar: navbar, helper: helper});
+});
 
 
 /* GET Projects page. */
@@ -117,7 +181,7 @@ router.get('/members', function(req, res, next) {
     member.numberOfProjects = findProjectsForMember( member).length;
   }
 
-  res.render('members', { title: 'CS Club',  members: members, navbar: navbar, helper: helper});
+  res.render('members', { title: 'CS Club', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
 });
 
 /* GET member page. */
@@ -249,6 +313,26 @@ function findProjectsForMember( member )
   }
 
   return projects;
+}
+
+function findUpcommingEvents()
+{
+  return tempDB.project_events;
+}
+
+function findClubOfficers()
+{
+  var members = [];
+  for (var officer of tempDB.club_officers) {
+    for (var member of tempDB.members) {
+      if (officer.member_id == member.id) {
+        member.role = officer.position_title;
+        members.push(member);
+      }
+    }
+  }
+
+  return members;
 }
 
 module.exports = router;

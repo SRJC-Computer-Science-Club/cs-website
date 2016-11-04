@@ -1,29 +1,41 @@
+- var isFound = false;
+- for (var officer of officers)
+  - if (officer.member_id == member.id)
+    - isFound = officer;
 //Tablet-Desktop-HD Desktop
-.row.card.hidden-sm-down
-  .avatar
-  .member-info
-    a(href='/members/' + member.id)
-      h1.member-name= member.first_name + ' ' + member.last_name
-    if (member.bio_short !== undefined)
-      p= '"' + member.bio_short + '"'
-    p= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
+.row.hidden-sm-down
+  .col-md-12
+    a(href='/members/' + member.id).card
+      .avatar
+      - if (isFound != false)
+        #corner-ribbons.wrapper
+          .ribbon-wrapper
+            .ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
+      .member-info
+        h1.member-name= member.first_name + ' ' + member.last_name
+        if (member.bio_short !== undefined)
+          p= '"' + member.bio_short + '"'
+        p= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
     .quick-links
       each link in member.links
         a(href=link target='_blank').links
           span= helper.trimURL(link)
           img.links
 //sm, xs Phone-and landscape
-#device-phone.row.card.hidden-md-up
+#device-phone.row.hidden-md-up
   .col-sm-12
-    .avatar
-    a(href='/members/' + member.id)
+    a(href='/members/' + member.id).card
+      .avatar
       h1.member-name= member.first_name + ' ' + member.last_name
-    if (member.bio_short !== undefined)
-      p= '"' + member.bio_short + '"'
-    p.hidden-sm-down= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
-    p.nProjects= helper.pluralize('project', member.numberOfProjects, true)
+      - if (isFound != false)
+        #corner-ribbons.wrapper
+          .ribbon-wrapper
+            .ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
+      if (member.bio_short !== undefined)
+        p= '"' + member.bio_short + '"'
+      p.hidden-sm-down= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
+      p.nProjects= helper.pluralize('project', member.numberOfProjects, true)
     .quick-links
       each link in member.links
         a(href=link target='_blank').links
-          span
           img.links

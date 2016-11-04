@@ -3,10 +3,10 @@ extends layout
 block content
 	#project-page.content
 		.row
-			.col-sm-9
+			.col-md-9
 				.project-title
 					h1= project.title + " (" + project.status + ")"
-			.col-sm-3
+			.col-md-3
 				ul.project-quick-links-container
 					each link, name in project.links
 						li

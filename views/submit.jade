@@ -1,0 +1,49 @@
+extends layout
+
+block content
+  #submit-page.content
+    h1 Signing Up for Slack
+    .row.card
+      .col-xs-12
+        .row
+          .col-xs-12
+            h3 Good Show
+            p!= 'Thank you, ' + results.name + ' for taking interest in our club! Expect either to hear back from a club officer/project manager or recieve an invite to join <a href="https://srjccsc.slack.com/" target="_blank">Slack</a> and jump into talking to your fellow peers and programmers!'
+            img.glyp(src='/images/icons/thumbs-up-1.png' alt='thumbs up')
+        //Return to Homepage, or Show message
+        .row
+          .col-xs-12
+            a.btn.btn-success.btn-lg(href='/') Return to Homepage
+            a(style='margin-left: 12px;' data-toggle="collapse" href="#showMessage" aria-expanded="false" aria-controls="collapseExample") show message
+            .collapse(id="showMessage")
+              hr
+              p.header Name
+              p= results.name
+              p.header Contact
+              p= results.contact
+              p.header Message
+              p= results.message
+    //A small bio of what we do
+    hr
+    .row.card
+      .col-xs-12.club-bio
+        .row
+          .col-xs-12
+            .row
+              #atoms.col-lg-6
+                h3 Our Club Officers
+                each member in club_officers
+                  .member-cell
+                    include ./partials/atoms/member-cell
+              #atoms.col-lg-6
+                h3 Popular Projects
+                each project in popular_projects
+                  .project-cell
+                    include ./partials/atoms/project-cell
+            .row
+              #atoms.col-lg-12
+                h3 Upcoming Events
+                each event in upcoming_events
+                  .event-cell
+                    include ./partials/atoms/event-cell
+                

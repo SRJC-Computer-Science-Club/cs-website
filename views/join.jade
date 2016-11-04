@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  #join-page.content
+    h1 Signing Up for Slack
+    .row.card
+      .col-xs-12
+        .row
+          .col-xs-12
+            p Slack is our way of communicating, sharing and posting information professionally. Since Slack is well divided up into channels, we require all of our members to help pass around critial information on this service. And with everyone on the same service, we can quickly reference documents and links vs looking through threads of emails.
+        .row
+          .col-lg-6
+            form(action='join/submit')
+              .form-group
+                p.header(for='email') Name
+                input.form-control(id='email' type='text' for='name' name='name' placeholder='Johny Appleseed')
+              .form-group
+                p.header(for='contact') Your Contact
+                input.form-control(id='contact' type='text' for='contact' name='contact' placeholder='e.g. email, Facebook Profile URL, phone number, etc.')
+              .form-group
+                p.header(for='message') Message (optional, but helpful)
+                textarea.form-control(id='message' name='message' rows='5' placeholder='e.g. list of skills, what interests you most, any new projects/ideas you would like to mention')
+              input.btn.btn-success.btn-lg(type='submit' name='submit' value='Send Message')
+          .col-lg-6
+            h3 Something we do

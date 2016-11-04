@@ -1,0 +1,30 @@
+#join-page {
+  h1, p, input.btn.btn-success.btn-lg {
+    text-align: left;
+  }
+  input.btn.btn-success.btn-lg {
+    margin-bottom: $margin-lg;
+  }
+}
+
+#submit-page {
+  h1 {
+    text-align: left;
+  }
+  .card {
+    padding: $margin-md;
+  }
+  img.glyp {
+    width: 25%;
+    height: 25%;
+    margin: $margin-lg;
+  }
+  a {
+    margin-bottom: $margin-lg;
+  }
+  .club-bio {
+    h3 {
+      text-align: left;
+    }
+  }
+}
