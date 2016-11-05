@@ -369,7 +369,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 2, 3,
 		"AI Players",
 		"",
-		"Welcome!:3", "&#8734",
+		"Welcome!:2", "&#8734",
 		[
 			{title: "Lua", experience: 1}
 		],
@@ -406,12 +406,12 @@ var project_area_requests = [
 	new ProjectAreaRequests( 6, 6,
 		"Position-1",
 		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
-		1, 5,
+		":1", 5,
 		[
 			{title: "Easy", experience: 1},
 			{title: "Medium", experience: 2},
-			{title: "Hard", experience: 3},
-			{title: "Harder", experience: 4},
+			{title: "A Challenge", experience: 3},
+			{title: "Difficult", experience: 4},
 			{title: "Experienced", experience: 5}
 		],
 		2
@@ -419,12 +419,12 @@ var project_area_requests = [
 	new ProjectAreaRequests( 7, 6,
 		"Position-2",
 		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
-		2, 4,
+		":2", 4,
 		[
 			{title: "Easy", experience: 1},
 			{title: "Medium", experience: 2},
-			{title: "Hard", experience: 3},
-			{title: "Harder", experience: 4},
+			{title: "A Challenge", experience: 3},
+			{title: "Difficult", experience: 4},
 			{title: "Experienced", experience: 5}
 		],
 		2
@@ -432,12 +432,12 @@ var project_area_requests = [
 	new ProjectAreaRequests( 8, 6,
 		"Position-3",
 		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
-		3, 3,
+		":3", 3,
 		[
 			{title: "Easy", experience: 1},
 			{title: "Medium", experience: 2},
-			{title: "Hard", experience: 3},
-			{title: "Harder", experience: 4},
+			{title: "A Challenge", experience: 3},
+			{title: "Difficult", experience: 4},
 			{title: "Experienced", experience: 5}
 		],
 		2
@@ -445,12 +445,12 @@ var project_area_requests = [
 	new ProjectAreaRequests( 9, 6,
 		"Position-4",
 		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
-		4, 2,
+		":4", 2,
 		[
 			{title: "Easy", experience: 1},
 			{title: "Medium", experience: 2},
-			{title: "Hard", experience: 3},
-			{title: "Harder", experience: 4},
+			{title: "A Challenge", experience: 3},
+			{title: "Difficult", experience: 4},
 			{title: "Experienced", experience: 5}
 		],
 		2
@@ -458,12 +458,12 @@ var project_area_requests = [
 	new ProjectAreaRequests( 10, 6,
 		"Position-5",
 		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
-		5, 1,
+		":5", 1,
 		[
 			{title: "Easy", experience: 1},
 			{title: "Medium", experience: 2},
-			{title: "Hard", experience: 3},
-			{title: "Harder", experience: 4},
+			{title: "A Challenge", experience: 3},
+			{title: "Difficult", experience: 4},
 			{title: "Experienced", experience: 5}
 		],
 		2

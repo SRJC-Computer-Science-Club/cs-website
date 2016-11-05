@@ -32,6 +32,9 @@ router.get('/', function(req, res, next) {
   for ( var project of projects) {
     project.members= findProjectMembers(project);
     project.areaRequests= findProjectAreaRequests(project);
+    for ( var request of project.areaRequests) {
+      request.project_interest_color = replaceColorIntensity({interest: request.project_interest});
+    }
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -118,52 +121,6 @@ router.get('/projects/', function(req, res, next) {
 
   res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
 });
-
-
-function replaceColorIntensity(project_interest) {
-  if (project_interest.interest != undefined) {
-    for ( var i = 0; i < project_interest.interest.length; i += 1) {
-      if (project_interest.interest[i] == ':') {
-        project_interest.value = parseInt(project_interest.interest[++i]);
-        project_interest.title = project_interest.interest.substr(0, --i);
-      }
-    }
-  }
-  switch (project_interest.value) {
-    case 1:
-      return '#BFBFBF'; break;
-    case 2:
-      return '#4A90E2'; break;
-    case 3:
-      return '#7ED321'; break;
-    case 4:
-      return '#F5A623'; break;
-    case 5:
-      return '#D0021B'; break;
-    default:
-      return '#BFBFBF'; break;
-  }
-}
-function replaceColorTitle(project_interest) {
-  if (project_interest.title == '') {
-    switch (project_interest.value) {
-      case 1:
-        project_interest.title = "Not Needed Now"; break;
-      case 2:
-        project_interest.title = "Planned Development"; break;
-      case 3:
-        project_interest.title = "Looking for Help"; break;
-      case 4:
-        project_interest.title = "In Need"; break;
-      case 5:
-        project_interest.title = "Strickly Needed"; break;
-      default:
-        project_interest.title = "undefined";
-        break;
-    }
-  }
-  return project_interest.title;
-}
 
 // GET project page
 router.get('/projects/:projectID', function(req, res, next) {
@@ -361,6 +318,54 @@ function findProjectsForMember( member )
   }
 
   return projects;
+}
+
+function replaceColorIntensity(project_interest)
+{
+  if (project_interest.interest != undefined) {
+    for ( var i = 0; i < project_interest.interest.length; i += 1) {
+      if (project_interest.interest[i] == ':') {
+        project_interest.value = parseInt(project_interest.interest[++i]);
+        project_interest.title = project_interest.interest.substr(0, --i);
+      }
+    }
+  }
+  switch (project_interest.value) {
+    case 1:
+      return '#BFBFBF'; break;
+    case 2:
+      return '#7ED321'; break;
+    case 3:
+      return '#4A90E2'; break;
+    case 4:
+      return '#F5A623'; break;
+    case 5:
+      return '#D0021B'; break;
+    default:
+      return '#BFBFBF'; break;
+  }
+}
+
+function replaceColorTitle(project_interest)
+{
+  if (project_interest.title == '') {
+    switch (project_interest.value) {
+      case 1:
+        project_interest.title = "Not Needed Now"; break;
+      case 2:
+        project_interest.title = "Planned Development"; break;
+      case 3:
+        project_interest.title = "Looking for Help"; break;
+      case 4:
+        project_interest.title = "In Need"; break;
+      case 5:
+        project_interest.title = "Strickly Needed"; break;
+      default:
+        project_interest.title = "undefined";
+        break;
+    }
+  }
+  return project_interest.title;
 }
 
 function findUpcommingEvents()
