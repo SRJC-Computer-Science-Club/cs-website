@@ -48,14 +48,16 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
-function ProjectEvent( id, project_id, title, description, description_short, date)
+function ProjectEvent( id, project_id, title, description, description_short, location, date_range, media)
 {
 	this.id = id;
 	this.project_id = project_id;
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
-	this.date = date;
+	this.location = location;
+	this.date_range = date_range;
+	this.media = media;
 }
 
 function ClubOfficers( id, member_id, position_title, swatch)
@@ -476,7 +478,11 @@ project_events = [
 	'RoboGames—Line Follower',
 	'description',
 	'Robotics competition for our line follower project.',
-	'April 21'
+	'',
+	'April 21',
+	[
+		{caption: '', image: '', url: ''}
+	]
 	)
 ]
 

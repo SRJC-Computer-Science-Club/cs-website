@@ -68,11 +68,14 @@ p.header {
   margin: $margin-xs 0;
 }
 
+@import 'assets/tables';
+
 @import 'partials/navbar';
 @import 'partials/index_page';
 @import 'partials/join_page';
 @import 'partials/project_banner';
 @import 'partials/projects_page';
+@import 'partials/events_page';
 @import 'partials/project_page';
 @import 'partials/photo_gallery_page';
 @import 'partials/members_page';

@@ -170,6 +170,18 @@ router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
 
 
 
+/* GET Events Page. */
+router.get('/events', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  res.render('events', { title: 'CS Club - Events', upcoming_events: findUpcommingEvents(), navbar: navbar });
+});
+
+
+
 /* GET members page. */
 router.get('/members', function(req, res, next) {
   var navbar = {
