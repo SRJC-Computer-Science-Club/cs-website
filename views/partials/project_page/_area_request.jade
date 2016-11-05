@@ -1,0 +1,16 @@
+h3 Area Requests
+#areaRequest-list
+  each request in project.areaRequests
+    a.cell.row
+      .context.col-xs-12
+        .col-xs-8
+          p(style="background-color: " +request.project_interest_color).interest.float-xs-right= request.project_interest_title
+          p.header= request.title
+          p.author.float-xs-right= request.author.first_name + ' ' + request.author.last_name
+          p= request.description
+        .positions.col-xs-4
+          h4= helper.pluralize('position', request.assets.length ,true)
+          hr
+          .asset-list
+            each asset in request.assets 
+              p.asset.float-xs-left= asset.title + '-' + asset.experience

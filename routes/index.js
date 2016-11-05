@@ -119,6 +119,17 @@ router.get('/projects/', function(req, res, next) {
   res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
 });
 
+
+function replaceColorIntensity(project_interest) {
+  value = 1;
+  return "#FFFFFF";
+
+}
+function replaceColorTitle(project_interest) {
+  return value;
+
+}
+
 // GET project page
 router.get('/projects/:projectID', function(req, res, next) {
   var projects = tempDB.projects;
@@ -134,17 +145,14 @@ router.get('/projects/:projectID', function(req, res, next) {
     navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
 
-  var members = findProjectMembers( project );
-  var results = [
-    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
-    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
-  ];
+  project.members = findProjectMembers( project );
+  project.areaRequests= findProjectAreaRequests(project);
+  for ( var request of project.areaRequests) {
+    request.author = findMemberForID( project.members, request.author_id);
 
-  project.members = members
+  }
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});
 });
 
 /* GET Project Photo Gallery. */
