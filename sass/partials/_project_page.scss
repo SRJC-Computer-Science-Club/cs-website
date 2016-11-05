@@ -38,7 +38,6 @@
 				font-style: italic;
 			}
 			.positions {
-				background-color: $lightgray;
 				.asset-list {
 					.asset {
 						@extend .interest;
@@ -48,7 +47,19 @@
 				}
 			}
 		}
-
+	}
+	#event-list {
+		.context {
+			.date-range {
+				font-weight: bolder;
+			}
+			.location {
+				margin-bottom: $margin-md;
+			}
+			.cover-image {
+				height: 125px;
+			}
+		}
 	}
 }
 $bg: #373a3c;

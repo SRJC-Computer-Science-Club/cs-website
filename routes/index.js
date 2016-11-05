@@ -148,6 +148,7 @@ router.get('/projects/:projectID', function(req, res, next) {
       asset.experience_color = replaceColorIntensity({value: asset.experience});
     }
   }
+  project.events = findProjectEvents(project);
 
   res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});
 });
