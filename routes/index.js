@@ -160,7 +160,7 @@ router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
 
   var project = findProjectForID( tempDB.projects, req.params.projectID);
 
-  res.render('photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
+  res.render('project_photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
 });
 
 
