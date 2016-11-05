@@ -311,6 +311,23 @@ function findProjectAreaRequests( project )
 
 
 
+function findProjectEvents( project )
+{
+  var events = [];
+
+  for ( var event of tempDB.project_events )
+  {
+    if (project.id == event.project_id)
+    {
+      events.push(event);
+    }
+  }
+
+  return events;
+}
+
+
+
 function findProjectsForMember( member )
 {
   var projects = [];
