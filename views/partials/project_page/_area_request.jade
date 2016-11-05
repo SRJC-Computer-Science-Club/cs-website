@@ -13,4 +13,4 @@ h3 Area Requests
           hr
           .asset-list
             each asset in request.assets 
-              p.asset.float-xs-left= asset.title + '-' + asset.experience
+              p(style="background-color: " +asset.experience_color).asset.float-xs-left= asset.title

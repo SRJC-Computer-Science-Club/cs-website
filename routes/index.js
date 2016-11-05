@@ -121,13 +121,48 @@ router.get('/projects/', function(req, res, next) {
 
 
 function replaceColorIntensity(project_interest) {
-  value = 1;
-  return "#FFFFFF";
-
+  if (project_interest.interest != undefined) {
+    for ( var i = 0; i < project_interest.interest.length; i += 1) {
+      if (project_interest.interest[i] == ':') {
+        project_interest.value = parseInt(project_interest.interest[++i]);
+        project_interest.title = project_interest.interest.substr(0, --i);
+      }
+    }
+  }
+  switch (project_interest.value) {
+    case 1:
+      return '#BFBFBF'; break;
+    case 2:
+      return '#4A90E2'; break;
+    case 3:
+      return '#7ED321'; break;
+    case 4:
+      return '#F5A623'; break;
+    case 5:
+      return '#D0021B'; break;
+    default:
+      return '#BFBFBF'; break;
+  }
 }
 function replaceColorTitle(project_interest) {
-  return value;
-
+  if (project_interest.title == '') {
+    switch (project_interest.value) {
+      case 1:
+        project_interest.title = "Not Needed Now"; break;
+      case 2:
+        project_interest.title = "Planned Development"; break;
+      case 3:
+        project_interest.title = "Looking for Help"; break;
+      case 4:
+        project_interest.title = "In Need"; break;
+      case 5:
+        project_interest.title = "Strickly Needed"; break;
+      default:
+        project_interest.title = "undefined";
+        break;
+    }
+  }
+  return project_interest.title;
 }
 
 // GET project page
@@ -149,7 +184,12 @@ router.get('/projects/:projectID', function(req, res, next) {
   project.areaRequests= findProjectAreaRequests(project);
   for ( var request of project.areaRequests) {
     request.author = findMemberForID( project.members, request.author_id);
-
+    var project_interest = {interest: request.project_interest, title: 'undefined', value: '0'};
+    request.project_interest_color = replaceColorIntensity(project_interest);
+    request.project_interest_title = replaceColorTitle(project_interest);
+    for ( var asset of request.assets) {
+      asset.experience_color = replaceColorIntensity({value: asset.experience});
+    }
   }
 
   res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});

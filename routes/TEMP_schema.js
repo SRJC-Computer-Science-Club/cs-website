@@ -326,7 +326,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 0, 1,
 		"Front-End Developers",
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
-		5, 4,
+		":4", 4,
 		[
 			{title: "HTML/CSS/Boostrap", experience: 3},
 			{title: "Java", experience: 1}
@@ -335,8 +335,8 @@ var project_area_requests = [
 	),
 	new ProjectAreaRequests( 1, 1,
 		"Back-End Developers",
-		"Check <a href=\"https://www.mongodb.com/\">this<\\a> out ",
-		8, 2,
+		"Check <a href=\"https://www.mongodb.com/\">this</a> out ",
+		":3", 2,
 		[
 			{title: "MongoDB", experience: 5}
 		],
@@ -346,7 +346,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 2, 3,
 		"AI Players",
 		"",
-		5, "&#8734",
+		"Welcome!:3", "&#8734",
 		[
 			{title: "Lua", experience: 1}
 		],
@@ -356,7 +356,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 3, 2,
 		"Game Developers",
 		"",
-		10, 3,
+		":5", 3,
 		[
 			{title: "Unity", experience: 5}
 		],
@@ -365,7 +365,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 4, 2,
 		"Graphic/Asset Designers",
 		"",
-		4, 2,
+		":3", 2,
 		[
 			{title: "Adobe Animate", experience: 5},
 			{title: "Vector Based Program", experience: 3}
@@ -375,7 +375,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 5, 2,
 		"Back-End Developer",
 		"",
-		2, 1,
+		":1", 1,
 		[],
 		2
 	)
