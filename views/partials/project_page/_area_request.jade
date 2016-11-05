@@ -1,16 +1,19 @@
 h3 Area Requests
 #areaRequest-list
-  each request in project.areaRequests
-    a.cell.row
-      .context.col-xs-12
-        .col-xs-8
-          p(style="background-color: " +request.project_interest_color).interest.float-xs-right= request.project_interest_title
-          p.header= request.title
-          p.author.float-xs-right= request.author.first_name + ' ' + request.author.last_name
-          p= request.description
-        .positions.col-xs-4
-          h4!= helper.pluralize('position', request.nPositions ,true)
-          hr
-          .asset-list
-            each asset in request.assets 
-              p(style="background-color: " +asset.experience_color).asset.float-xs-left= asset.title
+  if (project.areaRequests.length > 0)
+    each request in project.areaRequests
+      a.cell.row
+        .context.col-xs-12
+          .col-xs-8
+            p(style="background-color: " +request.project_interest_color).interest.float-xs-right= request.project_interest_title
+            p.header= request.title
+            p.author.float-xs-right= request.author.first_name + ' ' + request.author.last_name
+            p= request.description
+          .positions.col-xs-4
+            h4!= helper.pluralize('position', request.nPositions ,true)
+            hr
+            .asset-list
+              each asset in request.assets 
+                p(style="background-color: " +asset.experience_color).asset.float-xs-left= asset.title
+  else
+    h4 no curent requests at this moment
