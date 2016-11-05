@@ -346,6 +346,7 @@ var members_projects = [
   new ProjectsMembers( 28 , 6 , 2 , 'Administrator' )
 ];
 
+//11
 var project_area_requests = [
 	//CS Website
 	new ProjectAreaRequests( 0, 1,
@@ -376,6 +377,14 @@ var project_area_requests = [
 			{title: "Lua", experience: 1}
 		],
 		1
+	),
+	//Line-Follower
+	new ProjectAreaRequests( 11, 5,
+		"Hardware Designers",
+		"",
+		":2", 2,
+		[],
+		2
 	),
 	//2d-platformer
 	new ProjectAreaRequests( 3, 2,
@@ -478,8 +487,8 @@ project_events = [
 	'RoboGames—Line Follower',
 	'description',
 	'Robotics competition for our line follower project.',
-	'',
-	'April 21',
+	'Pleasanton, CA',
+	'April 21-23',
 	[
 		{caption: '', image: '', url: ''}
 	]
