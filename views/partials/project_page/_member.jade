@@ -1,8 +1,0 @@
-each member in project.members
-	.col-md-6
-		a(href='/members/'+ member.id).project-member.card
-			img.img-circle.pull-xs-left(src='http://placehold.it/64x64/77cb6f')
-			.project-member-text
-				//name
-				h6= member.first_name + " " + member.last_name
-				p= member.role

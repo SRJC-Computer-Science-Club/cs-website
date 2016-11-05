@@ -1,0 +1,15 @@
+#events-page {
+	.events {
+		.event {
+			// min-height: 96px;
+			h3 {
+				text-align: left;
+			}
+			.thumbnail {
+				position: absolute;
+				top: $margin-md;
+				right: $margin-lg;
+			}
+		}
+	}
+}
