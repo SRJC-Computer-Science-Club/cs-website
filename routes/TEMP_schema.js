@@ -66,7 +66,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//5
+//6
 var projects = [
 	new Project(
 		1,
@@ -159,6 +159,24 @@ var projects = [
 		{},
 		{},
 		[]
+  ),
+  new Project(
+    6,
+    'Template Project',
+    '<a href=\'\\members\\2\'>Link to a member</a>. Here you\' describe any goals and brief talk about skills and technologies used to work on this project. Placeholder, placeholder, placeholder, placeholder, placeholder, placeholder.<br /><br />use html break points<br /><br />And a long description.',
+		'Short descriptions don\'t support links, as far as I can tell',
+    'Archived',
+		'The most recent post',
+		{},
+		{
+			link: 'https://www.google.com/'
+		},
+		[
+			'',
+			'',
+			'',
+			''
+		] //images saved in public/images/projects/../images
   )
 ];
 
@@ -282,7 +300,7 @@ var members = [
   )
 ];
 
-//24
+//25
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-Kyle
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
@@ -318,7 +336,12 @@ var members_projects = [
   new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
-  new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
+  new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
+	//Template Project
+  new ProjectsMembers( 25 , 6 , 2 , 'Administrator' ),
+  new ProjectsMembers( 26 , 6 , 2 , 'Administrator' ),
+  new ProjectsMembers( 27 , 6 , 2 , 'Administrator' ),
+  new ProjectsMembers( 28 , 6 , 2 , 'Administrator' )
 ];
 
 var project_area_requests = [
@@ -377,6 +400,72 @@ var project_area_requests = [
 		"",
 		":1", 1,
 		[],
+		2
+	),
+	//Template Projet
+	new ProjectAreaRequests( 6, 6,
+		"Position-1",
+		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
+		1, 5,
+		[
+			{title: "Easy", experience: 1},
+			{title: "Medium", experience: 2},
+			{title: "Hard", experience: 3},
+			{title: "Harder", experience: 4},
+			{title: "Experienced", experience: 5}
+		],
+		2
+	),
+	new ProjectAreaRequests( 7, 6,
+		"Position-2",
+		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
+		2, 4,
+		[
+			{title: "Easy", experience: 1},
+			{title: "Medium", experience: 2},
+			{title: "Hard", experience: 3},
+			{title: "Harder", experience: 4},
+			{title: "Experienced", experience: 5}
+		],
+		2
+	),
+	new ProjectAreaRequests( 8, 6,
+		"Position-3",
+		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
+		3, 3,
+		[
+			{title: "Easy", experience: 1},
+			{title: "Medium", experience: 2},
+			{title: "Hard", experience: 3},
+			{title: "Harder", experience: 4},
+			{title: "Experienced", experience: 5}
+		],
+		2
+	),
+	new ProjectAreaRequests( 9, 6,
+		"Position-4",
+		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
+		4, 2,
+		[
+			{title: "Easy", experience: 1},
+			{title: "Medium", experience: 2},
+			{title: "Hard", experience: 3},
+			{title: "Harder", experience: 4},
+			{title: "Experienced", experience: 5}
+		],
+		2
+	),
+	new ProjectAreaRequests( 10, 6,
+		"Position-5",
+		"Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report. Nothing interesting to report.",
+		5, 1,
+		[
+			{title: "Easy", experience: 1},
+			{title: "Medium", experience: 2},
+			{title: "Hard", experience: 3},
+			{title: "Harder", experience: 4},
+			{title: "Experienced", experience: 5}
+		],
 		2
 	)
 ];
