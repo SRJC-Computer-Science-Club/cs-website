@@ -1,6 +1,6 @@
 #grid
   each image in project.images
-    - var source = '/images/projects/'+project.title+'/images/'+image;
+    - var source = '/images/projects/'+project.title.toLowerCase()+'/images/'+image;
     //TODO DRY
     //HD Desktops are 25%
     .thumbnail.hidden-lg-down
