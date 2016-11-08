@@ -86,25 +86,12 @@ var projects = [
 		},
 		[]
   ),
-	new Project(
-		3,
-		'Function Fighters',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An AI battle arena simulator',
-		'Scrimmaging!',
-		'Would you like to join?!',
-		{},
-		{
-		  github: 'https://github.com/joshuasrjc/function-fighters'
-		},
-		[]
-  ),
   new Project(
     5,
     'Line Follower',
     '',
 		'',
-    'Blueprinting',
+    'Finalizing Parts List',
 		'',
 		{},
 		{
@@ -113,21 +100,6 @@ var projects = [
 		},
 		[]
   ),
-	new Project(
-		0,
-		'Micromouse',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An autonomous maze solving robot mouse',
-		'Delayed',
-		'',
-		{},
-		{
-			checkvist: 'https://checkvist.com/checklists/542765',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
-			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
-		},
-		[]
-	),
   new Project(
     2,
     '2D Platformer',
@@ -151,6 +123,34 @@ var projects = [
 			'main-character-sprite-1.png'
 		]
   ),
+	new Project(
+		3,
+		'Function Fighters',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An AI battle arena simulator',
+		'Scrimmaging!',
+		'Would you like to join?!',
+		{},
+		{
+		  github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		[]
+  ),
+	new Project(
+		0,
+		'Micromouse',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An autonomous maze solving robot mouse',
+		'Delayed',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/542765',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
+			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		[]
+	),
   new Project(
     4,
     'Quad-Copter',
@@ -382,7 +382,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 11, 5,
 		"Hardware Designers",
 		"",
-		":2", 2,
+		":3", 3,
 		[],
 		2
 	),
