@@ -191,6 +191,7 @@ router.get('/events/:eventID', function(req, res, next) {
   };
 
   var event = findEventForID(tempDB.project_events, req.params.eventID);
+  event.project = findProjectForID(tempDB.projects, event.project_id);
 
   res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
 });

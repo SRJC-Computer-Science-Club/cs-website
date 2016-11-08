@@ -2,8 +2,6 @@ extends layout
 
 block content
   #events-page.content
-    h1 Events
-    hr
     .events
       each event in upcoming_events
         a(href='/events/'+event.id).cell.row.event
