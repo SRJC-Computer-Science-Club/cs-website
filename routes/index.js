@@ -183,6 +183,20 @@ router.get('/events', function(req, res, next) {
 
 
 
+/* GET Events Page. */
+router.get('/events/:eventID', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  var event = findEventForID(tempDB.project_events, req.params.eventID);
+
+  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
+});
+
+
+
 /* GET members page. */
 router.get('/members', function(req, res, next) {
   var navbar = {
@@ -325,6 +339,21 @@ function findProjectEvents( project )
   }
 
   return events;
+}
+
+
+
+function findEventForID( events, id )
+{
+  var found;
+  for ( var event of events)
+  {
+    if (event.id == id)
+      found = event;
+  }
+
+  return found;
+
 }
 
 
