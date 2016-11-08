@@ -1,0 +1,15 @@
+h3 Events
+#event-list
+  if (project.events.length > 0)
+    each event in project.events
+      a.cell.row
+        .context.col-xs-12
+          .col-xs-8
+            p.date-range.float-xs-right= event.date_range
+            p.header= event.title
+            p.location= event.location
+            p= event.description
+          .col-xs-4.cover-image
+            img(src='image')
+  else
+    h4 no listed events

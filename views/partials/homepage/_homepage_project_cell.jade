@@ -85,15 +85,12 @@
 									each request in project.areaRequests
 										tr
 											td.title
-												//TODO Request title Link
-												a(href="/projects/"+project.id)= request.title
+												a(href="/projects/"+project.id+"#areaRequest-list")= request.title
 											//TODO Tooltips/Popovers
 											- var assets = [];
 											each asset in request.assets
 												- assets.push(asset.title + "— level " + asset.experience + "\n")
-											//TODO Area Request Project Interest
-											- var color = "gray";
-											td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
+											td(title=assets style=" background-color: " +request.project_interest_color)!= helper.pluralize('position', request.nPositions, true)
 						else
 							span no current requests at this moment
 					.events
@@ -174,15 +171,12 @@
 									each request in project.areaRequests
 										tr
 											td.title
-												//TODO Request title Link
-												a(href="/projects/"+project.id)= request.title
+												a(href="/projects/"+project.id+"#areaRequest-list")= request.title
 											//TODO Tooltips/Popovers
 											- var assets = [];
 											each asset in request.assets
 												- assets.push(asset.title + "— level " + asset.experience + "\n")
-											//TODO Area Request Project Interest
-											- var color = "gray";
-											td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
+											td(title=assets style=" background-color: " +request.project_interest_color)!= helper.pluralize('position', request.nPositions, true)
 						else
 							span no curent requests at this moment
 					.events

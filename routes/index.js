@@ -32,6 +32,9 @@ router.get('/', function(req, res, next) {
   for ( var project of projects) {
     project.members= findProjectMembers(project);
     project.areaRequests= findProjectAreaRequests(project);
+    for ( var request of project.areaRequests) {
+      request.project_interest_color = replaceColorIntensity({interest: request.project_interest});
+    }
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -134,17 +137,36 @@ router.get('/projects/:projectID', function(req, res, next) {
     navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
 
-  var members = findProjectMembers( project );
-  var results = [
-    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
-    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
-  ];
+  project.members = findProjectMembers( project );
+  project.areaRequests= findProjectAreaRequests(project);
+  for ( var request of project.areaRequests) {
+    request.author = findMemberForID( project.members, request.author_id);
+    var project_interest = {interest: request.project_interest, title: 'undefined', value: '0'};
+    request.project_interest_color = replaceColorIntensity(project_interest);
+    request.project_interest_title = replaceColorTitle(project_interest);
+    for ( var asset of request.assets) {
+      asset.experience_color = replaceColorIntensity({value: asset.experience});
+    }
+  }
+  project.events = findProjectEvents(project);
 
-  project.members = members
+  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});
+});
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
+/* GET Project Photo Gallery. */
+router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
+  var navbar = {
+    active: 'projects',
+    links:
+    [
+      {name: 'Back to Project', url: '/projects/'+req.params.projectID, active: true}
+      //{name: 'Download Gallery', url: '#', active: false}
+    ]
+  };
+
+  var project = findProjectForID( tempDB.projects, req.params.projectID);
+
+  res.render('project_photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
 });
 
 
@@ -326,6 +348,54 @@ function findProjectsForMember( member )
   }
 
   return projects;
+}
+
+function replaceColorIntensity(project_interest)
+{
+  if (project_interest.interest != undefined) {
+    for ( var i = 0; i < project_interest.interest.length; i += 1) {
+      if (project_interest.interest[i] == ':') {
+        project_interest.value = parseInt(project_interest.interest[++i]);
+        project_interest.title = project_interest.interest.substr(0, --i);
+      }
+    }
+  }
+  switch (project_interest.value) {
+    case 1:
+      return '#BFBFBF'; break;
+    case 2:
+      return '#7ED321'; break;
+    case 3:
+      return '#4A90E2'; break;
+    case 4:
+      return '#F5A623'; break;
+    case 5:
+      return '#D0021B'; break;
+    default:
+      return '#BFBFBF'; break;
+  }
+}
+
+function replaceColorTitle(project_interest)
+{
+  if (project_interest.title == '') {
+    switch (project_interest.value) {
+      case 1:
+        project_interest.title = "Not Needed Now"; break;
+      case 2:
+        project_interest.title = "Planned Development"; break;
+      case 3:
+        project_interest.title = "Looking for Help"; break;
+      case 4:
+        project_interest.title = "In Need"; break;
+      case 5:
+        project_interest.title = "Strickly Needed"; break;
+      default:
+        project_interest.title = "undefined";
+        break;
+    }
+  }
+  return project_interest.title;
 }
 
 function findUpcommingEvents()
