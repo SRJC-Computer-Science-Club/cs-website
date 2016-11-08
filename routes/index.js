@@ -35,6 +35,7 @@ router.get('/', function(req, res, next) {
     for ( var request of project.areaRequests) {
       request.project_interest_color = replaceColorIntensity({interest: request.project_interest});
     }
+    project.events = findProjectEvents( project);
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -148,9 +149,9 @@ router.get('/projects/:projectID', function(req, res, next) {
       asset.experience_color = replaceColorIntensity({value: asset.experience});
     }
   }
-  project.events = findProjectEvents(project);
+  project.events = findProjectEvents( project);
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});
+  res.render('project', { title: 'CS Club' , project: project, services: tempDB.services, navbar: navbar, helper: helper});
 });
 
 /* GET Project Photo Gallery. */

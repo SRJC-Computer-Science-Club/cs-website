@@ -95,7 +95,16 @@
 							span no current requests at this moment
 					.events
 						p.header Events
-						span no listed events
+						if (project.events.length > 0)
+							table.table
+								tbody
+									each event in project.events
+										tr
+											td.title
+												a(href="/events/"+event.id)= event.title
+											td= event.date_range
+						else
+							span no listed events
 					
 //Phone xs
 #device-phone.row.card.project-banner.hidden-sm-up
@@ -181,6 +190,15 @@
 							span no curent requests at this moment
 					.events
 						p.header Events
-						span no listed events
+						if (project.events.length > 0)
+							table.table
+								tbody
+									each event in project.events
+										tr
+											td.title
+												a(href="/events/"+event.id)= event.title
+											td= event.date_range
+						else
+							span no listed events
 
 		
