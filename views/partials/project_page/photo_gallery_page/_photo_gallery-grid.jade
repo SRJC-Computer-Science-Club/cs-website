@@ -3,17 +3,17 @@
     - var source = '/images/projects/'+project.title.toLowerCase()+'/images/'+image;
     //TODO DRY
     //HD Desktops are 25%
-    .thumbnail.hidden-lg-down
+    .thumbnail-caption.hidden-lg-down
       a(href=source target='_blank')
         img(src=source alt=image)
       figcaption= image
     //Tablets and Desktops are 33%
-    .thumbnail(style='width: 33%;').hidden-xl-up.hidden-sm-down
+    .thumbnail-caption(style='width: 33%;').hidden-xl-up.hidden-sm-down
       a(href=source target='_blank')
         img(src=source alt=image)
       figcaption= image
     //Phones are 100%
-    .thumbnail(style='width: 100%;').hidden-md-up
+    .thumbnail-caption(style='width: 100%;').hidden-md-up
       a(href=source target='_blank')
         img(src=source alt=image)
       figcaption= image
