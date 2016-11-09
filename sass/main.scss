@@ -68,6 +68,9 @@ p.header {
   margin: $margin-xs 0;
 }
 
+@import 'assets/tables';
+@import 'assets/media';
+
 @import 'partials/navbar';
 @import 'partials/index_page';
 @import 'partials/join_page';
@@ -75,6 +78,8 @@ p.header {
 @import 'partials/projects_page';
 @import 'partials/project_page';
 @import 'partials/photo_gallery_page';
+@import 'partials/events_page';
+@import 'partials/event_page';
 @import 'partials/members_page';
 @import 'partials/member_page';
 @import 'partials/about';

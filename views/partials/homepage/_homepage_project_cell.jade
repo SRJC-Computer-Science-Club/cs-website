@@ -85,20 +85,26 @@
 									each request in project.areaRequests
 										tr
 											td.title
-												//TODO Request title Link
-												a(href="/projects/"+project.id)= request.title
+												a(href="/projects/"+project.id+"#areaRequest-list")= request.title
 											//TODO Tooltips/Popovers
 											- var assets = [];
 											each asset in request.assets
 												- assets.push(asset.title + "— level " + asset.experience + "\n")
-											//TODO Area Request Project Interest
-											- var color = "gray";
-											td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
+											td(title=assets style=" background-color: " +request.project_interest_color)!= helper.pluralize('position', request.nPositions, true)
 						else
 							span no current requests at this moment
 					.events
 						p.header Events
-						span no listed events
+						if (project.events.length > 0)
+							table.table
+								tbody
+									each event in project.events
+										tr
+											td.title
+												a(href="/events/"+event.id)= event.title
+											td= event.date_range
+						else
+							span no listed events
 					
 //Phone xs
 #device-phone.row.card.project-banner.hidden-sm-up
@@ -174,19 +180,25 @@
 									each request in project.areaRequests
 										tr
 											td.title
-												//TODO Request title Link
-												a(href="/projects/"+project.id)= request.title
+												a(href="/projects/"+project.id+"#areaRequest-list")= request.title
 											//TODO Tooltips/Popovers
 											- var assets = [];
 											each asset in request.assets
 												- assets.push(asset.title + "— level " + asset.experience + "\n")
-											//TODO Area Request Project Interest
-											- var color = "gray";
-											td(title=assets style=" background-color: " +color)!= helper.pluralize('position', request.nPositions, true)
+											td(title=assets style=" background-color: " +request.project_interest_color)!= helper.pluralize('position', request.nPositions, true)
 						else
 							span no curent requests at this moment
 					.events
 						p.header Events
-						span no listed events
+						if (project.events.length > 0)
+							table.table
+								tbody
+									each event in project.events
+										tr
+											td.title
+												a(href="/events/"+event.id)= event.title
+											td= event.date_range
+						else
+							span no listed events
 
 		

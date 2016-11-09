@@ -1,0 +1,21 @@
+.thumbnail {
+  float: left;
+  padding: $margin-sm;
+  //width
+  //heigth
+  img {
+    border: 1px solid #ddd;
+    border-radius: .25rem;
+    padding: .25rem;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+.thumbnail-caption {
+  @extend .thumbnail;
+  margin-bottom: 32px;
+  figcaption {
+    margin: $margin-sm 0;
+  }
+}

@@ -1,0 +1,18 @@
+.row.card
+	.col-lg-12
+		h2 The Team
+		.row
+			#atoms.col-lg-12
+				.col-md-6
+					h3 Project Managers
+					each member in project.team.project_managers
+						.member-cell
+							include ../atoms/member-cell
+				.col-md-6
+					h3 Members
+					each member in project.team.members
+						.member-cell.grid.col-2.hidden-md-down
+							include ../atoms/member-cell
+						.member-cell.hidden-lg-up
+							include ../atoms/member-cell
+hr
