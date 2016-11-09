@@ -182,7 +182,7 @@ var projects = [
   )
 ];
 
-//12
+//13
 var members = [
 	new Member(
 		2, 'Erick', 'Sanchez',
@@ -225,7 +225,7 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
-    8, 'Wind', 'Carrianna',
+    8, 'Wind', 'Schneidenbach',
 		'my bio',
 		undefined,
     {},
@@ -273,6 +273,14 @@ var members = [
     []
   ),
   new Member(
+    13, 'Eli', 'Krause',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
 		undefined,
@@ -302,9 +310,9 @@ var members = [
   )
 ];
 
-//25
-//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-Kyle
+//27
+//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
+//9-yekalo 10-alex dewey 11-junior 12-Kyle 13-Eli
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower
 var members_projects = [
@@ -314,6 +322,8 @@ var members_projects = [
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	new ProjectsMembers( 16 , 1 , 12 , 'Programmer' ),
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
+	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
+	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
@@ -355,16 +365,16 @@ var project_area_requests = [
 		":4", 4,
 		[
 			{title: "HTML/CSS/Boostrap", experience: 3},
-			{title: "Java", experience: 1}
+			{title: "Java Script", experience: 1}
 		],
 		2
 	),
 	new ProjectAreaRequests( 1, 1,
 		"Back-End Developers",
-		"Check <a href=\"https://www.mongodb.com/\">this</a> out ",
+		"Check out https://www.mongodb.com/ for our technologies for backend",
 		":3", 2,
 		[
-			{title: "MongoDB", experience: 5}
+			{title: "MongoDB", experience: 4}
 		],
 		2
 	),
