@@ -10,6 +10,6 @@ h3 Events
             p.location= event.location
             p= event.description
           .col-xs-4.cover-image
-            img(src='image')
+            img(src='/images/projects/'+project.title.toLowerCase()+'/events/'+event.media[0].image)
   else
     h4 no listed events
