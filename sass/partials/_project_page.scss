@@ -50,14 +50,16 @@
 	}
 	#event-list {
 		.context {
+			height: 225px;
 			.date-range {
 				font-weight: bolder;
 			}
 			.location {
 				margin-bottom: $margin-md;
 			}
-			.cover-image {
-				height: 125px;
+			.cover-image img {
+				width: 100%;
+				object-fit: cover;
 			}
 		}
 	}

@@ -139,6 +139,48 @@ router.get('/projects/:projectID', function(req, res, next) {
   }
 
   project.members = findProjectMembers( project );
+  project.team = {project_managers: [], members: []};
+  for (var member of project.members) {
+    if (member.role.includes("Project Founder") | member.role.includes("Project Manager") | member.role.includes("Sub-Project Manager"))
+      project.team.project_managers.push(member);
+    else
+      project.team.members.push(member);
+  }
+
+  project.team.project_managers.sort(function(a, b) {
+    if (a.role.includes("Project Founder") & ( b.role.includes("Project Manager") | b.role.includes("Sub-Project Manager"))) {
+      return -1; //a is greater than b
+    }
+    if (a.role.includes("Project Manager") & ( b.role.includes("Sub-Project Manager"))) {
+      return -1; //a is greater than b
+    }
+    if (a.role.includes("Project Manager") & ( b.role.includes("Project Founder"))) {
+      return 1; //a is less than b
+    }
+    if (a.role.includes("Sub-Project Manager") & ( b.role.includes("Project Founder") | b.role.includes("Project Manager"))) {
+      return 1; //a is less than b
+    }
+    // a must be equal to b
+    return 0;
+  });
+
+  project.team.members.sort(function(a, b) {
+    if (a.role.includes("Lead Developer") & !( b.role.includes("Lead Developer"))) {
+      return -1;
+    }
+    if ((a.role.includes("Developer") & !a.role.includes("Lead Developer")) & !( b.role.includes("Developer"))) {
+      return -1;
+    }
+    if (!a.role.includes("Lead Developer") & ( b.role.includes("Lead Developer"))) {
+      return 1;
+    }
+    if (!(a.role.includes("Developer") & !a.role.includes("Lead Developer")) & ( b.role.includes("Developer"))) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+
   project.areaRequests= findProjectAreaRequests(project);
   for ( var request of project.areaRequests) {
     request.author = findMemberForID( project.members, request.author_id);
@@ -215,7 +257,7 @@ router.get('/members', function(req, res, next) {
     member.numberOfProjects = findProjectsForMember( member).length;
   }
 
-  res.render('members', { title: 'CS Club', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
+  res.render('members', { title: 'CS Club - Members (' + members.length + ')', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
 });
 
 /* GET member page. */
