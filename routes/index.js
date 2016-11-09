@@ -35,6 +35,7 @@ router.get('/', function(req, res, next) {
     for ( var request of project.areaRequests) {
       request.project_interest_color = replaceColorIntensity({interest: request.project_interest});
     }
+    project.events = findProjectEvents( project);
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -190,9 +191,9 @@ router.get('/projects/:projectID', function(req, res, next) {
       asset.experience_color = replaceColorIntensity({value: asset.experience});
     }
   }
-  project.events = findProjectEvents(project);
+  project.events = findProjectEvents( project);
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, navbar: navbar, helper: helper});
+  res.render('project', { title: 'CS Club' , project: project, services: tempDB.services, navbar: navbar, helper: helper});
 });
 
 /* GET Project Photo Gallery. */
@@ -221,6 +222,21 @@ router.get('/events', function(req, res, next) {
   };
 
   res.render('events', { title: 'CS Club - Events', upcoming_events: findUpcommingEvents(), navbar: navbar });
+});
+
+
+
+/* GET Event Page. */
+router.get('/events/:eventID', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  var event = findEventForID(tempDB.project_events, req.params.eventID);
+  event.project = findProjectForID(tempDB.projects, event.project_id);
+
+  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
 });
 
 
@@ -367,6 +383,21 @@ function findProjectEvents( project )
   }
 
   return events;
+}
+
+
+
+function findEventForID( events, id )
+{
+  var found;
+  for ( var event of events)
+  {
+    if (event.id == id)
+      found = event;
+  }
+
+  return found;
+
 }
 
 
