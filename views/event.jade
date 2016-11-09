@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  #event-page.content
+    p.float-xs-right= event.date_range
+    h1= event.title
+    a(href="/projects/"+event.project_id)
+      p= event.project.title
+    p= event.location
+    p= event.description
+    include ./partials/event_page/_media

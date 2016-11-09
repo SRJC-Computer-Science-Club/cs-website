@@ -1,0 +1,16 @@
+@import './node_modules/bootstrap/scss/bootstrap';
+
+.cell {
+  @extend .card;
+  >.context {
+    padding: $margin-md $margin-lg;
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+a.cell {
+  :hover {
+    background-color: $highlighted;
+  }
+}

@@ -32,6 +32,10 @@ router.get('/', function(req, res, next) {
   for ( var project of projects) {
     project.members= findProjectMembers(project);
     project.areaRequests= findProjectAreaRequests(project);
+    for ( var request of project.areaRequests) {
+      request.project_interest_color = replaceColorIntensity({interest: request.project_interest});
+    }
+    project.events = findProjectEvents( project);
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -134,17 +138,62 @@ router.get('/projects/:projectID', function(req, res, next) {
     navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
 
-  var members = findProjectMembers( project );
-  var results = [
-    {first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'Vice-President'},
-    {first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'}
-  ];
+  project.members = findProjectMembers( project );
+  project.team = {project_managers: [], members: []};
+  for (var member of project.members) {
+    if (member.role.includes("Project Founder") | member.role.includes("Project Manager") | member.role.includes("Sub-Project Manager"))
+      project.team.project_managers.push(member);
+    else
+      project.team.members.push(member);
+  }
 
-  project.members = members
+  project.team.project_managers.sort(function(a, b) {
+    if (a.role.includes("Project Founder") & ( b.role.includes("Project Manager") | b.role.includes("Sub-Project Manager"))) {
+      return -1; //a is greater than b
+    }
+    if (a.role.includes("Project Manager") & ( b.role.includes("Sub-Project Manager"))) {
+      return -1; //a is greater than b
+    }
+    if (a.role.includes("Project Manager") & ( b.role.includes("Project Founder"))) {
+      return 1; //a is less than b
+    }
+    if (a.role.includes("Sub-Project Manager") & ( b.role.includes("Project Founder") | b.role.includes("Project Manager"))) {
+      return 1; //a is less than b
+    }
+    // a must be equal to b
+    return 0;
+  });
 
-  res.render('project', { title: 'CS Club' , project: project , services: tempDB.services, canidates: results, navbar: navbar});
+  project.team.members.sort(function(a, b) {
+    if (a.role.includes("Lead Developer") & !( b.role.includes("Lead Developer"))) {
+      return -1;
+    }
+    if ((a.role.includes("Developer") & !a.role.includes("Lead Developer")) & !( b.role.includes("Developer"))) {
+      return -1;
+    }
+    if (!a.role.includes("Lead Developer") & ( b.role.includes("Lead Developer"))) {
+      return 1;
+    }
+    if (!(a.role.includes("Developer") & !a.role.includes("Lead Developer")) & ( b.role.includes("Developer"))) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+
+  project.areaRequests= findProjectAreaRequests(project);
+  for ( var request of project.areaRequests) {
+    request.author = findMemberForID( project.members, request.author_id);
+    var project_interest = {interest: request.project_interest, title: 'undefined', value: '0'};
+    request.project_interest_color = replaceColorIntensity(project_interest);
+    request.project_interest_title = replaceColorTitle(project_interest);
+    for ( var asset of request.assets) {
+      asset.experience_color = replaceColorIntensity({value: asset.experience});
+    }
+  }
+  project.events = findProjectEvents( project);
+
+  res.render('project', { title: 'CS Club' , project: project, services: tempDB.services, navbar: navbar, helper: helper});
 });
 
 /* GET Project Photo Gallery. */
@@ -160,7 +209,34 @@ router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
 
   var project = findProjectForID( tempDB.projects, req.params.projectID);
 
-  res.render('photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
+  res.render('project_photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
+});
+
+
+
+/* GET Events Page. */
+router.get('/events', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  res.render('events', { title: 'CS Club - Events', upcoming_events: findUpcommingEvents(), navbar: navbar });
+});
+
+
+
+/* GET Event Page. */
+router.get('/events/:eventID', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  var event = findEventForID(tempDB.project_events, req.params.eventID);
+  event.project = findProjectForID(tempDB.projects, event.project_id);
+
+  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
 });
 
 
@@ -181,7 +257,7 @@ router.get('/members', function(req, res, next) {
     member.numberOfProjects = findProjectsForMember( member).length;
   }
 
-  res.render('members', { title: 'CS Club', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
+  res.render('members', { title: 'CS Club - Members (' + members.length + ')', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
 });
 
 /* GET member page. */
@@ -294,6 +370,38 @@ function findProjectAreaRequests( project )
 
 
 
+function findProjectEvents( project )
+{
+  var events = [];
+
+  for ( var event of tempDB.project_events )
+  {
+    if (project.id == event.project_id)
+    {
+      events.push(event);
+    }
+  }
+
+  return events;
+}
+
+
+
+function findEventForID( events, id )
+{
+  var found;
+  for ( var event of events)
+  {
+    if (event.id == id)
+      found = event;
+  }
+
+  return found;
+
+}
+
+
+
 function findProjectsForMember( member )
 {
   var projects = [];
@@ -313,6 +421,54 @@ function findProjectsForMember( member )
   }
 
   return projects;
+}
+
+function replaceColorIntensity(project_interest)
+{
+  if (project_interest.interest != undefined) {
+    for ( var i = 0; i < project_interest.interest.length; i += 1) {
+      if (project_interest.interest[i] == ':') {
+        project_interest.value = parseInt(project_interest.interest[++i]);
+        project_interest.title = project_interest.interest.substr(0, --i);
+      }
+    }
+  }
+  switch (project_interest.value) {
+    case 1:
+      return '#BFBFBF'; break;
+    case 2:
+      return '#7ED321'; break;
+    case 3:
+      return '#4A90E2'; break;
+    case 4:
+      return '#F5A623'; break;
+    case 5:
+      return '#D0021B'; break;
+    default:
+      return '#BFBFBF'; break;
+  }
+}
+
+function replaceColorTitle(project_interest)
+{
+  if (project_interest.title == '') {
+    switch (project_interest.value) {
+      case 1:
+        project_interest.title = "Not Needed Now"; break;
+      case 2:
+        project_interest.title = "Planned Development"; break;
+      case 3:
+        project_interest.title = "Looking for Help"; break;
+      case 4:
+        project_interest.title = "In Need"; break;
+      case 5:
+        project_interest.title = "Strickly Needed"; break;
+      default:
+        project_interest.title = "undefined";
+        break;
+    }
+  }
+  return project_interest.title;
 }
 
 function findUpcommingEvents()

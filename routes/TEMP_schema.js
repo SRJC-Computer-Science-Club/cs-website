@@ -48,14 +48,16 @@ function ProjectAreaRequests( id, project_id, title, description, project_intere
 	this.author_id = author_id;
 }
 
-function ProjectEvent( id, project_id, title, description, description_short, date)
+function ProjectEvent( id, project_id, title, description, description_short, location, date_range, media)
 {
 	this.id = id;
 	this.project_id = project_id;
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
-	this.date = date;
+	this.location = location;
+	this.date_range = date_range;
+	this.media = media;
 }
 
 function ClubOfficers( id, member_id, position_title, swatch)
@@ -66,7 +68,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//5
+//6
 var projects = [
 	new Project(
 		1,
@@ -84,25 +86,12 @@ var projects = [
 		},
 		[]
   ),
-	new Project(
-		3,
-		'Function Fighters',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An AI battle arena simulator',
-		'Scrimmaging!',
-		'Would you like to join?!',
-		{},
-		{
-		  github: 'https://github.com/joshuasrjc/function-fighters'
-		},
-		[]
-  ),
   new Project(
     5,
     'Line Follower',
     '',
 		'',
-    'Blueprinting',
+    'Finalizing Parts List',
 		'',
 		{},
 		{
@@ -111,21 +100,6 @@ var projects = [
 		},
 		[]
   ),
-	new Project(
-		0,
-		'Micromouse',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An autonomous maze solving robot mouse',
-		'Delayed',
-		'',
-		{},
-		{
-			checkvist: 'https://checkvist.com/checklists/542765',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
-			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
-		},
-		[]
-	),
   new Project(
     2,
     '2D Platformer',
@@ -149,6 +123,34 @@ var projects = [
 			'main-character-sprite-1.png'
 		]
   ),
+	new Project(
+		3,
+		'Function Fighters',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An AI battle arena simulator',
+		'Scrimmaging!',
+		'Would you like to join?!',
+		{},
+		{
+		  github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		[]
+  ),
+	new Project(
+		0,
+		'Micromouse',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An autonomous maze solving robot mouse',
+		'Delayed',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/542765',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
+			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		[]
+	),
   new Project(
     4,
     'Quad-Copter',
@@ -162,7 +164,7 @@ var projects = [
   )
 ];
 
-//12
+//13
 var members = [
 	new Member(
 		2, 'Erick', 'Sanchez',
@@ -205,7 +207,7 @@ var members = [
     ['C++','JavaScript']
   ),
   new Member(
-    8, 'Wind', 'Carrianna',
+    8, 'Wind', 'Schneidenbach',
 		'my bio',
 		undefined,
     {},
@@ -253,6 +255,14 @@ var members = [
     []
   ),
   new Member(
+    13, 'Eli', 'Krause',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
 		undefined,
@@ -282,9 +292,9 @@ var members = [
   )
 ];
 
-//24
-//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-Kyle
+//27
+//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
+//9-yekalo 10-alex dewey 11-junior 12-Kyle 13-Eli
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower
 var members_projects = [
@@ -294,6 +304,8 @@ var members_projects = [
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	new ProjectsMembers( 16 , 1 , 12 , 'Programmer' ),
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
+	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
+	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
@@ -321,24 +333,25 @@ var members_projects = [
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
 ];
 
+//11
 var project_area_requests = [
 	//CS Website
 	new ProjectAreaRequests( 0, 1,
 		"Front-End Developers",
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
-		5, 4,
+		":4", 4,
 		[
 			{title: "HTML/CSS/Boostrap", experience: 3},
-			{title: "Java", experience: 1}
+			{title: "Java Script", experience: 1}
 		],
 		2
 	),
 	new ProjectAreaRequests( 1, 1,
 		"Back-End Developers",
-		"Check <a href=\"https://www.mongodb.com/\">this<\\a> out ",
-		8, 2,
+		"Check out https://www.mongodb.com/ for our technologies for backend",
+		":3", 2,
 		[
-			{title: "MongoDB", experience: 5}
+			{title: "MongoDB", experience: 4}
 		],
 		2
 	),
@@ -346,17 +359,25 @@ var project_area_requests = [
 	new ProjectAreaRequests( 2, 3,
 		"AI Players",
 		"",
-		5, "&#8734",
+		"Welcome!:2", "&#8734",
 		[
 			{title: "Lua", experience: 1}
 		],
 		1
 	),
+	//Line-Follower
+	new ProjectAreaRequests( 11, 5,
+		"Hardware Designers",
+		"",
+		":3", 3,
+		[],
+		2
+	),
 	//2d-platformer
 	new ProjectAreaRequests( 3, 2,
 		"Game Developers",
 		"",
-		10, 3,
+		":5", 3,
 		[
 			{title: "Unity", experience: 5}
 		],
@@ -365,7 +386,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 4, 2,
 		"Graphic/Asset Designers",
 		"",
-		4, 2,
+		":3", 2,
 		[
 			{title: "Adobe Animate", experience: 5},
 			{title: "Vector Based Program", experience: 3}
@@ -375,7 +396,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 5, 2,
 		"Back-End Developer",
 		"",
-		2, 1,
+		":1", 1,
 		[],
 		2
 	)
@@ -387,7 +408,11 @@ project_events = [
 	'RoboGames—Line Follower',
 	'description',
 	'Robotics competition for our line follower project.',
-	'April 21'
+	'Pleasanton, CA',
+	'April 21-23',
+	[
+		{caption: '', image: '', url: ''}
+	]
 	)
 ]
 

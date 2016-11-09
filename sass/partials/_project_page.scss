@@ -1,4 +1,7 @@
 #project-page {
+	h3 {
+		text-align: left;
+	}
 	.project-member {
 		text-align: left;
 		margin: 10px auto;
@@ -20,6 +23,43 @@
 			img {
 				width: 42px;
 				padding: 5px;
+			}
+		}
+	}
+	#areaRequest-list {
+		.context {
+			.interest {
+				color: white;
+				padding: 2px 6px;
+				background-color: blue;
+				border-radius: 6px;
+			}
+			.author {
+				font-style: italic;
+			}
+			.positions {
+				.asset-list {
+					.asset {
+						@extend .interest;
+						background-color: $gray;
+						margin: 4px 6px;
+					}
+				}
+			}
+		}
+	}
+	#event-list {
+		.context {
+			height: 225px;
+			.date-range {
+				font-weight: bolder;
+			}
+			.location {
+				margin-bottom: $margin-md;
+			}
+			.cover-image img {
+				width: 100%;
+				object-fit: cover;
 			}
 		}
 	}
