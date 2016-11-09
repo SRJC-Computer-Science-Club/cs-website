@@ -226,7 +226,7 @@ router.get('/events', function(req, res, next) {
 
 
 
-/* GET Events Page. */
+/* GET Event Page. */
 router.get('/events/:eventID', function(req, res, next) {
   var navbar = {
     active: 'events',
