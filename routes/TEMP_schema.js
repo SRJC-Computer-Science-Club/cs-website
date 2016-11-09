@@ -411,7 +411,7 @@ project_events = [
 	'Pleasanton, CA',
 	'April 21-23',
 	[
-		{caption: '', image: '', url: ''}
+		{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
 	]
 	)
 ]
