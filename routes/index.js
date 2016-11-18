@@ -82,7 +82,7 @@ router.get('/join/submit', function(req, res, next) {
       from: '"BOT" <srjc.computer.science.club@gmail.com>', // sender address
       to: 'srjc.computer.science.club@gmail.com', // list of receivers
       subject: 'Slack invite from ' + recipient.name, // Subject line
-      text: 'use : >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
+      text: 'Hi, Mr. President, my name is ' + recipient.name + '. Please use >' + recipient.contact + '< to contact me. ' + recipient.message // plaintext body
   };
 
   //send mail with defined transport object
