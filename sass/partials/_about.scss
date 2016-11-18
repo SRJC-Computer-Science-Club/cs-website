@@ -10,7 +10,7 @@
 	@media (min-width: map-get($grid-breakpoints,lg)) { //apply only for lg and up
 		.context-left {
 			p, h1 {
-				text-align: right;
+				text-align: left;
 			}
 		}
 		.context-right {
