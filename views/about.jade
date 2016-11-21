@@ -2,17 +2,30 @@ extends layout
 
 block content
   #about-page.content
-    .row.card.context-left
-      .col-lg-12
-        .col-lg-4.avatar
-        .col-lg-8
-          h1 What we do
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    .row.card.context-right
-      .col-lg-12
-        .col-lg-8
-          h1 What we do
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        .col-lg-4.avatar
+    .row
+      .col-xs-12
+        - var content = [{header: "What we do", body: "The Computer Science Club has brought many projects back to life like our new website or the srjc scheduler by adding new features and capabilities as well as welcoming new projects based on the interest from the club members. To make our projects grow and flourish, we strive on making ourselves known by posting flyers with QR Codes to our website, which Snapchat can scan.", image: "http://placehold.it/350x200"}, {header: "What is the scope of this club", body: "We welcome all project types such as web development, graphic design work, electrical/hardware engineering, custom software design, artificial intelligence and any idea or concept that includes collaborating code or assets such as code snippets, graphics and hardware parts. The club wants to take part in achieving any idea from all skill levels ranging from beginning to expert!", image: "http://placehold.it/350x200"}, {header: "Our phylosophy", body: "The club exposes members to begin their journey new tools and share a common convention that is used in the real world.", image: "http://placehold.it/350x200"}];
+        each row, i in content
+          if (i % 2 != 1)
+            .row.card.context-left
+              .col-xs-12
+                .col-lg-4
+                  .thumb(style="height: 200px;")
+                    img(src=row.image)
+                .col-lg-8
+                  h1= row.header
+                  p.paragraph-block= row.body
+          else
+            .row.card.context-right
+              .col-xs-12
+                .col-lg-4.hidden-lg-up
+                  .thumb(style="height: 200px;")
+                    img(src=row.image)
+                .col-lg-8
+                  h1= row.header
+                  p.paragraph-block= row.body
+                .col-lg-4.hidden-md-down
+                  .thumb(style="height: 200px;")
+                    img(src=row.image)
 
         

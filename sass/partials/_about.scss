@@ -1,17 +1,22 @@
 #about-page {
-	.avatar {
-		display: inline-block;
-		width: 350px;
-		height: 200px;
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		background-image: url('http://placehold.it/350x200');
+	.col-xs-12 {
+		margin: $margin-sm 0;
 	}
-	.context-left {
-		text-align: left;
+	.context-left, .context-right {
+		h1 {
+			margin-top: $margin-sm;
+		}
 	}
-	.context-right {
-		text-align: right;
+	@media (min-width: map-get($grid-breakpoints,lg)) { //apply only for lg and up
+		.context-left {
+			p, h1 {
+				text-align: left;
+			}
+		}
+		.context-right {
+			p, h1 {
+				text-align: right;
+			}
+		}
 	}
 }
