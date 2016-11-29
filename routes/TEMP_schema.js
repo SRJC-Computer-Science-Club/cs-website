@@ -192,7 +192,9 @@ var members = [
 			twiter: 'https://www.Twitter.com/Linnier__Games',
 		},
 		'esericksanc@gmail.com',
-		['C++','JavaScript','Objective-C','HTML & CSS']
+		[
+			'C++','JavaScript','Objective-C','HTML & CSS'
+		]
 	),
   new Member(
     4, 'Steven', 'Guido',
@@ -203,16 +205,6 @@ var members = [
     []
   ),
   new Member(
-    3, 'Oran', 'C',
-		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
-		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-    {
-      github: 'https://www.github.com/Pastyguy'
-    },
-		undefined,
-    ['C++','HTML & CSS', 'python', 'JavaScript', 'BASH']
-  ),
-  new Member(
     1, 'Joshua', 'Murphy',
 		'my bio',
 		undefined,
@@ -220,7 +212,21 @@ var members = [
       github: 'https://www.github.com/joshuasrjc'
     },
 		undefined,
-    ['C++','JavaScript']
+    [
+			'C++','JavaScript'
+		]
+  ),
+  new Member(
+    3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
+    {
+      github: 'https://www.github.com/Pastyguy'
+    },
+		undefined,
+    [
+			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
+		]
   ),
   new Member(
     8, 'Wind', 'Schneidenbach',
@@ -326,6 +332,12 @@ var members = [
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer
 var members_projects = [
+	//Micromouse
+	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
+	new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
@@ -334,11 +346,16 @@ var members_projects = [
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
+	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+	//Quad-Copter
+  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
+  new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
 	//Line Follower
   new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
   new ProjectsMembers( 18 , 5 , 1 , 'Developer' ),
@@ -348,17 +365,6 @@ var members_projects = [
 	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
-	//Micromouse
-  new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
-  new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
-	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
-	//Quad-Copter
-  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
-  new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
 	//Retailer
   new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
   new ProjectsMembers( 29 , 6 , 14 , 'Developer' )
