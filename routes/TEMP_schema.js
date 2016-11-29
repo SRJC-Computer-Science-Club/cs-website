@@ -76,10 +76,10 @@ var projects = [
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
 		'In Progress',
-		'Developing for Mobile Version!',
+		'Finalizing the front-end',
 		{},
 		{
-			checkvist: 'https://checkvist.com/checklists/563656',
+			checkvist: 'https://checkvist.com/checklists/563656-csc-cs-website',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
 			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
 			figma: 'https://www.figma.com/files/project/64393/Club-Website'
@@ -91,38 +91,36 @@ var projects = [
     'Line Follower',
     '',
 		'',
-    'Finalizing Parts List',
-		'',
+		'In Progress',
+    'Software designing in progress',
 		{},
 		{
-			checkvist: 'https://checkvist.com/checklists/581272',
-			robogames: 'http://robogames.net/rules/line-following.php'
+			robogames: 'http://robogames.net/rules/line-following.php',
+			checkvist: 'https://checkvist.com/checklists/581272-csc-line-follower',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/line-follower'
 		},
 		[]
   ),
-  new Project(
-    2,
-    '2D Platformer',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'A simple 2d platformer game',
-    'On-Hold',
-		'This project may change to a top view game',
+	new Project(
+		6,
+		'Retailer',
+		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
+		'Retail simulation of everything that has to do with retail.',
+		'In Progress',
+		'Be sure to checkout the issues on GitHub!',
 		{},
-    {
-      checkvist: 'https://checkvist.com/checklists/560653',
-      waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-      github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-    },
+		{
+			checkvist: 'https://checkvist.com/checklists/587081-csc-retail',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/retailer'
+		},
 		[
 			'preview of ui-1.png',
 			'preview-1.jpg',
-			'3d model-1.png',
-			'main-character-1.png',
-			'main-character-2.png',
-			'main-character-3.png',
-			'main-character-sprite-1.png'
+			'3d model-1.png'
 		]
-  ),
+	),
 	new Project(
 		3,
 		'Function Fighters',
@@ -161,6 +159,26 @@ var projects = [
 		{},
 		{},
 		[]
+  ),
+  new Project(
+    2,
+    '2D Platformer',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'A simple 2d platformer game',
+    'On-Hold',
+		'',
+		{},
+    {
+      checkvist: 'https://checkvist.com/checklists/560653',
+      waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
+      github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
+    },
+		[
+			'main-character-1.png',
+			'main-character-2.png',
+			'main-character-3.png',
+			'main-character-sprite-1.png'
+		]
   )
 ];
 
@@ -176,7 +194,9 @@ var members = [
 			twiter: 'https://www.Twitter.com/Linnier__Games',
 		},
 		'esericksanc@gmail.com',
-		['C++','JavaScript','Objective-C','HTML & CSS']
+		[
+			'C++','JavaScript','Objective-C','HTML & CSS'
+		]
 	),
   new Member(
     4, 'Steven', 'Guido',
@@ -187,16 +207,6 @@ var members = [
     []
   ),
   new Member(
-    3, 'Oran', 'C',
-		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
-		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-    {
-      github: 'https://www.github.com/Pastyguy'
-    },
-		undefined,
-    ['C++','HTML & CSS', 'python', 'JavaScript', 'BASH']
-  ),
-  new Member(
     1, 'Joshua', 'Murphy',
 		'my bio',
 		undefined,
@@ -204,7 +214,21 @@ var members = [
       github: 'https://www.github.com/joshuasrjc'
     },
 		undefined,
-    ['C++','JavaScript']
+    [
+			'C++','JavaScript'
+		]
+  ),
+  new Member(
+    3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
+    {
+      github: 'https://www.github.com/Pastyguy'
+    },
+		undefined,
+    [
+			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
+		]
   ),
   new Member(
     8, 'Wind', 'Schneidenbach',
@@ -255,12 +279,24 @@ var members = [
     []
   ),
   new Member(
+    14, 'Austin', 'Meyer',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    [
+			"Unity"
+		]
+  ),
+  new Member(
     13, 'Eli', 'Krause',
 		'my bio',
 		undefined,
     {},
 		undefined,
-    []
+    [
+			'HTML & CSS'
+		]
   ),
   new Member(
     7, 'Conan', 'Skaife',
@@ -292,12 +328,18 @@ var members = [
   )
 ];
 
-//27
+//29
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-Kyle 13-Eli
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
-//5-line follower
+//5-line follower 6-retailer
 var members_projects = [
+	//Micromouse
+	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
+	new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
@@ -306,31 +348,28 @@ var members_projects = [
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
+	//2D Platformer
+  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+	//Quad-Copter
+  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
+  new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
 	//Line Follower
   new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
-  new ProjectsMembers( 18 , 5 , 1 , 'Developer' ),
+  new ProjectsMembers( 18 , 5 , 1 , 'Lead Developer' ),
   new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
   new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
 	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
-	//Micromouse
-  new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
-  new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
-  new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
-	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
-	//Quad-Copter
-  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
-  new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
+	//Retailer
+  new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
+  new ProjectsMembers( 29 , 6 , 14 , 'Developer' )
 ];
 
 //11
@@ -373,8 +412,8 @@ var project_area_requests = [
 		[],
 		2
 	),
-	//2d-platformer
-	new ProjectAreaRequests( 3, 2,
+	//Retailer
+	new ProjectAreaRequests( 3, 6,
 		"Game Developers",
 		"",
 		":5", 3,
@@ -383,7 +422,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 4, 2,
+	new ProjectAreaRequests( 4, 6,
 		"Graphic/Asset Designers",
 		"",
 		":3", 2,
@@ -393,7 +432,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 5, 2,
+	new ProjectAreaRequests( 5, 6,
 		"Back-End Developer",
 		"",
 		":1", 1,
