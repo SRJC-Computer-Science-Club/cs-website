@@ -100,29 +100,25 @@ var projects = [
 		},
 		[]
   ),
-  new Project(
-    2,
-    '2D Platformer',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'A simple 2d platformer game',
-    'On-Hold',
-		'This project may change to a top view game',
+	new Project(
+		6,
+		'Retailer',
+		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
+		'Retail simulation of everything that has to do with retail.',
+		'In Progress',
+		'Be sure to checkout the issues on GitHub!',
 		{},
-    {
-      checkvist: 'https://checkvist.com/checklists/560653',
-      waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-      github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-    },
+		{
+			checkvist: 'https://checkvist.com/checklists/587081-csc-retail',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/retailer'
+		},
 		[
 			'preview of ui-1.png',
 			'preview-1.jpg',
-			'3d model-1.png',
-			'main-character-1.png',
-			'main-character-2.png',
-			'main-character-3.png',
-			'main-character-sprite-1.png'
+			'3d model-1.png'
 		]
-  ),
+	),
 	new Project(
 		3,
 		'Function Fighters',
@@ -161,6 +157,26 @@ var projects = [
 		{},
 		{},
 		[]
+  ),
+  new Project(
+    2,
+    '2D Platformer',
+    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    'A simple 2d platformer game',
+    'On-Hold',
+		'',
+		{},
+    {
+      checkvist: 'https://checkvist.com/checklists/560653',
+      waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
+      github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
+    },
+		[
+			'main-character-1.png',
+			'main-character-2.png',
+			'main-character-3.png',
+			'main-character-sprite-1.png'
+		]
   )
 ];
 
@@ -255,12 +271,24 @@ var members = [
     []
   ),
   new Member(
+    14, 'Austin', 'Meyer',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    [
+			"Unity"
+		]
+  ),
+  new Member(
     13, 'Eli', 'Krause',
 		'my bio',
 		undefined,
     {},
 		undefined,
-    []
+    [
+			'HTML & CSS'
+		]
   ),
   new Member(
     7, 'Conan', 'Skaife',
@@ -292,11 +320,11 @@ var members = [
   )
 ];
 
-//27
+//29
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-Kyle 13-Eli
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
-//5-line follower
+//5-line follower 6-retailer
 var members_projects = [
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
@@ -331,6 +359,9 @@ var members_projects = [
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' )
+	//Retailer
+  new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
+  new ProjectsMembers( 29 , 6 , 14 , 'Developer' )
 ];
 
 //11
@@ -373,8 +404,8 @@ var project_area_requests = [
 		[],
 		2
 	),
-	//2d-platformer
-	new ProjectAreaRequests( 3, 2,
+	//Retailer
+	new ProjectAreaRequests( 3, 6,
 		"Game Developers",
 		"",
 		":5", 3,
@@ -383,7 +414,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 4, 2,
+	new ProjectAreaRequests( 4, 6,
 		"Graphic/Asset Designers",
 		"",
 		":3", 2,
@@ -393,7 +424,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 5, 2,
+	new ProjectAreaRequests( 5, 6,
 		"Back-End Developer",
 		"",
 		":1", 1,
