@@ -76,10 +76,10 @@ var projects = [
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
 		'In Progress',
-		'Developing for Mobile Version!',
+		'Finalizing the front-end',
 		{},
 		{
-			checkvist: 'https://checkvist.com/checklists/563656',
+			checkvist: 'https://checkvist.com/checklists/563656-csc-cs-website',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
 			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
 			figma: 'https://www.figma.com/files/project/64393/Club-Website'
@@ -91,12 +91,14 @@ var projects = [
     'Line Follower',
     '',
 		'',
-    'Finalizing Parts List',
-		'',
+		'In Progress',
+    'Software designing in progress',
 		{},
 		{
-			checkvist: 'https://checkvist.com/checklists/581272',
-			robogames: 'http://robogames.net/rules/line-following.php'
+			robogames: 'http://robogames.net/rules/line-following.php',
+			checkvist: 'https://checkvist.com/checklists/581272-csc-line-follower',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/line-follower'
 		},
 		[]
   ),
@@ -358,7 +360,7 @@ var members_projects = [
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
 	//Line Follower
   new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
-  new ProjectsMembers( 18 , 5 , 1 , 'Developer' ),
+  new ProjectsMembers( 18 , 5 , 1 , 'Lead Developer' ),
   new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
   new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
