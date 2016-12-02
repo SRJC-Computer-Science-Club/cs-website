@@ -97,7 +97,7 @@ var projects = [
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
 			checkvist: 'https://checkvist.com/checklists/581272-csc-line-follower',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/line-follower',
 			github: 'https://github.com/SRJC-Computer-Science-Club/line-follower'
 		},
 		[]
