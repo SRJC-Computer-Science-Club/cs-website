@@ -97,7 +97,7 @@ var projects = [
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
 			checkvist: 'https://checkvist.com/checklists/581272-csc-line-follower',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/line-follower',
 			github: 'https://github.com/SRJC-Computer-Science-Club/line-follower'
 		},
 		[]
@@ -298,6 +298,16 @@ var members = [
 			'HTML & CSS'
 		]
   ),
+	new Member(
+		15, 'Isaiah', 'Curtis',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
   new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
@@ -330,7 +340,7 @@ var members = [
 
 //29
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer
 var members_projects = [
@@ -364,6 +374,7 @@ var members_projects = [
   new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
   new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
+  new ProjectsMembers( 30 , 5 , 15 , 'Programmer' ),
 	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
@@ -378,7 +389,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 0, 1,
 		"Front-End Developers",
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
-		":4", 4,
+		":4", 3,
 		[
 			{title: "HTML/CSS/Boostrap", experience: 3},
 			{title: "Java Script", experience: 1}
@@ -387,7 +398,7 @@ var project_area_requests = [
 	),
 	new ProjectAreaRequests( 1, 1,
 		"Back-End Developers",
-		"Check out https://www.mongodb.com/ for our technologies for backend",
+		"Check out <a href=\"https://www.mongodb.com/\">MongoDB</a> for our technologies for backend",
 		":3", 2,
 		[
 			{title: "MongoDB", experience: 4}
@@ -408,8 +419,11 @@ var project_area_requests = [
 	new ProjectAreaRequests( 11, 5,
 		"Hardware Designers",
 		"",
-		":3", 3,
-		[],
+		":3", 0,
+		[
+			{title: 'C++', experience: 3},
+			{title: 'Arduino', experience: 2}
+		],
 		2
 	),
 	//Retailer
@@ -418,14 +432,14 @@ var project_area_requests = [
 		"",
 		":5", 3,
 		[
-			{title: "Unity", experience: 5}
+			{title: "Unity", experience: 4}
 		],
 		2
 	),
 	new ProjectAreaRequests( 4, 6,
 		"Graphic/Asset Designers",
 		"",
-		":3", 2,
+		":3", 1,
 		[
 			{title: "Adobe Animate", experience: 5},
 			{title: "Vector Based Program", experience: 3}
