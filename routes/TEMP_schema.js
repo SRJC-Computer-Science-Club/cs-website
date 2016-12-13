@@ -68,7 +68,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//6
+//7
 var projects = [
 	new Project(
 		1,
@@ -121,6 +121,19 @@ var projects = [
 			'3d model-1.png'
 		]
 	),
+	new Project(
+		7,
+		'SRJC Scheduler',
+		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
+		'Schedule your next semester with SRJC Scheduler!',
+		'Improving',
+		'Extending to include Gateway to College courses',
+		{},
+		{
+		  github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler'
+		},
+		[]
+  ),
 	new Project(
 		3,
 		'Function Fighters',
@@ -338,11 +351,6 @@ var members = [
   )
 ];
 
-//29
-//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah
-//0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
-//5-line follower 6-retailer
 var members_projects = [
 	//Micromouse
 	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
@@ -380,8 +388,19 @@ var members_projects = [
   new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//Retailer
   new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
-  new ProjectsMembers( 29 , 6 , 14 , 'Developer' )
+  new ProjectsMembers( 29 , 6 , 14 , 'Developer' ),
+	//srjc-scheduler
+  new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
+  new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
+  new ProjectsMembers( 32 , 7 , 2 , 'Programmer' )
 ];
+//29
+//0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah
+//0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
+//5-line follower 6-retailer
+
+
 
 //11
 var project_area_requests = [
