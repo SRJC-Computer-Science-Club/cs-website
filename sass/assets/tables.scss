@@ -14,3 +14,8 @@ a.cell {
     background-color: $highlighted;
   }
 }
+
+.scroll-y {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
