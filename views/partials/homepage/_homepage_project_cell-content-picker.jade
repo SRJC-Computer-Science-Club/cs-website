@@ -7,8 +7,10 @@
     .tab-pane(id=p+"content-members" role="tabpanel")
       a(data-toggle="tab" href="#"+p+"content-positions" role="tab")
         h2 Members
-      p members
-    .tab-pane.active(id=p+"content-positions" role="tabpanel")
+      - var block_members = project.members
+      .scroll-y(style="max-height: 132px;")
+        include ../../partials/atoms/members-grid
+    .tab-pane(id=p+"content-positions" role="tabpanel")
       a(data-toggle="tab" href="#"+p+"content-events" role="tab")
         h2 Area Requests
       - var block_requests = project.areaRequests
