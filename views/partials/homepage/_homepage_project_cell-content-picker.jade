@@ -12,10 +12,11 @@
       a(data-toggle="tab" href="#"+p+"content-events" role="tab")
         h2 Area Requests
       - var block_requests = project.areaRequests
-      .scroll-y(style="height: 132px;")
+      .scroll-y(style="max-height: 132px;")
         include ../../partials/atoms/area_requests-table
     .tab-pane(id=p+"content-events" role="tabpanel")
       a(data-toggle="tab" href="#"+p+"content-description" role="tab")
         h2 Events
       - var block_events = project.events
-      include ../../partials/atoms/events-table
+      .scroll-y(style="max-height: 132px;")
+        include ../../partials/atoms/events-table
