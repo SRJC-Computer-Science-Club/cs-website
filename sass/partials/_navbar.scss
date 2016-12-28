@@ -79,7 +79,7 @@ $navbar-mobile-height: 64px;
 .navbar-mobile {
   @extend .navbar;
   .thumb {
-    margin-left: $margin-md;
+    margin: 6px 0 6px $margin-md;
   }
   .navbar-toggler {
     position: absolute;
