@@ -1,7 +1,7 @@
 #project-cell-content-picker
   .tab-content
     //Description
-    .tab-pane.active(id=p+"content-description" role="tabpanel")
+    .tab-pane(id=p+"content-description" role="tabpanel")
       a(data-toggle="tab" href="#"+p+"content-members" role="tab")
         h2 Description
       p= project.description_short
@@ -13,7 +13,7 @@
       .scroll-y(style="max-height: 132px;")
         include ../../partials/atoms/members-grid
     //Area Requests
-    .tab-pane(id=p+"content-positions" role="tabpanel")
+    .tab-pane.active(id=p+"content-positions" role="tabpanel")
       a(data-toggle="tab" href="#"+p+"content-events" role="tab")
         h2 Area Requests
       - var block_requests = project.areaRequests
