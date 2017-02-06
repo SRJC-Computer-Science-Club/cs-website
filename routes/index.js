@@ -22,10 +22,12 @@ router.get('/', function(req, res, next) {
 
   var results = [
     {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Vice-President & Second ICC Member'},
-    {id: 5, first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
-    {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'}
+    {id: 1, first_name: 'Josh', last_name: 'Murphy', election: 'Vice-President'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Treasurer'},
+    {id: 12, first_name: 'Kyle', last_name: ' O\'Brien', election: 'Secretary'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'},
+    {id: 14, first_name: 'Austin', last_name: 'Meyer', election: 'ICC Member'},
+    {id: 16, first_name: 'Noah', last_name: '', election: 'ICC Member'}
   ];
   var projects = tempDB.projects;
 

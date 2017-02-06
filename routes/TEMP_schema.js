@@ -212,14 +212,6 @@ var members = [
 		]
 	),
   new Member(
-    4, 'Steven', 'Guido',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    []
-  ),
-  new Member(
     1, 'Joshua', 'Murphy',
 		'my bio',
 		undefined,
@@ -232,27 +224,7 @@ var members = [
 		]
   ),
   new Member(
-    3, 'Oran', 'C',
-		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
-		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-    {
-      github: 'https://www.github.com/Pastyguy'
-    },
-		undefined,
-    [
-			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
-		]
-  ),
-  new Member(
-    8, 'Wind', 'Schneidenbach',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    []
-  ),
-  new Member(
-    5, 'Alex', 'Chen',
+    4, 'Steven', 'Guido',
 		'my bio',
 		undefined,
     {},
@@ -261,22 +233,6 @@ var members = [
   ),
   new Member(
     12, 'Kyle', 'O\'Brien',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    []
-  ),
-  new Member(
-    6, 'Noah', 'Torrez',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    []
-  ),
-  new Member(
-    10, 'Alex', 'Dewey',
 		'my bio',
 		undefined,
     {},
@@ -301,16 +257,6 @@ var members = [
 			"Unity"
 		]
   ),
-  new Member(
-    13, 'Eli', 'Krause',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    [
-			'HTML & CSS'
-		]
-  ),
 	new Member(
 		15, 'Isaiah', 'Curtis',
 		'my bio',
@@ -321,6 +267,90 @@ var members = [
 
 		]
 	),
+	new Member(
+		16, 'Noah', '',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(
+		17, 'Spencer', 'Kelly',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(
+		18, 'Travis', 'Carpenter',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+  new Member(
+    6, 'Noah', 'Torrez',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
+    {
+      github: 'https://www.github.com/Pastyguy'
+    },
+		undefined,
+    [
+			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
+		]
+  ),
+  new Member(
+    10, 'Alex', 'Dewey',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    13, 'Eli', 'Krause',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    [
+			'HTML & CSS'
+		]
+  ),
+  new Member(
+    8, 'Wind', 'Schneidenbach',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
+  new Member(
+    5, 'Alex', 'Chen',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
+  ),
   new Member(
     7, 'Conan', 'Skaife',
 		'my bio',
@@ -394,9 +424,10 @@ var members_projects = [
   new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
   new ProjectsMembers( 32 , 7 , 2 , 'Programmer' )
 ];
-//29
+//32
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
+//17-spencer 18-travis
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer
 
@@ -410,7 +441,7 @@ var project_area_requests = [
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
 		":4", 3,
 		[
-			{title: "HTML/CSS/Boostrap", experience: 3},
+			{title: "HTML/CSS/Bootstrap", experience: 3},
 			{title: "Java Script", experience: 1}
 		],
 		2
@@ -420,7 +451,7 @@ var project_area_requests = [
 		"Check out <a href=\"https://www.mongodb.com/\">MongoDB</a> for our technologies for backend",
 		":3", 2,
 		[
-			{title: "MongoDB", experience: 4}
+			{title: "MongoDB/Moongse", experience: 4}
 		],
 		2
 	),
@@ -449,7 +480,7 @@ var project_area_requests = [
 	new ProjectAreaRequests( 3, 6,
 		"Game Developers",
 		"",
-		":5", 3,
+		":5", 4,
 		[
 			{title: "Unity", experience: 4}
 		],
@@ -530,9 +561,11 @@ var services = {
 var club_officers =
 [
 	new ClubOfficers( 0, 2, 'President', "#055B75"),
-	new ClubOfficers( 1, 4, 'Vice<br>President', "#0D94BD"),
-	new ClubOfficers( 2, 5, 'Treasurer', '#579C08'),
-	new ClubOfficers( 3, 3, 'ICC Rep', '#EEA00E')
+	new ClubOfficers( 1, 1, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 2, 4, 'Treasurer<br>& ICC Rep', '#579C08'),
+	new ClubOfficers( 3, 12, 'Secretary', '#579C08'),
+	new ClubOfficers( 4, 14, 'ICC Rep', '#EEA00E'),
+	new ClubOfficers( 5, 16, 'ICC Rep', '#EEA00E')
 ];
 
 module.exports = {
