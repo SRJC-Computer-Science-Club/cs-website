@@ -516,6 +516,16 @@ project_events = [
 	[
 		{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
 	]
+),
+	new ProjectEvent( 1, 1,
+	'Hackathon',
+	'description',
+	'',
+	'San Fransisco, CA',
+	'Feburary 11-12',
+	[
+		{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
+	]
 	)
 ]
 
