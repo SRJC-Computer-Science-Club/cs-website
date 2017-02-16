@@ -141,7 +141,7 @@ router.get('/projects/:projectID', function(req, res, next) {
     if (navbar.links.length < 4)
       navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
-  navbar.links.push({name: "List of Projects", url: '/projects/'});
+  navbar.links.push({name: "List of Projects", url: '/projects'});
 
   project.members = findProjectMembers( project );
   project.team = {project_managers: [], members: []};
