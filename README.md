@@ -1,47 +1,17 @@
+##### GitHub Issues
 [![Stories in Ready](https://badge.waffle.io/SRJC-Computer-Science-Club/CS-Website.png?label=todo&title=Todo)](http://waffle.io/SRJC-Computer-Science-Club/CS-Website) [![Stories in Ready](https://badge.waffle.io/SRJC-Computer-Science-Club/CS-Website.png?label=in+progress&title=In-Progress)](http://waffle.io/SRJC-Computer-Science-Club/CS-Website)
 
-# SRJC Computer Science Club Website
+### About this project
 
-[Link to live site][site]
+[Link to live development site][site]
 
 [Link to our Waffle.IO page.](https://waffle.io/SRJC-Computer-Science-Club/CS-Website)
 
 [Link to the Checkvist outline](https://checkvist.com/checklists/563656-csc-cs-site)
 
-### Getting Started
-Want to contribute? Great!
+The Purpose of this site is to invite new members to our club by presenting current and past projects and events and posting news of progress of current projects. Once a member, this site will create a centeral hub for members to find links and resources and keep up-to-date with its native app (repos here: [iOS][ios repo] and [Android][android repo]). This site will have logins for members, project managers and admins to maintain the site. Check out the Checkvist outline [here][checkvist].
 
-**Be sure to have [Node][node](6.3.x) installed.**
-
-Open terminal/cmd in root directory of project.
-
-Install project dependencies with:
-```sh
-$ npm install
-```
-
-
-
-To start the server:
-```sh
-$ npm run dev
-```
-If you receive any errors, confirm that npm install was run and try again
-
-The development server should now be live at [http://localhost:3000](http://localhost:3000)
-
-
-
-
-*(Optional)*
-Install LiveReload extension to automatically reload the webpage on changes
-
-[LiveReload (chrome)](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)
-
-
-
-
-### Tech
+### The technologies
 >[Node][node] is  a JavaScript runtime built on Chrome's V8 JavaScript engine
 
 >[Express][express] is a minimal and flexible Node.js web application framework
@@ -56,8 +26,15 @@ Install LiveReload extension to automatically reload the webpage on changes
 
 >[JQuery][jquery] is a fast, small, and feature-rich JavaScript library
 
+### How to join and understand this project
 
-### Interesting and Helpful Resources
+1. Install [Node][node](6.3.x or newer), LTS version is ok
+2. Open terminal/cmd in root directory of where you cloned the project on your computer
+3. Install project dependencies by entering `$ npm install`
+4. To start the server: `$ npm run dev` If you receive any errors, confirm that npm install was successful and try again
+5. The development server should now be live at [http://localhost:3000](http://localhost:3000)
+
+#### Interesting and Helpful Resources
 >[ECMAScript and the History of JavaScript][ECMAScriptWikipedia]
 
 >[History of CommonJS and Node from the Creator of NPM][CommonJSandNode]
@@ -66,16 +43,14 @@ Install LiveReload extension to automatically reload the webpage on changes
 
 >[New JavaScript Features in ECMAScript 6][ES6Features]
 
-
-### Version
-0.0.1
-
-
-**Free Software, Hell Yeah!**
+>If you're using Google Chrome, install [LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) extension to automatically reload the webpage on changes
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [site]: <https://srjc-cs-website.herokuapp.com/>
+   [ios repo]: <https://github.com/SRJC-Computer-Science-Club/cs-app-ios>
+   [android repo]: <https://github.com/SRJC-Computer-Science-Club/cs-app-android>
+   [checkvist]: <https://checkvist.com/checklists/563656-csc-cs-website>
    [node]: <https://nodejs.org/en/>
    [sass]: <http://sass-lang.com/>
    [express]: <http://expressjs.com/>
