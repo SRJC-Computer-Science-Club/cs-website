@@ -68,7 +68,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//7
+//9
 var projects = [
 	new Project(
 		1,
@@ -120,24 +120,16 @@ var projects = [
 		]
   ),
 	new Project(
-		6,
-		'Retailer',
-		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
-		'Retail simulation of everything that has to do with retail.',
-		'In Progress',
-		'Be sure to checkout the issues on GitHub!',
+		9,
+		'Club App',
+		'',
+		'',
+		'Blueprinting',
+		'',
 		{},
-		{
-			checkvist: 'https://checkvist.com/checklists/587081-csc-retail',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
-			github: 'https://github.com/SRJC-Computer-Science-Club/retailer'
-		},
-		[
-			'preview of ui-1.png',
-			'preview-1.jpg',
-			'3d model-1.png'
-		]
-	),
+		{},
+		[]
+  ),
 	new Project(
 		7,
 		'SRJC Scheduler',
@@ -164,6 +156,25 @@ var projects = [
 		},
 		[]
   ),
+	new Project(
+		6,
+		'Retailer',
+		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
+		'Retail simulation of everything that has to do with retail.',
+		'In Progress',
+		'Be sure to checkout the issues on GitHub!',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/587081-csc-retail',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Retailer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/retailer'
+		},
+		[
+			'preview of ui-1.png',
+			'preview-1.jpg',
+			'3d model-1.png'
+		]
+	),
 	new Project(
 		0,
 		'Micromouse',
@@ -285,13 +296,20 @@ var members = [
 		]
 	),
 	new Member(
-		16, 'Noah', '',
-		'my bio',
+		16, 'Noah', 'Tarr',
 		undefined,
-		{},
+		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
+		{
+			website: 'http://www.noahtarr.com/'
+		},
 		undefined,
 		[
-
+			'C++',
+			'Java',
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'PHP'
 		]
 	),
 	new Member(
@@ -312,6 +330,30 @@ var members = [
 		undefined,
 		[
 
+		]
+	),
+	new Member(
+		20, 'Adam', '',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(
+		19, 'Erik', 'Fisher',
+		'I am passionate about app development for mobile platforms and becoming a well rounded software developer.',
+		'I like to code apps and for other fun projects',
+		{},
+		undefined,
+		[
+			'C++',
+			'Java',
+			'Swift',
+			'HTML/CSS',
+			'Assembly'
 		]
 	),
   new Member(
@@ -408,11 +450,13 @@ var members_projects = [
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
-	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 33 , 1 , 16 , 'Programmer' ),
+	new ProjectsMembers( 34 , 1 , 19 , 'Programmer' ),
 	new ProjectsMembers( 16 , 1 , 12 , 'Programmer' ),
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
-	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
+	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
+	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	//2D Platformer
   new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Function Fighters
@@ -420,6 +464,7 @@ var members_projects = [
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+  new ProjectsMembers( 36 , 3 , 19 , 'AI Player' ),
 	//Quad-Copter
   new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
   new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
@@ -439,14 +484,20 @@ var members_projects = [
 	//srjc-scheduler
   new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
   new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
-  new ProjectsMembers( 32 , 7 , 2 , 'Programmer' )
+  new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
+  new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
+	//Dreamscape
+  new ProjectsMembers( 36 , 8 , 15 , 'Projects Manager' ),
+  new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
+	//Club App
+  new ProjectsMembers( 38 , 9 , 2 , 'Projects Manager' )
 ];
-//32
+//38
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
-//17-spencer 18-travis
+//17-spencer 18-travis 19-erik 20-adam
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
-//5-line follower 6-retailer
+//5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 
 
 
