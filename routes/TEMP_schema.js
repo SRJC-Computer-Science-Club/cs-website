@@ -481,6 +481,7 @@ var members_projects = [
 	//Retailer
   new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
   new ProjectsMembers( 29 , 6 , 14 , 'Developer' ),
+  new ProjectsMembers( 39 , 6 , 18 , 'Programmer' ),
 	//srjc-scheduler
   new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
   new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
@@ -489,10 +490,11 @@ var members_projects = [
 	//Dreamscape
   new ProjectsMembers( 36 , 8 , 15 , 'Projects Manager' ),
   new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
+  new ProjectsMembers( 40 , 8 , 17 , 'Programmer' ),
 	//Club App
   new ProjectsMembers( 38 , 9 , 2 , 'Projects Manager' )
 ];
-//38
+//41
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam
