@@ -102,6 +102,23 @@ var projects = [
 		},
 		[]
   ),
+  new Project(
+    8,
+    'Dreamscape',
+    '',
+    '',
+    'In-Progress',
+		'',
+		{},
+    {
+      // checkvist: 'https://checkvist.com/checklists/560653',
+      // waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
+      // github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
+			drive: 'https://drive.google.com/drive/folders/0B23hDSQTMIITY2hVZ3dzd3NuQm8?usp=sharing'
+    },
+		[
+		]
+  ),
 	new Project(
 		6,
 		'Retailer',
