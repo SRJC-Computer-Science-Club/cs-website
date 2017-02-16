@@ -117,7 +117,8 @@ router.get('/projects/', function(req, res, next) {
 
   for ( var project of projects) {
     project.members= findProjectMembers(project);
-    navbar.links.push({name: project.title, url: '/projects/' +  project.id});
+    if (navbar.links.length < 4)
+      navbar.links.push({name: project.title, url: '/projects/' +  project.id});
   }
 
   res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
@@ -135,8 +136,10 @@ router.get('/projects/:projectID', function(req, res, next) {
   var project = findProjectForID( projects, req.params.projectID);
 
   for ( var p of projects) {
-    navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
+    if (navbar.links.length < 4)
+      navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
+  navbar.links.push({name: "List of Projects", url: '/projects/'});
 
   project.members = findProjectMembers( project );
   project.team = {project_managers: [], members: []};
