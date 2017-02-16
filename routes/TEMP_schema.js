@@ -107,7 +107,7 @@ var projects = [
     'Dreamscape',
     '',
     '',
-    'In-Progress',
+    'Blueprinting the GDD',
 		'',
 		{},
     {
