@@ -12,6 +12,7 @@
         hr
         h4 New Officers
         each member in canidates
+          - member.role = member.election
           #atoms.cell-3
             .member-cell
               include ./../atoms/member-cell
