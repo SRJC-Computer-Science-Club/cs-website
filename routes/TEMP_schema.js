@@ -277,12 +277,14 @@ var members = [
   ),
   new Member(
     14, 'Austin', 'Meyer',
-		'my bio',
-		undefined,
+		'',
+		'Game Designer and Developer! Also know C++, Java, and Javascript',
     {},
-		undefined,
+		'Meyerforge@gmail.com',
     [
-			"Unity"
+			'C++',
+			'Java',
+			'JavaScript'
 		]
   ),
 	new Member(
@@ -314,22 +316,19 @@ var members = [
 	),
 	new Member(
 		17, 'Spencer', 'Kelly',
-		'my bio',
-		undefined,
-		{},
-		undefined,
+		'',
+		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
+		{
+			github: 'https://github.com/ablacklama'
+		},
+		'ablacklama@gmail.com',
 		[
-
-		]
-	),
-	new Member(
-		18, 'Travis', 'Carpenter',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[
-
+			'C++',
+			'Java',
+			'C',
+			'HTML/CSS',
+			'JavaScript',
+			'Python'
 		]
 	),
 	new Member(
@@ -356,14 +355,16 @@ var members = [
 			'Assembly'
 		]
 	),
-  new Member(
-    6, 'Noah', 'Torrez',
+	new Member(
+		18, 'Travis', 'Carpenter',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
+		[
+
+		]
+	),
   new Member(
     3, 'Oran', 'C',
 		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
@@ -375,6 +376,14 @@ var members = [
     [
 			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
 		]
+  ),
+  new Member(
+    6, 'Noah', 'Torrez',
+		'my bio',
+		undefined,
+    {},
+		undefined,
+    []
   ),
   new Member(
     10, 'Alex', 'Dewey',
@@ -462,6 +471,7 @@ var members_projects = [
 	//Function Fighters
   new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
   new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
+  new ProjectsMembers( 43 , 3 , 14 , 'AI Player' ),
   new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
   new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
   new ProjectsMembers( 36 , 3 , 19 , 'AI Player' ),
@@ -486,15 +496,18 @@ var members_projects = [
   new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
   new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
   new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
+  new ProjectsMembers( 44 , 7 , 17 , 'Programmer' ),
   new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
 	//Dreamscape
-  new ProjectsMembers( 36 , 8 , 15 , 'Projects Manager' ),
+  new ProjectsMembers( 36 , 8 , 15 , 'Project Manager' ),
   new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
   new ProjectsMembers( 40 , 8 , 17 , 'Programmer' ),
+  new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
 	//Club App
-  new ProjectsMembers( 38 , 9 , 2 , 'Projects Manager' )
+  new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
+  new ProjectsMembers( 45 , 9 , 17 , 'Programmer' )
 ];
-//41
+//45
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam
