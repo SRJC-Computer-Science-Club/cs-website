@@ -23,3 +23,19 @@
     color: #FFFFFF;
   }
 }
+
+.cell-2 {
+  @extend .pull-xs-left, .col-xl-6, .col-md-12;
+}
+
+.cell-3 {
+  @extend .pull-xs-left, .col-xl-4, .col-sm-6, .col-xs-12;
+}
+
+.cell-4 {
+  @extend .pull-xs-left, .col-xl-3, .col-md-6, .col-xs-12;
+}
+
+.cell-6 {
+  @extend .pull-xs-left, .col-xl-2, .col-lg-3, .col-md-4, .col-sm-6, .col-xs-12;
+}
