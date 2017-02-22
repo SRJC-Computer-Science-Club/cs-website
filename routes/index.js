@@ -22,10 +22,12 @@ router.get('/', function(req, res, next) {
 
   var results = [
     {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Vice-President & Second ICC Member'},
-    {id: 5, first_name: 'Alex', last_name: 'Chen', election: 'Treasurer'},
-    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'},
-    {id: 3, first_name: 'Oran', last_name: 'C', election: 'ICC Member'}
+    {id: 1, first_name: 'Josh', last_name: 'Murphy', election: 'Vice-President'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Treasurer'},
+    {id: 12, first_name: 'Kyle', last_name: ' O\'Brien', election: 'Secretary'},
+    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'},
+    {id: 14, first_name: 'Austin', last_name: 'Meyer', election: 'ICC Member'},
+    {id: 16, first_name: 'Noah', last_name: '', election: 'ICC Member'}
   ];
   var projects = tempDB.projects;
 
@@ -117,7 +119,8 @@ router.get('/projects/', function(req, res, next) {
 
   for ( var project of projects) {
     project.members= findProjectMembers(project);
-    navbar.links.push({name: project.title, url: '/projects/' +  project.id});
+    if (navbar.links.length < 4)
+      navbar.links.push({name: project.title, url: '/projects/' +  project.id});
   }
 
   res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
@@ -135,8 +138,10 @@ router.get('/projects/:projectID', function(req, res, next) {
   var project = findProjectForID( projects, req.params.projectID);
 
   for ( var p of projects) {
-    navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
+    if (navbar.links.length < 4)
+      navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
   }
+  navbar.links.push({name: "List of Projects", url: '/projects'});
 
   project.members = findProjectMembers( project );
   project.team = {project_managers: [], members: []};
