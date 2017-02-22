@@ -26,6 +26,7 @@ mixin links()
 				a(href='/')
 					img.thumb(src='/images/icons/logo-64@2x.png' style="width: 52px; height: 52px;")
 				button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar-collapse" aria-controls="navBar-collapse" aria-expanded="false" aria-label="navBar-control")
+					span(aria-hidden="false").glyphicon.glyphicon-menu-hamburger Menu
 				.navbar-mobile-secondary.collapse(id="navBar-collapse")
 					mixin links()
 					
