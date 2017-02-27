@@ -3,6 +3,7 @@ var tempDB = require('./TEMP_schema');
 var router = express.Router();
 var helper = require('./helper_methods');
 var nodemailer = require('nodemailer');
+var Models = require("./models");
 
 router.get('*', function(req, res, next) {
 
