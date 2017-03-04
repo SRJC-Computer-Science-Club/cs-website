@@ -1,7 +1,48 @@
 extends layout
 
 block content
-  #index-page.content
-    include ./partials/homepage/_homepage_top_news
-    include ./partials/homepage/_homepage_join_club_banner
-    include ./partials/homepage/_homepage_project_spotlight
+	#index-page.content
+		#top-news.row
+			.col-lg-12
+				h1 Top News
+				.row.card
+					.col-lg-12
+						h2 Project Updates
+						span Feb 16, 11:18am
+						hr
+						h4 Workshops
+						span Be on the look out for scheduled workshops for the <a href="/projects/1">CS Website</a>, Club App, Line-Follower, and the Game Development!
+						hr
+						h4 New Officers
+						each member in canidates
+							- member.role = member.election
+							#atoms.cell-3
+								.member-cell
+									include ./partials/atoms/member-cell
+		hr
+		#join.row
+			.col-sm-12
+				.row.card
+					.col-sm-12
+						h1 WANT TO JOIN THE CLUB
+				.row
+					.col-sm-6.card
+						a(href='#news-bar').col-sm-12
+							img.img-fluid(src='images/icons/maggini-icon-bnr.png')
+							h3 ATTEND A MEETING
+					.col-sm-6.card
+						a(href='join').col-sm-12
+							img.img-fluid(src='images/icons/slack-icon-bnr.png')
+							h3 SIGNUP FOR SLACK
+				.row.card
+					.col-sm-12
+						h2 DONE!
+						p once joined, you will be informed about <a href='/projects'>projects</a>
+						p.small no real requirments to join, internet is a plus though :)
+		hr
+		#project-spotlight.row(ng-controller="ProjectListController")
+			.col-lg-12
+				h1 Project Spotlight
+				each project in projects
+					include ./partials/homepage/_homepage_project_cell
+		hr
