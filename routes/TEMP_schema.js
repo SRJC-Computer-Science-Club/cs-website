@@ -261,26 +261,38 @@ var members = [
   ),
   new Member(
     12, 'Kyle', 'O\'Brien',
-		'my bio',
-		undefined,
-    {},
-		undefined,
-    []
+		'Hey! I\'m a professional novice. My skills lie primarly in C++ and Front-End Web technologies. I\'m currently learning Objective-C and Swift for an internship this summer. ',
+		'A Professional Novice',
+    {
+			personal_site: "www.Linkedin.com/in/kyle1668"
+		},
+		'kyleobrien01@comcast.net',
+    [
+			'C++',
+			'Javascript',
+			'Swift',
+			'Objective-C'
+		]
   ),
   new Member(
     11, 'Junior', 'Diarrassouba',
-		'my bio',
+		'',
 		undefined,
     {},
-		undefined,
-    []
+		'juniordiarrassouba1@gmail.com',
+    [
+			'C++',
+			'Java',
+			'HTML/CSS',
+			'JavaScript'
+		]
   ),
   new Member(
     14, 'Austin', 'Meyer',
 		'',
 		'Game Designer and Developer! Also know C++, Java, and Javascript',
     {},
-		'Meyerforge@gmail.com',
+		'meyerforge@gmail.com',
     [
 			'C++',
 			'Java',
@@ -289,20 +301,18 @@ var members = [
   ),
 	new Member(
 		15, 'Isaiah', 'Curtis',
-		'my bio',
-		undefined,
+		'',
+		'Interested in machine learning and low level programming',
 		{},
-		undefined,
-		[
-
-		]
+		'17ijcurtis@gmail.com',
+		[]
 	),
 	new Member(
 		16, 'Noah', 'Tarr',
 		undefined,
 		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
 		{
-			website: 'http://www.noahtarr.com/'
+			personal_site: 'http://www.noahtarr.com/'
 		},
 		undefined,
 		[
@@ -319,7 +329,7 @@ var members = [
 		'',
 		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
 		{
-			github: 'https://github.com/ablacklama'
+			github: 'https://www.GitHub.com/ablacklama'
 		},
 		'ablacklama@gmail.com',
 		[
@@ -461,7 +471,6 @@ var members_projects = [
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
 	new ProjectsMembers( 33 , 1 , 16 , 'Programmer' ),
 	new ProjectsMembers( 34 , 1 , 19 , 'Programmer' ),
-	new ProjectsMembers( 16 , 1 , 12 , 'Programmer' ),
 	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
@@ -498,6 +507,7 @@ var members_projects = [
   new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
   new ProjectsMembers( 44 , 7 , 17 , 'Programmer' ),
   new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
+  new ProjectsMembers( 47 , 7 , 11 , 'Programmer' ),
 	//Dreamscape
   new ProjectsMembers( 36 , 8 , 15 , 'Project Manager' ),
   new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
@@ -505,9 +515,12 @@ var members_projects = [
   new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
 	//Club App
   new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
-  new ProjectsMembers( 45 , 9 , 17 , 'Programmer' )
+	new ProjectsMembers( 16 , 9 , 12 , 'Programmer' ),
+  new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
+  new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
+  new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
 ];
-//45
+//48
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam
