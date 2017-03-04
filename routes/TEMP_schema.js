@@ -28,7 +28,7 @@ function Member( id, first_name, last_name, bio, bio_short, links, email, langua
 
 function ProjectsMembers( id, project_id, member_id, role, assignedArea )
 {
-  this.id = id;
+	this.id = id;
 	this.project_id = project_id;
 	this.member_id = member_id;
 	this.role = role;
@@ -70,13 +70,11 @@ function ClubOfficers( id, member_id, position_title, swatch)
 
 //9
 var projects = [
-	new Project(
-		1,
-		'CS Website',
+	new Project(1,'CS Website',
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
 		'In Progress',
-		'Finalizing the front-end',
+		'USE TABS NOT SPACES',
 		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/563656-csc-cs-website',
@@ -85,14 +83,12 @@ var projects = [
 			figma: 'https://www.figma.com/files/project/64393/Club-Website'
 		},
 		[]
-  ),
-  new Project(
-    5,
-    'Line Follower',
-    '',
+	),
+	new Project(5,'Line Follower',
+		'',
 		'',
 		'In Progress',
-    'Software designing in progress',
+		'Software designing in progress',
 		{},
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
@@ -101,68 +97,59 @@ var projects = [
 			github: 'https://github.com/SRJC-Computer-Science-Club/line-follower'
 		},
 		[]
-  ),
-  new Project(
-    8,
-    'Dreamscape',
-    '',
-    '',
-    'Blueprinting the GDD',
-		'',
-		{},
-    {
-      // checkvist: 'https://checkvist.com/checklists/560653',
-      // waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-      // github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-			drive: 'https://drive.google.com/drive/folders/0B23hDSQTMIITY2hVZ3dzd3NuQm8?usp=sharing'
-    },
-		[
-		]
-  ),
-	new Project(
-		9,
-		'Club App',
+	),
+	new Project(8,'Dreamscape',
 		'',
 		'',
-		'Blueprinting',
+		'Blueprinting the GDD',
 		'',
-		{},
-		{},
-		[]
-  ),
-	new Project(
-		7,
-		'SRJC Scheduler',
-		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
-		'Schedule your next semester with SRJC Scheduler!',
-		'Improving',
-		'Extending to include Gateway to College courses',
 		{},
 		{
-		  github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler'
+			// checkvist: 'https://checkvist.com/checklists/560653',
+			// waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
+			// github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
+			drive: 'https://drive.google.com/drive/folders/0B23hDSQTMIITY2hVZ3dzd3NuQm8?usp=sharing'
+		},
+		[
+		]
+	),
+	new Project(9,'Club App',
+		'',
+		'In-Progress',
+		'Building navigation',
+		'',
+		{},
+		{},
+		[]
+	),
+	new Project(7,'SRJC Scheduler',
+		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
+		'Schedule your next semester with SRJC Scheduler!',
+		'Rebuilding',
+		'Join us at the Make-a-thon!',
+		{},
+		{
+			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler',
+			scheduler: 'http://srjcscheduler.com/'
 		},
 		[]
-  ),
-	new Project(
-		3,
-		'Function Fighters',
+	),
+	new Project(3,'Function Fighters',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'An AI battle arena simulator',
 		'Scrimmaging!',
 		'Would you like to join?!',
 		{},
 		{
-		  github: 'https://github.com/joshuasrjc/function-fighters'
+			github: 'https://github.com/joshuasrjc/function-fighters'
 		},
 		[]
-  ),
-	new Project(
-		6,
-		'Retailer',
+	),
+	new Project(6,'Retailer',
 		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
 		'Retail simulation of everything that has to do with retail.',
-		'In Progress',
-		'Be sure to checkout the issues on GitHub!',
+		'On-Hold',
+		'',
 		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/587081-csc-retail',
@@ -175,12 +162,10 @@ var projects = [
 			'3d model-1.png'
 		]
 	),
-	new Project(
-		0,
-		'Micromouse',
+	new Project(0,'Micromouse',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'An autonomous maze solving robot mouse',
-		'Delayed',
+		'Archived',
 		'',
 		{},
 		{
@@ -190,43 +175,38 @@ var projects = [
 		},
 		[]
 	),
-  new Project(
-    4,
-    'Quad-Copter',
-    '<a href=\'\\members\\3\'>I</a> worked on a landmine detection quadcopter with college <a href=\'\\members\\9\'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.',
+	new Project(4,'Quad-Copter',
+		'<a href=\'\\members\\3\'>I</a> worked on a landmine detection quadcopter with college <a href=\'\\members\\9\'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.',
 		'',
-    'Archived',
+		'Archived',
 		'',
 		{},
 		{},
 		[]
-  ),
-  new Project(
-    2,
-    '2D Platformer',
-    'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-    'A simple 2d platformer game',
-    'On-Hold',
+	),
+	new Project(2,'2D Platformer',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'A simple 2d platformer game',
+		'On-Hold',
 		'',
 		{},
-    {
-      checkvist: 'https://checkvist.com/checklists/560653',
-      waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-      github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
-    },
+		{
+			checkvist: 'https://checkvist.com/checklists/560653',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
+			github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
+		},
 		[
 			'main-character-1.png',
 			'main-character-2.png',
 			'main-character-3.png',
 			'main-character-sprite-1.png'
 		]
-  )
+	)
 ];
 
 //13
 var members = [
-	new Member(
-		2, 'Erick', 'Sanchez',
+	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
 		'Making apps on the iPhone and on other platforms.',
 		{
@@ -239,76 +219,69 @@ var members = [
 			'C++','JavaScript','Objective-C','HTML & CSS'
 		]
 	),
-  new Member(
-    1, 'Joshua', 'Murphy',
+	new Member(1, 'Joshua', 'Murphy',
 		'my bio',
 		undefined,
-    {
-      github: 'https://www.github.com/joshuasrjc'
-    },
+		{
+			github: 'https://www.github.com/joshuasrjc'
+		},
 		undefined,
-    [
+		[
 			'C++','JavaScript'
 		]
-  ),
-  new Member(
-    4, 'Steven', 'Guido',
+	),
+	new Member(4, 'Steven', 'Guido',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    12, 'Kyle', 'O\'Brien',
+		[]
+	),
+	new Member(12, 'Kyle', 'O\'Brien',
 		'Hey! I\'m a professional novice. My skills lie primarly in C++ and Front-End Web technologies. I\'m currently learning Objective-C and Swift for an internship this summer. ',
 		'A Professional Novice',
-    {
+		{
 			personal_site: "www.Linkedin.com/in/kyle1668"
 		},
 		'kyleobrien01@comcast.net',
-    [
+		[
 			'C++',
 			'Javascript',
 			'Swift',
 			'Objective-C'
 		]
-  ),
-  new Member(
-    11, 'Junior', 'Diarrassouba',
+	),
+	new Member(11, 'Junior', 'Diarrassouba',
 		'',
 		undefined,
-    {},
+		{},
 		'juniordiarrassouba1@gmail.com',
-    [
+		[
 			'C++',
 			'Java',
 			'HTML/CSS',
 			'JavaScript'
 		]
-  ),
-  new Member(
-    14, 'Austin', 'Meyer',
+	),
+	new Member(14, 'Austin', 'Meyer',
 		'',
 		'Game Designer and Developer! Also know C++, Java, and Javascript',
-    {},
+		{},
 		'meyerforge@gmail.com',
-    [
+		[
 			'C++',
 			'Java',
 			'JavaScript'
 		]
-  ),
-	new Member(
-		15, 'Isaiah', 'Curtis',
+	),
+	new Member(15, 'Isaiah', 'Curtis',
 		'',
 		'Interested in machine learning and low level programming',
 		{},
 		'17ijcurtis@gmail.com',
 		[]
 	),
-	new Member(
-		16, 'Noah', 'Tarr',
+	new Member(16, 'Noah', 'Tarr',
 		undefined,
 		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
 		{
@@ -324,8 +297,7 @@ var members = [
 			'PHP'
 		]
 	),
-	new Member(
-		17, 'Spencer', 'Kelly',
+	new Member(17, 'Spencer', 'Kelly',
 		'',
 		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
 		{
@@ -341,8 +313,7 @@ var members = [
 			'Python'
 		]
 	),
-	new Member(
-		20, 'Adam', '',
+	new Member(20, 'Adam', '',
 		'my bio',
 		undefined,
 		{},
@@ -351,8 +322,7 @@ var members = [
 
 		]
 	),
-	new Member(
-		19, 'Erik', 'Fisher',
+	new Member(19, 'Erik', 'Fisher',
 		'I am passionate about app development for mobile platforms and becoming a well rounded software developer.',
 		'I like to code apps and for other fun projects',
 		{},
@@ -365,8 +335,7 @@ var members = [
 			'Assembly'
 		]
 	),
-	new Member(
-		18, 'Travis', 'Carpenter',
+	new Member(18, 'Travis', 'Carpenter',
 		'my bio',
 		undefined,
 		{},
@@ -375,88 +344,79 @@ var members = [
 
 		]
 	),
-  new Member(
-    3, 'Oran', 'C',
+	new Member(3, 'Oran', 'C',
 		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
 		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-    {
-      github: 'https://www.github.com/Pastyguy'
-    },
+		{
+			github: 'https://www.github.com/Pastyguy'
+		},
 		undefined,
-    [
+		[
 			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
 		]
-  ),
-  new Member(
-    6, 'Noah', 'Torrez',
+	),
+	new Member(6, 'Noah', 'Torrez',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    10, 'Alex', 'Dewey',
+		[]
+	),
+	new Member(10, 'Alex', 'Dewey',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    13, 'Eli', 'Krause',
+		[]
+	),
+	new Member(13, 'Eli', 'Krause',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    [
+		[
 			'HTML & CSS'
 		]
-  ),
-  new Member(
-    8, 'Wind', 'Schneidenbach',
+	),
+	new Member(8, 'Wind', 'Schneidenbach',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    5, 'Alex', 'Chen',
+		[]
+	),
+	new Member(5, 'Alex', 'Chen',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    7, 'Conan', 'Skaife',
+		[]
+	),
+	new Member(7, 'Conan', 'Skaife',
 		'my bio',
 		undefined,
-    {},
+		{},
 		undefined,
-    []
-  ),
-  new Member(
-    0, 'Benjamin', 'Hough',
+		[]
+	),
+	new Member(0, 'Benjamin', 'Hough',
 		'my bio',
 		undefined,
-    {
-      github: 'https://www.github.com/whothat'
-    },
+		{
+			github: 'https://www.github.com/whothat'
+		},
 		undefined,
-    ['C++','JavaScript']
-  ),
-  new Member(
-    9, 'Yekalo', 'Aberha',
+		['C++','JavaScript']
+	),
+	new Member(9, 'Yekalo', 'Aberha',
 		'my bio',
 		undefined,
-    {
-      github: 'https://www.github.com/yyekalo'
-    },
+		{
+			github: 'https://www.github.com/yyekalo'
+		},
 		undefined,
-    []
-  )
+		[]
+	)
 ];
 
 var members_projects = [
@@ -476,49 +436,49 @@ var members_projects = [
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	//2D Platformer
-  new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Function Fighters
-  new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
-  new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
-  new ProjectsMembers( 43 , 3 , 14 , 'AI Player' ),
-  new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
-  new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
-  new ProjectsMembers( 36 , 3 , 19 , 'AI Player' ),
+	new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
+	new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
+	new ProjectsMembers( 43 , 3 , 14 , 'AI Player' ),
+	new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
+	new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
+	new ProjectsMembers( 36 , 3 , 19 , 'AI Player' ),
 	//Quad-Copter
-  new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
-  new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
+	new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
+	new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
 	//Line Follower
-  new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
-  new ProjectsMembers( 18 , 5 , 1 , 'Lead Developer' ),
-  new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
+	new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
+	new ProjectsMembers( 18 , 5 , 1 , 'Lead Developer' ),
+	new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
-  new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
-  new ProjectsMembers( 30 , 5 , 15 , 'Programmer' ),
+	new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
+	new ProjectsMembers( 30 , 5 , 15 , 'Programmer' ),
 	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
-  new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
+	new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//Retailer
-  new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
-  new ProjectsMembers( 29 , 6 , 14 , 'Developer' ),
-  new ProjectsMembers( 39 , 6 , 18 , 'Programmer' ),
+	new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 29 , 6 , 14 , 'Developer' ),
+	new ProjectsMembers( 39 , 6 , 18 , 'Programmer' ),
 	//srjc-scheduler
-  new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
-  new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
-  new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
-  new ProjectsMembers( 44 , 7 , 17 , 'Programmer' ),
-  new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
-  new ProjectsMembers( 47 , 7 , 11 , 'Programmer' ),
+	new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
+	new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
+	new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
+	new ProjectsMembers( 44 , 7 , 17 , 'Programmer' ),
+	new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
+	new ProjectsMembers( 47 , 7 , 11 , 'Programmer' ),
 	//Dreamscape
-  new ProjectsMembers( 36 , 8 , 15 , 'Project Manager' ),
-  new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
-  new ProjectsMembers( 40 , 8 , 17 , 'Programmer' ),
-  new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
+	new ProjectsMembers( 36 , 8 , 15 , 'Project Manager' ),
+	new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
+	new ProjectsMembers( 40 , 8 , 17 , 'Programmer' ),
+	new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
 	//Club App
-  new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 16 , 9 , 12 , 'Programmer' ),
-  new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
-  new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
-  new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
+	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
+	new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
+	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
 ];
 //48
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
@@ -532,8 +492,7 @@ var members_projects = [
 //11
 var project_area_requests = [
 	//CS Website
-	new ProjectAreaRequests( 0, 1,
-		"Front-End Developers",
+	new ProjectAreaRequests( 0, 1,"Front-End Developers",
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
 		":4", 3,
 		[
@@ -542,8 +501,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 1, 1,
-		"Back-End Developers",
+	new ProjectAreaRequests( 1, 1,"Back-End Developers",
 		"Check out <a href=\"https://www.mongodb.com/\">MongoDB</a> for our technologies for backend",
 		":3", 2,
 		[
@@ -552,8 +510,7 @@ var project_area_requests = [
 		2
 	),
 	//function-fighters
-	new ProjectAreaRequests( 2, 3,
-		"AI Players",
+	new ProjectAreaRequests( 2, 3,"AI Players",
 		"",
 		"Welcome!:2", "&#8734",
 		[
@@ -562,8 +519,7 @@ var project_area_requests = [
 		1
 	),
 	//Line-Follower
-	new ProjectAreaRequests( 11, 5,
-		"Hardware Designers",
+	new ProjectAreaRequests( 11, 5,"Hardware Designers",
 		"",
 		":3", 0,
 		[
@@ -573,8 +529,7 @@ var project_area_requests = [
 		2
 	),
 	//Retailer
-	new ProjectAreaRequests( 3, 6,
-		"Game Developers",
+	new ProjectAreaRequests( 3, 6,"Game Developers",
 		"",
 		":5", 4,
 		[
@@ -582,8 +537,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 4, 6,
-		"Graphic/Asset Designers",
+	new ProjectAreaRequests( 4, 6,"Graphic/Asset Designers",
 		"",
 		":3", 1,
 		[
@@ -592,8 +546,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 5, 6,
-		"Back-End Developer",
+	new ProjectAreaRequests( 5, 6,"Back-End Developer",
 		"",
 		":1", 1,
 		[],
@@ -603,8 +556,7 @@ var project_area_requests = [
 
 //0
 project_events = [
-	new ProjectEvent( 0, 5,
-	'RoboGames—Line Follower',
+	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
 	'description',
 	'Robotics competition for our line follower project.',
 	'Pleasanton, CA',
@@ -613,8 +565,7 @@ project_events = [
 		{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
 	]
 ),
-	new ProjectEvent( 1, 1,
-	'Hackathon',
+	new ProjectEvent( 1, 1,'Hackathon',
 	'description',
 	'',
 	'San Fransisco, CA',
@@ -677,7 +628,7 @@ var club_officers =
 module.exports = {
 	projects,
 	members,
-  members_projects,
+	members_projects,
 	project_area_requests,
 	project_events,
 	services,
