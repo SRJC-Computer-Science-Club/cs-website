@@ -204,7 +204,7 @@ var projects = [
 	)
 ];
 
-//13
+//22
 var members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
@@ -297,23 +297,14 @@ var members = [
 			'PHP'
 		]
 	),
-	new Member(17, 'Spencer', 'Kelly',
-		'',
-		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
-		{
-			github: 'https://www.GitHub.com/ablacklama'
-		},
-		'ablacklama@gmail.com',
-		[
-			'C++',
-			'Java',
-			'C',
-			'HTML/CSS',
-			'JavaScript',
-			'Python'
-		]
+	new Member(22, 'Duncan', 'MacDonald',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
 	),
-	new Member(20, 'Adam', '',
+	new Member(20, 'Adam', 'Ahrens',
 		'my bio',
 		undefined,
 		{},
@@ -334,6 +325,36 @@ var members = [
 			'HTML/CSS',
 			'Assembly'
 		]
+	),
+	new Member(21, 'Ashley', 'Harrison',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(17, 'Spencer', 'Kelly',
+		'',
+		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
+		{
+			github: 'https://www.GitHub.com/ablacklama'
+		},
+		'ablacklama@gmail.com',
+		[
+			'C++',
+			'Java',
+			'C',
+			'HTML/CSS',
+			'JavaScript',
+			'Python'
+		]
+	),
+	new Member(23, 'Andrew', 'Rodrigues',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
 	),
 	new Member(18, 'Travis', 'Carpenter',
 		'my bio',
@@ -429,10 +450,11 @@ var members_projects = [
 	//CS Website
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
+	new ProjectsMembers( 49 , 1 , 23 , 'Programmer' ),
 	new ProjectsMembers( 33 , 1 , 16 , 'Programmer' ),
 	new ProjectsMembers( 34 , 1 , 19 , 'Programmer' ),
-	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
+	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	//2D Platformer
@@ -480,10 +502,10 @@ var members_projects = [
 	new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
 ];
-//48
+//49
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
-//17-spencer 18-travis 19-erik 20-adam
+//17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 
