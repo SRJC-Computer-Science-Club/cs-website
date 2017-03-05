@@ -84,11 +84,32 @@ var projects = [
 		},
 		[]
 	),
+	new Project(9,'Club App',
+		'',
+		'In-Progress',
+		'Building navigation',
+		'',
+		{},
+		{},
+		[]
+	),
+	new Project(7,'SRJC Scheduler',
+		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
+		'Schedule your next semester with SRJC Scheduler!',
+		'Rebuilding',
+		'Mockups looking good',
+		{},
+		{
+			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler',
+			scheduler: 'http://srjcscheduler.com/'
+		},
+		[]
+	),
 	new Project(5,'Line Follower',
 		'',
 		'',
 		'In Progress',
-		'Software designing in progress',
+		'Software development in progress',
 		{},
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
@@ -112,27 +133,6 @@ var projects = [
 		},
 		[
 		]
-	),
-	new Project(9,'Club App',
-		'',
-		'In-Progress',
-		'Building navigation',
-		'',
-		{},
-		{},
-		[]
-	),
-	new Project(7,'SRJC Scheduler',
-		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
-		'Schedule your next semester with SRJC Scheduler!',
-		'Rebuilding',
-		'Join us at the Make-a-thon!',
-		{},
-		{
-			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler',
-			scheduler: 'http://srjcscheduler.com/'
-		},
-		[]
 	),
 	new Project(3,'Function Fighters',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -187,7 +187,7 @@ var projects = [
 	new Project(2,'2D Platformer',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'A simple 2d platformer game',
-		'On-Hold',
+		'Archived',
 		'',
 		{},
 		{
@@ -211,6 +211,7 @@ var members = [
 		'Making apps on the iPhone and on other platforms.',
 		{
 			github: 'https://www.GitHub.com/LinnierGames',
+			linkedin: 'https://www.LinkedIn.com/in/erick-sanchez-84083171/',
 			facebook: 'https://www.Facebook.com/erick.sanchez.988926',
 			twiter: 'https://www.Twitter.com/Linnier__Games',
 		},
@@ -486,6 +487,7 @@ var members_projects = [
 	//srjc-scheduler
 	new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
 	new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
+	new ProjectsMembers( 50 , 7 , 20 , 'Developer' ),
 	new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
 	new ProjectsMembers( 44 , 7 , 17 , 'Programmer' ),
 	new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
@@ -497,12 +499,13 @@ var members_projects = [
 	new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
 	//Club App
 	new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 49 , 9 , 20 , 'Developer' ),
 	new ProjectsMembers( 16 , 9 , 12 , 'Programmer' ),
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
 	new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
 ];
-//49
+//50
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew
