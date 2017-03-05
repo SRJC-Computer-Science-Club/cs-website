@@ -86,9 +86,9 @@ var projects = [
 	),
 	new Project(9,'Club App',
 		'',
+		'',
 		'In-Progress',
 		'Building navigation',
-		'',
 		{},
 		{},
 		[]
