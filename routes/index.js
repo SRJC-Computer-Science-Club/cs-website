@@ -226,19 +226,19 @@ router.get('/events', function(req, res, next) {
     links: []
   };
 
-  res.render('events', { title: 'CS Club - Events', upcoming_events: findUpcommingEvents(), navbar: navbar });
+  res.render('events', { title: 'CS Club - Events', upcoming_events: findAllUpcommingEvents(), navbar: navbar });
 });
 
 
 
-/* GET Event Page. */
-router.get('/events/:eventID', function(req, res, next) {
+/* GET Project Event Page. */
+router.get('/project-events/:eventID', function(req, res, next) {
   var navbar = {
     active: 'events',
     links: []
   };
 
-  var event = findEventForID(tempDB.project_events, req.params.eventID);
+  var event = findProjectEventForID(tempDB.project_events, req.params.eventID);
   event.project = findProjectForID(tempDB.projects, event.project_id);
 
   res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
@@ -392,7 +392,7 @@ function findProjectEvents( project )
 
 
 
-function findEventForID( events, id )
+function findProjectEventForID( events, id )
 {
   var found;
   for ( var event of events)
@@ -476,9 +476,15 @@ function replaceColorTitle(project_interest)
   return project_interest.title;
 }
 
-function findUpcommingEvents()
+function findAllUpcommingEvents()
 {
-  return tempDB.project_events;
+	var events = tempDB.project_events.concat(tempDB.events);
+
+	events.sort(function(a, b) {
+		return new Date(b.date_range) - new Date(a.date_range)
+  });
+
+  return events;
 }
 
 function findClubOfficers()
