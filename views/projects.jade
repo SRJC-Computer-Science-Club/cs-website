@@ -1,5 +1,7 @@
 extends layout
 
 block content
-  #projects-page.content(ng-controller='ProjectListController')
-    include ./partials/projects_page/_project_list
+	#projects-page.content(ng-controller='ProjectListController')
+		#project-spotlight.row(ng-controller="ProjectListController")
+			include ./partials/projects_page/_project_cell-detailed
+		hr

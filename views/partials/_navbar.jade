@@ -17,7 +17,7 @@ mixin links()
 		.nbw2
 			.navbar-wrapper
 				a.navbar-brand(href='/')= title
-				ul.nav.navbar-nav.float-xs-right
+				ul.nav.navbar-nav.pull-xs-right
 					mixin links()
 .hidden-md-up
 	nav.navbar-mobile.navbar-fixed-top.navbar-dark.bg-inverse
@@ -34,7 +34,7 @@ mixin links()
 	nav.navbar.navbar-fixed-top.navbar-dark.navbar-secondary
 		.nbw2
 			.navbar-wrapper
-				ul.nav.navbar-nav.float-xs-right
+				ul.nav.navbar-nav.pull-xs-right
 					each link, index in navbar.links
 						li.nav-item(class= link.active === true ? 'active' : '')
 							a.nav-link(href=link.url)= link.name
