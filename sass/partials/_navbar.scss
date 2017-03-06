@@ -1,14 +1,18 @@
 $navbar-secondary-height: 40px;
-//$navbar-main-bg-color: 
+//$navbar-main-bg-color:
 $navbar-secondary-bg-color: #96afca;
 
 $navbar-main-button-height:40px;
 $navbar-main-button-margin-top: 12px;
 $navbar-main-height: $navbar-main-button-height + $navbar-main-button-margin-top;
+$navbar-mobile-height: 64px;
 
 .navbar {
     padding: 0;
     height: $navbar-main-height;
+    @media (max-width: map-get($grid-breakpoints,md)) { //apply only for sm and down
+      min-height: $navbar-mobile-height;
+    }
     &.navbar-secondary {
         background: $navbar-secondary-bg-color;
         top: $navbar-main-height;
@@ -26,7 +30,7 @@ $navbar-main-height: $navbar-main-button-height + $navbar-main-button-margin-top
     width: 100%;
     max-width: 1300px;
     position: absolute;
-    bottom: 0;
+    top: 0;
 }
 
 .nav-item {
@@ -70,4 +74,29 @@ $navbar-main-height: $navbar-main-button-height + $navbar-main-button-margin-top
             }
         }
     }
+}
+
+.navbar-mobile {
+  @extend .navbar;
+  .thumb {
+    margin: 6px 0 6px $margin-md;
+  }
+  .navbar-toggler {
+    position: absolute;
+    top: $margin-md;
+    right: $margin-sm;
+  }
+  .navbar-mobile-secondary {
+    background: $navbar-secondary-bg-color;
+    margin: 0;
+    li.nav-item {
+      margin-top: 0;
+      list-style-type: none;
+      a {
+        font-size: 1.25em;
+        color: black;
+        margin: 0 0 $margin-lg $margin-lg;
+      }
+    }
+  }
 }
