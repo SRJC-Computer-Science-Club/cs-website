@@ -232,6 +232,20 @@ router.get('/events', function(req, res, next) {
 
 
 /* GET Project Event Page. */
+router.get('/events/:eventID', function(req, res, next) {
+  var navbar = {
+    active: 'events',
+    links: []
+  };
+
+  var event = findProjectEventForID(tempDB.events, req.params.eventID);
+
+  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
+});
+
+
+
+/* GET Project Event Page. */
 router.get('/project-events/:eventID', function(req, res, next) {
   var navbar = {
     active: 'events',
