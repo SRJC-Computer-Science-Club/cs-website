@@ -204,7 +204,7 @@ var projects = [
 	)
 ];
 
-//22
+//25
 var members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
@@ -314,6 +314,24 @@ var members = [
 
 		]
 	),
+	new Member(24, 'Greg', 'Maddox',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
+		{
+			github: 'https://www.GitHub.com/Pastyguy'
+		},
+		undefined,
+		[
+			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
+		]
+	),
 	new Member(19, 'Erik', 'Fisher',
 		'I am passionate about app development for mobile platforms and becoming a well rounded software developer.',
 		'I like to code apps and for other fun projects',
@@ -357,6 +375,13 @@ var members = [
 		undefined,
 		[]
 	),
+	new Member(25, 'Juan', 'Rios',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
 	new Member(18, 'Travis', 'Carpenter',
 		'my bio',
 		undefined,
@@ -364,17 +389,6 @@ var members = [
 		undefined,
 		[
 
-		]
-	),
-	new Member(3, 'Oran', 'C',
-		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
-		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-		{
-			github: 'https://www.github.com/Pastyguy'
-		},
-		undefined,
-		[
-			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
 		]
 	),
 	new Member(6, 'Noah', 'Torrez',
@@ -508,7 +522,8 @@ var members_projects = [
 //50
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
-//17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew
+//17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
+//25-juan
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 
