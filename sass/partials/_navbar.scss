@@ -30,7 +30,10 @@ $navbar-mobile-height: 64px;
     width: 100%;
     max-width: 1300px;
     position: absolute;
-    top: 0;
+    bottom: 0;
+    @media (max-width: map-get($grid-breakpoints,md)) { //apply only for sm and down
+      top: 0;
+    }
 }
 
 .nav-item {
