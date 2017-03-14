@@ -9,7 +9,7 @@
 
 [Link to the Checkvist outline](https://checkvist.com/checklists/563656-csc-cs-site)
 
-The Purpose of this site is to invite new members to our club by presenting current and past projects and events and posting news of progress of current projects. Once a member, this site will create a centeral hub for members to find links and resources and keep up-to-date with its native app (repos here: [iOS][ios repo] and [Android][android repo]). This site will have logins for members, project managers and admins to maintain the site. Check out the Checkvist outline [here][checkvist].
+The Purpose of this site is to invite new members to our club by presenting current and past projects and events and posting news of progress of current projects. Once a member, this site will create a centeral hub for members to find links and resources and keep up-to-date with its native app (repo here: [react native][mobile app repo]). This site will have logins for members, project managers and admins to maintain the site. Check out the Checkvist outline [here][checkvist].
 
 ### The technologies
 >[Node][node] is  a JavaScript runtime built on Chrome's V8 JavaScript engine
@@ -48,8 +48,7 @@ The Purpose of this site is to invite new members to our club by presenting curr
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
    [site]: <https://srjc-cs-website.herokuapp.com/>
-   [ios repo]: <https://github.com/SRJC-Computer-Science-Club/cs-app-ios>
-   [android repo]: <https://github.com/SRJC-Computer-Science-Club/cs-app-android>
+   [mobile app repo]: <https://github.com/SRJC-Computer-Science-Club/cs-app-ios>
    [checkvist]: <https://checkvist.com/checklists/563656-csc-cs-website>
    [node]: <https://nodejs.org/en/>
    [sass]: <http://sass-lang.com/>

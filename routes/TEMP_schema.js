@@ -60,6 +60,17 @@ function ProjectEvent( id, project_id, title, description, description_short, lo
 	this.media = media;
 }
 
+function Event( id, title, description, description_short, location, date_range, media)
+{
+	this.id = id;
+	this.title = title;
+	this.description = description;
+	this.description_short = description_short;
+	this.location = location;
+	this.date_range = date_range;
+	this.media = media;
+}
+
 function ClubOfficers( id, member_id, position_title, swatch)
 {
 	this.id = id;
@@ -595,7 +606,7 @@ var project_area_requests = [
 ];
 
 //0
-project_events = [
+var project_events = [
 	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
 	'description',
 	'Robotics competition for our line follower project.',
@@ -614,6 +625,16 @@ project_events = [
 		{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
 	]
 	)
+]
+
+var events = [
+	new Event(0, '2017 Make-a-thon',
+	'description',
+	'Rohnert Park\'s Make-a-thon event!',
+	'Rohnert Park, CA',
+	'March 4, 9am-8pm',
+	[]
+)
 ]
 
 //Global instances for icons
@@ -671,6 +692,7 @@ module.exports = {
 	members_projects,
 	project_area_requests,
 	project_events,
+	events,
 	services,
 	club_officers
 };

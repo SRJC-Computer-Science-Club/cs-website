@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  #events-page.content
-    .events
-      each event in upcoming_events
-        a(href='/events/'+event.id).cell.row.event
-          .context.col-xs-12
-            p.float-xs-right= event.date_range
-            h3= event.title
-            //- img.float-xs-right(src='/images/icons/checkvist-icon-42@2x.png')
-            p= event.description
-      
+	#events-page.content
+		.events
+			each event in upcoming_events
+				- var link = (event.project_id != undefined ? '/project-events/' : '/events/') +event.id
+				a(href=link).cell.row.event
+					.context.col-xs-12
+						p.float-xs-right= event.date_range
+						h3= event.title
+						//- img.float-xs-right(src='/images/icons/checkvist-icon-42@2x.png')
+						p= event.description
+			

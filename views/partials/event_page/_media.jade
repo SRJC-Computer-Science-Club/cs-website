@@ -1,9 +1,10 @@
 h3 Media
 hr
 each image in event.media
-  - var source = image.image;
-  - var url = image.url;
-  .thumbnail-caption
-    a(href=url target='_blank')
-      img(src="/images/projects/"+event.project.title.toLowerCase()+"/events/"+source)
-    figcaption= image.caption
+	- var source = image.image;
+	- var url = image.url;
+	- var link = (event.project_id != undefined ? "/images/projects/"+event.project.title.toLowerCase()+"/events/"+source : source);
+	.thumbnail-caption
+		a(href=url target='_blank')
+			img(src=link)
+		figcaption= image.caption
