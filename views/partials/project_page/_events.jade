@@ -2,7 +2,7 @@ h3 Events
 #event-list
   if (project.events.length > 0)
     each event in project.events
-      a(href='/events/'+event.id).cell.row
+      a(href='/project-events/'+event.id).cell.row
         .context.col-xs-12
           .col-xs-8
             p.date-range.float-xs-right= event.date_range
