@@ -156,6 +156,15 @@ var projects = [
 		},
 		[]
 	),
+	new Project(10,'ShortLink',
+		"<a href='/members/12'>Kyle</a> joined <a href='/events/0'>Make-a-thon</a> to make his first iOS app. It was a success!<br><br>ShortLink brings link shortening to iOS, once more, using Google's public API to enter any valid url and gives back a working shorten link! This app is used as an introductory to iOS Development.",
+		"The first iOS application to make it to the club",
+		"In-Progress",
+		"Have a Mac? Join the iOS Team",
+		{},
+		{},
+		[]
+	),
 	new Project(6,'Retailer',
 		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
 		'Retail simulation of everything that has to do with retail.',
@@ -187,7 +196,7 @@ var projects = [
 		[]
 	),
 	new Project(4,'Quad-Copter',
-		'<a href=\'\\members\\3\'>I</a> worked on a landmine detection quadcopter with college <a href=\'\\members\\9\'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.',
+		"<a href=/members/3'>I</a> worked on a landmine detection quadcopter with college <a href='/members/9'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.",
 		'',
 		'Archived',
 		'',
@@ -198,7 +207,7 @@ var projects = [
 	new Project(2,'2D Platformer',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
 		'A simple 2d platformer game',
-		'Archived',
+		'Resigned',
 		'',
 		{},
 		{
@@ -528,7 +537,10 @@ var members_projects = [
 	new ProjectsMembers( 16 , 9 , 12 , 'Programmer' ),
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
 	new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
-	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' )
+	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' ),
+	//ShortLink
+	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
+	new ProjectsMembers( 52 , 10 , 2 , 'Developer')
 ];
 //50
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
