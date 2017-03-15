@@ -504,6 +504,10 @@ function findAllEvents()
 	}
 
 	upcommingEvents.sort(function(a,b) {
+		if (a.date_range == "TBA") //Puts TBA as upcoming and on bottom
+			return 1;
+		else if (b.date_range == "TBA")
+			return -1;
 		return new Date(a.date_range) - new Date(b.date_range)
 	});
 
