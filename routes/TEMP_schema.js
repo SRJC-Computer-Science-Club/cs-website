@@ -608,33 +608,42 @@ var project_area_requests = [
 //0
 var project_events = [
 	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
-	'description',
-	'Robotics competition for our line follower project.',
-	'Pleasanton, CA',
-	'April 21-23',
-	[
-		{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
-	]
-),
-	new ProjectEvent( 1, 1,'Hackathon',
-	'description',
-	'',
-	'San Fransisco, CA',
-	'Feburary 11-12',
-	[
-		{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
-	]
+		'description',
+		'Robotics competition for our line follower project.',
+		'Pleasanton, CA',
+		'April 21, 2017',
+		[
+			{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
+		]
 	)
 ]
 
 var events = [
 	new Event(0, '2017 Make-a-thon',
-	'description',
-	'Rohnert Park\'s Make-a-thon event!',
-	'Rohnert Park, CA',
-	'March 4, 9am-8pm',
-	[]
-)
+		'description',
+		'Rohnert Park\'s Make-a-thon event!',
+		'Rohnert Park, CA',
+		'March 4, 2017',
+		[]
+	),
+		new Event( 1,'Hackathon',
+		'description',
+		'',
+		'San Fransisco, CA',
+		'Feburary 11, 2017',
+		[
+			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
+		]
+	),
+		new Event( 1,' Keysight Trip',
+		'description',
+		'',
+		'TBA',
+		'TBA',
+		[
+			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
+		]
+	)
 ]
 
 //Global instances for icons
