@@ -1,0 +1,7 @@
+- var link = (event.project_id != undefined ? '/project-events/' : '/events/') +event.id
+a(href=link).cell.row.event
+	.context.col-xs-12
+		p.float-xs-right= event.date_range
+		h3= event.title
+		//- img.float-xs-right(src='/images/icons/checkvist-icon-42@2x.png')
+		p= event.description
