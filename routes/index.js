@@ -125,7 +125,7 @@ router.get('/projects/', function(req, res, next) {
     project.members= findProjectMembers(project);
     if (navbar.links.length < 4)
       navbar.links.push({name: project.title, url: '/projects/' +  project.id});
-		if (project.status == "Archvied" || project.satus == "Completed" || project.status == "Resigned" || project.status == "")
+		if (project.status == "Archived" || project.satus == "Completed" || project.status == "Resigned" || project.status == "")
 			archviedProjects.push(project);
 		else if (project.status == "On-Hold" || project.status == "Not on Track" || project.status == "Positions Needed")
 			secondaryProjects.push(project);
