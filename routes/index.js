@@ -117,13 +117,29 @@ router.get('/projects/', function(req, res, next) {
     links: []
   };
 
+	var topProjects = [];
+	var secondaryProjects = [];
+	var archviedProjects = [];
+
   for ( var project of projects) {
     project.members= findProjectMembers(project);
     if (navbar.links.length < 4)
       navbar.links.push({name: project.title, url: '/projects/' +  project.id});
+		if (project.status == "Archvied" || project.satus == "Completed" || project.status == "Resigned" || project.status == "")
+			archviedProjects.push(project);
+		else if (project.status == "On-Hold" || project.status == "Not on Track" || project.status == "Positions Needed")
+			secondaryProjects.push(project);
+		else {
+			if (topProjects.length > 3)
+				secondaryProjects.push(project);
+			else
+				topProjects.push(project);
+		}
   }
 
-  res.render('projects', { title: 'CS Club | Projects' , projects: projects, helper: helper, navbar: navbar});
+	console.log({top: topProjects, secondary: secondaryProjects, archvied: archviedProjects});
+
+  res.render('projects', { title: 'CS Club | Projects' , list_of_projects: {top: topProjects, secondary: secondaryProjects, archived: archviedProjects}, helper: helper, navbar: navbar});
 });
 
 // GET project page
