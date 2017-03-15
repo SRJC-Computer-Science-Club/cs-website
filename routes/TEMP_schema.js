@@ -635,14 +635,12 @@ var events = [
 			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
 		]
 	),
-		new Event( 1,' Keysight Trip',
-		'description',
+		new Event( 2,' Keysight Trip',
+		'Check out this trip at the weekly meeting!',
 		'',
-		'TBA',
-		'TBA',
-		[
-			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
-		]
+		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
+		'March 24, 2017',
+		[]
 	)
 ]
 
