@@ -226,7 +226,7 @@ router.get('/events', function(req, res, next) {
     links: []
   };
 
-  res.render('events', { title: 'CS Club - Events', upcoming_events: findAllUpcommingEvents(), navbar: navbar });
+  res.render('events', { title: 'CS Club - Events', list_of_events: findAllEvents(), navbar: navbar });
 });
 
 
@@ -490,15 +490,25 @@ function replaceColorTitle(project_interest)
   return project_interest.title;
 }
 
-function findAllUpcommingEvents()
+function findAllEvents()
 {
 	var events = tempDB.project_events.concat(tempDB.events);
+	var pastEvents = [];
+	var upcommingEvents = [];
+	for (var event of events) {
+		console.log(Date.now() - new Date(event.date_range));
+		if (Date.now() - new Date(event.date_range) > 0)
+			pastEvents.push(event);
+		else
+			upcommingEvents.push(event);
+	}
 
-	events.sort(function(a, b) {
-		return new Date(b.date_range) - new Date(a.date_range)
-  });
+	upcommingEvents.sort(function(a,b) {
+		return new Date(a.date_range) - new Date(b.date_range)
+	});
 
-  return events;
+	return {upcoming_events: upcommingEvents, past_events: pastEvents}
+
 }
 
 function findClubOfficers()

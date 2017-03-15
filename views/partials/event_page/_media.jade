@@ -3,7 +3,7 @@ hr
 each image in event.media
 	- var source = image.image;
 	- var url = image.url;
-	- var link = (event.project_id != undefined ? "/images/projects/"+event.project.title.toLowerCase()+"/events/"+source : source);
+	- var link = (event.project_id != undefined ? "/images/projects/"+event.project.title.toLowerCase()+"/events/"+source : "/images/events/" + source);
 	.thumbnail-caption
 		a(href=url target='_blank')
 			img(src=link)
