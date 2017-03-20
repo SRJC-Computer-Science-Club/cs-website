@@ -89,9 +89,9 @@ var projects = [
 		{},
 		{
 			checkvist: 'https://checkvist.com/checklists/563656-csc-cs-website',
+			figma: 'https://www.figma.com/files/project/64393/Club-Website',
 			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/cs-website',
-			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website',
-			figma: 'https://www.figma.com/files/project/64393/Club-Website'
+			github: 'https://github.com/SRJC-Computer-Science-Club/cs-website'
 		},
 		[]
 	),
@@ -101,7 +101,11 @@ var projects = [
 		'In-Progress',
 		'Building navigation',
 		{},
-		{},
+		{
+			invision: 'https://invis.io/K8AX0FZBN',
+			figma: 'https://www.figma.com/files/project/161855/Club-App',
+			github: 'https://github.com/SRJC-Computer-Science-Club/cs-app-react-native'
+		},
 		[]
 	),
 	new Project(7,'SRJC Scheduler',
@@ -111,8 +115,8 @@ var projects = [
 		'Mockups looking good',
 		{},
 		{
-			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler',
-			scheduler: 'http://srjcscheduler.com/'
+			scheduler: 'http://srjcscheduler.com/',
+			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler'
 		},
 		[]
 	),
@@ -120,7 +124,7 @@ var projects = [
 		'',
 		'',
 		'In Progress',
-		'Software development in progress',
+		'Crunch Time!',
 		{},
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
@@ -162,7 +166,9 @@ var projects = [
 		"In-Progress",
 		"Have a Mac? Join the iOS Team",
 		{},
-		{},
+		{
+			github: 'https://github.com/Kyle1668/Short-Link'
+		},
 		[]
 	),
 	new Project(6,'Retailer',
@@ -534,9 +540,8 @@ var members_projects = [
 	//Club App
 	new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 49 , 9 , 20 , 'Developer' ),
-	new ProjectsMembers( 16 , 9 , 12 , 'Programmer' ),
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
-	new ProjectsMembers( 45 , 9 , 17 , 'Programmer' ),
+	new ProjectsMembers( 45 , 9 , 16 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' ),
 	//ShortLink
 	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
@@ -636,9 +641,13 @@ var events = [
 		'Rohnert Park\'s Make-a-thon event!',
 		'Rohnert Park, CA',
 		'March 4, 2017',
-		[]
+		[
+			{caption: 'Google Drive Folder', image: 'drive.png', url: 'https://drive.google.com/drive/folders/0B3wyRcLxpH4jSHA2NjF1Nkk2S00?usp=sharing'},
+			{caption: 'Prize Winners!', image: '2017 make-a-thon/team-winners.jpg', url: 'http://drive.google.com/uc?export=view&id=0B3wyRcLxpH4jRkVFNG5WU1ctSFk'},
+			{caption: 'The Teams', image: '2017 make-a-thon/club.jpg', url: 'http://drive.google.com/uc?export=view&id=0B3wyRcLxpH4jcU93OTJUdlRpNG8'}
+		]
 	),
-		new Event( 1,'Hackathon',
+	new Event( 1,'Hackathon',
 		'description',
 		'',
 		'San Fransisco, CA',
@@ -647,11 +656,11 @@ var events = [
 			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
 		]
 	),
-		new Event( 2,' Keysight Trip',
+	new Event( 2,' Keysight Trip',
 		'Check out this trip at the weekly meeting!',
 		'',
 		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
-		'March 24, 2017',
+		'TBA',
 		[]
 	)
 ]
@@ -676,6 +685,13 @@ var services = {
 	{
 		name: 'WaffleIO',
 		icon_sm: 'waffleio-icon-42@2x.png',
+		icon_md: '',
+		icon_lg: ''
+	},
+	drive:
+	{
+		name: 'Google Drive',
+		icon_sm: 'drive-icon-42@2x.png',
 		icon_md: '',
 		icon_lg: ''
 	},
