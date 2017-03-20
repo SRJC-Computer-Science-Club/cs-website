@@ -1,8 +1,6 @@
-each project, i in projects
-	if (i < 3)
-		include ./_project_cell-detailed/_project_cell-detailed-top
-	else if (i < 6)
-		include ./_project_cell-detailed/_project_cell-detailed-secondary
-	else
-		include ./_project_cell-detailed/_project_cell-detailed-archived
-		
+each project in list_of_projects.top
+	include ./_project_cell-detailed/_project_cell-detailed-top
+each project in list_of_projects.secondary
+	include ./_project_cell-detailed/_project_cell-detailed-secondary
+each project in list_of_projects.archived
+	include ./_project_cell-detailed/_project_cell-detailed-archived
