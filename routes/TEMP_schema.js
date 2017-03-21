@@ -324,6 +324,19 @@ var members = [
 			'PHP'
 		]
 	),
+	new Member(19, 'Erik', 'Fisher',
+		'I am passionate about app development for mobile platforms and becoming a well rounded software developer.',
+		'I like to code apps and for other fun projects',
+		{},
+		undefined,
+		[
+			'C++',
+			'Java',
+			'Swift',
+			'HTML/CSS',
+			'Assembly'
+		]
+	),
 	new Member(22, 'Duncan', 'MacDonald',
 		'my bio',
 		undefined,
@@ -358,26 +371,6 @@ var members = [
 			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
 		]
 	),
-	new Member(19, 'Erik', 'Fisher',
-		'I am passionate about app development for mobile platforms and becoming a well rounded software developer.',
-		'I like to code apps and for other fun projects',
-		{},
-		undefined,
-		[
-			'C++',
-			'Java',
-			'Swift',
-			'HTML/CSS',
-			'Assembly'
-		]
-	),
-	new Member(21, 'Ashley', 'Harrison',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
-	),
 	new Member(17, 'Spencer', 'Kelly',
 		'',
 		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
@@ -408,6 +401,13 @@ var members = [
 		undefined,
 		[]
 	),
+	new Member(21, 'Ashley', 'Harrison',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
 	new Member(18, 'Travis', 'Carpenter',
 		'my bio',
 		undefined,
@@ -416,13 +416,6 @@ var members = [
 		[
 
 		]
-	),
-	new Member(6, 'Noah', 'Torrez',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
 	),
 	new Member(10, 'Alex', 'Dewey',
 		'my bio',
@@ -448,6 +441,13 @@ var members = [
 		[]
 	),
 	new Member(5, 'Alex', 'Chen',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(6, 'Noah', 'Torrez',
 		'my bio',
 		undefined,
 		{},
