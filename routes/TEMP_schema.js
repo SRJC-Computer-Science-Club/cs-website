@@ -630,7 +630,8 @@ var project_events = [
 		'Pleasanton, CA',
 		'April 21, 2017',
 		[
-			{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'}
+			{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'},
+			{caption: 'Our Line Follower!', image: 'linefollower-1.jpg', url: '/projects/5'}
 		]
 	)
 ]
