@@ -11,10 +11,16 @@ html(ng-app="csApp")
 		//script(src="/angular/angular.js")
 
 	body
-		include ./partials/_navbar
+		- if (dashboard == undefined)
+			include ./partials/_navbar
+		- else
+			include ./partials/_navbar-dashboard
 		.container-fluid
 			.starter-template(style="padding: 3rem 1.5rem 1rem;")
 				block content
-		include ./partials/_footer
+		- if (dashboard == undefined)
+			include ./partials/_footer
+		- else
+			include ./partials/_footer-dashboard
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/js/bootstrap.min.js" crossorigin="anonymous")

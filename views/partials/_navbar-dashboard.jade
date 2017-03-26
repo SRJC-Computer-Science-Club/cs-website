@@ -1,0 +1,30 @@
+mixin links()
+	li.nav-item
+		a.nav-link(href='/') View Website
+
+.hidden-sm-down
+	nav.navbar.navbar-fixed-top.navbar-dark.bg-inverse
+		.nbw2
+			.navbar-wrapper
+				a.navbar-brand(href='/dashboard')= title
+				ul.nav.navbar-nav.pull-xs-right
+					mixin links()
+.hidden-md-up
+	nav.navbar-mobile.navbar-fixed-top.navbar-dark.bg-inverse
+		.nbw2
+			.navbar-wrapper
+				a(href='/')
+					img.thumb(src='/images/icons/logo-64@2x.png' style="width: 52px; height: 52px;")
+				button(class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBar-collapse" aria-controls="navBar-collapse" aria-expanded="false" aria-label="navBar-control")
+					span(aria-hidden="false").glyphicon.glyphicon-menu-hamburger Menu
+				.navbar-mobile-secondary.collapse(id="navBar-collapse")
+					mixin links()
+
+.hidden-sm-down
+	nav.navbar.navbar-fixed-top.navbar-dark.navbar-secondary
+		.nbw2
+			.navbar-wrapper
+				ul.nav.navbar-nav.pull-xs-right
+					each link, index in navbar.links
+						li.nav-item(class= link.active === true ? 'active' : '')
+							a.nav-link(href=link.url)= link.name
