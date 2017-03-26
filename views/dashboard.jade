@@ -1,5 +1,17 @@
 extends layout-dashboard
 
 block view
-	#dashboard-page.content
-		h2 heres some content
+	#dashboard.content
+		h3 My Projects
+		each project in my_projects
+			a(href='dashboard/projects/'+ project.id).cell
+				.content
+					p.header= project.title
+					p= helper.pluralize('member', project.members.length, true)
+					p= project.description_short
+		h3 My Teammates
+		h3 My Events
+		each event in my_events
+			a.cell
+				.content
+					p= event.title

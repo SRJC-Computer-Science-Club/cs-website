@@ -1,3 +1,29 @@
 #dashboard-page {
+	.sidebar {
+		padding-right: 0;
+		p.name {
+			text-align: center;
+		}
+		.navbar {
+			padding-top: $margin-md;
+		}
+		.list-group .list-group-item {
+			text-align: left;
+		}
 
+	}
+	#dashboard {
+		a:link {
+			text-decoration: none;
+		}
+		.cell {
+			@extend .cell;
+			.content {
+				padding: $margin-sm;
+				p {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
 }

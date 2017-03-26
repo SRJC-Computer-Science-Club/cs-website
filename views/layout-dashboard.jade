@@ -3,7 +3,20 @@ extends layout
 block content
 	#dashboard-page.content
 		.row
-			.col-md-2
-				h1 Profile
-			.col-md-10
+			.col-lg-2.col-md-3.sidebar
+				.hidden-sm-down
+					h2 Welcome
+					img.img-avatar(src='http://placehold.it/64x64/77cb6f')
+					p.name= token.name
+					.btn-group(role="group" aria-label="Basic example")
+						button.btn.btn-secondary(type="button") msg
+						button.btn.btn-secondary(type="button") dir
+						button.btn.btn-secondary(type="button") act
+					.navbar.list-group
+						a(href="/dashboard" class=navbar.active == 'dashboard' ? 'active' : '').list-group-item Home Page
+						a(href="/dashboard/projects" class=navbar.active == 'projects' ? 'active' : '').list-group-item Projects
+						a(href="/dashboard/events" class=navbar.active == 'events' ? 'active' : '').list-group-item Events
+						a(href="/dashboard/members" class=navbar.active == 'members' ? 'active' : '').list-group-item Members
+						a(href="/").list-group-item Sign Out
+			.col-lg-10.col-md-9
 				block view
