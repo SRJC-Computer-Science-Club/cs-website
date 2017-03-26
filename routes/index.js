@@ -104,235 +104,33 @@ router.get('/join/submit', function(req, res, next) {
     project.members= findProjectMembers(project);
   }
 
-  res.render('submit', { title: 'CS Club', results: recipient, club_officers: findClubOfficers(), popular_projects: projects, upcoming_events: findUpcommingEvents(), navbar: navbar, helper: helper});
+  res.render('submit', { title: 'CS Club', results: recipient, club_officers: findClubOfficers(), popular_projects: projects, upcoming_events: findAllEvents().upcoming_events, navbar: navbar, helper: helper});
 });
 
+function findAllEvents()
+{
+	var events = tempDB.project_events.concat(tempDB.events);
+	var pastEvents = [];
+	var upcommingEvents = [];
+	for (var event of events) {
+		console.log(Date.now() - new Date(event.date_range));
+		if (Date.now() - new Date(event.date_range) > 0)
+			pastEvents.push(event);
+		else
+			upcommingEvents.push(event);
+	}
 
-/* GET Projects page. */
-router.get('/projects/', function(req, res, next) {
-  var projects = tempDB.projects;
+	upcommingEvents.sort(function(a,b) {
+		if (a.date_range == "TBA") //Puts TBA as upcoming and on bottom
+			return 1;
+		else if (b.date_range == "TBA")
+			return -1;
+		return new Date(a.date_range) - new Date(b.date_range)
+	});
 
-  var navbar = {
-    active: 'projects',
-    links: []
-  };
+	return {upcoming_events: upcommingEvents, past_events: pastEvents}
 
-	var topProjects = [];
-	var secondaryProjects = [];
-	var archviedProjects = [];
-
-  for ( var project of projects) {
-    project.members= findProjectMembers(project);
-    if (navbar.links.length < 4)
-      navbar.links.push({name: project.title, url: '/projects/' +  project.id});
-		if (project.status == "Archived" || project.satus == "Completed" || project.status == "Resigned" || project.status == "")
-			archviedProjects.push(project);
-		else if (project.status == "On-Hold" || project.status == "Not on Track" || project.status == "Positions Needed")
-			secondaryProjects.push(project);
-		else {
-			if (topProjects.length > 3)
-				secondaryProjects.push(project);
-			else
-				topProjects.push(project);
-		}
-  }
-
-	console.log({top: topProjects, secondary: secondaryProjects, archvied: archviedProjects});
-
-  res.render('projects', { title: 'CS Club | Projects' , list_of_projects: {top: topProjects, secondary: secondaryProjects, archived: archviedProjects}, helper: helper, navbar: navbar});
-});
-
-// GET project page
-router.get('/projects/:projectID', function(req, res, next) {
-  var projects = tempDB.projects;
-
-  var navbar = {
-    active: 'projects',
-    links: []
-  };
-
-  var project = findProjectForID( projects, req.params.projectID);
-
-  for ( var p of projects) {
-    if (navbar.links.length < 4)
-      navbar.links.push({name: p.title, url: '/projects/' +  p.id, active: p.title === project.title});
-  }
-  navbar.links.push({name: "List of Projects", url: '/projects'});
-
-  project.members = findProjectMembers( project );
-  project.team = {project_managers: [], members: []};
-  for (var member of project.members) {
-    if (member.role.includes("Project Founder") | member.role.includes("Project Manager") | member.role.includes("Sub-Project Manager"))
-      project.team.project_managers.push(member);
-    else
-      project.team.members.push(member);
-  }
-
-  project.team.project_managers.sort(function(a, b) {
-    if (a.role.includes("Project Founder") & ( b.role.includes("Project Manager") | b.role.includes("Sub-Project Manager"))) {
-      return -1; //a is greater than b
-    }
-    if (a.role.includes("Project Manager") & ( b.role.includes("Sub-Project Manager"))) {
-      return -1; //a is greater than b
-    }
-    if (a.role.includes("Project Manager") & ( b.role.includes("Project Founder"))) {
-      return 1; //a is less than b
-    }
-    if (a.role.includes("Sub-Project Manager") & ( b.role.includes("Project Founder") | b.role.includes("Project Manager"))) {
-      return 1; //a is less than b
-    }
-    // a must be equal to b
-    return 0;
-  });
-
-  project.team.members.sort(function(a, b) {
-    if (a.role.includes("Lead Developer") & !( b.role.includes("Lead Developer"))) {
-      return -1;
-    }
-    if ((a.role.includes("Developer") & !a.role.includes("Lead Developer")) & !( b.role.includes("Developer"))) {
-      return -1;
-    }
-    if (!a.role.includes("Lead Developer") & ( b.role.includes("Lead Developer"))) {
-      return 1;
-    }
-    if (!(a.role.includes("Developer") & !a.role.includes("Lead Developer")) & ( b.role.includes("Developer"))) {
-      return 1;
-    }
-    // a must be equal to b
-    return 0;
-  });
-
-  project.areaRequests= findProjectAreaRequests(project);
-  for ( var request of project.areaRequests) {
-    request.author = findMemberForID( project.members, request.author_id);
-    var project_interest = {interest: request.project_interest, title: 'undefined', value: '0'};
-    request.project_interest_color = replaceColorIntensity(project_interest);
-    request.project_interest_title = replaceColorTitle(project_interest);
-    for ( var asset of request.assets) {
-      asset.experience_color = replaceColorIntensity({value: asset.experience});
-    }
-  }
-  project.events = findProjectEvents( project);
-
-  res.render('project', { title: 'CS Club' , project: project, services: tempDB.services, navbar: navbar, helper: helper});
-});
-
-/* GET Project Photo Gallery. */
-router.get('/projects/:projectID/photo-gallery', function(req, res, next) {
-  var navbar = {
-    active: 'projects',
-    links:
-    [
-      {name: 'Back to Project', url: '/projects/'+req.params.projectID, active: true}
-      //{name: 'Download Gallery', url: '#', active: false}
-    ]
-  };
-
-  var project = findProjectForID( tempDB.projects, req.params.projectID);
-
-  res.render('project_photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
-});
-
-
-
-/* GET Events Page. */
-router.get('/events', function(req, res, next) {
-  var navbar = {
-    active: 'events',
-    links: []
-  };
-
-  res.render('events', { title: 'CS Club - Events', list_of_events: findAllEvents(), navbar: navbar });
-});
-
-
-
-/* GET Project Event Page. */
-router.get('/events/:eventID', function(req, res, next) {
-  var navbar = {
-    active: 'events',
-    links: []
-  };
-
-  var event = findProjectEventForID(tempDB.events, req.params.eventID);
-
-  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
-});
-
-
-
-/* GET Project Event Page. */
-router.get('/project-events/:eventID', function(req, res, next) {
-  var navbar = {
-    active: 'events',
-    links: []
-  };
-
-  var event = findProjectEventForID(tempDB.project_events, req.params.eventID);
-  event.project = findProjectForID(tempDB.projects, event.project_id);
-
-  res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
-});
-
-
-
-/* GET members page. */
-router.get('/members', function(req, res, next) {
-  var navbar = {
-    active: 'members',
-    links: [
-    { name: 'Members of the Board',  url: '#'  },
-    { name: 'Programmers and Developers',  url: '#'  }
-  ]};
-
-  var members = tempDB.members;
-
-  for ( var member of members)
-  {
-    member.numberOfProjects = findProjectsForMember( member).length;
-  }
-
-  res.render('members', { title: 'CS Club - Members (' + members.length + ')', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
-});
-
-/* GET member page. */
-router.get('/members/:memberID', function(req, res, next) {
-  var member = findMemberForID(tempDB.members,req.params.memberID);
-
-  member.projects = findProjectsForMember(member);
-
-  var navbar = {
-    active: 'members',
-    links: []
-  };
-
-  res.render('member', { title: 'CS Club' , member: member, navbar: navbar, helper: helper});
-});
-
-
-/* GET ABOUT PAGE. */
-router.get('/about', function(req, res, next) {
-  var navbar = {
-    active: 'about',
-    links: [{}]
-  };
-
-
-
-  res.render('about', { title: 'CS Club', navbar: navbar });
-});
-
-
-/* GET NEW-PAGE TEMPLATE. */
-router.get('/placholder', function(req, res, next) {
-  var navbar = {
-    active: 'page',
-    links: [
-    { name: 'ITEM',  url: '#'  },
-  ]};
-
-  res.render('jade_file', { title: 'CS Club', navbar: navbar });
-});
+}
 
 
 
