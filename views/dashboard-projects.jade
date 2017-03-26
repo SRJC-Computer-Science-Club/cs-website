@@ -3,7 +3,8 @@ extends layout-dashboard
 block view
 	#projects-page.content
 		each project in projects
-			a(href=token.role == 0 ? "#" : "" class=token.role != 0 ? 'disabled' : '').cell
+			- var canCRUD = token.role == 1 || project.admin == true ? true : false;
+			a(href= canCRUD ? "projects/" + project.id : "#" class= !canCRUD ? 'disabled' : '').cell
 				.context
 					p.header= project.title
 					p= helper.pluralize('member', project.members.length, true)

@@ -166,6 +166,20 @@ function findClubOfficers()
   return members;
 }
 
+function isProjectAdmin(project, member)
+{
+	for ( var link of tempDB.members_projects) {
+		console.log(member);
+		if (link.project_id == project.id) {
+			if (link.member_id == member.id) {
+				return link.admin;
+			}
+		}
+	}
+
+	return false;
+}
+
 function replaceColorIntensity(project_interest)
 {
   if (project_interest.interest != undefined) {
@@ -224,6 +238,7 @@ module.exports = {
 	findMemberForID,
 	findAllEvents,
 	findClubOfficers,
+	isProjectAdmin,
 	replaceColorIntensity,
 	replaceColorTitle,
 	pluralize, trimURL

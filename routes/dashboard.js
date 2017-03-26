@@ -8,6 +8,7 @@ var login = null;
 login = {
 	id: 1,
 	token: "123456789",
+	member: tempDB.members[0],
 	first_name: "Erick",
 	last_name: "Sanchez",
 	role: 1
@@ -40,6 +41,8 @@ router.get('/projects', function(req, res, next) {
 
 	for ( var project of projects) {
 		project.members = helper.findProjectMembers( project)
+
+		project.admin = helper.isProjectAdmin(project, login.member);
 	}
 
 	res.render('dashboard-projects', {dashboard: true, title: 'CS Dashboard - Projects', projects: projects, token: login, navbar: navbar, helper: helper});
