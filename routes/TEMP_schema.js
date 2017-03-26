@@ -26,11 +26,12 @@ function Member( id, first_name, last_name, bio, bio_short, links, email, langua
 	this.languages = languages;
 }
 
-function ProjectsMembers( id, project_id, member_id, role, assignedArea )
+function ProjectsMembers( id, project_id, member_id, role, admin, assignedArea )
 {
 	this.id = id;
 	this.project_id = project_id;
 	this.member_id = member_id;
+	this.admin = admin;
 	this.role = role;
 
 	this.assignedArea = assignedArea;
@@ -483,14 +484,14 @@ var members = [
 
 var members_projects = [
 	//Micromouse
-	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer' ),
-	new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer' ),
-	new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer' ),
+	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer', true ),
+	new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer', true ),
+	new ProjectsMembers( 3 , 0 , 1 , 'Co-Lead Developer', true ),
 	new ProjectsMembers( 4 , 0 , 2 , 'Programmer' ),
 	new ProjectsMembers( 5 , 0 , 3 , 'Programmer' ),
 	//CS Website
-	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
-	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
+	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager', true ),
+	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer', true ),
 	new ProjectsMembers( 49 , 1 , 23 , 'Programmer' ),
 	new ProjectsMembers( 33 , 1 , 16 , 'Programmer' ),
 	new ProjectsMembers( 34 , 1 , 19 , 'Programmer' ),
@@ -499,19 +500,19 @@ var members_projects = [
 	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
 	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
 	//2D Platformer
-	new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 10 , 2 , 2 , 'Project Manager', true ),
 	//Function Fighters
-	new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player' ),
+	new ProjectsMembers( 2 , 3 , 1 , 'Project Manager & AI Player', true ),
 	new ProjectsMembers( 9 , 3 , 3 , 'Beta Tester, AI Player' ),
 	new ProjectsMembers( 43 , 3 , 14 , 'AI Player' ),
 	new ProjectsMembers( 7 , 3 , 2 , 'AI Player' ),
 	new ProjectsMembers( 8 , 3 , 4 , 'AI Player' ),
 	new ProjectsMembers( 36 , 3 , 19 , 'AI Player' ),
 	//Quad-Copter
-	new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer' ),
-	new ProjectsMembers( 13 , 4 , 3 , 'Developer' ),
+	new ProjectsMembers( 14 , 4 , 9 , 'Lead Developer', true ),
+	new ProjectsMembers( 13 , 4 , 3 , 'Developer', true ),
 	//Line Follower
-	new ProjectsMembers( 17 , 5 , 4 , 'Project Manager' ),
+	new ProjectsMembers( 17 , 5 , 4 , 'Project Manager', true ),
 	new ProjectsMembers( 18 , 5 , 1 , 'Lead Developer' ),
 	new ProjectsMembers( 19 , 5 , 3 , 'Developer' ),
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
@@ -521,11 +522,11 @@ var members_projects = [
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
 	new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//Retailer
-	new ProjectsMembers( 28 , 6 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 28 , 6 , 2 , 'Project Manager', true ),
 	new ProjectsMembers( 29 , 6 , 14 , 'Developer' ),
 	new ProjectsMembers( 39 , 6 , 18 , 'Programmer' ),
 	//srjc-scheduler
-	new ProjectsMembers( 30 , 7 , 0 , 'Project Founder' ),
+	new ProjectsMembers( 30 , 7 , 0 , 'Project Founder', true ),
 	new ProjectsMembers( 31 , 7 , 1 , 'Developer' ),
 	new ProjectsMembers( 50 , 7 , 20 , 'Developer' ),
 	new ProjectsMembers( 32 , 7 , 2 , 'Programmer' ),
@@ -533,18 +534,18 @@ var members_projects = [
 	new ProjectsMembers( 35 , 7 , 19 , 'Programmer' ),
 	new ProjectsMembers( 47 , 7 , 11 , 'Programmer' ),
 	//Dreamscape
-	new ProjectsMembers( 36 , 8 , 15 , 'Project Manager' ),
+	new ProjectsMembers( 36 , 8 , 15 , 'Project Manager', true ),
 	new ProjectsMembers( 37 , 8 , 2 , 'Programmer' ),
 	new ProjectsMembers( 40 , 8 , 17 , 'Programmer' ),
 	new ProjectsMembers( 42 , 8 , 14 , 'Programmer' ),
 	//Club App
-	new ProjectsMembers( 38 , 9 , 2 , 'Project Manager' ),
+	new ProjectsMembers( 38 , 9 , 2 , 'Project Manager', true ),
 	new ProjectsMembers( 49 , 9 , 20 , 'Developer' ),
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
 	new ProjectsMembers( 45 , 9 , 16 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' ),
 	//ShortLink
-	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
+	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager', true ),
 	new ProjectsMembers( 52 , 10 , 2 , 'Developer')
 ];
 //50
