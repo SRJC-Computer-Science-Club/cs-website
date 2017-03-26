@@ -5,7 +5,7 @@ block view
 		h3 My Projects
 		each project in my_projects
 			a(href='dashboard/projects/'+ project.id).cell
-				.content
+				.context
 					p.header= project.title
 					p= helper.pluralize('member', project.members.length, true)
 					p= project.description_short
@@ -13,5 +13,5 @@ block view
 		h3 My Events
 		each event in my_events
 			a.cell
-				.content
+				.context
 					p= event.title

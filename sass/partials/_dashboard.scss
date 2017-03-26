@@ -13,17 +13,12 @@
 
 	}
 	#dashboard {
-		a:link {
-			text-decoration: none;
-		}
-		.cell {
-			@extend .cell;
-			.content {
-				padding: $margin-sm;
-				p {
-					margin-bottom: 0;
-				}
-			}
+	}
+	#projects-page {
+		.disabled {
+			cursor: not-allowed;
+			color: $gray-darkgray;
+			background-color: $highlighted;
 		}
 	}
 }
