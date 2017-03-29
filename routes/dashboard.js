@@ -11,7 +11,7 @@ login = {
 	member: tempDB.members[0],
 	first_name: "Erick",
 	last_name: "Sanchez",
-	role: 1
+	role: 0
 }
 
 login.name = login.first_name + ' ' + login.last_name;
@@ -36,7 +36,9 @@ router.get('/', function(req, res, next) {
 	}
 
 	res.render('dashboard', {dashboard: true, title: 'CS Dashboard', token: login, navbar: navbar, my_projects: myProjects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
-})
+});
+
+
 
 router.get('/projects', function(req, res, next) {
   var navbar = {
@@ -49,11 +51,11 @@ router.get('/projects', function(req, res, next) {
 	for ( var project of projects) {
 		project.members = helper.findProjectMembers( project)
 
-		project.admin = helper.isProjectAdmin(project, login.member);
+		project.admin = project.isProjectAdmin(login.member);
 	}
 
 	res.render('dashboard-projects', {dashboard: true, title: 'CS Dashboard - Projects', projects: projects, token: login, navbar: navbar, helper: helper});
 
-})
+});
 
 module.exports = router;
