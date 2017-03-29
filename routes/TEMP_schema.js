@@ -1,71 +1,10 @@
 //This will act as temporary database placeholder
 var Project = require('./modules/projects')
-
-function Member( id, first_name, last_name, bio, bio_short, links, email, languages )
-{
-	this.id = id;
-	this.first_name = first_name;
-	this.last_name = last_name;
-	this.bio = bio;
-	this.bio_short = bio_short;
-	this.links = links;
-	this.email = email;
-	this.languages = languages;
-}
-
-function ProjectsMembers( id, project_id, member_id, role, admin, assignedArea )
-{
-	this.id = id;
-	this.project_id = project_id;
-	this.member_id = member_id;
-	this.admin = admin;
-	this.role = role;
-
-	this.assignedArea = assignedArea;
-}
-
-function ProjectAreaRequests( id, project_id, title, description, project_interest, nPositions, assets, author_id)
-{
-	this.id = id;
-	this.project_id = project_id;
-	this.title = title;
-	this.description = description;
-	this.project_interest = project_interest;
-	this.nPositions = nPositions;
-	this.assets = assets;
-	this.author_id = author_id;
-}
-
-function ProjectEvent( id, project_id, title, description, description_short, location, date_range, media)
-{
-	this.id = id;
-	this.project_id = project_id;
-	this.title = title;
-	this.description = description;
-	this.description_short = description_short;
-	this.location = location;
-	this.date_range = date_range;
-	this.media = media;
-}
-
-function Event( id, title, description, description_short, location, date_range, media)
-{
-	this.id = id;
-	this.title = title;
-	this.description = description;
-	this.description_short = description_short;
-	this.location = location;
-	this.date_range = date_range;
-	this.media = media;
-}
-
-function ClubOfficers( id, member_id, position_title, swatch)
-{
-	this.id = id;
-	this.member_id = member_id;
-	this.position_title = position_title;
-	this.swatch = swatch;
-}
+var Member = require('./modules/members')
+var ProjectsMembers = require('./modules/projectsmembers')
+var ProjectAreaRequests = require('./modules/ProjectAreaRequests')
+var ProjectEvent = require('./modules/ProjectEvent')
+var NonProjectEvent = require('./modules/NonProjectEvent')
 
 //9
 var projects = [
@@ -625,7 +564,7 @@ var project_events = [
 ]
 
 var events = [
-	new Event(0, '2017 Make-a-thon',
+	new NonProjectEvent(0, '2017 Make-a-thon',
 		'description',
 		'Rohnert Park\'s Make-a-thon event!',
 		'Rohnert Park, CA',
@@ -636,7 +575,7 @@ var events = [
 			{caption: 'The Teams', image: '2017 make-a-thon/club.jpg', url: 'http://drive.google.com/uc?export=view&id=0B3wyRcLxpH4jcU93OTJUdlRpNG8'}
 		]
 	),
-	new Event( 1,'Hackathon',
+	new NonProjectEvent( 1,'Hackathon',
 		'description',
 		'',
 		'San Fransisco, CA',
@@ -645,7 +584,7 @@ var events = [
 			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
 		]
 	),
-	new Event( 2,' Keysight Trip',
+	new NonProjectEvent( 2,' Keysight Trip',
 		'Check out this trip at the weekly meeting!',
 		'',
 		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
@@ -699,6 +638,14 @@ var services = {
 		icon_lg: ''
 	}
 };
+
+function ClubOfficers( id, member_id, position_title, swatch)
+{
+	this.id = id;
+	this.member_id = member_id;
+	this.position_title = position_title;
+	this.swatch = swatch;
+}
 
 var club_officers =
 [
