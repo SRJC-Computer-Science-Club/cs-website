@@ -1,18 +1,5 @@
 //This will act as temporary database placeholder
-
-
-function Project( id, title, description, description_short, status, post, milestones, links, images )
-{
-	this.id = id;
-	this.title = title;
-	this.description = description;
-	this.description_short = description_short;
-	this.status = status;
-	this.post = post;
-	this.milestones = milestones;
-	this.links = links;
-	this.images = images;
-}
+var Project = require('./modules/projects')
 
 function Member( id, first_name, last_name, bio, bio_short, links, email, languages )
 {
@@ -733,3 +720,16 @@ module.exports = {
 	services,
 	club_officers
 };
+
+Project.prototype.isProjectAdmin = function(member)
+{
+	for ( var link of members_projects) {
+		if (link.project_id == this.id) {
+			if (link.member_id == member.id) {
+				return link.admin;
+			}
+		}
+	}
+
+	return false;
+}

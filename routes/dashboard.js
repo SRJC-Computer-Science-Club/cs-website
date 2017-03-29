@@ -1,7 +1,7 @@
 var express = require('express');
 var tempDB = require('./TEMP_schema');
-var router = express.Router();
 var helper = require('./helper_methods');
+var router = express.Router();
 
 var login = null;
 
@@ -24,11 +24,18 @@ router.get('/', function(req, res, next) {
 
 	var projects = tempDB.projects;
 
-	for ( var project of projects) {
+	var myProjects = [];
+
+	for ( var project of projects ) {
+		if (project.isProjectAdmin(login.member))
+			myProjects.push(project);
+	}
+
+	for ( var project of myProjects) {
 		project.members = helper.findProjectMembers( project)
 	}
 
-	res.render('dashboard', {dashboard: true, title: 'CS Dashboard', token: login, navbar: navbar, my_projects: projects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
+	res.render('dashboard', {dashboard: true, title: 'CS Dashboard', token: login, navbar: navbar, my_projects: myProjects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
 })
 
 router.get('/projects', function(req, res, next) {
