@@ -1,6 +1,19 @@
 var tempDB = require('./TEMP_schema');
 var pluralize = require('pluralize');
 
+function findIdInCollection(id,collection)
+{
+  var found = undefined;
+  for (var item of collection) {
+    if (id == item.id) {
+      found = item;
+      break;
+    }
+  }
+
+  return found;
+}
+
 var trimURL = function trimURL(url) {
   var start = -1, end = -1, length = url.length, i = 0;
   while ( i < length) {
@@ -14,116 +27,6 @@ var trimURL = function trimURL(url) {
     i++;
   }
   return url.substring(start, end);
-}
-
-function findProjectForID( projects, id )
-{
-  var found;
-  for( var project of projects)
-  {
-    if (project.id == id)
-      found = project;
-  }
-
-  return found;
-
-}
-
-function findProjectMembers( project )
-{
-  var members = [];
-
-  for( var member_project of tempDB.members_projects )
-  {
-    if ( member_project.project_id == project.id )
-    {
-      var potentialMember = findMemberForID(tempDB.members,member_project.member_id);
-
-      if (potentialMember !== undefined ) {
-        potentialMember.role = member_project.role;
-        members.push( potentialMember);
-      }
-    }
-  }
-
-  return members;
-}
-
-function findProjectAreaRequests( project )
-{
-  var requests = [];
-
-  for ( var area_request of tempDB.project_area_requests )
-  {
-    if (project.id == area_request.project_id)
-    {
-      requests.push(area_request);
-    }
-  }
-
-  return requests;
-}
-
-function findProjectEvents( project )
-{
-  var events = [];
-
-  for ( var event of tempDB.project_events )
-  {
-    if (project.id == event.project_id)
-    {
-      events.push(event);
-    }
-  }
-
-  return events;
-}
-
-function findProjectEventForID( events, id )
-{
-  var found;
-  for ( var event of events)
-  {
-    if (event.id == id)
-      found = event;
-  }
-
-  return found;
-
-}
-
-function findProjectsForMember( member )
-{
-  var projects = [];
-
-  for ( var member_project of tempDB.members_projects )
-  {
-      if ( member_project.member_id == member.id )
-      {
-        var potentialProject = findProjectForID(tempDB.projects,member_project.project_id);
-
-        if (potentialProject !== undefined ) {
-          potentialProject.role = member_project.role;
-          projects.push( potentialProject);
-        }
-      }
-
-  }
-
-  return projects;
-}
-
-function findMemberForID( members, id )
-{
-  var found;
-  for( var member of members)
-  {
-    if (member.id == id)
-      found = member;
-  }
-
-  return found;
-
 }
 
 function findAllEvents()
@@ -164,20 +67,6 @@ function findClubOfficers()
   }
 
   return members;
-}
-
-function isProjectAdmin(project, member)
-{
-	for ( var link of tempDB.members_projects) {
-		console.log(member);
-		if (link.project_id == project.id) {
-			if (link.member_id == member.id) {
-				return link.admin;
-			}
-		}
-	}
-
-	return false;
 }
 
 function replaceColorIntensity(project_interest)
@@ -229,16 +118,9 @@ function replaceColorTitle(project_interest)
 }
 
 module.exports = {
-	findProjectForID,
-	findProjectMembers,
-	findProjectAreaRequests,
-	findProjectEvents,
-	findProjectEventForID,
-	findProjectsForMember,
-	findMemberForID,
+  findIdInCollection,
 	findAllEvents,
 	findClubOfficers,
-	isProjectAdmin,
 	replaceColorIntensity,
 	replaceColorTitle,
 	pluralize, trimURL

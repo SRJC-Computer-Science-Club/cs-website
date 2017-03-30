@@ -32,7 +32,7 @@ router.get('/', function(req, res, next) {
 	}
 
 	for ( var project of myProjects) {
-		project.members = helper.findProjectMembers( project)
+		project.members = project.findProjectMembers();
 	}
 
 	res.render('dashboard', {dashboard: true, title: 'CS Dashboard', token: login, navbar: navbar, my_projects: myProjects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
@@ -49,8 +49,7 @@ router.get('/projects', function(req, res, next) {
 	var projects = tempDB.projects;
 
 	for ( var project of projects) {
-		project.members = helper.findProjectMembers( project)
-
+		project.members = project.findProjectMembers();
 		project.admin = project.isProjectAdmin(login.member);
 	}
 

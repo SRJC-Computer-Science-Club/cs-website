@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 
   for ( var member of members)
   {
-    member.numberOfProjects = helper.findProjectsForMember( member).length;
+    member.numberOfProjects = member.findProjectsForMember().length;
   }
 
   res.render('members', { title: 'CS Club - Members (' + members.length + ')', members: members, officers: tempDB.club_officers, navbar: navbar, helper: helper});
@@ -31,9 +31,9 @@ router.get('/', function(req, res, next) {
 
 /* GET member page. */
 router.get('/:memberID', function(req, res, next) {
-  var member = helper.findMemberForID(tempDB.members,req.params.memberID);
+  var member = helper.findIdInCollection(req.params.memberID, tempDB.members);
 
-  member.projects = helper.findProjectsForMember(member);
+  member.projects = member.findProjectsForMember();
 
   var navbar = {
     active: 'members',

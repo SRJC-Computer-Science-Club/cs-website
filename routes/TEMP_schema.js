@@ -2,12 +2,12 @@
 var Project = require('./modules/projects')
 var Member = require('./modules/members')
 var ProjectsMembers = require('./modules/projectsmembers')
-var ProjectAreaRequests = require('./modules/ProjectAreaRequests')
+var ProjectAreaRequest = require('./modules/ProjectAreaRequest')
 var ProjectEvent = require('./modules/ProjectEvent')
 var NonProjectEvent = require('./modules/NonProjectEvent')
 
 //9
-var projects = [
+var _projects = [
 	new Project(1,'CS Website',
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
 		'A new website to showoff what we do as a club',
@@ -158,7 +158,7 @@ var projects = [
 ];
 
 //25
-var members = [
+var _members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
 		'Making apps on the iPhone and on other platforms.',
@@ -408,7 +408,7 @@ var members = [
 	)
 ];
 
-var members_projects = [
+var _members_projects = [
 	//Micromouse
 	new ProjectsMembers( 15 , 0 , 9 , 'Co-Lead Developer', true ),
 	new ProjectsMembers( 0 , 0 , 0 , 'Co-Lead Developer', true ),
@@ -485,9 +485,9 @@ var members_projects = [
 
 
 //11
-var project_area_requests = [
+var _project_area_requests = [
 	//CS Website
-	new ProjectAreaRequests( 0, 1,"Front-End Developers",
+	new ProjectAreaRequest( 0, 1,"Front-End Developers",
 		"Help program and design the front-end of our website. This will not only help mask and structure our website, but also help make this site responsive to all platforms.",
 		":4", 3,
 		[
@@ -496,7 +496,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 1, 1,"Back-End Developers",
+	new ProjectAreaRequest( 1, 1,"Back-End Developers",
 		"Check out <a href=\"https://www.mongodb.com/\">MongoDB</a> for our technologies for backend",
 		":3", 2,
 		[
@@ -505,7 +505,7 @@ var project_area_requests = [
 		2
 	),
 	//function-fighters
-	new ProjectAreaRequests( 2, 3,"AI Players",
+	new ProjectAreaRequest( 2, 3,"AI Players",
 		"",
 		"Welcome!:2", "&#8734",
 		[
@@ -514,7 +514,7 @@ var project_area_requests = [
 		1
 	),
 	//Line-Follower
-	new ProjectAreaRequests( 11, 5,"Hardware Designers",
+	new ProjectAreaRequest( 11, 5,"Hardware Designers",
 		"",
 		":3", 0,
 		[
@@ -524,7 +524,7 @@ var project_area_requests = [
 		2
 	),
 	//Retailer
-	new ProjectAreaRequests( 3, 6,"Game Developers",
+	new ProjectAreaRequest( 3, 6,"Game Developers",
 		"",
 		":5", 4,
 		[
@@ -532,7 +532,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 4, 6,"Graphic/Asset Designers",
+	new ProjectAreaRequest( 4, 6,"Graphic/Asset Designers",
 		"",
 		":3", 1,
 		[
@@ -541,7 +541,7 @@ var project_area_requests = [
 		],
 		2
 	),
-	new ProjectAreaRequests( 5, 6,"Back-End Developer",
+	new ProjectAreaRequest( 5, 6,"Back-End Developer",
 		"",
 		":1", 1,
 		[],
@@ -550,7 +550,7 @@ var project_area_requests = [
 ];
 
 //0
-var project_events = [
+var _project_events = [
 	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
 		'description',
 		'Robotics competition for our line follower project.',
@@ -563,7 +563,7 @@ var project_events = [
 	)
 ]
 
-var events = [
+var _events = [
 	new NonProjectEvent(0, '2017 Make-a-thon',
 		'description',
 		'Rohnert Park\'s Make-a-thon event!',
@@ -594,7 +594,7 @@ var events = [
 ]
 
 //Global instances for icons
-var services = {
+var _services = {
 	noone:
 	{
 		name: 'Link',
@@ -647,7 +647,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-var club_officers =
+var _club_officers =
 [
 	new ClubOfficers( 0, 2, 'President', "#055B75"),
 	new ClubOfficers( 1, 1, 'Vice<br>President', "#0D94BD"),
@@ -658,15 +658,17 @@ var club_officers =
 ];
 
 module.exports = {
-	projects,
-	members,
-	members_projects,
-	project_area_requests,
-	project_events,
-	events,
-	services,
-	club_officers
+	projects: _projects,
+	members: _members,
+	members_projects: _members_projects,
+	project_area_requests: _project_area_requests,
+	project_events: _project_events,
+	events: _events,
+	services: _services,
+	club_officers: _club_officers
 };
+
+var helper = require('./helper_methods')
 
 Project.prototype.isProjectAdmin = function(member)
 {
@@ -679,4 +681,75 @@ Project.prototype.isProjectAdmin = function(member)
 	}
 
 	return false;
+}
+
+Project.prototype.findProjectMembers = function()
+{
+  var members = [];
+
+  for( var member_project of _members_projects )
+  {
+    if ( member_project.project_id == this.id )
+    {
+      var potentialMember = helper.findIdInCollection(member_project.member_id, _members);
+
+      if (potentialMember !== undefined ) {
+        potentialMember.role = member_project.role;
+        members.push( potentialMember);
+      }
+    }
+  }
+
+  return members;
+}
+
+Project.prototype.findProjectAreaRequests = function()
+{
+  var requests = [];
+
+  for ( var area_request of _project_area_requests )
+  {
+    if (this.id == area_request.project_id)
+    {
+      requests.push(area_request);
+    }
+  }
+
+  return requests;
+}
+
+Project.prototype.findProjectEvents = function()
+{
+  var events = [];
+
+  for ( var event of _project_events )
+  {
+    if (this.id == event.project_id)
+    {
+      events.push(event);
+    }
+  }
+
+  return events;
+}
+
+Member.prototype.findProjectsForMember = function()
+{
+  var projects = [];
+
+  for ( var member_project of _members_projects )
+  {
+      if ( member_project.member_id == this.id )
+      {
+        var potentialProject = helper.findIdInCollection(member_project.project_id, _projects);
+
+        if (potentialProject !== undefined ) {
+          potentialProject.role = member_project.role;
+          projects.push( potentialProject);
+        }
+      }
+
+  }
+
+  return projects;
 }

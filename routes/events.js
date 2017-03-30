@@ -29,11 +29,10 @@ router.get('/events/:eventID', function(req, res, next) {
     links: []
   };
 
-  var event = helper.findProjectEventForID(tempDB.events, req.params.eventID);
+  var event = helper.findIdInCollection(req.params.eventID, tempDB.events);
 
   res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
 });
-
 
 
 /* GET Project Event Page. */
@@ -43,8 +42,8 @@ router.get('/project-events/:eventID', function(req, res, next) {
     links: []
   };
 
-  var event = helper.findProjectEventForID(tempDB.project_events, req.params.eventID);
-  event.project = helper.findProjectForID(tempDB.projects, event.project_id);
+  var event = helper.findIdInCollection(req.params.eventID, tempDB.project_events);
+  event.project = helper.findIdInCollection(event.project_id, tempDB.projects);
 
   res.render('event', { title: 'CS Club - Events', event: event, navbar: navbar });
 });
