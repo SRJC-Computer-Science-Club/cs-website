@@ -53,6 +53,16 @@ router.get('/projects', function(req, res, next) {
 		project.admin = project.isProjectAdmin(login.member);
 	}
 
+	projects.sort(function(a,b) {
+		if (a.admin == true && b.admin == false)
+			return -1;
+		if (b.admin == true && a.admin == false )
+			return 1;
+			
+		return 0;
+	});  
+
+
 	res.render('dashboard-projects', {dashboard: true, title: 'CS Dashboard - Projects', projects: projects, token: login, navbar: navbar, helper: helper});
 
 });

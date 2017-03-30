@@ -2,8 +2,13 @@ extends layout-dashboard
 
 block view
 	#projects-page.content
-		each project in projects
-			- var canCRUD = token.role == 1 || project.admin == true ? true : false;
+		p My Projects
+		- for (var i = 0; i < projects.length; i += 1)
+			- var project = projects[i];
+			- var lastProject = (i != 0) ? projects[i -1] : undefined;
+			- var canCRUD = token.role == 1 || project.admin == true;
+			- if (i == 0 && project.admin == false || i != 0 && project.admin == false && lastProject.admin == true)
+				p Other projects
 			a(href= canCRUD ? "projects/" + project.id : "#" class= !canCRUD ? 'disabled' : '').cell
 				.context
 					p.header= project.title

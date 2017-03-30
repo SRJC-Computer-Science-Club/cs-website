@@ -675,7 +675,7 @@ Project.prototype.isProjectAdmin = function(member)
 	for ( var link of _members_projects) {
 		if (link.project_id == this.id) {
 			if (link.member_id == member.id) {
-				return link.admin;
+				return (link.admin == true ? true : false);
 			}
 		}
 	}
