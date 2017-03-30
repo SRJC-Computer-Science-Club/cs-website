@@ -672,7 +672,7 @@ var helper = require('./helper_methods')
 
 Project.prototype.isProjectAdmin = function(member)
 {
-	for ( var link of members_projects) {
+	for ( var link of _members_projects) {
 		if (link.project_id == this.id) {
 			if (link.member_id == member.id) {
 				return link.admin;
