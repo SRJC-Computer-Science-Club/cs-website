@@ -32,12 +32,12 @@ router.get('/', function(req, res, next) {
   var projects = tempDB.projects;
 
   for ( var project of projects) {
-    project.members= helper.findProjectMembers(project);
-    project.areaRequests= helper.findProjectAreaRequests(project);
+    project.members= project.findProjectMembers();
+    project.areaRequests= project.findProjectAreaRequests();
     for ( var request of project.areaRequests) {
       request.project_interest_color = helper.replaceColorIntensity({interest: request.project_interest});
     }
-    project.events = helper.findProjectEvents( project);
+    project.events = project.findProjectEvents();
   }
 
   res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
@@ -101,7 +101,7 @@ router.get('/join/submit', function(req, res, next) {
   var projects = tempDB.projects.slice(0,4);
 
   for ( var project of projects) {
-    project.members= helper.findProjectMembers(project);
+    project.members= project.findProjectMembers();
   }
 
   res.render('submit', { title: 'CS Club', results: recipient, club_officers: helper.findClubOfficers(), popular_projects: projects, upcoming_events: helper.findAllEvents().upcoming_events, navbar: navbar, helper: helper});

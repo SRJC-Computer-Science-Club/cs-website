@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
 	var archviedProjects = [];
 
   for ( var project of projects) {
-    project.members= helper.findProjectMembers(project);
+    project.members= project.findProjectMembers();
     if (navbar.links.length < 4)
       navbar.links.push({name: project.title, url: '/projects/' +  project.id});
 		if (project.status == "Archived" || project.satus == "Completed" || project.status == "Resigned" || project.status == "")
@@ -38,8 +38,6 @@ router.get('/', function(req, res, next) {
 		}
   }
 
-	console.log({top: topProjects, secondary: secondaryProjects, archvied: archviedProjects});
-
   res.render('projects', { title: 'CS Club | Projects' , list_of_projects: {top: topProjects, secondary: secondaryProjects, archived: archviedProjects}, helper: helper, navbar: navbar});
 });
 
@@ -52,7 +50,7 @@ router.get('/:projectID', function(req, res, next) {
     links: []
   };
 
-  var project = helper.findProjectForID( projects, req.params.projectID);
+  var project = helper.findIdInCollection( req.params.projectID, projects);
 
   for ( var p of projects) {
     if (navbar.links.length < 4)
@@ -60,7 +58,7 @@ router.get('/:projectID', function(req, res, next) {
   }
   navbar.links.push({name: "List of Projects", url: '/projects'});
 
-  project.members = helper.findProjectMembers( project );
+  project.members = project.findProjectMembers();
   project.team = {project_managers: [], members: []};
   for (var member of project.members) {
     if (member.role.includes("Project Founder") | member.role.includes("Project Manager") | member.role.includes("Sub-Project Manager"))
@@ -103,9 +101,9 @@ router.get('/:projectID', function(req, res, next) {
     return 0;
   });
 
-  project.areaRequests= helper.findProjectAreaRequests(project);
+  project.areaRequests= project.findProjectAreaRequests();
   for ( var request of project.areaRequests) {
-    request.author = helper.findMemberForID( project.members, request.author_id);
+    request.author = helper.findIdInCollection( request.author_id, project.members);
     var project_interest = {interest: request.project_interest, title: 'undefined', value: '0'};
     request.project_interest_color = helper.replaceColorIntensity(project_interest);
     request.project_interest_title = helper.replaceColorTitle(project_interest);
@@ -113,7 +111,9 @@ router.get('/:projectID', function(req, res, next) {
       asset.experience_color = helper.replaceColorIntensity({value: asset.experience});
     }
   }
-  project.events = helper.findProjectEvents( project);
+  // console.log("DEBUG: "+ JSON.stringify(project, null, 4));
+
+  project.events = project.findProjectEvents();
 
   res.render('project', { title: 'CS Club' , project: project, services: tempDB.services, navbar: navbar, helper: helper});
 });
@@ -129,7 +129,7 @@ router.get('/:projectID/photo-gallery', function(req, res, next) {
     ]
   };
 
-  var project = helper.findProjectForID( tempDB.projects, req.params.projectID);
+  var project = helper.findIdInCollection( req.params.projectID, tempDB.projects);
 
   res.render('project_photo-gallery', { title: 'CS Club', project: project, navbar: navbar });
 });
