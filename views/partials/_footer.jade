@@ -1,60 +1,62 @@
 #footer
-  .foot-wrapper-1
-    .row.links
-      .col-md-4
-        p Projects
-        ul
-          li
-            a(href='/projects/1') CS Website
-          li
-            a(href='/projects/5') Line Follower
-          li
-            a(href='/projects/6') Retailer
-          li
-            a(href='/projects/7') SRJC Scheduler
-          li
-            a(href='/projects') List of projects...
-        p
-          a(href='/events') Events
-      .col-md-4
-        p Members
-        ul
-          li
-            a(href='/members/2') President
-          li
-            a(href='/members/1') Vice-President, Second ICC Rep
-          li
-            a(href='/members/4') Treasurer
-          li
-            a(href='/members/4') ICC Repersentative
-          li
-            a(href='/members') List of Club Members...
-      .col-md-4
-        p Quick links
-        ul
-          li
-            a(href='/') Homepage
-          li
-            a(href='/projects') Projects Page
-          li
-            a(href='/members') Members Page
-          li
-            a(href='/members') Events Page
-          li
-            a(href='#') Contact Us Page
-          li
-            a(href='/about') About Page
-  .foot-wrapper-2
-    .row.news-bar(id='news-bar')
-      .col-sm-12
-        p
-          a(href='https://docs.google.com/document/d/1dnEZraRgMyhRGBvEnHLNsXxZfMpoVAWcDMCOxGFiyeE/pub' target='_blank')= "This week's meeting: " + "Fridays at 11:00am in room 2806 of Maggini Hall"
-  .foot-wrapper-3
-    .row.news-subbar
-      .col-sm-12
-        p
-          a(href='https://drive.google.com/file/d/0B3wyRcLxpH4jdWdQRzlQVTlzeWM/view?usp=sharing' target='_blank')= "Here's the link to last week's notes"
-  .foot-wrapper-4
-    .row.about
-      .col-sm-12
-        h4 About this site
+	- var LINK_MINUTES = "https://drive.google.com/file/d/0B3wyRcLxpH4jZHhTcEdRTmV0VGc/view?usp=sharing";
+	- var LINK_AGENDA_PUB = "https://docs.google.com/document/d/18SDKKFgLMiPhroNHmuv_Ypfhg8UTTvz0pX4j09loims/pub";
+	.foot-wrapper-1
+		.row.links
+			.col-md-4
+				p Projects
+				ul
+					li
+						a(href='/projects/1') CS Website
+					li
+						a(href='/projects/9') Club App
+					li
+						a(href='/projects/7') SRJC Scheduler
+					li
+						a(href='/projects/5') Line Follower
+					li
+						a(href='/projects') List of projects...
+				p
+					a(href='/events') Events
+			.col-md-4
+				p Members
+				ul
+					li
+						a(href='/members/2') President
+					li
+						a(href='/members/1') Vice-President, Second ICC Rep
+					li
+						a(href='/members/4') Treasurer
+					li
+						a(href='/members/4') ICC Representative
+					li
+						a(href='/members') List of Club Members...
+			.col-md-4
+				p Quick links
+				ul
+					li
+						a(href='/') Homepage
+					li
+						a(href='/projects') Projects Page
+					li
+						a(href='/members') Members Page
+					li
+						a(href='/members') Events Page
+					li
+						a(href='#') Contact Us Page
+					li
+						a(href='/about') About Page
+	.foot-wrapper-2
+		.row.news-bar(id='news-bar')
+			.col-sm-12
+				p
+					a(href=LINK_AGENDA_PUB target='_blank')= "This week's meeting: " + "Fridays at 11:00am in room 2806 of Maggini Hall"
+	.foot-wrapper-3
+		.row.news-subbar
+			.col-sm-12
+				p
+					a(href=LINK_MINUTES target='_blank')= "Link to last week's minutes is TBA. Check out our last meeting notes here"
+	.foot-wrapper-4
+		.row.about
+			.col-sm-12
+				h4 About this site
