@@ -625,7 +625,7 @@ var project_area_requests = [
 //0
 var project_events = [
 	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
-		'description',
+		'The 13th annual games will be held Apr 21-23, 2017. First, second, and third places finishers in all categories receive medals (gold, silver, or bronze respectively). Robots that don\'t fit into a specific category can enter "Best of Show" which can be any kind of robot doing anything. Junior League events are specifically set-up for robot builders under 18. "Entry Fees" are the cost to compete, not the cost for an audience ticket.<br><br>The club is attending the Sunday events to compete our Line Follower bot, IG-88B, as well as watching <a href="http://robogames.net/events.php">all the other events</a> the same day. Be sure to attend, or stay in touch with the PM, the weekly meetings to participate in this event.',
 		'Robotics competition for our line follower project.',
 		'Pleasanton, CA',
 		'April 21, 2017',
@@ -658,11 +658,20 @@ var events = [
 		]
 	),
 	new Event( 2,' Keysight Trip',
-		'Check out this trip at the weekly meeting!',
 		'',
+		'Check out this trip at the weekly meeting!',
 		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
 		'TBA',
 		[]
+	),
+	new Event( 3, 'Ludum Dare',
+		'Themes are suggested and chosen by the community. Theme Suggestions are accepted starting 5 weeks before the event. Theme Voting kicks off 2 weeks before the event. Ludum Dare games are submitted to 1 of 2 categories: the Jam or the Compo.</p><h3>The Jam</h2><p>The Jam is the Ludum Dare event for everyone. Teams, individuals, anyone that wants to come out and make something.<ol><li><p>Work alone or in a team.</p></li><li><p>Create a game in 72 hours.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. You’re free to use 3rd party Artwork/Music/Audio assets, or assets you previously created, but we ask that you OPT-OUT of the respected voting categories (Graphics, Audio). You can opt-out of a voting category when you submit your game. We strongly recommend you only use assets that you have the legal right to use (Public Domain, things you licensed/created, etc). If you don’t have the right to use something, it is your responsibility.</p><h3>The Compo</h3><p>The Compo is Classic Ludum Dare. Another way to think of it is as Ludum Dare “Hard Mode”. Compo games are created entirely from scratch (**) by one person, in just 48 hours. This is the ultimate test of your game creation skills.<ol><li><p>You must work alone (solo).</p></li><li><p>Your game, all your content (i.e. Art, Music, Sound, etc) must be created in 48 hours.</p></li><li><p>Source code must be included.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. At the end, you will be required to share your source code.<br><br>TIP: Compo games are typically reviewed harsher than Jam games. If your game closely resembles a sample game that comes with a development tool, it probably wont get a good score. Be sure to fully customize, and make the game your own.</p>',
+		'Ludum Dare is an event where you create a game from scratch in a weekend based on a theme.',
+		'On-Line Event',
+		'April 21, 2017',
+		[
+			{caption: 'Event', image: 'ludm-dare-1.jpg', url: 'http://ludumdare.com/compo/'}
+		]
 	)
 ]
 
