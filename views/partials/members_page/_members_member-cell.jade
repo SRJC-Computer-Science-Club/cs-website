@@ -6,7 +6,7 @@
 .row.hidden-sm-down
   .col-md-12
     a(href='/members/' + member.id).card
-      .avatar
+      .avatar(style="background-image: url(\"/avatars/" + member.first_name.toLowerCase() + "-" + member.id + ".jpg\");")
       - if (isFound != false)
         #corner-ribbons.wrapper
           .ribbon-wrapper

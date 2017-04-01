@@ -6,7 +6,7 @@ block content
       .row.card
         .col-lg-12
           .row.name-badge
-            .col-lg-3.avatar
+            .col-lg-3.avatar(style="background-image: url(\"/avatars/" + member.first_name.toLowerCase() + "-" + member.id + ".jpg\");")
             .col-lg-9
               h1= member.first_name + ' ' + member.last_name
               hr
