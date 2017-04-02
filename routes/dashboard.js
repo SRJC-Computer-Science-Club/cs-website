@@ -11,7 +11,7 @@ login = {
 	member: tempDB.members[0],
 	first_name: "Erick",
 	last_name: "Sanchez",
-	role: 0
+	isAdmin: true
 }
 
 login.name = login.first_name + ' ' + login.last_name;
@@ -35,10 +35,8 @@ router.get('/', function(req, res, next) {
 		project.members = project.findProjectMembers();
 	}
 
-	res.render('dashboard', {dashboard: true, title: 'CS Dashboard', token: login, navbar: navbar, my_projects: myProjects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
+	res.render('dashboard', {dashboard: [], title: 'CS Dashboard', token: login, navbar: navbar, my_projects: myProjects, my_events: helper.findAllEvents().upcoming_events, helper: helper});
 });
-
-
 
 router.get('/projects', function(req, res, next) {
   var navbar = {
@@ -63,9 +61,32 @@ router.get('/projects', function(req, res, next) {
 		return 0;
 	});  
 
+	res.render('dashboard-projects', {dashboard: [], title: 'CS Dashboard - Projects', projects: projects, token: login, navbar: navbar, helper: helper});
 
-	res.render('dashboard-projects', {dashboard: true, title: 'CS Dashboard - Projects', projects: projects, token: login, navbar: navbar, helper: helper});
+});
 
+router.get('/projects/:projectID', function(req, res, next) {
+  var navbar = {
+    active: 'projects',
+    links: []
+  };
+
+	var project = helper.findIdInCollection(req.params.projectID, tempDB.projects);
+
+	if (project.isProjectAdmin(login.member) || login.isAdmin)
+		navbar.links.push({name: "Edit", url: "edit/" + req.params.projectID});
+
+	if (project.isProjectMember(login.member)) {
+		if (login.isAdmin)
+			navbar.links.push({name: "Unjoin", url: "#"});
+	} else {
+		if (login.isAdmin)
+			navbar.links.push({name: "Join", url: "#"});
+		else
+			navbar.links.push({name: "Request to Join", url: "#"});
+	}
+
+	res.render('dashboard-project', {dashboard: ['hideSidebar'], title: 'Edit Project', project: project, token: login, navbar: navbar, helper: helper});
 });
 
 module.exports = router;

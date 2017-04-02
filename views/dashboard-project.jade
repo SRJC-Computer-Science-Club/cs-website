@@ -1,0 +1,26 @@
+extends layout-dashboard
+
+block view
+	#project-page.content
+		h1= project.title
+		p= "Description: " + project.description
+		p= "Short: " + project.description_short
+		p= "Status: " + project.status
+		p= "Post: " + project.post
+		p= "Milestones: "
+		//- each stone in project.milestones
+		p= "Links: "
+		each link, name in project.links
+			a(href=link target="_blank").cell
+				.context
+					p.pull-xs-right= link
+					p= name
+		p= "Images: "
+		each image in project.images
+			.image-cell
+				.context
+					- var source = "/images/projects/"+project.title.toLowerCase()+"/images/"+image;
+					a(href=source target="_blank").thumb.pull-xs-right
+						img(src=source)
+					p= image
+					p 12k

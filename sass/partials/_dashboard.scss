@@ -33,4 +33,16 @@
 			}
 		}
 	}
+	#project-page {
+		.image-cell {
+			@extend .cell;
+			img {
+				height: 64px;
+				width: 64px;
+			}
+			a {
+				text-align: left;
+			}
+		}
+	}
 }
