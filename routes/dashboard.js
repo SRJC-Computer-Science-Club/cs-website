@@ -86,6 +86,8 @@ router.get('/projects/:projectID', function(req, res, next) {
 			navbar.links.push({name: "Request to Join", url: "#"});
 	}
 
+	navbar.links.push({name: "List of Projects", url: "/dashboard/projects", active: true});
+
 	res.render('dashboard-project', {dashboard: ['hideSidebar'], title: 'Edit Project', project: project, token: login, navbar: navbar, helper: helper});
 });
 
@@ -97,6 +99,7 @@ router.get('/projects/edit/:projectID', function(req, res, next) {
     active: 'projects',
     links: [
 			{name: "Go Back", url: "/dashboard/projects/" + project.id},
+			{name: "Add a Member", url: ""},
 			{name: "Save Changes", url: "#", active: true}
 		]
   };

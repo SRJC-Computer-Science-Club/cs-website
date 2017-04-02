@@ -3,10 +3,10 @@ extends layout-dashboard
 block view
 	#project-page.content
 		.row
-			.col-md-4.hidden-sm-down
+			.col-md-2.hidden-sm-down
 				p.header Metadata
 				p= "Number of Members: " + project.findProjectMembers().length
-			.col-md-8
+			.col-md-10
 				h1= project.title
 				p= "Description: " + project.description
 				p= "Short: " + project.description_short

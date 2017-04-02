@@ -13,7 +13,7 @@ block view
 				.context
 					.project-controls.pull-xs-right
 						a(href= "projects/" + project.id) view
-						a(href= "edit/" + project.id class= canCRUD ? "" : "disabled") admin
+						a(href= "projects/edit/" + project.id class= canCRUD ? "" : "disabled") admin
 						a(class= project.isMember ? "remove" : "")= project.isMember ? "Unjoin" : "Join"
 					p.header= project.title
 					p= helper.pluralize('member', project.members.length, true)
