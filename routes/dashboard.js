@@ -89,4 +89,15 @@ router.get('/projects/:projectID', function(req, res, next) {
 	res.render('dashboard-project', {dashboard: ['hideSidebar'], title: 'Edit Project', project: project, token: login, navbar: navbar, helper: helper});
 });
 
+router.get('/projects/edit/:projectID', function(req, res, next) {
+  var navbar = {
+    active: 'projects',
+    links: []
+  };
+
+	var project = helper.findIdInCollection(req.params.projectID, tempDB.projects);
+	
+	res.render('dashboard-project-edit', {dashboard: ['hideSidebar'], title: 'Edit Project', project: project, token: login, navbar: navbar, helper: helper});
+});
+
 module.exports = router;
