@@ -51,6 +51,7 @@ router.get('/projects', function(req, res, next) {
 	for ( var project of projects) {
 		project.members = project.findProjectMembers();
 		project.admin = project.isProjectAdmin(login.member);
+		project.isMember = project.isProjectMember(login.member);
 	}
 
 	projects.sort(function(a,b) {

@@ -9,8 +9,12 @@ block view
 			- var canCRUD = token.role == 1 || project.admin == true;
 			- if (i == 0 && project.admin == false || i != 0 && project.admin == false && lastProject.admin == true)
 				p Other projects
-			a(href= canCRUD ? "projects/" + project.id : "#" class= !canCRUD ? 'disabled' : '').cell
+			.project-cell
 				.context
+					.project-controls.pull-xs-right
+						a(href= project.id) view
+						a(href= "edit/" + project.id class= canCRUD ? "" : "disabled") admin
+						a(class= project.isMember ? "remove" : "")= project.isMember ? "Unjoin" : "Join"
 					p.header= project.title
 					p= helper.pluralize('member', project.members.length, true)
 					p= project.description_short

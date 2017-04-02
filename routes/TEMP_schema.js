@@ -683,6 +683,21 @@ Project.prototype.isProjectAdmin = function(member)
 	return false;
 }
 
+Project.prototype.isProjectMember = function(member)
+{
+	var isFound = false;
+
+	for ( var link of _members_projects) {
+		if (link.project_id == this.id) {
+			if (link.member_id == member.id) {
+				isFound = true;
+			}
+		}
+	}
+
+	return isFound;
+}
+
 Project.prototype.findProjectMembers = function()
 {
   var members = [];

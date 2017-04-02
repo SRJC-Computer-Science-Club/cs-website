@@ -20,5 +20,17 @@
 			color: $gray-darkgray;
 			background-color: $highlighted;
 		}
+		.project-cell {
+			@extend .cell;
+			.project-controls {
+				a {
+					@extend .btn, .btn-primary;
+					margin: auto $margin-sm;
+				}
+				a.remove {
+					@extend .btn-danger;
+				}	
+			}
+		}
 	}
 }
