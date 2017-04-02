@@ -2,4 +2,41 @@ extends layout-dashboard
 
 block view
 	#project-edit-page.content
-		
+		.row
+			.col-md-4.hidden-sm-down
+				p.header= project.title
+				p= project.description_short
+			.col-md-8
+				form(action="" method="POST")
+					.form-group.row
+						label(for="title").col-2.col-form-label Title
+						.col-10
+							input(type="text" id="title" name="title" value= project.title).form-control
+					.form-group.row
+						label(for="description") Description
+						.col-12
+							textarea(id="description" name="description" placeholder="e.g." rows="3" value= project.description).form-control
+					.form-group.row
+						label(for="description_short").col-2.col-form-label Short Description
+						.col-10
+							input(type="text" id="description_short" name="description_short" value= project.description_short).form-control
+					.form-group.row
+						label(for="status").col-2.col-form-label Status
+						.col-10
+							input(type="text" id="status" name="status" value= project.status).form-control
+					.form-group.row
+						label(for="post").col-2.col-form-label Post
+						.col-10
+							input(type="text" id="post" name="post" value= project.post).form-control
+					.form-group.row
+						label(for="milestones").col-2.col-form-label Milestones
+						.col-10
+							input(type="text" id="milestones" name="milestones" value= project.milestones).form-control
+					.form-group.row
+						label(for="links").col-2.col-form-label Links
+						.col-10
+							input(type="text" id="links" name="links" value= project.links).form-control
+					.form-group.row
+						label(for="images").col-2.col-form-label Images
+						.col-10
+							input(type="text" id="images" name="images" value= project.images).form-control

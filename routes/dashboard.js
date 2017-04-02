@@ -90,13 +90,17 @@ router.get('/projects/:projectID', function(req, res, next) {
 });
 
 router.get('/projects/edit/:projectID', function(req, res, next) {
-  var navbar = {
-    active: 'projects',
-    links: []
-  };
 
 	var project = helper.findIdInCollection(req.params.projectID, tempDB.projects);
-	
+
+  var navbar = {
+    active: 'projects',
+    links: [
+			{name: "Go Back", url: "/dashboard/projects/" + project.id},
+			{name: "Save Changes", url: "#", active: true}
+		]
+  };
+
 	res.render('dashboard-project-edit', {dashboard: ['hideSidebar'], title: 'Edit Project', project: project, token: login, navbar: navbar, helper: helper});
 });
 
