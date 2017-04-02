@@ -137,13 +137,10 @@ var projects = [
 	new Project(8,'Dreamscape',
 		'',
 		'',
-		'Blueprinting the GDD',
+		'Resigned',
 		'',
 		{},
 		{
-			// checkvist: 'https://checkvist.com/checklists/560653',
-			// waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-			// github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
 			drive: 'https://drive.google.com/drive/folders/0B23hDSQTMIITY2hVZ3dzd3NuQm8?usp=sharing'
 		},
 		[
@@ -230,7 +227,7 @@ var projects = [
 	)
 ];
 
-//25
+//27
 var members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
@@ -291,14 +288,14 @@ var members = [
 		]
 	),
 	new Member(14, 'Austin', 'Meyer',
-		'',
+		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
 		'Game Designer and Developer! Also know C++, Java, and Javascript',
 		{},
 		'meyerforge@gmail.com',
 		[
 			'C++',
 			'Java',
-			'JavaScript'
+			'C#'
 		]
 	),
 	new Member(15, 'Isaiah', 'Curtis',
@@ -395,6 +392,22 @@ var members = [
 		[]
 	),
 	new Member(25, 'Juan', 'Rios',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(26, 'Alejandro', 'Fernandez',
+		'my bio',
+		'I enjoy long walks on the beach',
+		{},
+		'alexotter@ymail.com',
+		[
+			'C++'
+		]
+	),
+	new Member(27, 'Jameson', 'Danning',
 		'my bio',
 		undefined,
 		{},
@@ -543,15 +556,16 @@ var members_projects = [
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
 	new ProjectsMembers( 45 , 9 , 16 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' ),
+	new ProjectsMembers( 53 , 9 , 26 , 'Programmer'),
 	//ShortLink
 	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
 	new ProjectsMembers( 52 , 10 , 2 , 'Developer')
 ];
-//50
+//53
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
-//25-juan
+//25-juan 26-alex frenandez 27-jameson
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 
