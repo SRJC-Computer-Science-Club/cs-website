@@ -25,7 +25,7 @@
 #device-phone.row.hidden-md-up
   .col-sm-12
     a(href='/members/' + member.id).card
-      .avatar
+      .avatar(style="background-image: url(\"/avatars/" + member.first_name.toLowerCase() + "-" + member.id + ".jpg\");")
       h1.member-name= member.first_name + ' ' + member.last_name
       - if (isFound != false)
         #corner-ribbons.wrapper
