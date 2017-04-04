@@ -18,4 +18,13 @@ router.get('/', function(req, res, next) {
   res.render('resources', { title: 'CS Club', navbar: navbar });
 });
 
+router.get('/categories', function(req, res, next) {
+  var navbar = {
+    active: 'resources',
+    links: []
+  };
+
+  res.render('categories', { title: 'CS Club', navbar: navbar });
+});
+
 module.exports = router;
