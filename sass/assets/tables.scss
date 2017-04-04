@@ -9,9 +9,7 @@
     }
   }
 }
-a.cell {
+a.cell:hover {
   text-decoration: none;
-  :hover {
-    background-color: $highlighted;
-  }
+  background-color: $highlighted;
 }

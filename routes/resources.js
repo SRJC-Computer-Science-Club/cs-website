@@ -24,7 +24,9 @@ router.get('/categories', function(req, res, next) {
     links: []
   };
 
-  res.render('categories', { title: 'CS Club', navbar: navbar });
+  var categories = tempDB.categories;
+
+  res.render('categories', { title: 'CS Club', navbar: navbar, categories: categories});
 });
 
 module.exports = router;

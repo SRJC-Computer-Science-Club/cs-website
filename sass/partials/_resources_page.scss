@@ -18,11 +18,25 @@
 		h2 {
 			position: absolute;
 			bottom: 0;
+			width: 100%;
 			color: white;
 		}
 		height: 232px;
 	}
 }
 #categories-page {
-	
+	.category {
+		@extend .cell-4;
+		.cell {
+			.context {
+				height: 232px;
+			}
+			h2 {
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+		}
+		margin: 0 auto;
+	}
 }

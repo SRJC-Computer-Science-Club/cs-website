@@ -752,8 +752,27 @@ var _categories = [
 				]
 			)
 		]
+	),
+	new Category( 2, "C++",
+		"description",
+		undefined,
+		[]
+	),
+	new Category( 3, "Mobile Dev",
+		"description",
+		undefined,
+		[]
+	),
+	new Category( 4, "iOS Dev",
+		"description",
+		undefined,
+		[]
+	),
+	new Category( 5, "Game Dev",
+		"description",
+		undefined,
+		[]
 	)
-
 ];
 
 //Global instances for icons
