@@ -29,4 +29,15 @@ router.get('/categories', function(req, res, next) {
   res.render('categories', { title: 'CS Club', navbar: navbar, categories: categories});
 });
 
+router.get('/categories/:categoryID', function(req, res, next) {
+  var navbar = {
+    active: 'resources',
+    links: []
+  };
+
+  var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
+
+  res.render('tutorials', { title: 'CS Club', navbar: navbar, category: category});
+});
+
 module.exports = router;
