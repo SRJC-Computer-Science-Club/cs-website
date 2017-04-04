@@ -16,6 +16,19 @@ var trimURL = function trimURL(url) {
   return url.substring(start, end);
 }
 
+function findIdInCollection(id,collection)
+{
+  var found = undefined;
+  for (var item of collection) {
+    if (id == item.id) {
+      found = item;
+      break;
+    }
+  }
+
+  return found;
+}
+
 function findProjectForID( projects, id )
 {
   var found;
@@ -215,6 +228,7 @@ function replaceColorTitle(project_interest)
 }
 
 module.exports = {
+  findIdInCollection,
 	findProjectForID,
 	findProjectMembers,
 	findProjectAreaRequests,
