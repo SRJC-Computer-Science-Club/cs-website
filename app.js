@@ -10,6 +10,7 @@ var index = require('./routes/index');
 var projects = require('./routes/projects');
 var events = require('./routes/events');
 var members = require('./routes/members');
+var resources = require('./routes/resources');
 var about = require('./routes/about');
 
 
@@ -52,6 +53,7 @@ app.use('/', index);
 app.use('/projects/', projects);
 app.use('/', events);
 app.use('/members', members);
+app.use('/resources', resources);
 app.use('/about', about);
 
 // catch 404 and forward to error handler
