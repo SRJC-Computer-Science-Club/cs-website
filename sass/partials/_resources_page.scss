@@ -41,5 +41,30 @@
 	}
 }
 #tutorials-page {
-	
+	.tutorial {
+		@extend .cell;
+		.context {
+			height: 64px;
+			.difficulty {
+				float: left;
+				width: 32px;
+				height: 100%;
+				background-color: black;
+			}
+			a {
+				float: left;
+				margin: auto 0 auto $margin-lg;
+			}
+			.controls {
+				@extend .pull-xs-right;
+				* {
+					display: inline;
+					margin: auto $margin-sm;
+				}
+			}
+		}
+	}
+	.tutorial-mobile {
+		@extend .tutorial;
+	}
 }
