@@ -1,5 +1,55 @@
 //This will act as temporary database placeholder
 
+function Category( id, title, description, image, tutorials )
+{
+	this.id = id;
+	this.title = title;
+	this.description = description;
+	this.image = image;
+	this.tutorials = tutorials;
+}
+
+function Tutorial( id, title, description, description_short, difficulty, nDownloads, nLikes, nDislikes, lessons )
+{
+	this.id = id;
+	this.title = title;
+	this.description = description;
+	this.description_short = description_short;
+	this.difficulty = difficulty;
+	this.nDownloads = nDownloads;
+	this.nLikes = nLikes;
+	this.nDislikes = nDislikes;
+	this.lessons = lessons;
+}
+
+function Lesson( id, title )
+{
+	this.id = id;
+	this.title = title;
+	this.content = [];
+}
+
+function Lesson( id, title, content)
+{
+	this.id = id;
+	this.title = title;
+	this.content = content;
+}
+
+Lesson.prototype.addBodyText = function( content )
+{
+	this.content.push({type: 'body', value: content});
+}
+
+Lesson.prototype.addList = function( content )
+{
+	this.content.push({type: 'list', value: content});
+}
+
+Lesson.prototype.addImage = function( content )
+{
+	this.content.push({type: 'image', value: content});
+}
 
 function Project( id, title, description, description_short, status, post, milestones, links, images )
 {
@@ -675,6 +725,37 @@ var events = [
 	)
 ]
 
+var _categories = [
+	new Category( 0, 'Web Development',
+		'description',
+		undefined,
+		[
+			new Tutorial( 1, 'Nodejs',
+				'description',
+				'description_short',
+				1, 0, 0, 0,
+				[
+					new Lesson( 0, "What is Nodejs and how do I use npm",
+						[
+							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
+							{type: 'list', value: ["Node","npm","Express"]},
+							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."}
+						]
+					),
+					new Lesson( 1, "The Express Package",
+						[
+							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
+							{type: 'list', value: [{title: "Node", link: "www.google.com"},"npm","Express, download link <a href=\"www.google.com\">here</a>"]},
+							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."}
+						]
+					)
+				]
+			)
+		]
+	)
+
+];
+
 //Global instances for icons
 var services = {
 	noone:
@@ -738,6 +819,7 @@ module.exports = {
 	project_area_requests,
 	project_events,
 	events,
+	categories: _categories,
 	services,
 	club_officers
 };

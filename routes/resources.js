@@ -15,6 +15,8 @@ router.get('/', function(req, res, next) {
     links: []
   };
 
+  // console.log(JSON.stringify(tempDB.categories[0], null, 6));
+
   res.render('resources', { title: 'CS Club', navbar: navbar });
 });
 
