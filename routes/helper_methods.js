@@ -1,5 +1,6 @@
 var tempDB = require('./TEMP_schema');
 var pluralize = require('pluralize');
+var markdown = require('markdown').markdown;;
 
 var trimURL = function trimURL(url) {
   var start = -1, end = -1, length = url.length, i = 0;
@@ -240,5 +241,7 @@ module.exports = {
 	findClubOfficers,
 	replaceColorIntensity,
 	replaceColorTitle,
-	pluralize, trimURL
+	pluralize,
+  trimURL,
+  markdown
 };

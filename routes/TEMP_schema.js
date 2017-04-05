@@ -778,6 +778,7 @@ var _categories = [
 								"npm start",
 								"now, open up <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>"
 							]},
+							{type: 'text', text: "howdy", markdown: "`myapp\n--views`\nhi"},
 							{type: 'text', text: "Now let's dive into it now. Blah blah, learning yay."},
 							{type: 'image', value: {text: "crzy stuff!", caption: "look at us!", link: "/images/about-3.jpg"}},
 							{type: 'image', value: {text: "fancy stuff", caption: "fancy", link: "https://images-na.ssl-images-amazon.com/images/G/01/poppin/gateway/March/041117_Shoes_2x._CB532363727_.jpg"}}

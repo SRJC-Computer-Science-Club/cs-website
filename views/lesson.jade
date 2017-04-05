@@ -9,7 +9,12 @@ block view
 					when 'section'
 						p.section= content.text
 					when 'text'
-						p!= content.text
+						- if (content.markdown != undefined) {
+							- var markdown = helper.markdown.toHTML(content.markdown);
+							p!= content.text
+							div!= markdown
+						- } else
+							p!= content.text
 					when 'list'
 						p(style="margin-bottom: 0;")!= content.text
 						ol
