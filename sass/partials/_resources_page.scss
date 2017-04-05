@@ -92,7 +92,12 @@
 	}
 	.view {
 		#lesson-page {
-			.lesson {
+			#lesson {
+				.section {
+					font-size: 1.5em;
+					font-weight: bolder;
+					margin-bottom: 0;
+				}
 				li {
 					margin: $margin-sm 0;
 					p {
@@ -100,7 +105,7 @@
 					}
 				}
 				a.list-link {
-					float: left;
+					// @extend .pull-xs-left;
 				}
 			}
 		}

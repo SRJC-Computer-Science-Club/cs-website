@@ -3,12 +3,15 @@ extends layout-lessons
 block view
 	#lesson-page.content
 		h2= lesson.title
-		.lesson
+		#lesson
 			each content in lesson.content
 				case (content.type)
+					when 'section'
+						p.section= content.text
 					when 'text'
-						p!= content.value
+						p!= content.text
 					when 'list'
+						p(style="margin-bottom: 0;")!= content.text
 						ol
 							each i in content.value
 								li
