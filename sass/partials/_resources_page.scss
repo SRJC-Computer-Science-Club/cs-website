@@ -71,3 +71,25 @@
 #lessons-page {
 	
 }
+#lesson-layout {
+	.sidebar {
+		padding-right: 0;
+		p.name {
+			text-align: center;
+		}
+		.navbar {
+			padding-top: $margin-md;
+		}
+		.list-group {
+			margin: $margin-md 0;
+			.list-group-item {
+				text-align: left;
+			}
+		}
+	}
+	.view {
+		#lesson-page {
+
+		}
+	}
+}
