@@ -15,7 +15,7 @@ function Tutorial( id, title, description, description_short, difficulty, nDownl
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
-	this.difficulty = difficulty;
+	this.difficulty = difficulty; //1 beginner 2 intermidint 3 advanced
 	this.nDownloads = nDownloads;
 	this.nLikes = nLikes;
 	this.nDislikes = nDislikes;
@@ -722,7 +722,7 @@ var events = [
 var _categories = [
 	new Category( 0, 'Web Development',
 		'description',
-		undefined,
+		"/images/about-3.jpg",
 		[
 			new Tutorial( 1, 'Nodejs',
 				'description',

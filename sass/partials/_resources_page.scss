@@ -3,9 +3,8 @@
 		overflow: hidden;
 		position: relative;
 		padding: 0;
+		@extend .thumb;
 		img {
-			max-width: 100%;
-			
 			-moz-transition: all 0.3s;
 			-webkit-transition: all 0.3s;
 			transition: all 0.3s;
@@ -29,7 +28,9 @@
 		@extend .cell-4;
 		.cell {
 			.context {
+				padding: 0;
 				height: 232px;
+				@extend .thumb;
 			}
 			h2 {
 				position: absolute;
@@ -44,16 +45,18 @@
 	.tutorial {
 		@extend .cell;
 		.context {
-			height: 64px;
+			height: 48px;
+			>* {
+				display: inline;
+			}
 			.difficulty {
 				float: left;
-				width: 32px;
+				width: 8px;
 				height: 100%;
-				background-color: black;
 			}
 			a {
 				float: left;
-				margin: auto 0 auto $margin-lg;
+				margin: auto auto auto $margin-lg;
 			}
 			.controls {
 				@extend .pull-xs-right;

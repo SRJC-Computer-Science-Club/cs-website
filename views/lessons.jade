@@ -4,6 +4,7 @@ block content
   #lessons-page.content
     h2= tutorial.title
     p= tutorial.description
+    p.header Lessons
     each lesson in tutorial.lessons
       a(href=lesson.id + "/").cell
         .context
