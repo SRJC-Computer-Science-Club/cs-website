@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     links: []
   };
 
-  res.render('resources/resources', { title: 'CS Club', navbar: navbar });
+  res.render('resources', { title: 'CS Club', navbar: navbar });
 });
 
 router.get('/categories/', function(req, res, next) {
@@ -26,7 +26,7 @@ router.get('/categories/', function(req, res, next) {
 
   var categories = tempDB.categories;
 
-  res.render('/categories', { title: 'CS Club', navbar: navbar, categories: categories});
+  res.render('categories', { title: 'CS Club', navbar: navbar, categories: categories});
 });
 
 router.get('/categories/:categoryID/', function(req, res, next) {
@@ -54,7 +54,7 @@ router.get('/categories/:categoryID/:tutorialID/', function(req, res, next) {
 
   var tutorial = helper.findIdInCollection(req.params.tutorialID, category.tutorials);
 
-  res.render('resources/lessons', { title: 'CS Club', tutorial: tutorial, navbar: navbar});
+  res.render('lessons', { title: 'CS Club', tutorial: tutorial, navbar: navbar});
 });
 
 router.get('/categories/:categoryID/:tutorialID/:lessonID/', function(req, res, next) {
@@ -69,7 +69,7 @@ router.get('/categories/:categoryID/:tutorialID/:lessonID/', function(req, res, 
   var tutorial = helper.findIdInCollection(req.params.tutorialID, category.tutorials);
   var lesson = helper.findIdInCollection(req.params.lessonID, tutorial.lessons);
 
-  res.render('resources/lesson', { title: 'CS Club', lesson: lesson, navbar: navbar});
+  res.render('lesson', { title: 'CS Club', lesson: lesson, navbar: navbar});
 });
 
 module.exports = router;

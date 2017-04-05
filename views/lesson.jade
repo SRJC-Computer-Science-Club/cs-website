@@ -1,0 +1,29 @@
+extends layout-lessons
+
+block view
+	#lesson-page.content
+		h2= lesson.title
+		.lesson
+			each content in lesson.content
+				case (content.type)
+					when 'text'
+						p= content.value
+					when 'list'
+						ol
+							each i in content.value
+								li
+									case (typeof i)
+										when 'string'
+											p!= i
+										when 'object'
+											a.list-link(href=i.url)= i.text
+					when 'image'
+						.row.image
+							.col-md-8
+								p=content.value.text
+							.col-md-4
+								.thumbnail-caption
+									a(href=content.value.link target="_blank")
+										img(src=content.value.link)
+									figcaption= content.value.caption
+							

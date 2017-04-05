@@ -1,0 +1,28 @@
+extends layout-lessons
+
+block content
+	#tutorials-page.content
+		each tutorial in category.tutorials
+			.tutorial.hidden-sm-down
+				.context
+					- var difficulty = tutorial.difficulty == 1 ? "lime" : tutorial.difficulty == 2 ? "orange" : tutorial.difficulty == 3 ? "red" : "white"
+					.difficulty(style="background-color: " + difficulty +";")
+					a(href=tutorial.id + "/")= tutorial.title
+					.controls
+						p= tutorial.nDownloads
+						button download
+						p= tutorial.nLikes
+						button likes
+						p= tutorial.nDislikes
+						button dislikes
+			//- .tutorial-mobile.hidden-md-up
+				.context
+					.difficulty
+					a(href="tutorials/" + category.id)= tutorial.title
+					.controls
+						p= tutorial.nDownloads
+						button download
+						p= tutorial.nLikes
+						button download
+						p= tutorial.nDislikes
+						button download
