@@ -26,7 +26,7 @@ router.get('/categories/', function(req, res, next) {
 
   var categories = tempDB.categories;
 
-  res.render('resources/categories', { title: 'CS Club', navbar: navbar, categories: categories});
+  res.render('/categories', { title: 'CS Club', navbar: navbar, categories: categories});
 });
 
 router.get('/categories/:categoryID/', function(req, res, next) {
@@ -39,7 +39,7 @@ router.get('/categories/:categoryID/', function(req, res, next) {
 
   var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
 
-  res.render('resources/tutorials', { title: 'CS Club', navbar: navbar, category: category});
+  res.render('tutorials', { title: 'CS Club', navbar: navbar, category: category});
 });
 
 router.get('/categories/:categoryID/:tutorialID/', function(req, res, next) {

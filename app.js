@@ -54,7 +54,7 @@ app.use('/projects/', projects);
 app.use('/', events);
 app.use('/members', members);
 app.use('/resources', resources);
-app.use(express.static(__dirname+ '/views/resources'));
+app.set('resources', path.join(__dirname, 'views/resources'));
 app.use('/about', about);
 
 // catch 404 and forward to error handler
