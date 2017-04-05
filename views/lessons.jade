@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  #lessons-page.content
+    h2= tutorial.title
+    p= tutorial.description
+    each lesson in tutorial.lessons
+      a(href=tutorial.id + "/" + lesson.id).cell
+        .context
+          p.header=lesson.title
+          p=lesson.description

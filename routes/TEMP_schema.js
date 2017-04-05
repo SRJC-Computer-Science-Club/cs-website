@@ -22,17 +22,11 @@ function Tutorial( id, title, description, description_short, difficulty, nDownl
 	this.lessons = lessons;
 }
 
-function Lesson( id, title )
+function Lesson( id, title, description, content)
 {
 	this.id = id;
 	this.title = title;
-	this.content = [];
-}
-
-function Lesson( id, title, content)
-{
-	this.id = id;
-	this.title = title;
+	this.description = description;
 	this.content = content;
 }
 
@@ -736,6 +730,7 @@ var _categories = [
 				1, 0, 0, 0,
 				[
 					new Lesson( 0, "What is Nodejs and how do I use npm",
+						"something to do with the lesson",
 						[
 							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
 							{type: 'list', value: ["Node","npm","Express"]},
@@ -743,6 +738,7 @@ var _categories = [
 						]
 					),
 					new Lesson( 1, "The Express Package",
+						"something to do with the lesson",
 						[
 							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
 							{type: 'list', value: [{title: "Node", link: "www.google.com"},"npm","Express, download link <a href=\"www.google.com\">here</a>"]},

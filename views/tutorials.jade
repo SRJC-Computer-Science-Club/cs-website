@@ -6,7 +6,7 @@ block content
 			.tutorial.hidden-sm-down
 				.context
 					.difficulty
-					a(href="tutorials/" + category.id)= tutorial.title
+					a(href=category.id + "/" + tutorial.id)= tutorial.title
 					.controls
 						p= tutorial.nDownloads
 						button download

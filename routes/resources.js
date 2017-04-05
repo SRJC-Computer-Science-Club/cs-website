@@ -40,15 +40,19 @@ router.get('/categories/:categoryID', function(req, res, next) {
   res.render('tutorials', { title: 'CS Club', navbar: navbar, category: category});
 });
 
-router.get('/categories/tutorials/:tutorialID', function(req, res, next) {
+router.get('/categories/:categoryID/:tutorialID', function(req, res, next) {
   var navbar = {
     active: 'resources',
     links: []
   };
 
-  // var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
+  var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
 
-  res.render('tutorial', { title: 'CS Club', navbar: navbar});
+  var tutorial = helper.findIdInCollection(req.params.tutorialID, category.tutorials);
+
+  // tutorial._category = category;
+
+  res.render('lessons', { title: 'CS Club', tutorial: tutorial, navbar: navbar});
 });
 
 module.exports = router;
