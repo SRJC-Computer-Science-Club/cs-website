@@ -725,16 +725,29 @@ var _categories = [
 		"/images/about-3.jpg",
 		[
 			new Tutorial( 1, 'Nodejs',
-				'description',
-				'description_short',
+				'Nodejs is a JavaScript runtime built on Chrome\'s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js\' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.',
+				'Get an introduction on how to create your own Nodejs project using Express and other tools',
 				1, 0, 0, 0,
 				[
 					new Lesson( 0, "What is Nodejs and how do I use npm",
-						"something to do with the lesson",
+						"",
 						[
-							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
-							{type: 'list', value: ["Node","npm","Express"]},
-							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."}
+							{type: 'text', value:
+							"Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website.\
+							Listed below are a few things you'll need:"},
+							{type: 'list', value: ["Node"]},
+							{type: 'text', value:
+							"When installing Nodejs, which you can get <a href=https://nodejs.org/en/ target=_blank>here</a>, npm or node package manager will be installed with it and with this package manager, installing dependencies couldn't be easier!\
+							Okay, now that we have the tools needed let's create a boilerplate project."},
+							{type: 'text', value: "Open up cmd, or terminal, and type in the following:"},
+							{type: 'list', value: [
+								"npm install express-generator -g",
+								"express --view=pug myapp",
+								"cd myapp",
+								"npm install",
+								"npm start",
+								"now, open up <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>"
+							]}
 						]
 					),
 					new Lesson( 1, "The Express Package",

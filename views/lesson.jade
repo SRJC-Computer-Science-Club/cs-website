@@ -7,7 +7,7 @@ block view
 			each content in lesson.content
 				case (content.type)
 					when 'text'
-						p= content.value
+						p!= content.value
 					when 'list'
 						ol
 							each i in content.value
@@ -20,7 +20,7 @@ block view
 					when 'image'
 						.row.image
 							.col-md-8
-								p=content.value.text
+								p!=content.value.text
 							.col-md-4
 								.thumbnail-caption
 									a(href=content.value.link target="_blank")
