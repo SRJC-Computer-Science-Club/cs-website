@@ -89,7 +89,17 @@
 	}
 	.view {
 		#lesson-page {
-
+			.lesson {
+				li {
+					margin: $margin-sm 0;
+					p {
+						margin: 0;
+					}
+				}
+				a.list-link {
+					float: left;
+				}
+			}
 		}
 	}
 }

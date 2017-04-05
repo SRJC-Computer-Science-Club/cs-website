@@ -56,7 +56,9 @@ router.get('/categories/:categoryID/:tutorialID', function(req, res, next) {
 router.get('/categories/:categoryID/:tutorialID/:lessonID', function(req, res, next) {
   var navbar = {
     active: 'resources',
-    links: []
+    links: [
+      {name: "Go Back to Tutorial", url: "."}
+    ]
   };
 
   var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);

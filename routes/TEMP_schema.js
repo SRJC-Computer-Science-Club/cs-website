@@ -741,8 +741,10 @@ var _categories = [
 						"something to do with the lesson",
 						[
 							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
-							{type: 'list', value: [{title: "Node", link: "www.google.com"},"npm","Express, download link <a href=\"www.google.com\">here</a>"]},
-							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."}
+							{type: 'list', value: [{text: "Node", url: "www.google.com"},"npm","Express, download link <a href=\"www.google.com\">here</a>"]},
+							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."},
+							{type: 'image', value: {text: "crzy stuff!", caption: "look at us!", link: "/images/about-3.jpg"}},
+							{type: 'image', value: {text: "fancy stuff", caption: "fancy", link: "https://images-na.ssl-images-amazon.com/images/G/01/poppin/gateway/March/041117_Shoes_2x._CB532363727_.jpg"}}
 						]
 					)
 				]
