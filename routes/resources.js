@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
     links: []
   };
 
-  res.render('resources', { title: 'CS Club', navbar: navbar });
+  res.render('resources/resources', { title: 'CS Club', navbar: navbar });
 });
 
 router.get('/categories/', function(req, res, next) {
