@@ -92,15 +92,20 @@
 	}
 	.view {
 		#lesson-page {
-			.lesson {
+			#lesson {
+				.section {
+					font-size: 1.5em;
+					font-weight: bolder;
+					margin-bottom: 0;
+				}
 				li {
 					margin: $margin-sm 0;
 					p {
 						margin: 0;
 					}
 				}
-				a.list-link {
-					float: left;
+				.thumbnail-caption {
+					margin: 0;
 				}
 			}
 		}

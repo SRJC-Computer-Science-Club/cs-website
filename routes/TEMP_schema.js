@@ -22,11 +22,12 @@ function Tutorial( id, title, description, description_short, difficulty, nDownl
 	this.lessons = lessons;
 }
 
-function Lesson( id, title, description, content)
+function Lesson( id, title, description, description_short, content)
 {
 	this.id = id;
 	this.title = title;
 	this.description = description;
+	this.description_short = description_short;
 	this.content = content;
 }
 
@@ -726,38 +727,77 @@ var _categories = [
 		[
 			new Tutorial( 1, 'Nodejs',
 				'Nodejs is a JavaScript runtime built on Chrome\'s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js\' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.',
-				'Get an introduction on how to create your own Nodejs project using Express and other tools',
+				'Get an introduction on how to create your own Nodejs project using Express and other tools used on the Club Website!',
 				1, 0, 0, 0,
 				[
-					new Lesson( 0, "What is Nodejs and how do I use npm",
-						"",
+					new Lesson( 0, "Getting started with Nodejs and using npm",
+						"In this lesson we'll download the tools used in a project flow like Nodejs and you'll learn how to use npm in the cmd/Terminal to install and manage a project's dependencies such as Express, Pug, Bootstrap, and <a href=https://www.npmjs.com/>more</a>.\
+						",
+						"This is an installation guide to getting the proper tools needed to create, code, and test a Nodejs project",
 						[
-							{type: 'text', value:
-							"Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website.\
-							Listed below are a few things you'll need:"},
-							{type: 'list', value: ["Node"]},
-							{type: 'text', value:
-							"When installing Nodejs, which you can get <a href=https://nodejs.org/en/ target=_blank>here</a>, npm or node package manager will be installed with it and with this package manager, installing dependencies couldn't be easier!\
-							Okay, now that we have the tools needed let's create a boilerplate project."},
-							{type: 'text', value: "Open up cmd, or terminal, and type in the following:"},
+							{type: 'text', text:
+								"Welcome to this Nodejs tutorial! Here you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you'll need:"},
 							{type: 'list', value: [
-								"npm install express-generator -g",
-								"express --view=pug myapp",
-								"cd myapp",
-								"npm install",
-								"npm start",
-								"now, open up <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>"
-							]}
+								"Node, install <a href=https://nodejs.org/en/ target=_blank>here</a>,",
+								"On a PC, you'll need access <a href=https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true target=_blank>cmd</a>",
+								"On a Mac, you'll need to access <a href=https://en.wikipedia.org/wiki/Terminal_(macOS) target=_blank>Terminal</a>"
+								]},
+							{type: 'text', text:
+								"When you install Nodejs, npm, or node package manager, will be installed with Nodejs. Nodejs will by our runtime server we'll use to compile our project. But first, let's create a package.json file."},
+							{type: 'section', text: "Working with npm"},
+							{type: 'list', text: "A package.json file holds information about our workflow such as its name, version, dependencies, scripts you can run in cmd/Terminal, and much <a href=https://docs.npmjs.com/files/package.json>more</a>. Open up cmd, or terminal, and type in the following(you might want to change directory into someplace like your Desktop):", value: [
+								"`mkdir myworkspace`, creates a new directory",
+								"`cd myworkspace`, changes directory to myworkspace",
+								"`npm init`, initalizes a new package.json file",
+								"Follow the steps shown in the cmd/Terminal window by entering the name, version number, description, entry point, test command, git repo url, keywords, author, and license. Whatever is in ()s is the default if you enter a blank option",
+								"After you've confirmed the package.json file, open up the myworkspace folder and you'll see this file with all its options",
+							]},
+							{type: 'list', text: "Remember that this package.json file is where we save dependencies and scripts. So, lets write some dependencies in our workspace:", value: [
+								"`npm install bootstrap --save`. This will do two things: download the package bootstrap into a node_modules folder and since we've put a --save flag, this package will be saved in our package.json file",
+								"`npm install mongodb`. This will only install the package"
+							]},
+							{type: 'text', text: "Open up our package.json file and look under dependencies. You'll see \"bootstrap\": \"^3.3.7\". We'll explain the ^3.3.7 soon.\
+								But for now, if you uploaded this project to GitHub and had collaborators clone your project, they can download all of the project's dependencies by running `npm install`."},
+							{type: 'list', text: "To test this, go to the myapp folder and delete the node_modules folder and run the following in the same cd/Terminal window:", value: [
+								"`npm install`, this will look at our package.json file and install each package listed under \"dependencies\". As for the ^3.3.7, this means install the most stable version from 3.3.7 and newer; more <a href=https://docs.npmjs.com/files/package.json#dependencies target=_blank>here</a>"
+							]},
+							{type: 'text', text: "With this simple command everyone can jump into any project node project and start testing right away!"}
 						]
 					),
 					new Lesson( 1, "The Express Package",
-						"something to do with the lesson",
+						"",
+						"Setting up an Express boilerplate project",
 						[
-							{type: 'text', value: 'Welcome to this Nodejs tutorial where you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you\'ll need:'},
-							{type: 'list', value: [{text: "Node", url: "www.google.com"},"npm","Express, download link <a href=\"www.google.com\">here</a>"]},
-							{type: 'text', value: "Now let's dive into it now. Blah blah, learning yay."},
-							{type: 'image', value: {text: "crzy stuff!", caption: "look at us!", link: "/images/about-3.jpg"}},
-							{type: 'image', value: {text: "fancy stuff", caption: "fancy", link: "https://images-na.ssl-images-amazon.com/images/G/01/poppin/gateway/March/041117_Shoes_2x._CB532363727_.jpg"}}
+							{type: 'text', text: "In this lesson, we'll understand the workflow that is made with Express. This workspace is used in the Club Website."},
+							{type: 'list', text: "What is Express? Express is a nodejs server project which handles routing. Some of its features are:", value: [
+								"Robust routing",
+								"Focus on high performance",
+								"Super-high test coverage",
+								"HTTP helpers (redirection, caching, etc)",
+								"View system supporting 14+ template engines",
+								"Content negotiation",
+								"Executable for generating applications quickly"
+							]},
+							{type: 'section', text: "npm express-generator"},
+							{type: 'list', text:
+								"Express is also a node module, but we're going to use the express-generator to start the boilerplate workflow.\
+								Now, in a new folder, open cmd/Terminal and run the following:", value: [
+								"`npm install express-generator -g`, the `-g` flag will install this in a global location versus the node_module folder inside the project",
+								"`express --view=pug myapp`, the `--view=pug` flag will tell express to use <a href=https://pugjs.org/api/getting-started.html target=_blank>pug</a> as the view engine",
+								"`cd myapp`",
+								"`npm install`",
+								"`npm start`, this is the script we'll use to start our express server",
+								"Now, open up <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>"
+							]},
+							{type: 'image', text:
+								"If you're at this step, success! You've managed npm, kinda, and used a package, kinda, to start on our boilerplate... kinda.\
+								But, this will be your work environment: first open the project folder, or root folder, in a text editor like Visual Studio Code, Atom or Sublime Text.\
+								Next, open cmd/Terminal and `cd` into the root folder\
+								Then, enter `npm start` and open any webbrowser and visit <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>",
+								caption: "Open http://localhost:3000/ inside Google Chrome", link: "nodejs-express-1.png"},
+							{type: 'text', text: "Sadly, we're not done here. There are a few more tools/packages the current Club Website uses that we'd like to add to this boilerplate project."},
+							{type: 'section', text: "npm express-generator"},
+							{type: 'image', text: "fancy stuff", caption: "fancy", url: "https://images-na.ssl-images-amazon.com/images/G/01/poppin/gateway/March/041117_Shoes_2x._CB532363727_.jpg"}
 						]
 					)
 				]

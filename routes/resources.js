@@ -68,6 +68,8 @@ router.get('/categories/:categoryID/:tutorialID/:lessonID/', function(req, res, 
   var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
   var tutorial = helper.findIdInCollection(req.params.tutorialID, category.tutorials);
   var lesson = helper.findIdInCollection(req.params.lessonID, tutorial.lessons);
+  
+  lesson._category = category;
 
   res.render('lesson', { title: 'CS Club', lesson: lesson, navbar: navbar});
 });
