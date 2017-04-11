@@ -33,7 +33,7 @@ router.get('/categories/:categoryID/', function(req, res, next) {
   var navbar = {
     active: 'resources',
     links: [
-      {name: "View List of Categories", url: ".."}
+      {name: "View List of Categories", url: "../", active: true}
     ]
   };
 
@@ -46,7 +46,8 @@ router.get('/categories/:categoryID/:tutorialID/', function(req, res, next) {
   var navbar = {
     active: 'resources',
     links: [
-      {name: "View List of Tutorials", url: ".."}
+      {name: "View List of Categories", url: "../../"},
+      {name: "View List of Tutorials", url: "../", active: true}
     ]
   };
 
@@ -61,13 +62,17 @@ router.get('/categories/:categoryID/:tutorialID/:lessonID/', function(req, res, 
   var navbar = {
     active: 'resources',
     links: [
-      {name: "View List of Lessons", url: ".."}
+      {name: "View List of Categories", url: "../../../"},
+      {name: "View List of Tutorials", url: "../../"},
+      {name: "View List of Lessons", url: "../", active: true}
     ]
   };
 
   var category = helper.findIdInCollection(req.params.categoryID, tempDB.categories);
   var tutorial = helper.findIdInCollection(req.params.tutorialID, category.tutorials);
   var lesson = helper.findIdInCollection(req.params.lessonID, tutorial.lessons);
+  
+  lesson._category = category;
 
   res.render('lesson', { title: 'CS Club', lesson: lesson, navbar: navbar, helper: helper});
 });

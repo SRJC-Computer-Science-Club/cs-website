@@ -28,10 +28,11 @@ block view
 					when 'image'
 						.row.image
 							.col-md-8
-								p!=content.value.text
+								p!=content.text
 							.col-md-4
 								.thumbnail-caption
-									a(href=content.value.link target="_blank")
-										img(src=content.value.link)
-									figcaption= content.value.caption
+									- var link = content.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+content.link : content.url
+									a(href=link target="_blank")
+										img(src=link)
+									figcaption= content.caption
 							

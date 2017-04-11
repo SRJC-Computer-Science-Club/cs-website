@@ -2,7 +2,7 @@ extends layout-lessons
 
 block content
 	#tutorials-page.content
-		h2 Tutorials
+		h2= category.title + " Tutorials"
 		each tutorial in category.tutorials
 			.tutorial.hidden-sm-down
 				.context
