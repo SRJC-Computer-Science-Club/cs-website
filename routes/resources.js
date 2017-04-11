@@ -74,7 +74,7 @@ router.get('/categories/:categoryID/:tutorialID/:lessonID/', function(req, res, 
   
   lesson._category = category;
 
-  res.render('lesson', { title: 'CS Club', lesson: lesson, navbar: navbar});
+  res.render('lesson', { title: 'CS Club', lesson: lesson, navbar: navbar, helper: helper});
 });
 
 module.exports = router;
