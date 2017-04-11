@@ -1,3 +1,37 @@
+mixin executeComponent(component)
+	- if (typeof component == 'string')
+		p!= component
+	- else
+		- if (component.text != undefined)
+			+executeComponent(component.text)
+		- else if (component.section != undefined)
+			p.header!= component.section
+		- else if (component.list != undefined)
+			- var list = component.list
+			- if (list.text != undefined)
+				+executeComponent(list.text)
+			- if (list.value != undefined)
+				ol
+					each value in list.value
+						li
+							+executeComponent(value)
+		- else if (component.markdown != undefined)
+			- var markdown = helper.markdown.toHTML(component.markdown)
+			div!= markdown
+		- else if (component.image != undefined)
+			- var image = component.image
+			.row.image
+				.col-md-8
+					- if (image.text != undefined)
+						+executeComponent(image.text)
+				.col-md-4
+					.thumbnail-caption
+						- var link = image.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+image.link : image.url
+						a(href=link target="_blank")
+							img(src=link)
+						- if (image.caption != undefined)
+							figcaption= content.caption
+
 extends layout-lessons
 
 block view
@@ -5,34 +39,4 @@ block view
 		h2= lesson.title
 		#lesson
 			each content in lesson.content
-				case (content.type)
-					when 'section'
-						p.section= content.text
-					when 'text'
-						- if (content.markdown != undefined) {
-							- var markdown = helper.markdown.toHTML(content.markdown);
-							p!= content.text
-							div!= markdown
-						- } else
-							p!= content.text
-					when 'list'
-						p(style="margin-bottom: 0;")!= content.text
-						ol
-							each i in content.value
-								li
-									case (typeof i)
-										when 'string'
-											p!= i
-										when 'object'
-											a.list-link(href=i.url)= i.text
-					when 'image'
-						.row.image
-							.col-md-8
-								p!=content.text
-							.col-md-4
-								.thumbnail-caption
-									- var link = content.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+content.link : content.url
-									a(href=link target="_blank")
-										img(src=link)
-									figcaption= content.caption
-							
+				+executeComponent(content)
