@@ -930,17 +930,17 @@ var _categories = [
 		"/images/icons/tutorial-c.png",
 		[]
 	),
-	new Category( 3, "Mobile Dev",
+	new Category( 3, "Mobile Development",
 		"description",
 		"/images/icons/tutorial-mobile.png",
 		[]
 	),
-	new Category( 4, "iOS Dev",
+	new Category( 4, "iOS Development",
 		"description",
 		"/images/icons/tutorial-ios.png",
 		[]
 	),
-	new Category( 5, "Game Dev",
+	new Category( 5, "Game Development",
 		"description",
 		"/images/icons/tutorial-game.png",
 		[]
