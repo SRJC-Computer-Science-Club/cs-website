@@ -723,9 +723,9 @@ var events = [
 var _categories = [
 	new Category( 0, 'Web Development',
 		'description',
-		"/images/about-3.jpg",
+		"/images/icons/tutorial-web.png",
 		[
-			new Tutorial( 1, 'Nodejs Boilerplate',
+			new Tutorial( 0, 'Nodejs Boilerplate',
 				'Nodejs is a JavaScript runtime built on Chrome\'s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js\' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.',
 				'Get an introduction on how to create your own Nodejs project using Express and other tools used on the Club Website!',
 				1, 0, 0, 0,
@@ -928,22 +928,22 @@ var _categories = [
 	),
 	new Category( 2, "C++",
 		"description",
-		undefined,
+		"/images/icons/tutorial-c.png",
 		[]
 	),
 	new Category( 3, "Mobile Dev",
 		"description",
-		undefined,
+		"/images/icons/tutorial-mobile.png",
 		[]
 	),
 	new Category( 4, "iOS Dev",
 		"description",
-		undefined,
+		"/images/icons/tutorial-ios.png",
 		[]
 	),
 	new Category( 5, "Game Dev",
 		"description",
-		undefined,
+		"/images/icons/tutorial-game.png",
 		[]
 	)
 ];
