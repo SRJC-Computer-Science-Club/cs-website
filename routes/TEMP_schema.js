@@ -811,11 +811,11 @@ var _categories = [
 								{codeBlock: {text: {markdown: "Open **app.js** in a text editor and paste the following after `line 22`:"},
 								value: [
 									"app.use('/stylesheets',require('node-sass-middleware')({",
-										"src: path.join(__dirname, 'sass'),",
-										"dest: path.join(__dirname, 'public/stylesheets'),",
-										"debug: true,",
-										"outputStyle: 'compressed',",
-										"sourceMap: true",
+									"&nbsp; src: path.join(__dirname, 'sass'),",
+									"&nbsp; dest: path.join(__dirname, 'public/stylesheets'),",
+									"&nbsp; debug: true,",
+									"&nbsp; outputStyle: 'compressed',",
+									"&nbsp; sourceMap: true",
 									"}));"
 								]}},
 								{markdown: "Create a new folder, **sass** in the root folder"},
@@ -849,9 +849,9 @@ var _categories = [
 								{codeBlock: {text: {markdown: "In the **index.pug** file, paste the following:"},
 								value: [
 								"block content",
-									"#index-page",
-										"h1= title",
-										"p Welcome to #{title}",
+								"&nbsp; #index-page",
+								"&nbsp;&nbsp; h1= title",
+								"&nbsp;&nbsp; p Welcome to #{title}",
 								]}}
 							]}},
 							{markdown: "The index page now lies inside a `div` tag which has the id of *index-page*.\
@@ -876,18 +876,18 @@ var _categories = [
 								value: [
 								"try //try to load LiveReload",
 								"{",
-								"var livereload = require('livereload');",
-								"server = livereload.createServer({exts: ['pug','js','sccs,'css']});",
-								"server.watch([__dirname + '/public', __dirname + '/scss', __dirname + '/views', __dirname + '/routes']);",
-								"console.log(\"LiveReload Started\");",
+								"&nbsp; var livereload = require('livereload');",
+								"&nbsp; server = livereload.createServer({exts: ['pug','js','sccs,'css']});",
+								"&nbsp; server.watch([__dirname + '/public', __dirname + '/scss', __dirname + '/views', __dirname + '/routes']);",
+								"&nbsp; console.log(\"LiveReload Started\");",
 								"}",
 								"catch (ex) {}"
 								]}},
 								{codeBlock: {text: {markdown: "In **package.json**, look for \"scripts\" and paste the following:"},
 								value: [
 									"\"scripts\": {",
-									"\"start\": \"node ./bin/www\"",
-									"\"dev\": \"nodemon --debug ./bin/www\"",
+									"&nbsp; \"start\": \"node ./bin/www\"",
+									"&nbsp; \"dev\": \"nodemon --debug ./bin/www\"",
 									"}",
 								]}},
 								{markdown: "Before you open localhost:3000, you'll need to install the Chrome Extension [here](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)"},
