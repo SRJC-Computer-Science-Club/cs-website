@@ -24,6 +24,14 @@
   }
 }
 
+.code {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  color: #bd4147;
+  background-color: #f7f7f9;
+  border-radius: .25rem;
+}
+
 .cell-2 {
   @extend .pull-xs-left, .col-xl-6, .col-md-12;
 }
@@ -39,3 +47,4 @@
 .cell-6 {
   @extend .pull-xs-left, .col-xl-2, .col-lg-3, .col-md-4, .col-sm-6, .col-xs-12;
 }
+

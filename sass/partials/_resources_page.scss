@@ -104,6 +104,15 @@
 						margin: 0;
 					}
 				}
+				ul {
+					margin: $margin-sm 0;
+					padding-left: 0;
+					list-style-type: none;
+					li.code {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
 				.thumbnail-caption {
 					margin: 0;
 				}

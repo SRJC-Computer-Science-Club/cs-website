@@ -735,41 +735,43 @@ var _categories = [
 						",
 						"This is an installation guide to getting the proper tools needed to create, code, and test a Nodejs project",
 						[
-							{type: 'text', text:
-								"Welcome to this Nodejs tutorial! Here you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you'll need:"},
-							{type: 'list', value: [
-								"Node, install <a href=https://nodejs.org/en/ target=_blank>here</a>,",
-								"On a PC, you'll need access <a href=https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true target=_blank>cmd</a>",
-								"On a Mac, you'll need to access <a href=https://en.wikipedia.org/wiki/Terminal_(macOS) target=_blank>Terminal</a>"
-								]},
-							{type: 'text', text:
-								"When you install Nodejs, npm, or node package manager, will be installed with Nodejs. Nodejs will by our runtime server we'll use to compile our project. But first, let's create a package.json file."},
-							{type: 'section', text: "Working with npm"},
-							{type: 'list', text: "A package.json file holds information about our workflow such as its name, version, dependencies, scripts you can run in cmd/Terminal, and much <a href=https://docs.npmjs.com/files/package.json>more</a>. Open up cmd, or terminal, and type in the following(you might want to change directory into someplace like your Desktop):", value: [
-								"`$ mkdir myworkspace`, creates a new directory",
-								"`$ cd myworkspace`, changes directory to myworkspace",
-								"`$ npm init`, initalizes a new package.json file",
-								"Follow the steps shown in the cmd/Terminal window by entering the name, version number, description, entry point, test command, git repo url, keywords, author, and license. Whatever is in ()s is the default if you enter a blank option",
+							{text: "Welcome to this Nodejs tutorial! Here you will understand the project workflow and learn how to add new pages to the Club Website. Listed below are a few things you'll need:"},
+							{list: { value: [
+								{markdown: "Node, install [here](https://nodejs.org/en/),"},
+								{markdown: "On a PC, you'll need access [cmd](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true)"},
+								{markdown: "On a Mac, you'll need to access [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS))"}
+								]}},
+							{text: "When you install Nodejs, npm, or node package manager, will be installed with Nodejs. Nodejs will by our runtime server we'll use to compile our project. But first, let's create a package.json file."},
+							{section: "Working with npm"},
+							{list: {text: {markdown: "A package.json file holds information about our workflow such as its name, version, dependencies, scripts you can run in cmd/Terminal, and much [more](https://docs.npmjs.com/files/package.json). Open up cmd, or terminal, and type in the following (you might want to change directory into someplace like your Desktop):"},
+							value: [
+								{markdown: "`$ mkdir myworkspace`, creates a new directory"},
+								{markdown: "`$ cd myworkspace`, changes directory to myworkspace"},
+								{markdown: "`$ npm init`, initalizes a new package.json file"},
+								{markdown: "Follow the steps shown in the cmd/Terminal window by entering the name, version number, description, entry point, test command, git repo url, keywords, author, and license. Whatever is in `()` is the default if you enter a blank option"},
 								"After you've confirmed the package.json file, open up the myworkspace folder and you'll see this file with all its options",
-							]},
-							{type: 'list', text: "Remember that this package.json file is where we save dependencies and scripts. So, lets write some dependencies in our workspace:", value: [
-								"`$ npm install bootstrap --save`. This will do two things: download the package bootstrap into a node_modules folder and since we've put a --save flag, this package will be saved in our package.json file",
-								"`$ npm install mongodb`. This will only install the package"
-							]},
-							{type: 'text', text: "Open up our package.json file and look under dependencies. You'll see \"bootstrap\": \"^3.3.7\". We'll explain the ^3.3.7 soon.\
+							]}},
+							{list: {text: "Remember that this package.json file is where we save dependencies and scripts. So, lets write some dependencies in our workspace:",
+							value: [
+								{markdown: "`$ npm install bootstrap --save`. This will do two things: download the package bootstrap into a node_modules folder and since we've put a `--save` flag, this package will be saved in our package.json file"},
+								{markdown: "`$ npm install mongodb`. This will only install the package"}
+							]}},
+							{markdown: "Open up our **package.json** file and look under dependencies. You'll see `\"bootstrap\": \"^3.3.7\"`. We'll explain the `^3.3.7` soon.\
 								But for now, if you uploaded this project to GitHub and had collaborators clone your project, they can download all of the project's dependencies by running `npm install`."},
-							{type: 'list', text: "To test this, go to the myapp folder and delete the node_modules folder and run the following in the same cd/Terminal window:", value: [
-								"`$ npm install`, this will look at our package.json file and install each package listed under \"dependencies\". As for the ^3.3.7, this means install the most stable version from 3.3.7 and newer; more <a href=https://docs.npmjs.com/files/package.json#dependencies target=_blank>here</a>"
-							]},
-							{type: 'text', text: "With this simple command everyone can jump into any project node project and start testing right away!"}
+							{list: {text: "To test this, go to the myapp folder and delete the node_modules folder and run the following in the same cd/Terminal window:",
+							value: [
+								{markdown: "`$ npm install`, this will look at our **package.json** file and install each package listed under `\"dependencies\"`. As for the `^3.3.7`, this means install the most stable version from 3.3.7 and newer; more [here](https://docs.npmjs.com/files/package.json#dependencies)"}
+							]}},
+							{text: "With this simple command everyone can jump into any project node project and start testing right away!"}
 						]
 					),
 					new Lesson( 1, "The Express Package",
 						"",
 						"Setting up an Express boilerplate project",
 						[
-							{type: 'text', text: "In this lesson, we'll understand the workflow that is made with Express. This workspace is used in the Club Website."},
-							{type: 'list', text: "What is Express? Express is a nodejs server project which handles routing. Some of its features are:", value: [
+							{text: "In this lesson, we'll understand the workflow that is made with Express. This workspace is used in the Club Website."},
+							{list: {text: "What is Express? Express is a nodejs server project which handles routing. Some of its features are:",
+							value: [
 								"Robust routing",
 								"Focus on high performance",
 								"Super-high test coverage",
@@ -777,81 +779,82 @@ var _categories = [
 								"View system supporting 14+ template engines",
 								"Content negotiation",
 								"Executable for generating applications quickly"
-							]},
-							{type: 'section', text: "npm express-generator"},
-							{type: 'list', text:
-								"Express is also a node module, but we're going to use the express-generator to start the boilerplate workflow.\
-								Now, open cmd/Terminal, cd onto your desktop and run the following:", value: [
-								"`$ npm install express-generator -g`, the `-g` flag will install this in a global location versus the node_module folder inside the project, so you might have to use `sudo` in front of this command if it fails due to authentication",
-								"`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use <a href=https://pugjs.org/api/getting-started.html target=_blank>pug</a> as the view engine",
-								"`$ cd myapp`, change directory into our new folder",
-								"`$ npm install`, download all the dependencies",
-								"`$ npm start`, this is the script we'll use to start our express server",
-								"Now, open up <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>"
-							]},
-							{type: 'image', text:
+							]}},
+							{section: "npm express-generator"},
+							{list: {text: "Express is also a node module, but we're going to use the express-generator to start the boilerplate workflow.\
+								Now, open cmd/Terminal, cd onto your desktop and run the following:",
+								value: [
+								{markdown: "`$ npm install express-generator -g`, the `-g` flag will install this in a global location versus the node_module folder inside the project, so you might have to use `sudo` in front of this command if it fails due to authentication"},
+								{markdown: "`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use <a href=https://pugjs.org/api/getting-started.html target=_blank>pug</a> as the view engine"},
+								{markdown: "`$ cd myapp`, change directory into our new folder"},
+								{markdown: "`$ npm install`, download all the dependencies"},
+								{markdown: "`$ npm start`, this is the script we'll use to start our express server"},
+								{markdown: "Now, open up [http://localhost:3000/](http://localhost:3000/)"}
+							]}},
+							{image: {text: {markdown:
 								"If you're at this step, success! You've managed npm, kinda, and used a package, kinda, to start on our boilerplate... kinda.\
 								This will be your work environment: first open the project folder, or root folder, in a text editor like Visual Studio Code, Atom or Sublime Text.\
 								Next, open cmd/Terminal and `cd` into the root folder\
-								Then, enter `npm start` and open any webbrowser and visit <a href=http://localhost:3000/ target=_blank>http://localhost:3000/</a>",
-								caption: "Open http://localhost:3000/ inside Google Chrome", link: "nodejs-express-1.png"},
-							{type: 'text', text: "Sadly, we're not done here. There are a few more tools/packages the current Club Website uses that we'd like to add to this boilerplate project."}
+								Then, enter `npm start` and open any webbrowser and visit [http://localhost:3000/](http://localhost:3000/)"},
+								caption: "Open http://localhost:3000/ inside Google Chrome", link: "nodejs-express-1.png"}},
+							{text: "Sadly, we're not done here. There are a few more tools/packages the current Club Website uses that we'd like to add to this boilerplate project."}
 						]
 					),
 					new Lesson( 2, "Adding SASS to the project",
 						"Learn how to add SASS to your workspace and start using partials to scope styling to certain pages.",
 						"Love HTML/CSS? In that case, you'll love SCSS!",
 						[
-							{type: 'text', text: ''},
-							{type: 'list', text: '',
+							{text: ''},
+							{list: {text: '',
 							value: [
-								"`$ npm install node-sass-middleware@0.8.0 --save`",
-								"Open **app.js** in a text editor and paste the following after `line 22`:\
-								````\
-								app.use('/stylesheets',require('node-sass-middleware')({\
-									src: path.join(__dirname, 'sass'),\
-									dest: path.join(__dirname, 'public/stylesheets'),\
-									debug: true,\
-									outputStyle: 'compressed',\
-									sourceMap: true\
-								}));\
-								````",
-								"Create a new folder, **sass** in the root folder",
-								"Create a new file, **main.scss** inside the **sass** folder",
-								"Cut and paste the contents in **style.css**, found under **root > public > stylesheets**, into **main.scss**",
-								"End any process in your cmd/Termnial window and run `$ npm run dev` and open [localhost:3000](localhost:3000). Yes, nothing has changed, but now we have sass installed!"
-							]},
-							{type: 'list', text: "Here are a few things you now do with sass:",
+								{markdown: "`$ npm install node-sass-middleware@0.8.0 --save`"},
+								{codeBlock: {text: {markdown: "Open **app.js** in a text editor and paste the following after `line 22`:"},
+								value: [
+									"app.use('/stylesheets',require('node-sass-middleware')({",
+										"src: path.join(__dirname, 'sass'),",
+										"dest: path.join(__dirname, 'public/stylesheets'),",
+										"debug: true,",
+										"outputStyle: 'compressed',",
+										"sourceMap: true",
+									"}));"
+								]}},
+								{markdown: "Create a new folder, **sass** in the root folder"},
+								{markdown: "Create a new file, **main.scss** inside the **sass** folder"},
+								{markdown: "Cut and paste the contents in **style.css**, found under **root > public > stylesheets**, into **main.scss**"},
+								{markdown: "End any process in your cmd/Termnial window and run `$ npm run dev` and open [localhost:3000](localhost:3000). Yes, nothing has changed, but now we have sass installed!"}
+							]}},
+							{list: {text: "Here are a few things you now do with sass:",
 							value: [
 								"Variables",
 								"Nesting",
 								"Partials",
 								"Import",
 								"Mixins",
-								"Here's a guide on more [features](http://sass-lang.com/guide)"
-							]},
-							{tyep: 'text', text: "There are a few features we would recommend using in this boilerplate project."},
-							{type: 'section', text: "Partials"},
-							{type: 'list', text: "Now, understand why the first sass file we've created was titled **main.scss** because this file will hold the top most styles used throughout the site.\
-							But, this will also import other scss files in the form of a partial. Used in the Website, a each partial represents each page (e.g. _index.scss, _members.scss, _projects.scss):",
+								{markdown: "Here's a guide on more [features](http://sass-lang.com/guide)"}
+							]}},
+							{text: "There are a few features we would recommend using in this boilerplate project."},
+							{section: "Partials"},
+							{list: {text: {markdown: "Now, understand why the first sass file we've created was titled **main.scss** because this file will hold the top most styles used throughout the site.\
+							But, this will also import other scss files in the form of a partial. Used in the Website, a each partial represents each page (e.g. _index.scss, _members.scss, _projects.scss):"},
 							value: [
-								"First, create a **partials** folder in the **sass** folder",
-								"Create a new file **_index.scss** inside the **partials**folder",
-								"Paste the following:\
-								````\
-								#index-page {\
-								\
-								}",
-								"Import our new sass file by adding `@import 'partials/index'` at the bottom of **main.scss**",
-								"In the **index.pug** file, paste the following:\
-								````\
-								block content\
-									#index-page\
-										h1= title\
-										p Welcome to #{title}\
-								````"
-							]},
-							{type: 'text', text: "The index page now lies inside a `div` tag which has the id of *index-page*.\
+								{markdown: "First, create a **partials** folder in the **sass** folder"},
+								{markdown: "Create a new file **_index.scss** inside the **partials**folder"},
+								{codeBlock: {text: {markdown: "Paste the following:"},
+								value: [
+									"#index-page {",
+									"",
+									"}"
+								]}},
+								{markdown: "Import our new sass file by adding `@import 'partials/index'` at the bottom of **main.scss**"},
+								{codeBlock: {text: {markdown: "In the **index.pug** file, paste the following:"},
+								value: [
+								"block content",
+									"#index-page",
+										"h1= title",
+										"p Welcome to #{title}",
+								]}}
+							]}},
+							{markdown: "The index page now lies inside a `div` tag which has the id of *index-page*.\
 							So, our **_index.scss** only gets applied to div tags with the unique id of **index-page**. Thus, seperating specific styling to only certain pages or elements is done by adding ids.\
 							Other styling such as classes also applies :)"}
 						]
@@ -860,38 +863,38 @@ var _categories = [
 						"This lesson will require that you use Google Chrome as the browser as LiveReload is only available on this browser. But, don't flip! nodemon is not dependant on the browser so this lesson is still a great time saver when working with nodejs projects!",
 						"Hate restarting your server every time you make a simple change in your source code? Well, you'll love this lesson",
 						[
-							{type: 'text', text: ""},
-							{type: 'list', text: "Nodemon is another npm package, like Express, but this one restarts the node server based on changes made in the root folder.\
+							{markdown: "Nodemon is another npm package, like Express, but this one restarts the node server based on changes made in the root folder.\
 							Whenever you run `npm start`, a new server is created and your website is created under localhost:3000. But, whenever you make a change in your source code, you'll have to close this server by hitting **Ctr^C** in the cmn/Terminal window and then running `npm start` each time. With nodemon, it'll do that for you!\
-							But that's not all. We'll also install LiveReload, a Chrome extension that refreshes the internet page whenever a change is made.\
-							Open up the **myapp** folder in cmd/Terminal window and run the following:",
+							But that's not all."},
+							{list: {text: {markdown: "We'll also install LiveReload, a Chrome extension that refreshes the internet page whenever a change is made.\
+							Open up the **myapp** folder in cmd/Terminal window and run the following (if you do **not want to use Google Chrome** for your browser, skip steps 2, 3, and 5:"},
 							value: [
-								"`$ npm install nodemon --save-dev`, the `--save-dev` flag tells npm that this dependency is used for development only and not needed when the product is in production, or shipped.\
-								Look here for [more](https://docs.npmjs.com/files/package.json#devdependencies)",
-								"`$ npm install livereload --save-dev`",
-								"Open the root folder, **myapp**, in a text editor and open **app.js** and paste the following after `line 15`:\
-								````\
-								try //try to load LiveReload\
-								{\
-								var livereload = require('livereload');\
-								server = livereload.createServer({exts: ['pug','js','sccs,'css']});\
-								server.watch([__dirname + '/public', __dirname + '/scss', __dirname + '/views', __dirname + '/routes']);\
-								console.log(\"LiveReload Started\");\
-								}\
-								catch (ex) {}\
-								````",
-								"In **package.json**, look for \"scripts\" and paste the following:\
-								````\
-								\"scripts\": {\
-									\"start\": \"node ./bin/www\"\
-									\"dev\": \"nodemon --debug ./bin/www\"\
-								},\
-								````",
-								"Back in cmd/Terminal, close any process and run `$ npm run dev`. Hopefully there were no errors on your console",
-								"Before you open localhost:3000, you'll need to install the Chrome Extension [here](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)",
-								"Now, open [localhost:3000](localhost:3000) and enable the extension from the toolbar of the Chrome browser and make some changes in the **index.pug** file then hit save.\
-								Without restarting the server and hitting Ctr+R on your browser, the new changes appear!"
-							]}
+								{markdown: "`$ npm install nodemon --save-dev`, the `--save-dev` flag tells npm that this dependency is used for development only and not needed when the product is in production, or shipped.\
+								Look here for [more](https://docs.npmjs.com/files/package.json#devdependencies)"},
+								{markdown: "`$ npm install livereload --save-dev`"},
+								{codeBlock: {text: {markdown: "Open the root folder, **myapp**, in a text editor and open **app.js** and paste the following after `line 15`:"},
+								value: [
+								"try //try to load LiveReload",
+								"{",
+								"var livereload = require('livereload');",
+								"server = livereload.createServer({exts: ['pug','js','sccs,'css']});",
+								"server.watch([__dirname + '/public', __dirname + '/scss', __dirname + '/views', __dirname + '/routes']);",
+								"console.log(\"LiveReload Started\");",
+								"}",
+								"catch (ex) {}"
+								]}},
+								{codeBlock: {text: {markdown: "In **package.json**, look for \"scripts\" and paste the following:"},
+								value: [
+									"\"scripts\": {",
+									"\"start\": \"node ./bin/www\"",
+									"\"dev\": \"nodemon --debug ./bin/www\"",
+									"}",
+								]}},
+								{markdown: "Before you open localhost:3000, you'll need to install the Chrome Extension [here](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)"},
+								{markdown: "Back in cmd/Terminal, close any process and run `$ npm run dev`. Hopefully there were no errors on your console"},
+								{markdown: "Now, open [localhost:3000](localhost:3000) and enable the extension from the toolbar of the Chrome browser and make some changes in the **index.pug** file then hit save.\
+								Without restarting the server and hitting Ctr+R on your browser, the new changes appear!"}
+							]}}
 						]
 					),
 					new Lesson( 4, "Bootstrap & Jquery",

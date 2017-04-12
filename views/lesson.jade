@@ -12,11 +12,20 @@ mixin executeComponent(component)
 				+executeComponent(list.text)
 			- if (list.value != undefined)
 				ol
-					each value in list.value
+					each component in list.value
 						li
-							+executeComponent(value)
+							+executeComponent(component)
+		- else if (component.codeBlock != undefined)
+			- var codeList = component.codeBlock
+			- if (codeList.text != undefined)
+				+executeComponent(codeList.text)
+			- if (codeList.value != undefined)
+				ul
+					each component in codeList.value
+						li.code
+							+executeComponent(component)
 		- else if (component.markdown != undefined)
-			- var markdown = helper.markdown.toHTML(component.markdown)
+			- var markdown = helper.markdown(component.markdown)
 			div!= markdown
 		- else if (component.image != undefined)
 			- var image = component.image
@@ -30,7 +39,9 @@ mixin executeComponent(component)
 						a(href=link target="_blank")
 							img(src=link)
 						- if (image.caption != undefined)
-							figcaption= content.caption
+							figcaption= image.caption
+		- if (component.footer != undefined)
+			+executeComponent(component.footer)
 
 extends layout-lessons
 

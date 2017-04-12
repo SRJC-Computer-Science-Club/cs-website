@@ -1,6 +1,17 @@
 var tempDB = require('./TEMP_schema');
 var pluralize = require('pluralize');
-var markdown = require('markdown').markdown;;
+var markdown = require('marked')
+
+markdown.setOptions({
+  renderer: new markdown.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
 
 var trimURL = function trimURL(url) {
   var start = -1, end = -1, length = url.length, i = 0;
