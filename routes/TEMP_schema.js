@@ -137,13 +137,10 @@ var projects = [
 	new Project(8,'Dreamscape',
 		'',
 		'',
-		'Blueprinting the GDD',
+		'Resigned',
 		'',
 		{},
 		{
-			// checkvist: 'https://checkvist.com/checklists/560653',
-			// waffle: 'https://waffle.io/SRJC-Computer-Science-Club/2d-platformer',
-			// github: 'https://github.com/SRJC-Computer-Science-Club/2d-platformer'
 			drive: 'https://drive.google.com/drive/folders/0B23hDSQTMIITY2hVZ3dzd3NuQm8?usp=sharing'
 		},
 		[
@@ -230,7 +227,7 @@ var projects = [
 	)
 ];
 
-//25
+//28
 var members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
@@ -291,14 +288,14 @@ var members = [
 		]
 	),
 	new Member(14, 'Austin', 'Meyer',
-		'',
+		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
 		'Game Designer and Developer! Also know C++, Java, and Javascript',
 		{},
 		'meyerforge@gmail.com',
 		[
 			'C++',
 			'Java',
-			'JavaScript'
+			'C#'
 		]
 	),
 	new Member(15, 'Isaiah', 'Curtis',
@@ -395,6 +392,29 @@ var members = [
 		[]
 	),
 	new Member(25, 'Juan', 'Rios',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(26, 'Alejandro', 'Fernandez',
+		'my bio',
+		'I enjoy long walks on the beach',
+		{},
+		'alexotter@ymail.com',
+		[
+			'C++'
+		]
+	),
+	new Member(27, 'Jameson', 'Danning',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(28, 'Andrew', 'Eljumaily',
 		'my bio',
 		undefined,
 		{},
@@ -543,15 +563,16 @@ var members_projects = [
 	new ProjectsMembers( 46 , 9 , 19 , 'Programmer' ),
 	new ProjectsMembers( 45 , 9 , 16 , 'Programmer' ),
 	new ProjectsMembers( 48 , 9 , 11 , 'Programmer' ),
+	new ProjectsMembers( 53 , 9 , 26 , 'Programmer'),
 	//ShortLink
 	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
 	new ProjectsMembers( 52 , 10 , 2 , 'Developer')
 ];
-//50
+//53
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
-//25-juan
+//25-juan 26-alex frenandez 27-jameson
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 
@@ -657,11 +678,16 @@ var events = [
 			{caption: 'Developer Week', image: 'dev-week/hackathon-1.png', url: 'http://www.developerweek.com/hackathon/'}
 		]
 	),
-	new Event( 2,' Keysight Trip',
-		'',
+	new Event( 2,'Tour at Keysight',
+		"<p class=header>Unlocking Measurement Insights for 75 Years</p>\
+		<p>In high technology, the key to success is delivering what's next. First. We are Keysight Technologies, a brand new company with over 75 years of electronic test and measurement success under our belts. Founded in 1939 by Bill Hewlett and David Packard as HP, our expertise continued as Agilent Technologies Electronic Measurement Group.<br><br>\
+		Today, Keysight is 100% focused on helping companies tackle the toughest electronic design, test and measurement challenges through a combination of trusted hardware, innovative software and our own global team of industry experts. The result? Insights that lead to innovation. From home entertainment to network reliability to communicating wirelessly, Keysight provides the measurement capabilities that make our world more productive and a safer place to live.\
+		More info <a href=http://about.keysight.com/en/index.shtml target=_blank>here</a>.</p>\
+		<p class=header>Be sure to check out the weekly meetings!</p>\
+		<p>Since there will be an offical roster sent to Keysight, if you'd like to join this tour, be sure to make it to a weekly meeting or message <a href=/members/2/>Erick</a> on slack before April 24th. Some information other than your name is required.</p>",
 		'Check out this trip at the weekly meeting!',
 		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
-		'TBA',
+		'April 28, 2017',
 		[]
 	),
 	new Event( 3, 'Ludum Dare',
@@ -672,6 +698,18 @@ var events = [
 		[
 			{caption: 'Event', image: 'ludm-dare-1.jpg', url: 'http://ludumdare.com/compo/'}
 		]
+	),
+	new Event( 4, 'Markafaire',
+		"<p>Part science fair, part county fair, and part something entirely new, Maker Faire is an all-ages gathering of tech enthusiasts, crafters, educators, tinkerers, hobbyists, engineers, science clubs, authors, artists, students, and commercial exhibitors. All of these “makers” come to Maker Faire to show what they have made and to share what they have learned.</p>\
+		<p>The launch of Maker Faire in the Bay Area in 2006 demonstrated the popularity of making and interest among legions of aspiring makers to participate in hands-on activities and learn new skills at the event. A record 215,000 people attended the two flagship Maker Faires in the Bay Area and New York in 2014, with 44% of attendees first timers at the Bay Area event, and 61% in New York. A family-friendly event, 50% attend the event with children. Also in 2014, 119 independently-produced Mini and 14 Featured Maker Faires occurred around the world, including Tokyo, Rome, Detroit, Oslo and Shenzhen.</p>\
+		<p>Maker Faire is primarily designed to be forward-looking, showcasing makers who are exploring new forms and new technologies. But it’s not just for the novel in technical fields; Maker Faire features innovation and experimentation across the spectrum of science, engineering, art, performance and craft.</p>\
+		<p>Maker Faire is a gathering of fascinating, curious people who enjoy learning and who love sharing what they can do. It’s a venue for makers to show examples of their work and interact with others about it. Many makers say they have no other place to share what they do. DIY (Do-It-Yourself) is often invisible in our communities, taking place in shops, garages and on kitchen tables. It’s typically out of the spotlight of traditional art or science or craft events. Maker Faire makes visible these projects and ideas that we don’t encounter every day.</p>\
+		<p>Maker Faire is brought to you by Maker Media.  Maker Media publishes Make: magazine, produces Maker Faire, and offers DIY electronics, tools, kits, and books through its online and pop-up Maker Shed stores. More info <a href=http://makerfaire.com/bay-area/ target=_blank>here</a></p>\
+		<iframe width=352.5 height=198.5 src=https://www.youtube.com/embed/RD_JpGgUFQQ frameborder=0 allowfullscreen></iframe>",
+		"Maker Faire is the Greatest Show (and Tell) on Earth—a family-friendly festival of invention, creativity and resourcefulness, and a celebration of the Maker movement!",
+		"San Mateo County Event Center, 1346 Saratoga Drive, San Mateo, CA 94403",
+		'May 19, 2017',
+		[]
 	)
 ]
 
