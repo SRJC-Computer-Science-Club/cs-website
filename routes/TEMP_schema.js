@@ -652,7 +652,13 @@ var project_events = [
 		'April 21, 2017',
 		[
 			{caption: '2017 Robotic Games', image: 'robo-games-17/robo-games-header.jpg', url: 'http://robogames.net/rules/line-following.php'},
-			{caption: 'Our Line Follower!', image: 'linefollower-1.jpg', url: '/projects/5'}
+			{caption: 'Our Line Follower!', image: 'linefollower-1.jpg', url: '/projects/5'},
+			{caption: 'At the Competition!', image: 'robo-games-17/comp-1.jpg', url: '/images/projects/line follower/events/robo-games-17/comp-1.jpg'},
+			{caption: 'The Team', image: 'robo-games-17/team-1.jpg', url: '/images/projects/line follower/events/robo-games-17/team-1.jpg'},
+			{caption: 'Our 3rd place bot!', image: 'robo-games-17/metal-1.jpg', url: '/images/projects/line follower/events/robo-games-17/metal-1.jpg'},
+			{caption: 'To the battle bots we go', image: 'robo-games-17/team-2.jpg', url: '/images/projects/line follower/events/robo-games-17/team-2.jpg'},
+			{caption: 'Watching them bots!', image: 'robo-games-17/team-3 copy.jpg', url: '/images/projects/line follower/events/robo-games-17/team-3 copy.jpg'},
+			{caption: 'Google Drive Folder', image: 'drive.png', url: 'https://drive.google.com/drive/folders/0B3wyRcLxpH4jX1BEN0tDMVI1bjQ?usp=sharing'}
 		]
 	)
 ]
