@@ -762,7 +762,14 @@ var _categories = [
 							value: [
 								{markdown: "`$ npm install`, this will look at our **package.json** file and install each package listed under `\"dependencies\"`. As for the `^3.3.7`, this means install the most stable version from 3.3.7 and newer; more [here](https://docs.npmjs.com/files/package.json#dependencies)"}
 							]}},
-							{text: "With this simple command everyone can jump into any project node project and start testing right away!"}
+							{text: "With this simple command everyone can jump into any project node project and start testing right away!"},
+							{section: "Helpful Resources"},
+							{list: {text: "",
+							value: [
+								{markdown: "Here are the docs for [Nodejs](https://nodejs.org/en/docs/) to best understand this project workflow"},
+								{markdown: "Here's a YouTube Playlist from npm Inc on getting started with npm [here](https://www.youtube.com/watch?v=pa4dc480Apo&list=PLQso55XhxkgBMeiYmFEHzz1axDUBjTLC6)"},
+								{markdown: "Debug your node pacakage manager problems with this [YouTube Channel](https://www.youtube.com/channel/UCK71Wk0I45SLTSXQA23GdIw), or check out the docs from npm [here](https://docs.npmjs.com/)"}
+							]}}
 						]
 					),
 					new Lesson( 1, "The Express Package",
@@ -785,7 +792,7 @@ var _categories = [
 								Now, open cmd/Terminal, cd onto your desktop and run the following:",
 								value: [
 								{markdown: "`$ npm install express-generator -g`, the `-g` flag will install this in a global location versus the node_module folder inside the project, so you might have to use `sudo` in front of this command if it fails due to authentication"},
-								{markdown: "`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use <a href=https://pugjs.org/api/getting-started.html target=_blank>pug</a> as the view engine"},
+								{markdown: "`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use [pug](https://pugjs.org/api/getting-started.html) as the view engine"},
 								{markdown: "`$ cd myapp`, change directory into our new folder"},
 								{markdown: "`$ npm install`, download all the dependencies"},
 								{markdown: "`$ npm start`, this is the script we'll use to start our express server"},
@@ -797,6 +804,14 @@ var _categories = [
 								Next, open cmd/Terminal and `cd` into the root folder\
 								Then, enter `npm start` and open any webbrowser and visit [http://localhost:3000/](http://localhost:3000/)"},
 								caption: "Open http://localhost:3000/ inside Google Chrome", link: "nodejs-express-1.png"}},
+							{section: "Helpful Resources"},
+							{list: {text: "",
+							value: [
+								{markdown: "[Understanding the view engine Pug](https://pugjs.org/language/attributes.html) look under **Language Reference** for more"},
+								{markdown: "Check out this [video](https://www.youtube.com/watch?v=l5AXcXAP4r8) about the JADE/PUG engine",
+								subtitle: {markdown: "*Note* instead of using express to render each jade/pug file, this video uses jade in the cmd/termnial to render the page in Google Chrome where we use `npm start` to test our pages."}},
+								{markdown: "[**Mirgrating from JADE to PUG**](https://pugjs.org/api/migration-v2.html) this will give you steps from upgrading to pug from jade"}
+							]}},
 							{text: "Sadly, we're not done here. There are a few more tools/packages the current Club Website uses that we'd like to add to this boilerplate project."}
 						]
 					),
@@ -817,11 +832,15 @@ var _categories = [
 									"&nbsp; outputStyle: 'compressed',",
 									"&nbsp; sourceMap: true",
 									"}));"
-								]}},
+								]}, footer: {markdown: "Be sure to paste this code before `app.use(express.static(path.join(__dirname, 'public')));`"}},
 								{markdown: "Create a new folder, **sass** in the root folder"},
 								{markdown: "Create a new file, **main.scss** inside the **sass** folder"},
 								{markdown: "Cut and paste the contents in **style.css**, found under **root > public > stylesheets**, into **main.scss**"},
-								{markdown: "End any process in your cmd/Termnial window and run `$ npm run dev` and open [localhost:3000](localhost:3000). Yes, nothing has changed, but now we have sass installed!"}
+								{codeBlock: {text: {markdown: "Open **layout.pug** in the **views/** folder and paste the following on `line 5`:"},
+								value: [
+									"link(href='/stylesheets/main.css', rel='stylesheet')"
+								]}, subtitle: {markdown: "You can now delete the **style.css** file in the **public/stylesheets/** folder"}},
+								{markdown: "End any process in your cmd/Termnial window and run `$ npm start` and open [localhost:3000](localhost:3000). Yes, nothing has changed, but now we have sass installed!"}
 							]}},
 							{list: {text: "Here are a few things you now do with sass:",
 							value: [
@@ -839,12 +858,12 @@ var _categories = [
 							value: [
 								{markdown: "First, create a **partials** folder in the **sass** folder"},
 								{markdown: "Create a new file **_index.scss** inside the **partials**folder"},
-								{codeBlock: {text: {markdown: "Paste the following:"},
+								{markdown: "Paste the following:", footer: {codeBlock: {
 								value: [
 									"#index-page {",
 									"",
 									"}"
-								]}},
+								]}}},
 								{markdown: "Import our new sass file by adding `@import 'partials/index'` at the bottom of **main.scss**"},
 								{codeBlock: {text: {markdown: "In the **index.pug** file, paste the following:"},
 								value: [
@@ -856,7 +875,14 @@ var _categories = [
 							]}},
 							{markdown: "The index page now lies inside a `div` tag which has the id of *index-page*.\
 							So, our **_index.scss** only gets applied to div tags with the unique id of **index-page**. Thus, seperating specific styling to only certain pages or elements is done by adding ids.\
-							Other styling such as classes also applies :)"}
+							Other styling such as classes also applies :)"},
+							{section: "Helpful Resources"},
+							{list: {text: "",
+							value: [
+								{markdown: "Check out the docs [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)"},
+								{markdown: "Here's a indepth video on [SASS](https://www.youtube.com/watch?v=wz3kElLbEHE)",
+								footer: "Beware, this video is 45m long!"}
+							]}}
 						]
 					),
 					new Lesson( 3, "nodemon and Google's Extension, LiveReload",
@@ -901,28 +927,48 @@ var _categories = [
 						"",
 						"Love bootstrap!? Lets get started then!",
 						[
-
 						]
 					),
-					new Lesson( 5, "Adding a new page",
-						"Learn both the frontend and the backend in this lesson. ",
-						"Control the routes using express to render pages, handle POST and GET requests",
-						[
-
-						]
-					),
-					new Lesson( 6, "Other Stacks and Technologies",
+					new Lesson( 6, "Other Stacks, Technologies and Resources",
 						"",
 						"Here are other packages used in the Website that can be of-use in your workspace",
 						[
+							{section: "Video Tutorials"},
+							{list: {text: "",
+							value: [
+								{markdown: "[Nodejs Tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD) from [Derek Banas](https://www.youtube.com/user/derekbanas)"}
+							]}}
 						]
 					)
 				]
 			),
-			new Tutorial( 1, "MongoDB",
-				"",
-				"",
+			new Tutorial( 1, "Adding a New Page",
+				"This one's a large one, butt! we'll be sure to not miss any details without explaination. We're going to add a partner's page to our website. Let's get started.",
+				"By following this tutorial you'll understand 90% of this project workflow!",
 				2, 0, 0, 0,
+				[
+					new Lesson( 0, "Create the html page",
+						"",
+						"",
+						[
+							{text: ""},
+							{section: ""},
+							{list: {text: ""},
+							value: [
+								{markdown: "**DUPLICATE** the **index.pug** file and name it **partners.pug**"},
+								{markdown: "Open up **partners.pug** and paste the following",
+								footer: {codeBlock: {value: [
+									""
+								]}}}
+							], footer: "Here is where we'll add all of our styled html components in this file."}
+						]
+					)
+				]
+			),
+			new Tutorial( 2, "MongoDB",
+				"",
+				"",
+				3, 0, 0, 0,
 				[
 				]
 			)

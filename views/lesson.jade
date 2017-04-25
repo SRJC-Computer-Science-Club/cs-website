@@ -26,7 +26,7 @@ mixin executeComponent(component)
 							+executeComponent(component)
 		- else if (component.markdown != undefined)
 			- var markdown = helper.markdown(component.markdown)
-			div!= markdown
+			div.markdown!= markdown
 		- else if (component.image != undefined)
 			- var image = component.image
 			.row.image
@@ -40,8 +40,12 @@ mixin executeComponent(component)
 							img(src=link)
 						- if (image.caption != undefined)
 							figcaption= image.caption
+		- if (component.subtitle != undefined)
+			.subtitle
+				+executeComponent(component.subtitle)
 		- if (component.footer != undefined)
-			+executeComponent(component.footer)
+			.footer
+				+executeComponent(component.footer)
 
 extends layout-lessons
 

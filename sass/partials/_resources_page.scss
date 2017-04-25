@@ -113,8 +113,17 @@
 						margin-bottom: 0;
 					}
 				}
+				.markdown {
+					strong {
+					}
+				}
 				.thumbnail-caption {
 					margin: 0;
+				}
+				.subtitle {
+					color: $subtitle;
+				}
+				.footer {
 				}
 			}
 		}
