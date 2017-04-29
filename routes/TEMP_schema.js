@@ -275,50 +275,15 @@ var members = [
 			'Objective-C'
 		]
 	),
-	new Member(11, 'Junior', 'Diarrassouba',
-		'',
-		undefined,
-		{},
-		'juniordiarrassouba1@gmail.com',
-		[
-			'C++',
-			'Java',
-			'HTML/CSS',
-			'JavaScript'
-		]
-	),
-	new Member(14, 'Austin', 'Meyer',
-		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
-		'Game Designer and Developer! Also know C++, Java, and Javascript',
-		{},
-		'meyerforge@gmail.com',
-		[
-			'C++',
-			'Java',
-			'C#'
-		]
-	),
-	new Member(15, 'Isaiah', 'Curtis',
-		'',
-		'Interested in machine learning and low level programming',
-		{},
-		'17ijcurtis@gmail.com',
-		[]
-	),
-	new Member(16, 'Noah', 'Tarr',
-		undefined,
-		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
+	new Member(3, 'Oran', 'C',
+		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
+		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
 		{
-			personal_site: 'http://www.noahtarr.com/'
+			github: 'https://www.GitHub.com/Pastyguy'
 		},
 		undefined,
 		[
-			'C++',
-			'Java',
-			'HTML',
-			'CSS',
-			'JavaScript',
-			'PHP'
+			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
 		]
 	),
 	new Member(19, 'Erik', 'Fisher',
@@ -341,6 +306,33 @@ var members = [
 		undefined,
 		[]
 	),
+	new Member(14, 'Austin', 'Meyer',
+		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
+		'Game Designer and Developer! Also know C++, Java, and Javascript',
+		{},
+		'meyerforge@gmail.com',
+		[
+			'C++',
+			'Java',
+			'C#'
+		]
+	),
+	new Member(16, 'Noah', 'Tarr',
+		undefined,
+		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
+		{
+			personal_site: 'http://www.noahtarr.com/'
+		},
+		undefined,
+		[
+			'C++',
+			'Java',
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'PHP'
+		]
+	),
 	new Member(20, 'Adam', 'Ahrens',
 		'my bio',
 		undefined,
@@ -350,53 +342,17 @@ var members = [
 
 		]
 	),
-	new Member(24, 'Greg', 'Maddox',
-		'my bio',
+	new Member(11, 'Junior', 'Diarrassouba',
+		'',
 		undefined,
 		{},
-		undefined,
-		[]
-	),
-	new Member(3, 'Oran', 'C',
-		'I started programming with HTML*, in highschool just for fun. I really got into real programming when I built a Bluetooth robot from scratch which, over the summer, I started learning JavaScript from an online self paced tutorial, and that transitioned into taking C++. I\'m currently learning python right now.',
-		'I\'ve built and been running a Ubuntu server, and also have been running and handling with server software for about a year now. I\'m comfortable with using GNU/Linux.',
-		{
-			github: 'https://www.GitHub.com/Pastyguy'
-		},
-		undefined,
-		[
-			'C++','HTML & CSS', 'python', 'JavaScript', 'BASH'
-		]
-	),
-	new Member(17, 'Spencer', 'Kelly',
-		'',
-		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
-		{
-			github: 'https://www.GitHub.com/ablacklama'
-		},
-		'ablacklama@gmail.com',
+		'juniordiarrassouba1@gmail.com',
 		[
 			'C++',
 			'Java',
-			'C',
 			'HTML/CSS',
-			'JavaScript',
-			'Python'
+			'JavaScript'
 		]
-	),
-	new Member(23, 'Andrew', 'Rodrigues',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
-	),
-	new Member(25, 'Juan', 'Rios',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
 	),
 	new Member(26, 'Alejandro', 'Fernandez',
 		'my bio',
@@ -414,7 +370,51 @@ var members = [
 		undefined,
 		[]
 	),
+	new Member(17, 'Spencer', 'Kelly',
+		'',
+		'Student, currently building a general knowledge of programming with a specific focus on Deep Learning.',
+		{
+			github: 'https://www.GitHub.com/ablacklama'
+		},
+		'ablacklama@gmail.com',
+		[
+			'C++',
+			'Java',
+			'C',
+			'HTML/CSS',
+			'JavaScript',
+			'Python'
+		]
+	),
 	new Member(28, 'Andrew', 'Eljumaily',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(25, 'Juan', 'Rios',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(15, 'Isaiah', 'Curtis',
+		'',
+		'Interested in machine learning and low level programming',
+		{},
+		'17ijcurtis@gmail.com',
+		[]
+	),
+	new Member(24, 'Greg', 'Maddox',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(23, 'Andrew', 'Rodrigues',
 		'my bio',
 		undefined,
 		{},
