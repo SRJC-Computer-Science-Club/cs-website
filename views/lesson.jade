@@ -1,12 +1,20 @@
 mixin executeComponent(component)
+	- var options = component.options != undefined ? component.options : null
 	- if (typeof component == 'string')
 		p!= component
 	- else
-		- if (component.text != undefined)
+		- if (component.text != undefined) //text
 			+executeComponent(component.text)
-		- else if (component.section != undefined)
+		- else if (component.textImage != undefined) //text aligned with an image
+			- var textImage = component.textImage
+			.row
+				.col-md-8(style="padding-left: 0;")
+					+executeComponent(textImage.text)
+				.col-md-4
+					+executeComponent( new Object({_image: textImage.image}))
+		- else if (component.section != undefined) //section
 			p.header!= component.section
-		- else if (component.list != undefined)
+		- else if (component.list != undefined) //list
 			- var list = component.list
 			- if (list.text != undefined)
 				+executeComponent(list.text)
@@ -15,8 +23,8 @@ mixin executeComponent(component)
 					each component in list.value
 						li
 							+executeComponent(component)
-		- else if (component.codeBlock != undefined)
-			- var codeList = component.codeBlock
+		- else if (component.code != undefined) //markdown ul list of code
+			- var codeList = component.code
 			- if (codeList.text != undefined)
 				+executeComponent(codeList.text)
 			- if (codeList.value != undefined)
@@ -24,26 +32,66 @@ mixin executeComponent(component)
 					each component in codeList.value
 						li.code
 							+executeComponent(component)
-		- else if (component.markdown != undefined)
+		- else if (component.markdown != undefined) //markdown div
 			- var markdown = helper.markdown(component.markdown)
 			div.markdown!= markdown
-		- else if (component.image != undefined)
-			- var image = component.image
-			.row.image
+		- else if (component.imageBlock != undefined) //Image Card w/Text
+			- var image = component.imageBlock
+			.row.imageBlock
 				.col-md-8
 					- if (image.text != undefined)
 						+executeComponent(image.text)
 				.col-md-4
-					.thumbnail-caption
-						- var link = image.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+image.link : image.url
-						a(href=link target="_blank")
-							img(src=link)
-						- if (image.caption != undefined)
-							figcaption= image.caption
-		- if (component.subtitle != undefined)
+					+executeComponent( new Object({_image: image}))
+		- else if (component.images != undefined) //Column Images, 1 to 4 supported
+			- var images = component.images
+			.row.images
+				- var count = images.length
+				each image in images
+					div(class= count == 1 ? "col-md-12" : count == 2 ? "col-md-6" : count == 3 ? "col-md-4" : "col-md-3")
+						+executeComponent( new Object({_image: image}))
+		- else if (component.video != undefined) //Video
+			- var video = component.video
+			.row.video
+				.col-md-8
+					- if (video.text != undefined)
+						+executeComponent(video.text)
+				.col-md-4
+					.embed-responsive.embed-responsive-16by9
+						iframe.embed-responsive-item(src=video.url allowfullscreen)
+					- if (video.caption != undefined)
+						figcaption= video.caption
+		- else if (component.videoFull != undefined)//Video Full
+			- var video = component.videoFull
+				.embed-responsive.embed-responsive-16by9
+					iframe.embed-responsive-item(src=video.url allowfullscreen)
+		- else if (component.span != undefined) //inline compoenents
+			- var span = component.span
+			.span
+				- for (var spanned of span)
+					if spanned.markdown != undefined
+						+executeComponent(spanned)
+					else if spanned.icon != undefined
+						+executeComponent(new Object({_thumbnail: spanned.icon}))
+
+		- else if (component._image != undefined) //Image define
+			- var image = component._image
+			.thumbnail-caption
+				- var link = image.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+image.link : image.url
+				a(href=link target="_blank")
+					img(src=link)
+				- if (image.caption != undefined)
+					figcaption= image.caption
+		- else if (component._thumbnail != undefined) //Thumbnail define
+			- var thumbnail = component._thumbnail
+			.thumb(style="height: 32px; width: 32px;")
+				- var link = thumbnail.link ? "/resources/tutorials/"+lesson._category.title.toLowerCase()+"/"+thumbnail.link : thumbnail.url
+				img(src=link)
+
+		- if (component.subtitle != undefined) //Subitle
 			.subtitle
 				+executeComponent(component.subtitle)
-		- if (component.footer != undefined)
+		- if (component.footer != undefined) //Footer
 			.footer
 				+executeComponent(component.footer)
 
@@ -55,3 +103,9 @@ block view
 		#lesson
 			each content in lesson.content
 				+executeComponent(content)
+			ol
+				li
+					.col-md-8
+						p height
+					.col-md-4
+						p hola

@@ -93,10 +93,26 @@
 	.view {
 		#lesson-page {
 			#lesson {
+				padding: 0 $margin-md;
+				@media (max-width: map-get($grid-breakpoints,lg)) { //apply only for lg and down
+					padding: 0;
+				}
+				p {
+					line-height: 24px;
+				}
+				.card {
+					padding: $margin-sm 0;
+				}
+				.image, .video {
+					@extend .card;
+				}
 				.section {
 					font-size: 1.5em;
 					font-weight: bolder;
 					margin-bottom: 0;
+				}
+				ol, ul {
+					padding-left: 28px;
 				}
 				li {
 					margin: $margin-sm 0;
@@ -115,6 +131,14 @@
 				}
 				.markdown {
 					strong {
+					}
+				}
+				.span {
+					>div {
+						@extend .pull-xs-left;
+					}
+					.thumb {
+						@extend .card;
 					}
 				}
 				.thumbnail-caption {

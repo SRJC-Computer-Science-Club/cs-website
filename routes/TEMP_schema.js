@@ -823,7 +823,7 @@ var _categories = [
 							{list: {text: '',
 							value: [
 								{markdown: "`$ npm install node-sass-middleware@0.8.0 --save`"},
-								{codeBlock: {text: {markdown: "Open **app.js** in a text editor and paste the following after `line 22`:"},
+								{code: {text: {markdown: "Open **app.js** in a text editor and paste the following after `line 22`:"},
 								value: [
 									"app.use('/stylesheets',require('node-sass-middleware')({",
 									"&nbsp; src: path.join(__dirname, 'sass'),",
@@ -836,7 +836,7 @@ var _categories = [
 								{markdown: "Create a new folder, **sass** in the root folder"},
 								{markdown: "Create a new file, **main.scss** inside the **sass** folder"},
 								{markdown: "Cut and paste the contents in **style.css**, found under **root > public > stylesheets**, into **main.scss**"},
-								{codeBlock: {text: {markdown: "Open **layout.pug** in the **views/** folder and paste the following on `line 5`:"},
+								{code: {text: {markdown: "Open **layout.pug** in the **views/** folder and paste the following on `line 5`:"},
 								value: [
 									"link(href='/stylesheets/main.css', rel='stylesheet')"
 								]}, subtitle: {markdown: "You can now delete the **style.css** file in the **public/stylesheets/** folder"}},
@@ -858,14 +858,14 @@ var _categories = [
 							value: [
 								{markdown: "First, create a **partials** folder in the **sass** folder"},
 								{markdown: "Create a new file **_index.scss** inside the **partials**folder"},
-								{markdown: "Paste the following:", footer: {codeBlock: {
+								{markdown: "Paste the following:", footer: {code: {
 								value: [
 									"#index-page {",
 									"",
 									"}"
 								]}}},
 								{markdown: "Import our new sass file by adding `@import 'partials/index'` at the bottom of **main.scss**"},
-								{codeBlock: {text: {markdown: "In the **index.pug** file, paste the following:"},
+								{code: {text: {markdown: "In the **index.pug** file, paste the following:"},
 								value: [
 								"block content",
 								"&nbsp; #index-page",
@@ -898,7 +898,7 @@ var _categories = [
 								{markdown: "`$ npm install nodemon --save-dev`, the `--save-dev` flag tells npm that this dependency is used for development only and not needed when the product is in production, or shipped.\
 								Look here for [more](https://docs.npmjs.com/files/package.json#devdependencies)"},
 								{markdown: "`$ npm install livereload --save-dev`"},
-								{codeBlock: {text: {markdown: "Open the root folder, **myapp**, in a text editor and open **app.js** and paste the following after `line 15`:"},
+								{code: {text: {markdown: "Open the root folder, **myapp**, in a text editor and open **app.js** and paste the following after `line 15`:"},
 								value: [
 								"try //try to load LiveReload",
 								"{",
@@ -909,7 +909,7 @@ var _categories = [
 								"}",
 								"catch (ex) {}"
 								]}},
-								{codeBlock: {text: {markdown: "In **package.json**, look for \"scripts\" and paste the following:"},
+								{code: {text: {markdown: "In **package.json**, look for \"scripts\" and paste the following:"},
 								value: [
 									"\"scripts\": {",
 									"&nbsp; \"start\": \"node ./bin/www\"",
@@ -957,7 +957,7 @@ var _categories = [
 							value: [
 								{markdown: "**DUPLICATE** the **index.pug** file and name it **partners.pug**"},
 								{markdown: "Open up **partners.pug** and paste the following",
-								footer: {codeBlock: {value: [
+								footer: {code: {value: [
 									""
 								]}}}
 							], footer: "Here is where we'll add all of our styled html components in this file."}
@@ -974,7 +974,7 @@ var _categories = [
 			)
 		]
 	),
-	new Category( 2, "C++",
+	new Category( 2, "Hardware and Software",
 		"description",
 		"/images/icons/tutorial-c.png",
 		[]
@@ -987,7 +987,109 @@ var _categories = [
 	new Category( 4, "iOS Development",
 		"description",
 		"/images/icons/tutorial-ios.png",
-		[]
+		[
+			new Tutorial( 0, "Getting started with iOS devlopment",
+				"",
+				"",
+				1, 0, 0, 0,
+				[
+					new Lesson( 4, "Installing and Understanding Xcode",
+						"",
+						"Xcode will be your one-time stop for all of your development. It'll be your IDE, debugger and deployment application",
+						[
+							{section: "Setting up the Xcode project"},
+							{text: ""}
+						]
+					),
+					new Lesson( 0, "Exercise: Basketball Ratio",
+						"",
+						"With a label and two buttons, you can calculate the ratio of your hit/miss.",
+						[
+							{section: "Setting up and understanding the Xcode project"},
+							{video: {text: {markdown: "In this video, we'll set up a new project using the **Single View Application** template and understand what files will make up our project.\
+								We'll also use the Interface Builder to create our user interface, or UI, by dragging and dropping buttons and labels to then wire up to our controller.\
+								Lastly, the controller will calculate the ratio and update the view."}, url: "//www.youtube.com/embed/TQl_Sv3LztQ", caption: "Xcode Setup"}},
+							{list: {text: "Shown below are the steps explained in the video:", value: [
+								{markdown: "**File > New > Project** and select **Single View Application** under *iOS*"},
+								{markdown: "Name our new project **Basketball Ratio** and enter **com.mycompany** under *Organization Identifier*. Be sure the language is set to **Swift**. Uncheck **Use Core Data** and all of the following check boxes and hit Next to select the destination",
+									footer: {images: [
+										{link: "new-project-basketball-1.png", caption: "a new project"},
+										{link: "workspace-basketball-1.png", caption: "xcode window"}
+									], footer: "On the left are our files"}
+								},
+								{markdown: "**Main.storyboard**: this is the UI of our application. Here, we'll add our components such as buttons and labels"},
+								{markdown: "**ViewController.swift**: here we'll handle button click events from our storyboard and updating the view based off of a few properties saved in the controller"},
+								{markdown: "**AppDelegate.swift**: this class is different. When an event from the application state is fired, the AppDelegate will handle each event", 
+									footer: {list: {value:[
+										{markdown: "`func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {}` when the application `didFinishLaunchingWithOptions:` this method is called"},
+										{markdown: "`func applicationDidEnterBackground(_ application: UIApplication) {}` when the application `applicationDidEnterBackground:` this method is called say if the user clicks the home button"},
+										{markdown: "`func applicationWillEnterForeground(_ application: UIApplication)` when the application `applicationWillEnterForeground:` this method is called when the application WILL become active again from the background"},
+										{markdown: "check out the AppDeleget's [reference library](https://developer.apple.com/reference/uikit/uiapplicationdelegate) for more events, or protocol prototypes"}
+									]}}}
+							]}},
+							{section: "Interface Builder"},
+							{video: {text: {markdown: "In this video, "}, url: "//www.youtube.com/embed/TQl_Sv3LztQ", caption: "Xcode's Interface Builder"}},
+							{text: "Select **Main.storyboard** on the left navigation bar to open up the interface builder."},
+							{list: {value: [
+									{textImage: {text: {markdown: "**Adding Components** at the bottom right select *Object Library* and look for **UIButton** and **UILabel**.\
+										If you do not see this, press `cmd+option+0` to show the *Utilities* panel."},
+										image: {link: "object-library-show-1.png"}}
+									},
+									{textImage: {text: {markdown: "Drag and drop two buttons and a label into our view. Double click each button and name them *Hit* and *Miss*.\
+										We'll leave the label as is. Style each component as needed."},
+										image: {link: "basketball-ratio-layout-1.png"}}
+									},
+									{markdown: "**Making Connections** There are a two kinds of connections we can make from a interface to a controller: *Outlets* and *Actions*.\
+											An outlet to a controller allows the controller to update the connected component such as setting the button title or the text of a label.\
+											Actions are functions, or methods, in a controller fired by the connector, like a button, for defined events."},
+									{textImage: {text: {markdown: "**Connecting to the Controller** by opening the *Assitance Editor* located at the top right of the window, we can see the interface builder and its controller on the right.\
+										First we'll do the buttons:"},
+										image: {link: "assistance-editor-show-1.png"}}
+									},
+									{markdown: "select the *Hit* button from the interface builder and **cmd+right-click and drag** from the button to the controller after `line 12` and release the mouse.\
+										A connection window pops up (look at the second screenshot below). Set the `Connection` from `Outlet` to `Action` with `Name` set to `pressHit`.\
+										The `Event` is the how this *action* is fired. The most common for a button is `Touch Up Inside`. Do this for the *Miss* button but be sure to name the `Name` as `pressMiss`.\
+										Now the label:"},
+									{markdown: "The same applies, **cmd+right-click drag** from the interface builder to the controller. But, instread of the Connection as `Action` ",
+										footer: {images: [
+											{link: "basketball-ratio-ui-controller-connection-1.png", caption: "Connect with Right-click drag"},
+											{link: "basketball-ratio-ui-controller-action-1.png", caption: "IBAction settings"},
+											{link: "basketball-ratio-ui-controller-connection-2.png", caption: "Our new ViewController.swift"}
+										]}
+									}
+							]}},
+							{section: "Using the ViewController to update the view"},
+							{video: {text: {markdown: "In this video, "}, url: "//www.youtube.com/embed/TQl_Sv3LztQ", caption: "Xcode's Interface Builder"}},
+							{list: {value: []}}
+						]
+					),
+					new Lesson( 1, "Exercise: Unit Conversions",
+						"",
+						"Using Apple's UIKit and delegation, we'll build a simple input-output converter",
+						[
+							{section: "Setting up the Xcode project"},
+							{text: ""}
+						]
+					),
+					new Lesson( 2, "Exercise: Calculator",
+						"",
+						"Learn the fundamentals of Model View Controller, or MVC, to build a calculator",
+						[
+							{section: "Setting up the Xcode project"},
+							{text: ""}
+						]
+					),
+					new Lesson( 3, "Exercise: Utitlites",
+						"",
+						"After leanring MVC, let's build an application that has mutiple MVCs",
+						[
+							{section: "Setting up the Xcode project"},
+							{text: ""}
+						]
+					)
+				]
+			)
+		]
 	),
 	new Category( 5, "Game Development",
 		"description",
