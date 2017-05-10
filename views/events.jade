@@ -11,7 +11,7 @@ block content
 						p.float-xs-right= event.date_range
 						h3= event.title
 						//- img.float-xs-right(src='/images/icons/checkvist-icon-42@2x.png')
-						p= event.description
+						p= event.description_short
 			h2 Past Events
 			each event in list_of_events.past_events
 				- var link = (event.project_id != undefined ? '/project-events/' : '/events/') +event.id

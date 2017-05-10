@@ -109,6 +109,15 @@ p.header {
 // End explicit class/id styles //
 //////////////////////////////////
 
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-image: url('http://placehold.it/230x100');
+}
 
 //colors
 .lightgray

@@ -5,7 +5,7 @@
     }
     a.card {
       padding: $margin-sm;
-      min-height: 108px;
+      min-height: 132px;
     }
     a.card:hover {
       background-color: $highlighted;
@@ -15,14 +15,8 @@
       position: absolute;
       top: 18px;
       left: $margin-sm +24px;
-      display: inline-block;
-      width: 84px;
-      height: 84px;
-      border-radius: 50%;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      background-image: url('http://placehold.it/230x100');
+      width: 96px;
+      height: 96px;
     }
     .member-info {
       margin-left: 142px;
@@ -58,9 +52,11 @@
     #device-phone {
       .avatar {
         position: relative;
-        left: 0;
         top: 0;
-        padding-bottom: $margin-lg;
+        left: 0;
+        margin: 0 auto;
+        width: 132px;
+        height: 132px;
       }
       p, h1 {
         padding: $margin-sm 0;

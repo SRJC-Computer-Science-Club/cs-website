@@ -4,6 +4,10 @@ block content
   #about-page.content
     .row
       .col-xs-12
+        .thumb
+          img(src="/avatars/club-1.jpg")
+    .row
+      .col-xs-12
         - var content = [{header: "What we do", body: "The Computer Science Club has brought many projects back to life like our new website or the srjc scheduler by adding new features and capabilities as well as welcoming new projects based on the interest from the club members. To make our projects grow and flourish, we strive on making ourselves known by posting flyers with QR Codes to our website, which Snapchat can scan; we schedule workshops to meet up about a specific project and get things done!", image: "http://placehold.it/350x200"}, {header: "What is the scope of this club", body: "We welcome all project types such as web development, graphic design work, electrical/hardware engineering, custom software design, artificial intelligence and any idea or concept that includes collaborating code or assets such as code snippets, graphics and hardware parts. The club wants to take part in achieving any idea from all skill levels ranging from beginning to expert!", image: "http://placehold.it/350x200"}, {header: "Our phylosophy", body: "The club exposes members to begin their journey new tools and share a common convention that is used in the real world. Currently, the club is working on taking memebers to local events and tours to larger companies!", image: "images/about-3.jpg"}];
         each row, i in content
           if (i % 2 != 1)
