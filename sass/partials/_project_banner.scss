@@ -11,12 +11,18 @@
 		}
 
 		.project-banner-headline {
-			position: absolute;
-			bottom: 0;
-			left: 20px;
+			text-align: left;
 			font-weight: bold;
 			font-size: 3em;
-			color: white;
+			color: #373a3c;
+
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: linear-gradient(0, #fff, rgba(255,255,255,0));
+			padding: $margin-md $margin-lg $margin-sm $margin-lg;
+			margin-bottom: 0;
 		}
 
 		.project-banner-description {
