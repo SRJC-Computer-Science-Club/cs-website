@@ -79,7 +79,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//9
+//10
 var projects = [
 	new Project(1,'CS Website',
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
@@ -134,6 +134,17 @@ var projects = [
 		},
 		[]
 	),
+	new Project(11,'Space Junkies',
+		'',
+		'',
+		'In Progress',
+		'',
+		{},
+		{
+		},
+		[
+		]
+	),
 	new Project(8,'Dreamscape',
 		'',
 		'',
@@ -145,6 +156,19 @@ var projects = [
 		},
 		[
 		]
+	),
+	new Project(0,'Micromouse',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An autonomous maze solving robot mouse',
+		'Rebuilding',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/542765',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
+			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		[]
 	),
 	new Project(3,'Function Fighters',
 		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
@@ -184,19 +208,6 @@ var projects = [
 			'preview-1.jpg',
 			'3d model-1.png'
 		]
-	),
-	new Project(0,'Micromouse',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An autonomous maze solving robot mouse',
-		'Archived',
-		'',
-		{},
-		{
-			checkvist: 'https://checkvist.com/checklists/542765',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
-			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
-		},
-		[]
 	),
 	new Project(4,'Quad-Copter',
 		"<a href=/members/3'>I</a> worked on a landmine detection quadcopter with college <a href='/members/9'>Yekalo Aberha</a>. Mr. Aberha and I, coded and build a lidar two diminsional mapping sensor. To create a graph of points to repersent what the sensor is resiving which was edges of objects.<br /><br />x = r × cos( θ )y = r × sin( θ )<br /><br />We found out that the sensor was not working because we needen to conver the rotation of the sensor, into (x,y) coordiates.",
@@ -512,12 +523,7 @@ var members_projects = [
 	new ProjectsMembers( 6 , 1 , 2 , 'Project Manager' ),
 	new ProjectsMembers( 1 , 1 , 0 , 'Lead Developer' ),
 	new ProjectsMembers( 49 , 1 , 23 , 'Programmer' ),
-	new ProjectsMembers( 33 , 1 , 16 , 'Programmer' ),
-	new ProjectsMembers( 34 , 1 , 19 , 'Programmer' ),
-	new ProjectsMembers( 27 , 1 , 11 , 'Programmer' ),
-	new ProjectsMembers( 22 , 1 , 5 , 'Programmer' ),
-	new ProjectsMembers( 12 , 1 , 8 , 'Programmer' ),
-	new ProjectsMembers( 26 , 1 , 13 , 'Programmer' ),
+	new ProjectsMembers( 54 , 1 , 26 , 'Programmer' ),
 	//2D Platformer
 	new ProjectsMembers( 10 , 2 , 2 , 'Project Manager' ),
 	//Function Fighters
@@ -566,13 +572,21 @@ var members_projects = [
 	new ProjectsMembers( 53 , 9 , 26 , 'Programmer'),
 	//ShortLink
 	new ProjectsMembers( 51 , 10 , 12 , 'Project Manager'),
-	new ProjectsMembers( 52 , 10 , 2 , 'Developer')
+	new ProjectsMembers( 52 , 10 , 2 , 'Developer'),
+	//Space Junkies
+	new ProjectsMembers( 55 , 11 , 14 , 'Project Manager'),
+	new ProjectsMembers( 56 , 11 , 2 , 'Programmer'),
+	new ProjectsMembers( 57 , 11 , 2 , 'Programmer'),
+	new ProjectsMembers( 58 , 11 , 2 , 'Programmer'),
+	new ProjectsMembers( 59 , 11 , 2 , 'Programmer'),
+
 ];
-//53
+//54
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
 //25-juan 26-alex frenandez 27-jameson
+
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
 

@@ -11,7 +11,9 @@
 		}
 
 		.project-banner-headline {
-			text-align: left;
+			@media (min-width: map-get($grid-breakpoints,md)) { //apply only for md and up
+				text-align: left;
+			}
 			font-weight: bold;
 			font-size: 3em;
 			color: #373a3c;
