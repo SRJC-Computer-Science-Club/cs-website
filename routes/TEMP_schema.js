@@ -781,12 +781,11 @@ var services = {
 
 var club_officers =
 [
-	new ClubOfficers( 0, 2, 'President', "#055B75"),
-	new ClubOfficers( 1, 1, 'Vice<br>President', "#0D94BD"),
-	new ClubOfficers( 2, 4, 'Treasurer<br>& ICC Rep', '#579C08'),
-	new ClubOfficers( 3, 12, 'Secretary', '#579C08'),
-	new ClubOfficers( 4, 14, 'ICC Rep', '#EEA00E'),
-	new ClubOfficers( 5, 16, 'ICC Rep', '#EEA00E')
+	new ClubOfficers( 0, 1, 'President', "#055B75"),
+	new ClubOfficers( 1, 12, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 2, 20, 'Treasurer<br>& ICC Rep', '#579C08'),
+	new ClubOfficers( 3, 2, 'Secretary', '#579C08'),
+	new ClubOfficers( 4, -1, 'ICC Rep', '#EEA00E'),
 ];
 
 module.exports = {

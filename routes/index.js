@@ -21,13 +21,10 @@ router.get('/', function(req, res, next) {
   ]};
 
   var results = [
-    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'President'},
-    {id: 1, first_name: 'Josh', last_name: 'Murphy', election: 'Vice-President'},
-    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'Treasurer'},
-    {id: 12, first_name: 'Kyle', last_name: ' O\'Brien', election: 'Secretary'},
-    {id: 4, first_name: 'Steven', last_name: 'Guido', election: 'ICC Member'},
-    {id: 14, first_name: 'Austin', last_name: 'Meyer', election: 'ICC Member'},
-    {id: 16, first_name: 'Noah', last_name: '', election: 'ICC Member'}
+    {id: 1, first_name: 'Josh', last_name: 'Murphy', election: 'President'},
+    {id: 12, first_name: 'Kyle', last_name: ' O\'Brien', election: 'Vice-President'},
+    {id: 20, first_name: 'Adam', last_name: 'Ahrens', election: 'Treasurer'},
+    {id: 2, first_name: 'Erick', last_name: 'Sanchez', election: 'Secretary'}
   ];
   var projects = tempDB.projects;
 
@@ -40,7 +37,7 @@ router.get('/', function(req, res, next) {
     project.events = helper.findProjectEvents( project);
   }
 
-  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, canidates: results, helper: helper});
+  res.render('index', { title: 'CS Club',  projects: projects, navbar: navbar, officers: results, helper: helper});
 });
 
 
