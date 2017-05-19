@@ -565,7 +565,6 @@ var members_projects = [
 	new ProjectsMembers( 25 , 5 , 10 , 'Programmer' ),
 	new ProjectsMembers( 20 , 5 , 6 , 'Programmer' ),
 	new ProjectsMembers( 30 , 5 , 15 , 'Programmer' ),
-	new ProjectsMembers( 24 , 5 , 8 , 'Programmer' ),
 	new ProjectsMembers( 23 , 5 , 12 , 'Programmer' ),
 	new ProjectsMembers( 21 , 5 , 2 , 'Programmer' ),
 	//Retailer
@@ -751,7 +750,7 @@ var events = [
 		<iframe width=352.5 height=198.5 src=https://www.youtube.com/embed/RD_JpGgUFQQ frameborder=0 allowfullscreen></iframe>",
 		"Maker Faire is the Greatest Show (and Tell) on Earth—a family-friendly festival of invention, creativity and resourcefulness, and a celebration of the Maker movement!",
 		"San Mateo County Event Center, 1346 Saratoga Drive, San Mateo, CA 94403",
-		'May 19, 2017',
+		'May 20, 2017',
 		[]
 	)
 ]

@@ -8,7 +8,7 @@ h3 Events
             p.date-range.float-xs-right= event.date_range
             p.header= event.title
             p.location= event.location
-            p!= event.description
+            p= event.description
           .col-xs-4.cover-image
             img(src='/images/projects/'+project.title.toLowerCase()+'/events/'+event.media[0].image)
   else
