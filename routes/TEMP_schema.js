@@ -14,16 +14,22 @@ function Project( id, title, description, description_short, status, post, miles
 	this.images = images;
 }
 
-function Member( id, first_name, last_name, bio, bio_short, links, email, languages )
+class Member
 {
-	this.id = id;
-	this.first_name = first_name;
-	this.last_name = last_name;
-	this.bio = bio;
-	this.bio_short = bio_short;
-	this.links = links;
-	this.email = email;
-	this.languages = languages;
+	constructor( id, first_name, last_name, bio, bio_short, links, email, languages ) {
+			this.id = id;
+			this.first_name = first_name;
+			this.last_name = last_name;
+			this.bio = bio;
+			this.bio_short = bio_short;
+			this.links = links;
+			this.email = email;
+			this.languages = languages;
+	}
+	get avatar() {
+
+		return "/avatars/" + this.first_name.toLowerCase() + "-" + this.id + ".jpg";
+	}
 }
 
 function ProjectsMembers( id, project_id, member_id, role, assignedArea )
