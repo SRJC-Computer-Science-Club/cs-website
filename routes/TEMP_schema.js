@@ -720,6 +720,7 @@ var events = [
 	)
 ]
 
+//
 var _categories = [
 	new Category( 0, 'Web Development',
 		'description',
@@ -1019,7 +1020,7 @@ var _categories = [
 								},
 								{markdown: "**Main.storyboard**: this is the UI of our application. Here, we'll add our components such as buttons and labels"},
 								{markdown: "**ViewController.swift**: here we'll handle button click events from our storyboard and updating the view based off of a few properties saved in the controller"},
-								{markdown: "**AppDelegate.swift**: this class is different. When an event from the application state is fired, the AppDelegate will handle each event", 
+								{markdown: "**AppDelegate.swift**: this class is different. When an event from the application state is fired, the AppDelegate will handle each event",
 									footer: {list: {value:[
 										{markdown: "`func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {}` when the application `didFinishLaunchingWithOptions:` this method is called"},
 										{markdown: "`func applicationDidEnterBackground(_ application: UIApplication) {}` when the application `applicationDidEnterBackground:` this method is called say if the user clicks the home button"},
@@ -1094,7 +1095,29 @@ var _categories = [
 	new Category( 5, "Game Development",
 		"description",
 		"/images/icons/tutorial-game.png",
-		[]
+		[
+			new Tutorial( 0, "Getting started with Game Development",
+				"",
+				"",
+				1, 0, 0, 0,
+				[
+					new Lesson( 1, "Jumping Right into Unity",
+						"",
+						"",
+						[
+							{section: "YouTube Tutorials"},
+							{list: {text: "These tutorials are from Unity themselves and are great introductions to Unity and becoming exposed to C#",
+							value: [
+								{markdown: '[Beginner 2D UFO Tutorial](https://www.youtube.com/playlist?list=PLX2vGYjWbI0RZ3M5zSs-cegtIzv-FBi4q)'},
+								{markdown: '[Tutorials - Beginner 2D](https://www.youtube.com/playlist?list=PLX2vGYjWbI0SFVUTzpOkmr8f9QZI3N8eY)'},
+								{markdown: '[2D Platformer Character Controller](https://www.youtube.com/playlist?list=PLX2vGYjWbI0SUWwVPCERK88Qw8hpjEGd8)'},
+							]}
+							}
+						]
+					)
+				]
+			)
+		]
 	)
 ];
 
