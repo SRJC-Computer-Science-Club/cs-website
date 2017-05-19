@@ -135,12 +135,16 @@ var projects = [
 		[]
 	),
 	new Project(11,'Space Junkies',
-		'',
-		'',
+		'I am heading the design and production of Space Junkies with a wonderful team! The game is still in its youth, but we are getting a lot done. We hope to share more information about this game in the following months.',
+		'I am heading the design and production for Space Junkies with a wonderful team!',
 		'In Progress',
 		'',
 		{},
 		{
+			github: 'https://github.com/SRJC-Computer-Science-Club/Ludum-Dare-38-Space-Junkies',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/Ludum-Dare-38-Space-Junkies',
+			drive: 'https://drive.google.com/drive/folders/0B3wyRcLxpH4jXzRDMHdROW9ENTg?usp=sharing',
+			checkvist: 'https://checkvist.com/checklists/614869-csc-space-junkies'
 		},
 		[
 		]
@@ -238,7 +242,7 @@ var projects = [
 	)
 ];
 
-//28
+//30
 var members = [
 	new Member(2, 'Erick', 'Sanchez',
 		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
@@ -411,6 +415,24 @@ var members = [
 		undefined,
 		[]
 	),
+	new Member(29, 'Roman', 'Ruano',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(30, 'Julie', 'Levine',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
 	new Member(15, 'Isaiah', 'Curtis',
 		'',
 		'Interested in machine learning and low level programming',
@@ -576,19 +598,20 @@ var members_projects = [
 	//Space Junkies
 	new ProjectsMembers( 55 , 11 , 14 , 'Project Manager'),
 	new ProjectsMembers( 56 , 11 , 2 , 'Programmer'),
-	new ProjectsMembers( 57 , 11 , 2 , 'Programmer'),
-	new ProjectsMembers( 58 , 11 , 2 , 'Programmer'),
-	new ProjectsMembers( 59 , 11 , 2 , 'Programmer'),
+	new ProjectsMembers( 57 , 11 , 28 , 'Programmer'),
+	new ProjectsMembers( 58 , 11 , 27 , 'Assets'),
+	new ProjectsMembers( 59 , 11 , 29 , 'Assets'),
 
 ];
 //54
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
-//25-juan 26-alex frenandez 27-jameson
+//25-juan 26-alex frenandez 27-jameson 28-andrew eljumaily 29-roman 30-Julie
 
 //0-micromouse 1-cs website 2-plattformer 3-function fighters 4-Quad-Copter
 //5-line follower 6-retailer 7-srjc-schduler 8-dreamscape 9-club app
+//10-short link 11-space junkies
 
 
 
@@ -674,6 +697,15 @@ var project_events = [
 			{caption: 'Watching them bots!', image: 'robo-games-17/team-3 copy.jpg', url: '/images/projects/line follower/events/robo-games-17/team-3 copy.jpg'},
 			{caption: 'Google Drive Folder', image: 'drive.png', url: 'https://drive.google.com/drive/folders/0B3wyRcLxpH4jX1BEN0tDMVI1bjQ?usp=sharing'}
 		]
+	),
+	new ProjectEvent( 1, 11, 'Ludum Dare',
+		'Themes are suggested and chosen by the community. Theme Suggestions are accepted starting 5 weeks before the event. Theme Voting kicks off 2 weeks before the event. Ludum Dare games are submitted to 1 of 2 categories: the Jam or the Compo.</p><h3>The Jam</h2><p>The Jam is the Ludum Dare event for everyone. Teams, individuals, anyone that wants to come out and make something.<ol><li><p>Work alone or in a team.</p></li><li><p>Create a game in 72 hours.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. You’re free to use 3rd party Artwork/Music/Audio assets, or assets you previously created, but we ask that you OPT-OUT of the respected voting categories (Graphics, Audio). You can opt-out of a voting category when you submit your game. We strongly recommend you only use assets that you have the legal right to use (Public Domain, things you licensed/created, etc). If you don’t have the right to use something, it is your responsibility.</p><h3>The Compo</h3><p>The Compo is Classic Ludum Dare. Another way to think of it is as Ludum Dare “Hard Mode”. Compo games are created entirely from scratch (**) by one person, in just 48 hours. This is the ultimate test of your game creation skills.<ol><li><p>You must work alone (solo).</p></li><li><p>Your game, all your content (i.e. Art, Music, Sound, etc) must be created in 48 hours.</p></li><li><p>Source code must be included.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. At the end, you will be required to share your source code.<br><br>TIP: Compo games are typically reviewed harsher than Jam games. If your game closely resembles a sample game that comes with a development tool, it probably wont get a good score. Be sure to fully customize, and make the game your own.</p>',
+		'Ludum Dare is an event where you create a game from scratch in a weekend based on a theme.',
+		'Online Event',
+		'April 21, 2017',
+		[
+			{caption: 'Visit the new site', image: 'ludm-dare-1.png', url: 'https://ldjam.com/'}
+		]
 	)
 ]
 
@@ -709,15 +741,6 @@ var events = [
 		'1400 Fountaingrove Pkwy, Santa Rosa, CA 95403',
 		'April 28, 2017',
 		[]
-	),
-	new Event( 3, 'Ludum Dare',
-		'Themes are suggested and chosen by the community. Theme Suggestions are accepted starting 5 weeks before the event. Theme Voting kicks off 2 weeks before the event. Ludum Dare games are submitted to 1 of 2 categories: the Jam or the Compo.</p><h3>The Jam</h2><p>The Jam is the Ludum Dare event for everyone. Teams, individuals, anyone that wants to come out and make something.<ol><li><p>Work alone or in a team.</p></li><li><p>Create a game in 72 hours.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. You’re free to use 3rd party Artwork/Music/Audio assets, or assets you previously created, but we ask that you OPT-OUT of the respected voting categories (Graphics, Audio). You can opt-out of a voting category when you submit your game. We strongly recommend you only use assets that you have the legal right to use (Public Domain, things you licensed/created, etc). If you don’t have the right to use something, it is your responsibility.</p><h3>The Compo</h3><p>The Compo is Classic Ludum Dare. Another way to think of it is as Ludum Dare “Hard Mode”. Compo games are created entirely from scratch (**) by one person, in just 48 hours. This is the ultimate test of your game creation skills.<ol><li><p>You must work alone (solo).</p></li><li><p>Your game, all your content (i.e. Art, Music, Sound, etc) must be created in 48 hours.</p></li><li><p>Source code must be included.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. At the end, you will be required to share your source code.<br><br>TIP: Compo games are typically reviewed harsher than Jam games. If your game closely resembles a sample game that comes with a development tool, it probably wont get a good score. Be sure to fully customize, and make the game your own.</p>',
-		'Ludum Dare is an event where you create a game from scratch in a weekend based on a theme.',
-		'Online Event',
-		'April 21, 2017',
-		[
-			{caption: 'Visit the new site', image: 'ludm-dare-1.png', url: 'https://ldjam.com/'}
-		]
 	),
 	new Event( 4, 'Markafaire',
 		"<p>Part science fair, part county fair, and part something entirely new, Maker Faire is an all-ages gathering of tech enthusiasts, crafters, educators, tinkerers, hobbyists, engineers, science clubs, authors, artists, students, and commercial exhibitors. All of these “makers” come to Maker Faire to show what they have made and to share what they have learned.</p>\
