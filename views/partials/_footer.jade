@@ -1,6 +1,6 @@
 #footer
-	- var LINK_MINUTES = "https://drive.google.com/file/d/0B3wyRcLxpH4jX1dDZ2RKXzh3Vmc/view?usp=sharing";
-	- var LINK_AGENDA_PUB = "https://docs.google.com/document/d/1vSKsQm8z9xnCBAZL3rq-eGeNYCbM0jNxzDXD6nR7C_E/pub";
+	- var LINK_MINUTES = "https://drive.google.com/file/d/0B3wyRcLxpH4jN3BCUE1qcm5iUDQ/view?usp=sharing";
+	- var LINK_AGENDA_PUB = "";
 	.foot-wrapper-1
 		.row.links
 			.col-md-4
@@ -42,15 +42,14 @@
 						a(href='/members') Members Page
 					li
 						a(href='/events') Events Page
-					li
-						a(href='#') Contact Us Page
+					li Contact Us Page
 					li
 						a(href='/about') About Page
 	.foot-wrapper-2
 		.row.news-bar(id='news-bar')
 			.col-sm-12
-				p
-					a(href=LINK_AGENDA_PUB target='_blank')= "This week's meeting: " + "Fridays at 11:00am in room 2806 of Maggini Hall"
+				p Stay tuned for the Summer meeting agenda: Mondays at 5:00pm in room 2806 of Maggini Hall
+					//a(href=LINK_AGENDA_PUB target='_blank')= "This week's meeting: " + "Fridays at 11:00am in room 2806 of Maggini Hall"
 	.foot-wrapper-3
 		.row.news-subbar
 			.col-sm-12
