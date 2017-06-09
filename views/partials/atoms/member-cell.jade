@@ -1,5 +1,5 @@
-a(href='/members/'+ member.id).card
-	img.img-avatar(src='http://placehold.it/64x64/77cb6f')
+a(href='/members/'+ member.id)
+	img(src=member.avatar ? member.avatar : "/avatars/" + member.first_name.toLowerCase() + "-" + member.id + ".jpg" onerror="this.src = 'http://placehold.it/77cb6f'")
 	.member-text
 		p.header= member.first_name + " " + member.last_name
 		p= member.role

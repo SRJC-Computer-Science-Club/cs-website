@@ -2,6 +2,10 @@
   #members-list {
     .row {
       padding-top: 0;
+			>* {
+				padding-left: 0;
+				padding-right: 0;
+			}
     }
     a.card {
       padding: $margin-sm;

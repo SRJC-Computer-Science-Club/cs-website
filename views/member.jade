@@ -1,38 +1,39 @@
 extends layout
 
 block content
-  #member-page.content.row
-    .col-lg-8
-      .row.card
-        .col-lg-12
-          .row.name-badge
-            .col-lg-3.avatar(style="background-image: url(\"/avatars/" + member.first_name.toLowerCase() + "-" + member.id + ".jpg\");")
-            .col-lg-9
-              h1= member.first_name + ' ' + member.last_name
-              hr
-              .member-links
-                if (member.email !== undefined)
-                  a(href='mailto:' + member.email).links
-                    img.links
-                    span= member.email
-                each link in member.links
-                  a(href=link target='_blank').links
-                    img.links
-                    span= helper.trimURL(link)
-          .row.info
-            .col-lg-12
-              p= member.bio
-    .col-lg-4
-      .row.project-list.card
-        .col-lg-12
-          h2 Projects
-          each project in member.projects
-            a.link(href='/projects/' + project.id)
-              p= project.title
-            p.role= project.role
-      .row.languages-list.card
-        .col-lg-12
-          h2 Languages
-          .list
-            each lang in member.languages
-              p= lang
+	#member-page.content.row
+		.col-lg-8
+			.row.card
+				.col-lg-12
+					.row.name-badge
+						.col-lg-3
+							img.avatar(src=member.avatar onError="this.src = 'http://placehold.it/77cb6f'")
+						.col-lg-9
+							h1= member.first_name + ' ' + member.last_name
+							hr
+							.member-links
+								if (member.email !== undefined)
+									a(href='mailto:' + member.email).links
+										img.links
+										span= member.email
+								each link in member.links
+									a(href=link target='_blank').links
+										img.links
+										span= helper.trimURL(link)
+					.row.info
+						.col-lg-12
+							p= member.bio
+		.col-lg-4
+			.row.project-list.card
+				.col-lg-12
+					h2 Projects
+					each project in member.projects
+						a.link(href='/projects/' + project.id)
+							p= project.title
+						p.role= project.role
+			.row.languages-list.card
+				.col-lg-12
+					h2 Languages
+					.list
+						each lang in member.languages
+							p= lang
