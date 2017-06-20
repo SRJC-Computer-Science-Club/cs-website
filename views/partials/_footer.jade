@@ -1,6 +1,6 @@
 #footer
-	- var LINK_MINUTES = "https://drive.google.com/file/d/0B3wyRcLxpH4jN3BCUE1qcm5iUDQ/view?usp=sharing";
-	- var LINK_AGENDA_PUB = "";
+	- var LINK_MINUTES = "https://drive.google.com/file/d/0B3wyRcLxpH4jUVhTSGlfeVptUUE/view?usp=sharing";
+	- var LINK_AGENDA_PUB = "https://docs.google.com/document/d/1ZCKJw5MeyZ4Z2z6SI9rm91z0QNd-Ji7d4i0LDXuuQMQ/pub";
 	.foot-wrapper-1
 		.row.links
 			.col-md-4
@@ -48,13 +48,12 @@
 	.foot-wrapper-2
 		.row.news-bar(id='news-bar')
 			.col-sm-12
-				p Stay tuned for the Summer meeting agenda: Mondays at 5:00pm in room 2806 of Maggini Hall
-					//a(href=LINK_AGENDA_PUB target='_blank')= "This week's meeting: " + "Fridays at 11:00am in room 2806 of Maggini Hall"
+				a(href=LINK_AGENDA_PUB target='_blank')= "This week's meeting: " + "Mondays at 5:00pm in room 2806 of Maggini Hall"
 	.foot-wrapper-3
 		.row.news-subbar
 			.col-sm-12
 				p
-					a(href=LINK_MINUTES target='_blank')= "Here are last, last, last week's minutes"
+					a(href=LINK_MINUTES target='_blank')= "Here are last week's minutes"
 	.foot-wrapper-4
 		.row.about
 			.col-sm-12

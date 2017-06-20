@@ -79,7 +79,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//10
+//12
 var projects = [
 	new Project(1,'CS Website',
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
@@ -95,36 +95,31 @@ var projects = [
 		},
 		[]
 	),
-	new Project(9,'Club App',
+	new Project(11,'Firefighter',
 		'',
 		'',
-		'In-Progress',
-		'Building navigation',
+		'In Progress',
+		'Designing Plans',
 		{},
-		{
-			invision: 'https://invis.io/K8AX0FZBN',
-			figma: 'https://www.figma.com/files/project/161855/Club-App',
-			github: 'https://github.com/SRJC-Computer-Science-Club/cs-app-react-native'
-		},
-		[]
+		{},
+		[
+		]
 	),
-	new Project(7,'SRJC Scheduler',
-		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
-		'Schedule your next semester with SRJC Scheduler!',
-		'Rebuilding',
-		'Mockups looking good',
+	new Project(12,'Note Taking App',
+		'',
+		'',
+		'In Progress',
+		'Designing Plans',
 		{},
-		{
-			scheduler: 'http://srjcscheduler.com/',
-			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler'
-		},
-		[]
+		{},
+		[
+		]
 	),
 	new Project(5,'Line Follower',
 		'',
 		'',
 		'In Progress',
-		'Crunch Time!',
+		'Third place, not bad!',
 		{},
 		{
 			robogames: 'http://robogames.net/rules/line-following.php',
@@ -149,6 +144,66 @@ var projects = [
 		[
 		]
 	),
+	new Project(0,'Micromouse',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An autonomous maze solving robot mouse',
+		'Rebuilding?',
+		'',
+		{},
+		{
+			checkvist: 'https://checkvist.com/checklists/542765',
+			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
+			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
+		},
+		[]
+	),
+	new Project(9,'Club App',
+		'',
+		'',
+		'Positions Needed',
+		'Building navigation',
+		{},
+		{
+			invision: 'https://invis.io/K8AX0FZBN',
+			figma: 'https://www.figma.com/files/project/161855/Club-App',
+			github: 'https://github.com/SRJC-Computer-Science-Club/cs-app-react-native'
+		},
+		[]
+	),
+	new Project(7,'SRJC Scheduler',
+		'Quickly load classes onto a friendly calendar all at once! If instructors isn\'t your main concern, nicely look at all available times for a course. The SRJC Scheduler is founded and created by <a href="/members/0">Ben Hough</a>',
+		'Schedule your next semester with SRJC Scheduler!',
+		'On-Hold',
+		'Building the boilderplate',
+		{},
+		{
+			scheduler: 'http://srjcscheduler.com/',
+			github: 'https://github.com/SRJC-Computer-Science-Club/srjc-scheduler'
+		},
+		[]
+	),
+	new Project(3,'Function Fighters',
+		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+		'An AI battle arena simulator',
+		'Archived',
+		'Would you like to join?!',
+		{},
+		{
+			github: 'https://github.com/joshuasrjc/function-fighters'
+		},
+		[]
+	),
+	new Project(10,'ShortLink',
+		"<a href='/members/12'>Kyle</a> joined <a href='/events/0'>Make-a-thon</a> to make his first iOS app. It was a success!<br><br>ShortLink brings link shortening to iOS, once more, using Google's public API to enter any valid url and gives back a working shorten link! This app is used as an introductory to iOS Development.",
+		"The first iOS application to make it to the club",
+		"Archived",
+		"Have a Mac? Join the iOS Team",
+		{},
+		{
+			github: 'https://github.com/Kyle1668/Short-Link'
+		},
+		[]
+	),
 	new Project(8,'Dreamscape',
 		'',
 		'',
@@ -160,41 +215,6 @@ var projects = [
 		},
 		[
 		]
-	),
-	new Project(0,'Micromouse',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An autonomous maze solving robot mouse',
-		'Rebuilding',
-		'',
-		{},
-		{
-			checkvist: 'https://checkvist.com/checklists/542765',
-			waffle: 'https://waffle.io/SRJC-Computer-Science-Club/micromouse',
-			github: 'https://github.com/SRJC-Computer-Science-Club/micromouse'
-		},
-		[]
-	),
-	new Project(3,'Function Fighters',
-		'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-		'An AI battle arena simulator',
-		'Scrimmaging!',
-		'Would you like to join?!',
-		{},
-		{
-			github: 'https://github.com/joshuasrjc/function-fighters'
-		},
-		[]
-	),
-	new Project(10,'ShortLink',
-		"<a href='/members/12'>Kyle</a> joined <a href='/events/0'>Make-a-thon</a> to make his first iOS app. It was a success!<br><br>ShortLink brings link shortening to iOS, once more, using Google's public API to enter any valid url and gives back a working shorten link! This app is used as an introductory to iOS Development.",
-		"The first iOS application to make it to the club",
-		"In-Progress",
-		"Have a Mac? Join the iOS Team",
-		{},
-		{
-			github: 'https://github.com/Kyle1668/Short-Link'
-		},
-		[]
 	),
 	new Project(6,'Retailer',
 		'Created with <a href="https://unity3d.com" target="_blank">Unity 3D</a>, Retailer is an all-out, in-depth simulation of a store manager. You, the store manager, will control and oversee many things such as who you hire, promote, penaltize and transfer in your store. Chose which vendors you\'d like to partner with as well as what merchandise you\'ll want to sell. Will your store be a grocery store, hardware store or an outlet? Every small detail will be made by you, the store manager.',
@@ -244,20 +264,6 @@ var projects = [
 
 //30
 var members = [
-	new Member(2, 'Erick', 'Sanchez',
-		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
-		'Making apps on the iPhone and on other platforms.',
-		{
-			github: 'https://www.GitHub.com/LinnierGames',
-			linkedin: 'https://www.LinkedIn.com/in/erick-sanchez-84083171/',
-			facebook: 'https://www.Facebook.com/erick.sanchez.988926',
-			twiter: 'https://www.Twitter.com/Linnier__Games',
-		},
-		'esericksanc@gmail.com',
-		[
-			'C++','JavaScript','Objective-C','HTML & CSS'
-		]
-	),
 	new Member(1, 'Joshua', 'Murphy',
 		'my bio',
 		undefined,
@@ -268,13 +274,6 @@ var members = [
 		[
 			'C++','JavaScript'
 		]
-	),
-	new Member(4, 'Steven', 'Guido',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
 	),
 	new Member(12, 'Kyle', 'O\'Brien',
 		'Hey! I\'m a professional novice. My skills lie primarly in C++ and Front-End Web technologies. I\'m currently learning Objective-C and Swift for an internship this summer. ',
@@ -288,6 +287,29 @@ var members = [
 			'Javascript',
 			'Swift',
 			'Objective-C'
+		]
+	),
+	new Member(20, 'Adam', 'Ahrens',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(2, 'Erick', 'Sanchez',
+		'Began programming since GameMaker was installed on the computer of my 8th grade English class. Made a game from complete scratch and messing around with my friends watching me make a face follow the cursor then something shooting at the face! And this is how Face Game was made, a simple concept turned into something amusing. This game was a hit for too many students during English D: But I expanded to the iPhone, the Mac World! And I\'ll never go back, to PC *cough*. I planned to recreate the Face Game on the iOS with all new faces and cooler stuff because it\'s on the phone. Butt I was too intrested in making other iOS apps and created a few utilities enough to make myself noticed for a client. I programmed and designed an application for a client, George Moskoff. George was the sole creator of Kids-Self Evaluation. This app is sold on the iPhone AppStore. I learned to making my own apps to sell on the AppStore, Mulah, iLogs, Assigned, and whatever else comes out of my head :)',
+		'Making apps on the iPhone and on other platforms.',
+		{
+			github: 'https://www.GitHub.com/LinnierGames',
+			linkedin: 'https://www.LinkedIn.com/in/erick-sanchez-84083171/',
+			facebook: 'https://www.Facebook.com/erick.sanchez.988926',
+			twiter: 'https://www.Twitter.com/Linnier__Games',
+		},
+		'esericksanc@gmail.com',
+		[
+			'C++','JavaScript','Objective-C','HTML & CSS'
 		]
 	),
 	new Member(3, 'Oran', 'C',
@@ -313,6 +335,13 @@ var members = [
 			'HTML/CSS',
 			'Assembly'
 		]
+	),
+	new Member(4, 'Steven', 'Guido',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
 	),
 	new Member(22, 'Duncan', 'MacDonald',
 		'my bio',
@@ -348,15 +377,6 @@ var members = [
 			'PHP'
 		]
 	),
-	new Member(20, 'Adam', 'Ahrens',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[
-
-		]
-	),
 	new Member(11, 'Junior', 'Diarrassouba',
 		'',
 		undefined,
@@ -367,15 +387,6 @@ var members = [
 			'Java',
 			'HTML/CSS',
 			'JavaScript'
-		]
-	),
-	new Member(26, 'Alejandro', 'Fernandez',
-		'my bio',
-		'I enjoy long walks on the beach',
-		{},
-		'alexotter@ymail.com',
-		[
-			'C++'
 		]
 	),
 	new Member(27, 'Jameson', 'Danning',
@@ -422,6 +433,15 @@ var members = [
 		undefined,
 		[
 
+		]
+	),
+	new Member(26, 'Alejandro', 'Fernandez',
+		'my bio',
+		'I enjoy long walks on the beach',
+		{},
+		'alexotter@ymail.com',
+		[
+			'C++'
 		]
 	),
 	new Member(30, 'Julie', 'Levine',
@@ -600,9 +620,12 @@ var members_projects = [
 	new ProjectsMembers( 57 , 11 , 28 , 'Programmer'),
 	new ProjectsMembers( 58 , 11 , 27 , 'Assets'),
 	new ProjectsMembers( 59 , 11 , 29 , 'Assets'),
+	//Firefighter
+	//Note taking
+	new ProjectsMembers( 55 , 12 , 3 , 'Project Manager'),
 
 ];
-//54
+//55
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
 //9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
