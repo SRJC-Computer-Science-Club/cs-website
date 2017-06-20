@@ -994,7 +994,33 @@ var _categories = [
 				"",
 				1, 0, 0, 0,
 				[
-					new Lesson( 4, "Installing and Understanding Xcode",
+					new Lesson( 4, "Quick Start",
+						"",
+						"Here are some VERY informational videos on Swift and app development with Swift. This includes a link to Stanford's course.",
+						[
+							{markdown: "asdf"},
+							{video: {text: {list: {text: "Stanford's 1st lecture demostrating ", value: [{text: "class/struct/enum declarations"}, {text: "optionals, switches, and"}, {text: "understanding the interface builder* with IBActions and IBOutlets."}]}},
+								url: "https://www.youtube.com/embed/ilQ-tq772VI?list=PLPA-ayBrweUz32NSgNZdl0_QISw-f12Ai", caption: "Stanford 2017"}
+							},
+							{video: {text: {list: {text: "placeholder"}, value: []}, 
+								url: "https://www.youtube.com/embed/dKaojOZ-az8", caption: "Swift 3 Tutorial-Derek Banas"}
+							},
+							{list: {text: "Start Developing iOS Apps (Swift) is the perfect starting point for learning to create apps that run on iPhone and iPad. View this set of incremental lessons as a guided introduction to building your first app—including the tools, major concepts, and best practices that will ease your path.",
+								value: [
+								{markdown: "Build a Basic UI, link [here](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/BuildABasicUI.html#//apple_ref/doc/uid/TP40015214-CH5-SW1)"},
+								{markdown: "Create a Table View, link [here](https://developer.apple.com/library/content/referencelibrary/GettingStarted/DevelopiOSAppsSwift/CreateATableView.html#//apple_ref/doc/uid/TP40015214-CH8-SW1)"}
+								]
+							}},
+							{section: "Other Resources"},
+							{list: {
+								value: [
+								{markdown: "Swift Programming PDF: iBooks [link](https://itunes.apple.com/us/book/the-swift-programming-language-swift-3-1/id881256329?mt=11)"},
+								{markdown: "Intro to App Development with Swift PDF: iBooks [link](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)"},
+								{markdown: "App Development with Swift PDF: iBooks [link](https://itunes.apple.com/us/book/app-development-with-swift/id1219117996?mt=11)"}
+							]}}
+						]
+					),
+					new Lesson( 5, "Installing and Understanding Xcode",
 						"",
 						"Xcode will be your one-time stop for all of your development. It'll be your IDE, debugger and deployment application",
 						[
