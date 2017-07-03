@@ -828,7 +828,7 @@ var club_officers =
 [
 	new ClubOfficers( 0, 1, 'President', "#055B75"),
 	new ClubOfficers( 1, 12, 'Vice<br>President', "#0D94BD"),
-	new ClubOfficers( 2, 20, 'Treasurer<br>& ICC Rep', '#579C08'),
+	new ClubOfficers( 2, 20, 'Treasurer<br>', '#579C08'),
 	new ClubOfficers( 3, 2, 'Secretary', '#579C08'),
 	new ClubOfficers( 4, -1, 'ICC Rep', '#EEA00E'),
 ];
