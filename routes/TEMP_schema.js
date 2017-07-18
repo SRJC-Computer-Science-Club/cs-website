@@ -79,7 +79,7 @@ function ClubOfficers( id, member_id, position_title, swatch)
 	this.swatch = swatch;
 }
 
-//12
+//14
 var projects = [
 	new Project(1,'CS Website',
 		'Not only will this new website show off each of our projects, tasks and quick links to all of our resources and tools the club is using, but it will also become a hub for our new and current members to digest a project and become a great help! Any new top news, upcoming event, and project updates will be posted to our site for everyone to view. My vision in this website is for everyone, members, programmers, and potental members to stay informed about progress and details in every project. Members and potental members can comment and give feedback to any project as a comment feed in each project. Each project contains a detailed description about goals, requirments, and the platform as well as images, list of participating members, and a timeline of events and achivements. As for members, a club member can create a profile and fill in a picture, short and long bios, and show off any work done outside of the club. Quick links will show all of the projects, listed on the website, each member has participated in. As for the About and Contact Us pages, egeryone will have the opprotunuty to ask how to join the club and learn about what we do.',
@@ -95,21 +95,31 @@ var projects = [
 		},
 		[]
 	),
-	new Project(11,'Firefighter',
+	new Project(14,'Firefighter',
 		'',
 		'',
-		'In Progress',
+		'On Hold',
 		'Designing Plans',
 		{},
 		{},
 		[
 		]
 	),
-	new Project(12,'Note Taking App',
+	new Project(12,'Jumpnotes',
 		'',
 		'',
 		'In Progress',
-		'Designing Plans',
+		'Delegating Tasks',
+		{},
+		{},
+		[
+		]
+	),
+	new Project(13,'Book Stack',
+		'',
+		'',
+		'In Progress',
+		'Creating Outline',
 		{},
 		{},
 		[
@@ -622,12 +632,17 @@ var members_projects = [
 	new ProjectsMembers( 59 , 11 , 29 , 'Assets'),
 	//Firefighter
 	//Note taking
-	new ProjectsMembers( 55 , 12 , 3 , 'Project Manager'),
+	new ProjectsMembers( 60 , 12 , 3 , 'Project Manager'),
+	new ProjectsMembers( 62 , 12 , 16 , 'Front-End Developer'),
+	new ProjectsMembers( 63 , 12 , 12 , 'Back-End Developer'),
+	new ProjectsMembers( 64 , 12 , 2 , 'Front-End Designer'),
+	//Book Stack
+	new ProjectsMembers( 61 , 13 , 25 , 'Project Manager'),
 
 ];
-//55
+//64
 //0-ben 1-joshua 2-erick 3-oran 4-steven 5-alex chen chen 6-noah 7-conan 8-wind
-//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah
+//9-yekalo 10-alex dewey 11-junior 12-kyle 13-eli 14-austin 15-isaiah 16-noah ta
 //17-spencer 18-travis 19-erik 20-adam 21-ashley 22-duncan 23-andrew 24-greg
 //25-juan 26-alex frenandez 27-jameson 28-andrew eljumaily 29-roman 30-Julie
 
@@ -637,7 +652,7 @@ var members_projects = [
 
 
 
-//11
+//8
 var project_area_requests = [
 	//CS Website
 	new ProjectAreaRequests( 0, 1,"Front-End Developers",
@@ -667,7 +682,7 @@ var project_area_requests = [
 		1
 	),
 	//Line-Follower
-	new ProjectAreaRequests( 11, 5,"Hardware Designers",
+	new ProjectAreaRequests( 8, 5,"Hardware Designers",
 		"",
 		":3", 0,
 		[
@@ -699,7 +714,25 @@ var project_area_requests = [
 		":1", 1,
 		[],
 		2
-	)
+	),
+	//Book Stack
+	new ProjectAreaRequests( 6, 13,"Front-End Developers",
+		"Help program and design the front-end of this website.",
+		":4", 2,
+		[
+			{title: "HTML/CSS/Bootstrap", experience: 3},
+			{title: "Java Script", experience: 1}
+		],
+		25
+	),
+	new ProjectAreaRequests( 7, 13,"Back-End Developers",
+		"",
+		":3", 2,
+		[
+			{title: "MongoDB/Moongse", experience: 4}
+		],
+		25
+	),
 ];
 
 //0
