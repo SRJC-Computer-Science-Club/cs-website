@@ -101,5 +101,6 @@ block view
 	#lesson-page.content
 		h2= lesson.title
 		#lesson
-			each content in lesson.content
-				+executeComponent(content)
+			- if (lesson.isPublished)
+				each content in lesson.content
+					+executeComponent(content)

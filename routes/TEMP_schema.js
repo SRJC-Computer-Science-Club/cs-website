@@ -1,15 +1,16 @@
 //This will act as temporary database placeholder
 
-function Category( id, title, description, image, tutorials )
+function Category( id, title, description, image, tutorials, published )
 {
 	this.id = id;
 	this.title = title;
 	this.description = description;
 	this.image = image;
 	this.tutorials = tutorials;
+	this.isPublished = published;
 }
 
-function Tutorial( id, title, description, description_short, difficulty, nDownloads, nLikes, nDislikes, lessons )
+function Tutorial( id, title, description, description_short, difficulty, nDownloads, nLikes, nDislikes, lessons, published )
 {
 	this.id = id;
 	this.title = title;
@@ -20,15 +21,17 @@ function Tutorial( id, title, description, description_short, difficulty, nDownl
 	this.nLikes = nLikes;
 	this.nDislikes = nDislikes;
 	this.lessons = lessons;
+	this.isPublished = published;
 }
 
-function Lesson( id, title, description, description_short, content)
+function Lesson( id, title, description, description_short, content, published)
 {
 	this.id = id;
 	this.title = title;
 	this.description = description;
 	this.description_short = description_short;
 	this.content = content;
+	this.isPublished = published;
 }
 
 Lesson.prototype.addBodyText = function( content )
@@ -740,28 +743,34 @@ var _categories = [
 							{list: { value: [
 								{markdown: "Node, install [here](https://nodejs.org/en/),"},
 								{markdown: "On a PC, you'll need access [cmd](https://www.microsoft.com/resources/documentation/windows/xp/all/proddocs/en-us/cmd.mspx?mfr=true)"},
-								{markdown: "On a Mac, you'll need to access [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS))"}
+								{markdown: "On a Mac, you'll need to access [Terminal](https://en.wikipedia.org/wiki/Terminal_(macOS) )"}
 								]}},
-							{text: "When you install Nodejs, npm, or node package manager, will be installed with Nodejs. Nodejs will by our runtime server we'll use to compile our project. But first, let's create a package.json file."},
+							{text: "When you install Nodejs, npm, or node package manager, will be installed. Nodejs will be our runtime server we'll use to compile our project. But first, let's create a package.json file."},
 							{section: "Working with npm"},
-							{list: {text: {markdown: "A package.json file holds information about our workflow such as its name, version, dependencies, scripts you can run in cmd/Terminal, and much [more](https://docs.npmjs.com/files/package.json). Open up cmd, or terminal, and type in the following (you might want to change directory into someplace like your Desktop):"},
+							{list: {text: {markdown: "A package.json file holds information about our workflow such as its name, version, dependencies or packages, scripts you can run in cmd/Terminal, and [more](https://docs.npmjs.com/files/package.json).\
+								Open up cmd, or terminal, and type in the following (you might want to change directory into someplace like your Desktop):"},
 							value: [
 								{markdown: "`$ mkdir myworkspace`, creates a new directory"},
 								{markdown: "`$ cd myworkspace`, changes directory to myworkspace"},
 								{markdown: "`$ npm init`, initalizes a new package.json file"},
-								{markdown: "Follow the steps shown in the cmd/Terminal window by entering the name, version number, description, entry point, test command, git repo url, keywords, author, and license. Whatever is in `()` is the default if you enter a blank option"},
-								"After you've confirmed the package.json file, open up the myworkspace folder and you'll see this file with all its options",
+								{markdown: "Follow the steps shown in the cmd/Terminal window by entering the name, version number, description, entry point, test command, git repo url, keywords, author, and license.\
+									Whatever is in `()` is the default if you enter a blank option. You can also use `$ npm init -y` to skip these steps and use the default values."},
+								"After you've created the package.json file, open up the myworkspace folder and you'll see this file with all its options",
 							]}},
-							{list: {text: "Remember that this package.json file is where we save dependencies and scripts. So, lets write some dependencies in our workspace:",
+							{list: {text: "Remember, this package.json file will show what are our saved dependencies and scripts are for this workspace.\
+								So, lets add some dependencies in our workspace:",
 							value: [
-								{markdown: "`$ npm install bootstrap --save`. This will do two things: download the package bootstrap into a node_modules folder and since we've put a `--save` flag, this package will be saved in our package.json file"},
-								{markdown: "`$ npm install mongodb`. This will only install the package"}
+								{markdown: "`$ npm install bootstrap --save`.\
+									This will do two things: download the package bootstrap into a node_modules folder and since we've put a `--save` flag, this package will be saved in our package.json file"},
+								{markdown: "`$ npm install mongodb`. This will only install the package but not save in our package.json file"}
 							]}},
-							{markdown: "Open up our **package.json** file and look under dependencies. You'll see `\"bootstrap\": \"^3.3.7\"`. We'll explain the `^3.3.7` soon.\
-								But for now, if you uploaded this project to GitHub and had collaborators clone your project, they can download all of the project's dependencies by running `npm install`."},
+							{markdown: "Open up our **package.json** file and look under dependencies.\
+								You'll see `\"bootstrap\": \"^3.3.7\"` (version will vary). We'll explain the `^3.3.7` later.\
+								But for now, if you uploaded this project to GitHub and had collaborators clone your project, they can download all of the project's dependencies by running `$ npm install`."},
 							{list: {text: "To test this, go to the myapp folder and delete the node_modules folder and run the following in the same cd/Terminal window:",
 							value: [
-								{markdown: "`$ npm install`, this will look at our **package.json** file and install each package listed under `\"dependencies\"`. As for the `^3.3.7`, this means install the most stable version from 3.3.7 and newer; more [here](https://docs.npmjs.com/files/package.json#dependencies)"}
+								{markdown: "`$ npm install`, this will look at our **package.json** file and install each package listed under `\"dependencies\"`.\
+									As for the `^3.3.7`, this means install the most stable version from 3.3.7 and newer; more [here](https://docs.npmjs.com/files/package.json#dependencies)"}
 							]}},
 							{text: "With this simple command everyone can jump into any project node project and start testing right away!"},
 							{section: "Helpful Resources"},
@@ -771,13 +780,13 @@ var _categories = [
 								{markdown: "Here's a YouTube Playlist from npm Inc on getting started with npm [here](https://www.youtube.com/watch?v=pa4dc480Apo&list=PLQso55XhxkgBMeiYmFEHzz1axDUBjTLC6)"},
 								{markdown: "Debug your node pacakage manager problems with this [YouTube Channel](https://www.youtube.com/channel/UCK71Wk0I45SLTSXQA23GdIw), or check out the docs from npm [here](https://docs.npmjs.com/)"}
 							]}}
-						]
+						],
+						true
 					),
 					new Lesson( 1, "The Express Package",
-						"",
+						"In this lesson, we'll understand the workflow that is made with Express. This workspace is used in the Club Website.",
 						"Setting up an Express boilerplate project",
 						[
-							{text: "In this lesson, we'll understand the workflow that is made with Express. This workspace is used in the Club Website."},
 							{list: {text: "What is Express? Express is a nodejs server project which handles routing. Some of its features are:",
 							value: [
 								"Robust routing",
@@ -793,7 +802,7 @@ var _categories = [
 								Now, open cmd/Terminal, cd onto your desktop and run the following:",
 								value: [
 								{markdown: "`$ npm install express-generator -g`, the `-g` flag will install this in a global location versus the node_module folder inside the project, so you might have to use `sudo` in front of this command if it fails due to authentication"},
-								{markdown: "`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use [pug](https://pugjs.org/api/getting-started.html) as the view engine"},
+								{markdown: "`$ express --view=pug myapp`, the `--view=pug` flag will tell express to use [pug](https://pugjs.org/api/getting-started.html) as the view engine and myapp is the title of this project"},
 								{markdown: "`$ cd myapp`, change directory into our new folder"},
 								{markdown: "`$ npm install`, download all the dependencies"},
 								{markdown: "`$ npm start`, this is the script we'll use to start our express server"},
@@ -814,14 +823,15 @@ var _categories = [
 								{markdown: "[**Mirgrating from JADE to PUG**](https://pugjs.org/api/migration-v2.html) this will give you steps from upgrading to pug from jade"}
 							]}},
 							{text: "Sadly, we're not done here. There are a few more tools/packages the current Club Website uses that we'd like to add to this boilerplate project."}
-						]
+						],
+						true
 					),
 					new Lesson( 2, "Adding SASS to the project",
 						"Learn how to add SASS to your workspace and start using partials to scope styling to certain pages.",
 						"Love HTML/CSS? In that case, you'll love SCSS!",
 						[
-							{text: ''},
-							{list: {text: '',
+							{text: "Let's continue from our project we created using **express generator** boilerplate."},
+							{list: {text: "Open up cmd/terminal and run the following:",
 							value: [
 								{markdown: "`$ npm install node-sass-middleware@0.8.0 --save`"},
 								{code: {text: {markdown: "Open **app.js** in a text editor and paste the following after `line 22`:"},
@@ -833,9 +843,9 @@ var _categories = [
 									"&nbsp; outputStyle: 'compressed',",
 									"&nbsp; sourceMap: true",
 									"}));"
-								]}, footer: {markdown: "Be sure to paste this code before `app.use(express.static(path.join(__dirname, 'public')));`"}},
-								{markdown: "Create a new folder, **sass** in the root folder"},
-								{markdown: "Create a new file, **main.scss** inside the **sass** folder"},
+								]}, footer: {markdown: "Be sure to paste this code before this line of code: `app.use(express.static(path.join(__dirname, 'public')));`"}},
+								{markdown: "Create a new folder, name it **sass** in the root folder of our project"},
+								{markdown: "Create a new file, name it **main.scss** inside the **sass** folder"},
 								{markdown: "Cut and paste the contents in **style.css**, found under **root > public > stylesheets**, into **main.scss**"},
 								{code: {text: {markdown: "Open **layout.pug** in the **views/** folder and paste the following on `line 5`:"},
 								value: [
@@ -880,11 +890,12 @@ var _categories = [
 							{section: "Helpful Resources"},
 							{list: {text: "",
 							value: [
-								{markdown: "Check out the docs [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)"},
+								{markdown: "Check out the SASS docs [here](http://sass-lang.com/documentation/file.SASS_REFERENCE.html)"},
 								{markdown: "Here's a indepth video on [SASS](https://www.youtube.com/watch?v=wz3kElLbEHE)",
 								footer: "Beware, this video is 45m long!"}
 							]}}
-						]
+						],
+						true
 					),
 					new Lesson( 3, "nodemon and Google's Extension, LiveReload",
 						"This lesson will require that you use Google Chrome as the browser as LiveReload is only available on this browser. But, don't flip! nodemon is not dependant on the browser so this lesson is still a great time saver when working with nodejs projects!",
@@ -920,15 +931,18 @@ var _categories = [
 								{markdown: "Before you open localhost:3000, you'll need to install the Chrome Extension [here](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en)"},
 								{markdown: "Back in cmd/Terminal, close any process and run `$ npm run dev`. Hopefully there were no errors on your console"},
 								{markdown: "Now, open [localhost:3000](localhost:3000) and enable the extension from the toolbar of the Chrome browser and make some changes in the **index.pug** file then hit save.\
-								Without restarting the server and hitting Ctr+R on your browser, the new changes appear!"}
+								Without restarting the server and hitting refresh on your browser, the new changes appear!"}
 							]}}
-						]
+						],
+						true
 					),
 					new Lesson( 4, "Bootstrap & Jquery",
 						"",
 						"Love bootstrap!? Lets get started then!",
 						[
-						]
+							{text: "Lesson to be updated soon."}
+						],
+						false
 					),
 					new Lesson( 6, "Other Stacks, Technologies and Resources",
 						"",
@@ -939,9 +953,11 @@ var _categories = [
 							value: [
 								{markdown: "[Nodejs Tutorial](https://www.youtube.com/playlist?list=PLGLfVvz_LVvSpxyVx5XcprEgvhJ1BzruD) from [Derek Banas](https://www.youtube.com/user/derekbanas)"}
 							]}}
-						]
+						],
+						true
 					)
-				]
+				],
+				true
 			),
 			new Tutorial( 1, "Adding a New Page",
 				"This one's a large one, butt! we'll be sure to not miss any details without explaination. We're going to add a partner's page to our website. Let's get started.",
@@ -964,26 +980,31 @@ var _categories = [
 							], footer: "Here is where we'll add all of our styled html components in this file."}
 						]
 					)
-				]
+				],
+				false
 			),
 			new Tutorial( 2, "MongoDB",
 				"",
 				"",
 				3, 0, 0, 0,
 				[
-				]
+				],
+				false
 			)
-		]
+		],
+		true
 	),
 	new Category( 2, "Hardware and Software",
 		"description",
 		"/images/icons/tutorial-c.png",
-		[]
+		[],
+		true
 	),
 	new Category( 3, "Mobile Development",
 		"description",
 		"/images/icons/tutorial-mobile.png",
-		[]
+		[],
+		true
 	),
 	new Category( 4, "iOS Development",
 		"description",
@@ -998,11 +1019,13 @@ var _categories = [
 						"",
 						"Here are some VERY informational videos on Swift and app development with Swift. This includes a link to Stanford's course.",
 						[
-							{markdown: "asdf"},
-							{video: {text: {list: {text: "Stanford's 1st lecture demostrating ", value: [{text: "class/struct/enum declarations"}, {text: "optionals, switches, and"}, {text: "understanding the interface builder* with IBActions and IBOutlets."}]}},
+							{text: "What's shown here are in-depth videos on getting a great foundation on Swift and developing apps in Xcode"},
+							{video: {text: {list: {text: "Stanford's 1st lecture demostrating ", 
+								value: [{text: "class/struct/enum declarations"}, {markdown: "optionals, switches, and `if let` syntax"}, {text: "understanding the *interface builder* with IBActions and IBOutlets"}]}},
 								url: "https://www.youtube.com/embed/ilQ-tq772VI?list=PLPA-ayBrweUz32NSgNZdl0_QISw-f12Ai", caption: "Stanford 2017"}
 							},
-							{video: {text: {list: {text: "placeholder"}, value: []}, 
+							{markdown: "Here's a Slack post describing most of the [Stanford's videos](https://slack-files.com/T0LTMGRNW-F5P51708N-06579b1dbb)"},
+							{video: {text: {list: {text: "\"..a ton of examples..\" he says and that is what you'll get. You'll use Swift Playgrounds to execute the code"}, value: []}, 
 								url: "https://www.youtube.com/embed/dKaojOZ-az8", caption: "Swift 3 Tutorial-Derek Banas"}
 							},
 							{list: {text: "Start Developing iOS Apps (Swift) is the perfect starting point for learning to create apps that run on iPhone and iPad. View this set of incremental lessons as a guided introduction to building your first app—including the tools, major concepts, and best practices that will ease your path.",
@@ -1018,7 +1041,8 @@ var _categories = [
 								{markdown: "Intro to App Development with Swift PDF: iBooks [link](https://itunes.apple.com/us/book/intro-to-app-development-with-swift/id1118575552?mt=11)"},
 								{markdown: "App Development with Swift PDF: iBooks [link](https://itunes.apple.com/us/book/app-development-with-swift/id1219117996?mt=11)"}
 							]}}
-						]
+						],
+						true
 					),
 					new Lesson( 5, "Installing and Understanding Xcode",
 						"",
@@ -1026,7 +1050,8 @@ var _categories = [
 						[
 							{section: "Setting up the Xcode project"},
 							{text: ""}
-						]
+						],
+						false
 					),
 					new Lesson( 0, "Exercise: Basketball Ratio",
 						"",
@@ -1088,7 +1113,8 @@ var _categories = [
 							{section: "Using the ViewController to update the view"},
 							{video: {text: {markdown: "In this video, "}, url: "//www.youtube.com/embed/TQl_Sv3LztQ", caption: "Xcode's Interface Builder"}},
 							{list: {value: []}}
-						]
+						],
+						false
 					),
 					new Lesson( 1, "Exercise: Unit Conversions",
 						"",
@@ -1096,7 +1122,8 @@ var _categories = [
 						[
 							{section: "Setting up the Xcode project"},
 							{text: ""}
-						]
+						],
+						false
 					),
 					new Lesson( 2, "Exercise: Calculator",
 						"",
@@ -1104,7 +1131,8 @@ var _categories = [
 						[
 							{section: "Setting up the Xcode project"},
 							{text: ""}
-						]
+						],
+						false
 					),
 					new Lesson( 3, "Exercise: Utitlites",
 						"",
@@ -1112,11 +1140,14 @@ var _categories = [
 						[
 							{section: "Setting up the Xcode project"},
 							{text: ""}
-						]
+						],
+						false
 					)
-				]
+				],
+				true
 			)
-		]
+		],
+		true
 	),
 	new Category( 5, "Game Development",
 		"description",
@@ -1139,11 +1170,14 @@ var _categories = [
 								{markdown: '[2D Platformer Character Controller](https://www.youtube.com/playlist?list=PLX2vGYjWbI0SUWwVPCERK88Qw8hpjEGd8)'},
 							]}
 							}
-						]
+						],
+						true
 					)
-				]
+				],
+				true
 			)
-		]
+		],
+		true
 	)
 ];
 

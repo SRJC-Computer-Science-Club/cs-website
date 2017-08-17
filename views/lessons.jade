@@ -6,7 +6,8 @@ block content
     p= tutorial.description
     p.header Lessons
     each lesson in tutorial.lessons
-      a(href=lesson.id + "/").cell
-        .context
-          p.header=lesson.title
-          p=lesson.description_short
+      - if (lesson.isPublished)
+        a(href=lesson.id + "/").cell
+          .context
+            p.header=lesson.title
+            p=lesson.description_short
