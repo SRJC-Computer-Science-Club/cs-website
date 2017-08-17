@@ -1,5 +1,17 @@
 var tempDB = require('./TEMP_schema');
 var pluralize = require('pluralize');
+var markdown = require('marked')
+
+markdown.setOptions({
+  renderer: new markdown.Renderer(),
+  gfm: true,
+  tables: true,
+  breaks: false,
+  pedantic: false,
+  sanitize: true,
+  smartLists: true,
+  smartypants: false
+});
 
 var trimURL = function trimURL(url) {
   var start = -1, end = -1, length = url.length, i = 0;
@@ -14,6 +26,19 @@ var trimURL = function trimURL(url) {
     i++;
   }
   return url.substring(start, end);
+}
+
+function findIdInCollection(id,collection)
+{
+  var found = undefined;
+  for (var item of collection) {
+    if (id == item.id) {
+      found = item;
+      break;
+    }
+  }
+
+  return found;
 }
 
 function findProjectForID( projects, id )
@@ -215,6 +240,7 @@ function replaceColorTitle(project_interest)
 }
 
 module.exports = {
+  findIdInCollection,
 	findProjectForID,
 	findProjectMembers,
 	findProjectAreaRequests,
@@ -226,5 +252,7 @@ module.exports = {
 	findClubOfficers,
 	replaceColorIntensity,
 	replaceColorTitle,
-	pluralize, trimURL
+	pluralize,
+  trimURL,
+  markdown
 };

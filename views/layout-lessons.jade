@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	#lesson-layout.content
+		.row
+			.sidebar.col-md-3
+				.hidden-sm-down
+					.cell
+						.context
+							p.header About this Lesson
+							p!= lesson.description
+					.list-group
+						a(href="#").list-group-item Download
+						a(href="#").list-group-item Save for Later
+					.list-group
+						a.list-group-item Like
+						a.list-group-item Dislike
+			.view.col-md-9
+				block view

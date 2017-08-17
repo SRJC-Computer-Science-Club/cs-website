@@ -22,6 +22,7 @@ $darkgray: #7D7D7D;
 $darkergray: #484848;
 //control-colors
 $highlighted: $lightgray;
+$subtitle: $gray-darkgray;
 
 $margin-xs: 4px;
 $margin-sm: 8px; //vertical margin
@@ -82,6 +83,7 @@ p.header {
 @import 'partials/event_page';
 @import 'partials/members_page';
 @import 'partials/member_page';
+@import 'partials/resources_page';
 @import 'partials/about';
 
 
