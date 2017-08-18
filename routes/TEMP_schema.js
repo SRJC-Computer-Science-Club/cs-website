@@ -327,17 +327,6 @@ var projects = [
 
 //30
 var members = [
-	new Member(1, 'Joshua', 'Murphy',
-		'my bio',
-		undefined,
-		{
-			github: 'https://www.github.com/joshuasrjc'
-		},
-		undefined,
-		[
-			'C++','JavaScript'
-		]
-	),
 	new Member(12, 'Kyle', 'O\'Brien',
 		'Hey! I\'m a professional novice. My skills lie primarly in C++ and Front-End Web technologies. I\'m currently learning Objective-C and Swift for an internship this summer. ',
 		'A Professional Novice',
@@ -440,6 +429,40 @@ var members = [
 			'PHP'
 		]
 	),
+	new Member(28, 'Andrew', 'Eljumaily',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(25, 'Juan', 'Rios',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(30, 'Julie', 'Levine',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[
+
+		]
+	),
+	new Member(1, 'Joshua', 'Murphy',
+		'my bio',
+		undefined,
+		{
+			github: 'https://www.github.com/joshuasrjc'
+		},
+		undefined,
+		[
+			'C++','JavaScript'
+		]
+	),
 	new Member(11, 'Junior', 'Diarrassouba',
 		'',
 		undefined,
@@ -475,20 +498,6 @@ var members = [
 			'Python'
 		]
 	),
-	new Member(28, 'Andrew', 'Eljumaily',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
-	),
-	new Member(25, 'Juan', 'Rios',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[]
-	),
 	new Member(29, 'Roman', 'Ruano',
 		'my bio',
 		undefined,
@@ -505,15 +514,6 @@ var members = [
 		'alexotter@ymail.com',
 		[
 			'C++'
-		]
-	),
-	new Member(30, 'Julie', 'Levine',
-		'my bio',
-		undefined,
-		{},
-		undefined,
-		[
-
 		]
 	),
 	new Member(15, 'Isaiah', 'Curtis',
@@ -1379,8 +1379,8 @@ var services = {
 
 var club_officers =
 [
-	new ClubOfficers( 0, 1, 'President', "#055B75"),
-	new ClubOfficers( 1, 12, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 0, 12, 'President', "#055B75"),
+	new ClubOfficers( 1, -1, 'Vice<br>President', "#0D94BD"),
 	new ClubOfficers( 2, 20, 'Treasurer<br>', '#579C08'),
 	new ClubOfficers( 3, 2, 'Secretary', '#579C08'),
 	new ClubOfficers( 4, -1, 'ICC Rep', '#EEA00E'),
