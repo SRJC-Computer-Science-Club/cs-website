@@ -22,6 +22,7 @@ $darkgray: #7D7D7D;
 $darkergray: #484848;
 //control-colors
 $highlighted: $lightgray;
+$subtitle: $gray-darkgray;
 
 $margin-xs: 4px;
 $margin-sm: 8px; //vertical margin
@@ -82,9 +83,8 @@ p.header {
 @import 'partials/event_page';
 @import 'partials/members_page';
 @import 'partials/member_page';
+@import 'partials/resources_page';
 @import 'partials/about';
-
-@import 'imported';
 
 
 ////////////////////////////////////
@@ -109,84 +109,4 @@ p.header {
 // End explicit class/id styles //
 //////////////////////////////////
 
-.avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  background-image: url('http://placehold.it/230x100');
-}
-
-//colors
-.lightgray
-{
-  background: $lightgray;
-}
-
-#atoms {
-  .member-cell {
-    width: 100%;
-    a.card {
-      height: 96px;
-      padding: 0;
-    }
-    a.card:hover {
-      background-color: $highlighted;
-      text-decoration: none;
-    }
-    img.img-avatar {
-      margin: 15px 10px;
-      float: left !important;
-      border-radius: 50%;
-    }
-    .member-text {
-      padding: 10px 0;
-    }
-  }
-  .member-cell.grid {
-    float: left;
-    width: 330px;
-    a.card {
-      margin: 0 .75rem .75rem 0;
-    }
-  }
-  .member-cell.grid.col-3 {
-    width: 33%;
-  }
-  .member-cell.grid.col-2 {
-    width: 50%;
-  }
-  //Generic-cell
-  .project-cell {
-    float: left;
-    width: 100%;
-    a.card:hover {
-      background-color: $highlighted;
-      text-decoration: none;
-    }
-    .nMebers {
-      position: absolute;
-      top: $margin-md;
-      right: $margin-md;
-      text-align: right;
-    }
-  }
-  //Generic-cell
-  .event-cell {
-    float: left;
-    width: 100%;
-    height: 25%;
-    a.card:hover {
-      background-color: $highlighted;
-      text-decoration: none;
-    }
-    .date {
-      position: absolute;
-      top: $margin-md;
-      right: $margin-md;
-      text-align: right;
-    }
-  }
-}
+@import 'imported';

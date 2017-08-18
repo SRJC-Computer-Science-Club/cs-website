@@ -4,4 +4,44 @@ block content
 	#members-page.content
 		#members-list.content
 			each member in members
-				include ./partials/members_page/_members_member-cell
+				- var isFound = false;
+				- for (var officer of officers)
+					- if (officer.member_id == member.id)
+						- isFound = officer;
+				//Tablet-Desktop-HD Desktop
+				.row.hidden-sm-down
+					.col-md-12
+						a(href='/members/' + member.id).card
+							img.avatar(src=member.avatar onError="this.src = 'http://placehold.it/77cb6f'")
+							- if (isFound != false)
+								#corner-ribbons.wrapper
+									.ribbon-wrapper
+										.ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
+							.member-info
+								h1.member-name= member.first_name + ' ' + member.last_name
+								if (member.bio_short !== undefined)
+									p= '"' + member.bio_short + '"'
+								p= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
+						.quick-links
+							each link in member.links
+								a(href=link target='_blank').links
+									span= helper.trimURL(link)
+									img.links
+				//sm, xs Phone-and landscape
+				#device-phone.row.hidden-md-up
+					.col-sm-12
+						a(href='/members/' + member.id).card
+							img.avatar(src=member.avatar onError="this.src = 'http://placehold.it/77cb6f'")
+							h1.member-name= member.first_name + ' ' + member.last_name
+							- if (isFound != false)
+								#corner-ribbons.wrapper
+									.ribbon-wrapper
+										.ribbon(style="background-color: " +isFound.swatch)!= isFound.position_title
+							if (member.bio_short !== undefined)
+								p= '"' + member.bio_short + '"'
+							p.hidden-sm-down= 'Participating in ' + helper.pluralize('project', member.numberOfProjects, true)
+							p.nProjects= helper.pluralize('project', member.numberOfProjects, true)
+						.quick-links
+							each link in member.links
+								a(href=link target='_blank').links
+									img.links

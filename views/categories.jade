@@ -1,0 +1,14 @@
+extends layout-lessons
+
+block content
+	#categories-page.content
+		.d-flex.justify-content-center
+			h2 Categories
+			- for ( var i = 0; i < categories.length; i += 1 )
+				- var category = categories[i]
+					- if (category.isPublished)
+						.category
+							a.cell(href=category.id + "/")
+								.context
+									img(src=category.image)
+								h2= category.title

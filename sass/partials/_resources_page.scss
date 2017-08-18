@@ -1,0 +1,155 @@
+#resources-page {
+	.context {
+		overflow: hidden;
+		position: relative;
+		padding: 0;
+		@extend .thumb;
+		img {
+			-moz-transition: all 0.3s;
+			-webkit-transition: all 0.3s;
+			transition: all 0.3s;
+		}
+		img:hover {
+			-moz-transform: scale(1.2);
+			-webkit-transform: scale(1.2);
+			transform: scale(1.1);
+		}
+		h2 {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+		height: 232px;
+	}
+}
+#categories-page {
+	.category {
+		@extend .cell-4;
+		.cell {
+			.context {
+				padding: 0;
+				height: 232px;
+				@extend .thumb;
+			}
+			h2 {
+				font-size: 1.25em;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+		}
+		margin: 0 auto;
+	}
+}
+#tutorials-page {
+	.tutorial {
+		@extend .cell;
+		.context {
+			height: 48px;
+			>* {
+				display: inline;
+			}
+			.difficulty {
+				float: left;
+				width: 8px;
+				height: 100%;
+			}
+			a {
+				float: left;
+				margin: auto auto auto $margin-lg;
+			}
+			.controls {
+				@extend .pull-xs-right;
+				* {
+					display: inline;
+					margin: auto $margin-sm;
+				}
+			}
+		}
+	}
+	.tutorial-mobile {
+		@extend .tutorial;
+	}
+}
+#lessons-page {
+	
+}
+#lesson-layout {
+	.sidebar {
+		padding-right: 0;
+		p.name {
+			text-align: center;
+		}
+		.navbar {
+			padding-top: $margin-md;
+		}
+		.list-group {
+			margin: $margin-md 0;
+			.list-group-item {
+				text-align: left;
+			}
+		}
+	}
+	.view {
+		#lesson-page {
+			#lesson {
+				padding: 0 $margin-md;
+				@media (max-width: map-get($grid-breakpoints,lg)) { //apply only for lg and down
+					padding: 0;
+				}
+				p {
+					line-height: 24px;
+				}
+				.card {
+					padding: $margin-sm 0;
+				}
+				.image, .video {
+					@extend .card;
+				}
+				.section {
+					font-size: 1.5em;
+					font-weight: bolder;
+					margin-bottom: 0;
+				}
+				ol, ul {
+					padding-left: 28px;
+				}
+				li {
+					margin: $margin-sm 0;
+					p {
+						margin: 0;
+					}
+				}
+				ul {
+					margin: $margin-sm 0;
+					padding-left: 0;
+					list-style-type: none;
+					li.code {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+				}
+				.markdown {
+					strong {
+					}
+				}
+				.span {
+					>div {
+						@extend .pull-xs-left;
+					}
+					.thumb {
+						@extend .card;
+					}
+				}
+				.thumbnail-caption {
+					margin: 0;
+				}
+				.subtitle {
+					color: $subtitle;
+				}
+				.footer {
+				}
+			}
+		}
+	}
+}
