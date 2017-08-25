@@ -159,8 +159,8 @@ var projects = [
 		]
 	),
 	new Project(12,'Jumpnotes',
-		'',
-		'',
+		'JumpNotes is a Simple, Quick, Easy to use, Note taking app that "auto-magically" backups everything to a server. Using the hottest new technology we built JumpNotes using React Native for the app frontend, Node.js for the backend server magic, and used Mongodb to implement our database.',
+		'Simple, Quick, Easy to use, Note taking app',
 		'In Progress',
 		'Delegating Tasks',
 		{},
@@ -799,7 +799,7 @@ var project_area_requests = [
 
 //0
 var project_events = [
-	new ProjectEvent( 0, 5,'RoboGames—Line Follower',
+	new ProjectEvent( 0, 5,'RoboGames—Line Follower, 2017',
 		'The 13th annual games will be held Apr 21-23, 2017. First, second, and third places finishers in all categories receive medals (gold, silver, or bronze respectively). Robots that don\'t fit into a specific category can enter "Best of Show" which can be any kind of robot doing anything. Junior League events are specifically set-up for robot builders under 18. "Entry Fees" are the cost to compete, not the cost for an audience ticket.<br><br>The club is attending the Sunday events to compete our Line Follower bot, IG-88B, as well as watching <a href="http://robogames.net/events.php">all the other events</a> the same day. Be sure to attend, or stay in touch with the PM, the weekly meetings to participate in this event.',
 		'Robotics competition for our line follower project.',
 		'Pleasanton, CA',
@@ -815,7 +815,7 @@ var project_events = [
 			{caption: 'Google Drive Folder', image: 'drive.png', url: 'https://drive.google.com/drive/folders/0B3wyRcLxpH4jX1BEN0tDMVI1bjQ?usp=sharing'}
 		]
 	),
-	new ProjectEvent( 1, 11, 'Ludum Dare',
+	new ProjectEvent( 1, 11, 'Ludum Dare, April 2017',
 		'Themes are suggested and chosen by the community. Theme Suggestions are accepted starting 5 weeks before the event. Theme Voting kicks off 2 weeks before the event. Ludum Dare games are submitted to 1 of 2 categories: the Jam or the Compo.</p><h3>The Jam</h2><p>The Jam is the Ludum Dare event for everyone. Teams, individuals, anyone that wants to come out and make something.<ol><li><p>Work alone or in a team.</p></li><li><p>Create a game in 72 hours.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. You’re free to use 3rd party Artwork/Music/Audio assets, or assets you previously created, but we ask that you OPT-OUT of the respected voting categories (Graphics, Audio). You can opt-out of a voting category when you submit your game. We strongly recommend you only use assets that you have the legal right to use (Public Domain, things you licensed/created, etc). If you don’t have the right to use something, it is your responsibility.</p><h3>The Compo</h3><p>The Compo is Classic Ludum Dare. Another way to think of it is as Ludum Dare “Hard Mode”. Compo games are created entirely from scratch (**) by one person, in just 48 hours. This is the ultimate test of your game creation skills.<ol><li><p>You must work alone (solo).</p></li><li><p>Your game, all your content (i.e. Art, Music, Sound, etc) must be created in 48 hours.</p></li><li><p>Source code must be included.</p></li></ol><p>You’re free to use any tools or libraries to create your game. You’re free to start with any base-code you may have. At the end, you will be required to share your source code.<br><br>TIP: Compo games are typically reviewed harsher than Jam games. If your game closely resembles a sample game that comes with a development tool, it probably wont get a good score. Be sure to fully customize, and make the game your own.</p>',
 		'Ludum Dare is an event where you create a game from scratch in a weekend based on a theme.',
 		'Online Event',
@@ -827,7 +827,7 @@ var project_events = [
 ]
 
 var events = [
-	new Event(0, '2017 Make-a-thon',
+	new Event(0, 'Make-a-thon, 2017',
 		'description',
 		'Rohnert Park\'s Make-a-thon event!',
 		'Rohnert Park, CA',
@@ -838,7 +838,7 @@ var events = [
 			{caption: 'The Teams', image: '2017 make-a-thon/club.jpg', url: 'http://drive.google.com/uc?export=view&id=0B3wyRcLxpH4jcU93OTJUdlRpNG8'}
 		]
 	),
-	new Event( 1,'Hackathon',
+	new Event( 1,'Hackathon, 2017',
 		'description',
 		'',
 		'San Fransisco, CA',
@@ -859,7 +859,7 @@ var events = [
 		'April 28, 2017',
 		[]
 	),
-	new Event( 4, 'Markafaire',
+	new Event( 4, 'Markafaire, 2017',
 		"<p>Part science fair, part county fair, and part something entirely new, Maker Faire is an all-ages gathering of tech enthusiasts, crafters, educators, tinkerers, hobbyists, engineers, science clubs, authors, artists, students, and commercial exhibitors. All of these “makers” come to Maker Faire to show what they have made and to share what they have learned.</p>\
 		<p>The launch of Maker Faire in the Bay Area in 2006 demonstrated the popularity of making and interest among legions of aspiring makers to participate in hands-on activities and learn new skills at the event. A record 215,000 people attended the two flagship Maker Faires in the Bay Area and New York in 2014, with 44% of attendees first timers at the Bay Area event, and 61% in New York. A family-friendly event, 50% attend the event with children. Also in 2014, 119 independently-produced Mini and 14 Featured Maker Faires occurred around the world, including Tokyo, Rome, Detroit, Oslo and Shenzhen.</p>\
 		<p>Maker Faire is primarily designed to be forward-looking, showcasing makers who are exploring new forms and new technologies. But it’s not just for the novel in technical fields; Maker Faire features innovation and experimentation across the spectrum of science, engineering, art, performance and craft.</p>\
@@ -870,6 +870,14 @@ var events = [
 		"San Mateo County Event Center, 1346 Saratoga Drive, San Mateo, CA 94403",
 		'May 20, 2017',
 		[]
+	), new Event( 5, 'Welcome Day, 2017',
+		'',
+		'',
+		'Santa Rosa Junior College',
+		'August 17, 2017',
+		[
+			{caption: "", image: '', url: ''}
+		]
 	)
 ]
 
