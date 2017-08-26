@@ -10,7 +10,7 @@ router.get('*', function(req, res, next) {
 
 
 /* GET ABOUT PAGE. */
-router.get('/', function(req, res, next) {
+router.get('', function(req, res, next) {
   var navbar = {
     active: 'about',
     links: [{}]

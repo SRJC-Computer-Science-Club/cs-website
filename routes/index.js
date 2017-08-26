@@ -10,7 +10,7 @@ router.get('*', function(req, res, next) {
 });
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
+router.get('', function(req, res, next) {
   var navbar = {
     active: 'home',
     links: [
@@ -42,7 +42,7 @@ router.get('/', function(req, res, next) {
 
 
 /* GET /join. */
-router.get('/join/', function(req, res, next) {
+router.get('/join', function(req, res, next) {
   var navbar = {
     active: 'home',
     links: []};

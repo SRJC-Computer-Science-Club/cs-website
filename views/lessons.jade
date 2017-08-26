@@ -7,7 +7,7 @@ block content
     p.header Lessons
     each lesson in tutorial.lessons
       - if (lesson.isPublished)
-        a(href=lesson.id + "/").cell
+        a(href="/resources/categories/" + category.id + "/" + tutorial.id + "/" + lesson.id).cell
           .context
             p.header=lesson.title
             p=lesson.description_short

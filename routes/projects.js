@@ -10,7 +10,7 @@ router.get('*', function(req, res, next) {
 
 
 /* GET Projects page. */
-router.get('/', function(req, res, next) {
+router.get('', function(req, res, next) {
   var projects = tempDB.projects;
 
   var navbar = {

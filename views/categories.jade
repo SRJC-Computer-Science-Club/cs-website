@@ -8,7 +8,7 @@ block content
 				- var category = categories[i]
 					- if (category.isPublished)
 						.category
-							a.cell(href=category.id + "/")
+							a.cell(href="/resources/categories/" + category.id)
 								.context
 									img(src=category.image)
 								h2= category.title
