@@ -11,7 +11,7 @@ router.get('*', function(req, res, next) {
 
 
 /* GET members page. */
-router.get('/', function(req, res, next) {
+router.get('', function(req, res, next) {
   var navbar = {
     active: 'members',
     links: [

@@ -50,7 +50,7 @@ app.use(express.static(path.join(__dirname, '/public')));
 app.use(express.static(__dirname+ '/node_modules'));
 
 app.use('/', index);
-app.use('/projects/', projects);
+app.use('/projects', projects);
 app.use('/', events);
 app.use('/members', members);
 app.use('/resources', resources);
