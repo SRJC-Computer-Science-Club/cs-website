@@ -325,7 +325,7 @@ var projects = [
 	)
 ];
 
-//30
+//30 48
 var members = [
 	new Member(12, 'Kyle', 'O\'Brien',
 		'Hey! I\'m a professional novice. My skills lie primarly in C++ and Front-End Web technologies. I\'m currently learning Objective-C and Swift for an internship this summer. ',
@@ -339,6 +339,17 @@ var members = [
 			'Javascript',
 			'Swift',
 			'Objective-C'
+		]
+	),
+	new Member(14, 'Austin', 'Meyer',
+		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
+		'Game Designer and Developer! Also know C++, Java, and Javascript',
+		{},
+		'meyerforge@gmail.com',
+		[
+			'C++',
+			'Java',
+			'C#'
 		]
 	),
 	new Member(20, 'Adam', 'Ahrens',
@@ -402,17 +413,6 @@ var members = [
 		undefined,
 		[]
 	),
-	new Member(14, 'Austin', 'Meyer',
-		'I am a fledgling game designer seeking to develop his skills and create wonderful pieces of art/entertainment. I have some education in C++, Java, and Unity C#. My preferred engine right now is Unity and I hope to become certified in the next year or so.',
-		'Game Designer and Developer! Also know C++, Java, and Javascript',
-		{},
-		'meyerforge@gmail.com',
-		[
-			'C++',
-			'Java',
-			'C#'
-		]
-	),
 	new Member(16, 'Noah', 'Tarr',
 		undefined,
 		'Second semester at JC. Learning C++ and Java. Computer Engineering major. Know JavaScript, Some PHP, CSS, and HTML.',
@@ -450,17 +450,6 @@ var members = [
 		undefined,
 		[
 
-		]
-	),
-	new Member(1, 'Joshua', 'Murphy',
-		'my bio',
-		undefined,
-		{
-			github: 'https://www.github.com/joshuasrjc'
-		},
-		undefined,
-		[
-			'C++','JavaScript'
 		]
 	),
 	new Member(11, 'Junior', 'Diarrassouba',
@@ -507,15 +496,6 @@ var members = [
 
 		]
 	),
-	new Member(26, 'Alejandro', 'Fernandez',
-		'my bio',
-		'I enjoy long walks on the beach',
-		{},
-		'alexotter@ymail.com',
-		[
-			'C++'
-		]
-	),
 	new Member(15, 'Isaiah', 'Curtis',
 		'',
 		'Interested in machine learning and low level programming',
@@ -529,6 +509,152 @@ var members = [
 		{},
 		undefined,
 		[]
+	),
+	new Member(31, 'Ethan', 'Humphreys',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(48, 'Arien', 'Carnacion',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(47, 'Mikhail', 'Eufusia',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(46, 'Matthew', 'Eldridge',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(45, 'Nathan', 'Pandolfo',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(44, 'George', 'Dubinin',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(43, 'Terrence', 'DeBois',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(42, 'Max', 'Underdown',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(41, 'Katherine', 'Brashear',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(40, 'Rami', 'Alabrach',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(39, 'Stephen', 'McGovern',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(38, 'Borith', 'S',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(37, 'Belen', 'Cj',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(36, 'Kevin', 'Benelli',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(35, 'Dan', 'Vyenielo',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(34, 'Gigi', '',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(33, 'Tyler', 'Jachetta',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(32, 'Nick', 'Ripes',
+		'my bio',
+		undefined,
+		{},
+		undefined,
+		[]
+	),
+	new Member(1, 'Joshua', 'Murphy',
+		'my bio',
+		undefined,
+		{
+			github: 'https://www.github.com/joshuasrjc'
+		},
+		undefined,
+		[
+			'C++','JavaScript'
+		]
+	),
+	new Member(26, 'Alejandro', 'Fernandez',
+		'my bio',
+		'I enjoy long walks on the beach',
+		{},
+		'alexotter@ymail.com',
+		[
+			'C++'
+		]
 	),
 	new Member(23, 'Andrew', 'Rodrigues',
 		'my bio',
@@ -1178,12 +1304,12 @@ var _categories = [
                         "Here are some VERY informational videos on Swift and app development with Swift. This includes a link to Stanford's course.",
                         [
                             {text: "What's shown here are in-depth videos on getting a great foundation on Swift and developing apps in Xcode"},
-                            {video: {text: {list: {text: "Stanford's 1st lecture demonstrating ", 
+                            {video: {text: {list: {text: "Stanford's 1st lecture demonstrating ",
                                 value: [{text: "class/struct/enum declarations"}, {markdown: "optionals, switches, and `if let` syntax"}, {text: "understanding the *interface builder* with IBActions and IBOutlets"}]}},
                                 url: "https://www.youtube.com/embed/ilQ-tq772VI?list=PLPA-ayBrweUz32NSgNZdl0_QISw-f12Ai", caption: "Stanford 2017"}
                             },
                             {markdown: "Here's a Slack post describing most of the [Stanford's videos](https://slack-files.com/T0LTMGRNW-F5P51708N-06579b1dbb)"},
-                            {video: {text: {list: {text: "\"..a ton of examples..\" he says and that is what you'll get. You'll use Swift Playgrounds to execute the code"}, value: []}, 
+                            {video: {text: {list: {text: "\"..a ton of examples..\" he says and that is what you'll get. You'll use Swift Playgrounds to execute the code"}, value: []},
                                 url: "https://www.youtube.com/embed/dKaojOZ-az8", caption: "Swift 3 Tutorial-Derek Banas"}
                             },
                             {list: {text: "Start Developing iOS Apps (Swift) is the perfect starting point for learning to create apps that run on iPhone and iPad. View this set of incremental lessons as a guided introduction to building your first app—including the tools, major concepts, and best practices that will ease your path.",
@@ -1388,7 +1514,7 @@ var services = {
 var club_officers =
 [
 	new ClubOfficers( 0, 12, 'President', "#055B75"),
-	new ClubOfficers( 1, -1, 'Vice<br>President', "#0D94BD"),
+	new ClubOfficers( 1, 14, 'Vice<br>President', "#0D94BD"),
 	new ClubOfficers( 2, 20, 'Treasurer<br>', '#579C08'),
 	new ClubOfficers( 3, 2, 'Secretary', '#579C08'),
 	new ClubOfficers( 4, -1, 'ICC Rep', '#EEA00E'),
@@ -1405,4 +1531,3 @@ module.exports = {
     services,
     club_officers
 };
-
