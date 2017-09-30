@@ -164,7 +164,10 @@ var projects = [
 		'In Progress',
 		'Delegating Tasks',
 		{},
-		{},
+		{
+			invision: 'https://invis.io/5KCMK0DU9',
+			github: 'https://github.com/SRJC-Computer-Science-Club/jumpnotes'
+		},
 		[
 		]
 	),
@@ -1013,6 +1016,20 @@ var _categories = [
         'description',
         "/images/icons/tutorial-web.png",
         [
+	new Tutorial( 3, "Getting started with Web Development",
+		"", "",
+		1, 0, 0, 0,
+		[
+			new Lesson(0, "Learn HTML and CSS",
+				"", "",
+				[
+					{video: {text: "For complete beginners. Here he explains each step and part in good depth", url: "https://www.youtube.com/embed/y3UH2gAhwPI"}},
+				],
+				true
+			)
+		],
+		true
+	),
             new Tutorial( 0, 'Nodejs Boilerplate',
                 'Nodejs is a JavaScript runtime built on Chrome\'s V8 JavaScript engine. Node.js uses an event-driven, non-blocking I/O model that makes it lightweight and efficient. Node.js\' package ecosystem, npm, is the largest ecosystem of open source libraries in the world.',
                 'Get an introduction on how to create your own Nodejs project using Express and other tools used on the Club Website!',
@@ -1262,7 +1279,8 @@ var _categories = [
                                     ""
                                 ]}}}
                             ], footer: "Here is where we'll add all of our styled html components in this file."}
-                        ]
+                        ],
+false
                     )
                 ],
                 false
@@ -1287,7 +1305,22 @@ var _categories = [
     new Category( 3, "Mobile Development",
         "description",
         "/images/icons/tutorial-mobile.png",
-        [],
+        [
+	new Tutorial(0, "Getting started with Nodejs",
+	"", "",
+	2, 0, 0, 0,
+	[
+		new Lesson(0, "Helpful Resources",
+		"","",
+		[
+			{video: {text: "In this tutorial we'll explore the Express NodeJS framework. It provides all of the capabilities of NodeJS, also makes it easy to build robust web applications quite easily using a MVC format. I'll cover how to install on Windows, Mac and Linux. We'll then explore building the server, routes, incorporating Handlebars, incorporating Bootstrap, ports, middleware, app.use, app.get, catching / throwing errors, handling forms, file uploads, cookies, sessions, reading / writing files and much more.", url: 'https://www.youtube.com/embed/xDCKcNBFsuI', caption: "51 minutes"}}
+		],
+		true
+	)
+],
+true
+)
+],
         true
     ),
     new Category( 4, "iOS Development",
