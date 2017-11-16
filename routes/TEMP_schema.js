@@ -171,16 +171,6 @@ var projects = [
 		[
 		]
 	),
-	new Project(13,'Book Stack',
-		'',
-		'',
-		'In Progress',
-		'Creating Outline',
-		{},
-		{},
-		[
-		]
-	),
     new Project(5,'Line Follower',
         '',
         '',
@@ -817,9 +807,7 @@ var members_projects = [
 	new ProjectsMembers( 60 , 12 , 3 , 'Project Manager'),
 	new ProjectsMembers( 62 , 12 , 16 , 'Front-End Developer'),
 	new ProjectsMembers( 63 , 12 , 12 , 'Back-End Developer'),
-	new ProjectsMembers( 64 , 12 , 2 , 'Front-End Designer'),
-	//Book Stack
-	new ProjectsMembers( 61 , 13 , 25 , 'Project Manager'),
+	new ProjectsMembers( 64 , 12 , 2 , 'Front-End Designer')
 
 ];
 //64
@@ -896,24 +884,6 @@ var project_area_requests = [
 		":1", 1,
 		[],
 		2
-	),
-	//Book Stack
-	new ProjectAreaRequests( 6, 13,"Front-End Developers",
-		"Help program and design the front-end of this website.",
-		":4", 2,
-		[
-			{title: "HTML/CSS/Bootstrap", experience: 3},
-			{title: "Java Script", experience: 1}
-		],
-		25
-	),
-	new ProjectAreaRequests( 7, 13,"Back-End Developers",
-		"",
-		":3", 2,
-		[
-			{title: "MongoDB/Moongse", experience: 4}
-		],
-		25
 	),
 	//Club App
     new ProjectAreaRequests( 9, 9,"Back-End Developer",
